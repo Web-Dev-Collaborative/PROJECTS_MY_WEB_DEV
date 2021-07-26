@@ -1,0 +1,166 @@
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 WEBSITE
+
+
+  New reference issues for 3.0 are going through GitHub:
+  https://github.com/processing/processing-docs/
+
+
+  NEED POST 2.0
+
+  o Look into bitcoin
+  o Note about Red on Foundation page.
+  - Download amounts to "None" add "25.00" and fill the right box with "other"
+  o Foundation page, mixed with patrons
+    . How do the patrons get added w/donations?      
+  - New CSS for tutorials
+  - Code copyright forms and page [Goes on the developer site @ GitHub]  --CR
+    
+    
+  NICE
+
+  - Adjust favicon to match future black icon
+
+
+  ROUND 2.0   
+
+  - Adjust grid on Reference/Examples/Exhibition/Tutorial pages
+  - Color code the code for the Tutorials, Examples, Reference
+  - Retinafy all images
+
+
+  EYE ON THE FUTURE
+
+  - Add Examples back to web that weren't compatible with Processing.js
+    . Reflection1 (PVector.random2D())
+    . Cubes within cube (PVector.random3D())
+    . Koch (PVector.rotate())
+    . Flocking (PVector.random2D())
+
+  
+// // // // // // // // // // // // // // // // // // // // //
+
+  NEED TO DO ON LAUNCH
+
+  x Update credential file to redirect users to main site, rather than trunk
+  x Check .htaccess for references to trunk
+  x Make sure fonts are on the server
+  x Add more redirects
+    . http://processing.org/reference/alpha.html > http://trunk.processing.org/reference/
+    . http://processing.org/learning/ > http://trunk.processing.org/tutorials/
+    . http://processing.org/learning/basics/ > http://trunk.processing.org/examples/
+    . http://processing.org/learning/topics/ > http://trunk.processing.org/examples/
+    . http://processing.org/learning/books/ > http://trunk.processing.org/books/
+    . http://processing.org/about/ > http://trunk.processing.org/overview/
+    . http://processing.org/about/people/ > http://trunk.processing.org/people/
+    . http://processing.org/about/patrons/ > http://trunk.processing.org/foundation/
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 SITE NAVIGATION
+
+Cover
+
+Download
+
+Exhibition
+
+Reference
+Libraries
+Tools
+Environment
+  
+Tutorials
+*Examples
+Books
+  
+Overview
+People
+Foundation
+  
+Shop
+
+> Twitter <https://twitter.com/processingOrg/>
+> Forum <http://forum.processing.org>
+> Wiki <https://github.com/processing/processing/wiki>
+> Issues <https://github.com/processing/processing-docs/issues?state=open>
+> GitHub <https://github.com/processing/>
+
+
+// // // // // // // // // // // // // // // // // // // // //
+
+FOUNDATION MINI-SITE: 
+
+-Fix Donate box formatting 
+-New SVG header logo for Processing Foundation 
+-New header background image for Processing Foundation 
+-Add ribbon to header
+-Fix “Overview” and “People” page —> links don’t highlight
+
+// // // // // // // // // // // // // // // // // // // // //
+
+DONE
+
+
+  x Set up dev site
+  
+  x New font for site
+  
+  x Mockups (Explore new menu, font options)
+	x Download options
+	x Transaction page
+	x Homepage
+	x Reference page
+	x Example index
+	x Example page
+	x Tutorial index
+	x Tutorial page
+
+  
+  x Write Foundation copy  --CR
+  x Write 2.0 press copy  --CR
+  
+  x New menu design on left (page width to 850 or 960)
+  x Center page within browser
+  
+        	
+  x Donations
+    x Complete donation sequence
+    x New download page with radio buttons, goes to page w/links
+    x Get financial setup for transactions
+
+  X Clean up CSS and HTML
+  X Clean out the JavaScript includes
+  X Change the name of patrons.html to foundation.html
+  X Remove all GIF bitmapped type and replace  
+  X Integrate Stripe/PayPal
+  X Integrate mailman for email after financial transaction
+  X Added proper header image
+  X Add Google analytics
+  X Purchase $0 bug
+  X Merge Basic / Topic examples
+  X Update nav (download + reference)
+  X Update css for distribution
+  X Sticky nav
+  X Replace drop down menu with “Back to list” button. Do this on Examples as well.
+  X Build libraries page from the contributions.txt file web/contrib_generate
+  X Build tools pages from the contributions.txt file web/contrib_generate
+  X Legacy libraries and tools linked from the bottom of the page
+  X Double check new language for the header text
+  X Fix 3 column layout for Libraries & Tools pages
+  X Make the URLs make sense (Overview, People, Foundation)
+  X Legacy text
+  X Home Page
+  X Decrease text block width on pages with large text block
+  X Integrate Download Page
+  X Where did the Shop go?
+  X Integrate italics
+  X Pretty Urls
+  X remove twitter cache
+  X Add Mailing List to Hompage
+  X Dynamic Feeds (twitter / github)
+  X Italics
+  X Send test/live credentials
+  X Add caching solution for github feed
+  X Add contact to Homepage and About!

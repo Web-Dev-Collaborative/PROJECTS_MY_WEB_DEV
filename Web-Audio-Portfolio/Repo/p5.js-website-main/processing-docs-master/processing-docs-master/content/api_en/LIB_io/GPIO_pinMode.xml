@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>pinMode()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.io.*;
+
+// On the Raspberry Pi GPIO 4 is physical pin 7 on the header
+
+void setup() {
+  // INPUT_PULLUP enables the built-in pull-up resistor for this pin
+  // left alone, the pin will read as HIGH
+  // connected to ground (via e.g. a button or switch) it will read LOW
+  GPIO.pinMode(4, GPIO.INPUT_PULLUP);
+}
+
+void draw() {
+  if (GPIO.digitalRead(4) == GPIO.LOW) {
+    // button is pressed
+    fill(255);
+  } else {
+    // button is not pressed
+    fill(204);
+  }
+  stroke(255);
+  ellipse(width/2, height/2, width*0.75, height*0.75);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Configures a pin to act either as input (<b>INPUT</b>), or input with internal pull-up resistor (<b>INPUT_PULLUP</b>), or input with internal pull-down resistor (<b>INPUT_PULLDOWN</b>) or output (<b>OUTPUT</b>)<br/>
+<br/>
+Unlike on Arduino, where pins are implicitly set to inputs by default, it is necessary
+to call this function for any pin you want to access, including input pins.<br/>
+<br/>
+Pull-up and pull-down resistors are very useful when connecting buttons and switches, since they will force the value of the pin in a specified electrical state when no electrical connection is made, and the pin would otherwise be left "floating".<br/>
+<br/>
+The ability to set (and clear) pull-up and pull-down resistors is currently limited to the Raspberry Pi running the Raspbian distribution. On other systems, a warning will be shown.
+]]></description>
+
+<syntax>
+<c>GPIO</c>.pinMode()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>SqrOsc</name>
+
+<category>Sound</category>
+
+<subcategory>Category</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image>../../../images/LIB_sound_SqrOsc.png</image>
+<code><![CDATA[
+import processing.sound.*;
+SqrOsc square;
+
+void setup() {
+  size(640, 360);
+  background(255);
+  
+  // Create square wave oscillator.
+  square = new SqrOsc(this);
+  square.play();
+}
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+This is a simple Square Wave Oscillator.
+]]></description>
+
+</root>

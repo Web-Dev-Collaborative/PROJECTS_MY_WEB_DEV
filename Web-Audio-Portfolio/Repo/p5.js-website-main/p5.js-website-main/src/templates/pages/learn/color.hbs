@@ -1,0 +1,162 @@
+---
+title: learn
+slug: learn/
+---
+
+<div id="learn-page">
+
+  {{> sidebar}}
+
+  <div class="column-span">
+
+    <main >
+
+      <div class="attribution">{{#i18n "color-description1"}}{{/i18n}}<a href="https://github.com/processing/p5.js/issues">{{#i18n "color-description2"}}{{/i18n}}</a>
+
+      </div>
+
+      <h1>{{#i18n "color-title"}}{{/i18n}}</h1>
+
+      <p>
+      {{#i18n "color-p1x1"}}{{/i18n}}
+      </p>
+
+      <img src="{{assets}}/learn/color/grayscale.svg">
+
+      <p>
+      {{#i18n "color-p2x1"}}{{/i18n}}<a href="{{root}}/reference/#/p5/stroke"> stroke()</a>{{#i18n "color-p2x2"}}{{/i18n}}<a href="{{root}}/reference/#/p5/fill">fill()</a>{{#i18n "color-p2x3"}}{{/i18n}}<a href="{{root}}/reference/#/p5/background">background()</a>{{#i18n "color-p2x4"}}{{/i18n}}
+      </p>
+
+      <pre><code class="language-javascript">
+        {{#i18n "color-code1"}}{{/i18n}}
+      </code></pre>
+
+      <p>
+      {{#i18n "color-p3x1"}}{{/i18n}}<a href="{{root}}/reference/#/p5/noStroke">noStroke()</a>{{#i18n "color-p3x2"}}{{/i18n}}<a href="{{root}}/reference/#/p5/noFill">noFill()</a>{{#i18n "color-p3x3"}}{{/i18n}}<b>noStroke()</b>{{#i18n "color-p3x4"}}{{/i18n}}<b>noFill()</b>{{#i18n "color-p3x5"}}{{/i18n}}
+      </p>
+
+      <p>{{#i18n "color-p4x1"}}{{/i18n}}</p>
+
+      <!-- this script only needs to get added once even if there are multiple widget instances -->
+      <script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+      <script type="text/p5" data-autoplay data-p5-version="{{ version }}">
+        function draw() {
+  background(150);
+  stroke(0);
+  line(0, 0, 100, 100);
+  stroke(255);
+  noFill();
+  rect(25, 25, 50, 50);
+}
+      </script>
+
+      <h2>{{#i18n "color-rgb-title"}}{{/i18n}}</h2>
+
+      <p>
+      {{#i18n "color-rgb-p1x1"}}{{/i18n}}
+      </p>
+
+      <img src="{{assets}}/learn/color/rgb.jpg">
+      <p>
+        <ul class="list_view">
+          <li>{{#i18n "color-rgb-li1"}}{{/i18n}}</li>
+          <li>{{#i18n "color-rgb-li2"}}{{/i18n}}</li>
+          <li>{{#i18n "color-rgb-li3"}}{{/i18n}}</li>
+          <li>{{#i18n "color-rgb-li4"}}{{/i18n}}</li>
+          <li>{{#i18n "color-rgb-li5"}}{{/i18n}}</li>
+        </ul>
+      </p>
+
+      <p>{{#i18n "color-rgb-p2x1"}}{{/i18n}}</p>
+
+      <script type="text/p5" data-autoplay data-p5-version="{{ version }}">
+function draw() {
+  background(255);
+  noStroke();
+
+  // Bright red
+  fill(255,0,0);
+  ellipse(20,20,16,16);
+
+  // Dark red
+  fill(127,0,0);
+  ellipse(40,20,16,16);
+
+  // Pink (pale red)
+  fill(255,200,200);
+  ellipse(60,20,16,16);
+}
+      </script>
+
+
+
+      <h2>{{#i18n "color-transparency-title"}}{{/i18n}}</h2>
+
+      <p>{{#i18n "color-transparency-p1x1"}}{{/i18n}}</p>
+      <p>{{#i18n "color-transparency-p2x1"}}{{/i18n}}</p>
+
+      <p>{{#i18n "color-transparency-p3x1"}}{{/i18n}}</p>
+
+      <script type="text/p5" data-autoplay  data-p5-version="{{ version }}">
+  createCanvas(100, 100);
+  fill(0,0,255);
+  rect(0,0,50,100);
+
+  // 255 means 100% opacity.
+  fill(255,0,0,255);
+  rect(0,0,100,20);
+
+  // 75% opacity.
+  fill(255,0,0,191);
+  rect(0,25,100,20);
+
+  // 55% opacity.
+  fill(255,0,0,127);
+  rect(0,50,100,20);
+
+  // 25% opacity.
+  fill(255,0,0,63);
+  rect(0,75,100,20);
+
+      </script>
+
+      <h2>{{#i18n "color-custom-ranges-title"}}{{/i18n}}</h2>
+
+      <p>
+      {{#i18n "color-custom-ranges-p1x1"}}{{/i18n}}<a href="{{root}}/reference/#/p5/colorMode">colorMode()</a>.
+      </p>
+
+      <pre><code>
+      colorMode(RGB,100);
+      </code></pre>
+
+      <p>{{#i18n "color-custom-ranges-p2x1"}}{{/i18n}}</p>
+
+      <p>{{#i18n "color-custom-ranges-p3x1"}}{{/i18n}}</p>
+
+      <pre><code>
+      colorMode(RGB,100,500,10,255);
+      </code></pre>
+
+      <p>{{#i18n "color-custom-ranges-p4x1"}}{{/i18n}}</p>
+
+      <p>{{#i18n "color-custom-ranges-p5x1"}}{{/i18n}}</p>
+
+      <img src="{{assets}}/learn/color/hsb.png">
+      <ul class="list_view">
+        <li><b>{{#i18n "color-custom-ranges-li1x1"}}{{/i18n}}</b>{{#i18n "color-custom-ranges-li1x2"}}{{/i18n}}</li>
+        <li><b>{{#i18n "color-custom-ranges-li2x1"}}{{/i18n}}</b>{{#i18n "color-custom-ranges-li2x2"}}{{/i18n}}</li>
+        <li><b>{{#i18n "color-custom-ranges-li3x1"}}{{/i18n}}</b>{{#i18n "color-custom-ranges-li3x2"}}{{/i18n}}</li>
+      </ul>
+
+      <p>{{#i18n "color-custom-ranges-p6x1"}}{{/i18n}}<a href="{{root}}/reference/#/p5/colorMode">colorMode()</a>{{#i18n "color-custom-ranges-p6x2"}}{{/i18n}}</p>
+
+    </main>
+
+    {{> footer}}
+
+  </div> <!-- end column-span -->
+
+  {{> asterisk}}
+
+</div><!-- end id="get-started-page"  -->

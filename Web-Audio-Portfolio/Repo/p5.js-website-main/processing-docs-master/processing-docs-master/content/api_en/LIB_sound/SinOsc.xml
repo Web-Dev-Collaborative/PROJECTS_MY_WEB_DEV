@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>SinOsc</name>
+
+<category>Sound</category>
+
+<subcategory>Category</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image>../../../images/LIB_sound_SinOsc.png</image>
+<code><![CDATA[
+import processing.sound.*;
+SinOsc sine;
+
+void setup() {
+  size(640, 360);
+  background(255);
+    
+  // Create the sine oscillator.
+  sine = new SinOsc(this);
+  sine.play();
+}
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+This is a simple Sine Wave Oscillator.
+]]></description>
+
+</root>

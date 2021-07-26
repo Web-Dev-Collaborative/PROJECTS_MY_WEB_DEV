@@ -1,0 +1,32 @@
+
+<% if (typeof constructor !== 'undefined') { %>
+<div class="constructor">
+  <%=constructor%>
+</div>
+<% } %>
+
+<% let fields = _.filter(things, function(item) { return item.itemtype === 'property' && item.access !== 'private' }); %>
+<% if (fields.length > 0) { %>
+  <h3 id='reference-fields'>Fields</h3>
+  <ul aria-labelledby='reference-fields'>
+  <% _.each(fields, function(item) { %>
+    <li>
+      <div class='paramname'><a href="<%=item.hash%>" <% if (item.module !== module) { %>class="addon"<% } %>><%=item.name%></a></div>
+      <div class='paramtype'><%= item.description %></div>
+    </li>
+  <% }); %>
+  </ul>
+<% } %>
+
+<% let methods = _.filter(things, function(item) { return item.itemtype === 'method' && item.access !== 'private' }); %>
+<% if (methods.length > 0) { %>
+  <h3 id='reference-methods'>Methods</h3>
+  <ul aria-labelledby='reference-methods'>
+    <% _.each(methods, function(item) { %>
+      <li>
+        <div class='paramname'><a href="<%=item.hash%>" <% if (item.module !== module) { %>class="addon"<% } %>><%=item.name%><% if (item.itemtype === 'method') { %>()<%}%></a></div>
+        <div class='paramtype'><%= item.description %></div>
+      </li>
+    <% }); %>
+  </ul>
+<% } %>

@@ -1,0 +1,144 @@
+---
+title: download
+slug: download/
+---
+
+<div id="download-page">
+
+  {{> sidebar}}
+
+  <div class="column-span">
+
+    <main id="content" >
+
+      <h1>{{#i18n "Download"}}{{/i18n}}</h1>
+
+      <h2 class='sr-only'>Introduction</h2>
+      <p>{{#i18n "download-intro"}}{{/i18n}}</p>
+
+      <!-- EDITOR -->
+      <div class="link_group">
+        <h2>{{#i18n "editor-title"}}{{/i18n}}</h2>
+        <p>{{#i18n "p5.js-editor-intro"}}{{/i18n}}</p>
+
+        <a class='support_link' href="https://editor.p5js.org" target="_blank">
+          <div class="download_box">
+
+            <span class="download_name">{{#i18n "p5.js-editor"}}{{/i18n}}</span>
+            <p>{{#i18n "editor-includes"}}{{/i18n}}</p>
+
+          </div>
+        </a>
+
+        <div class="spacer"></div>
+      </div>
+
+      <!-- COMPLETE LIBRARY -->
+      <div class="link_group">
+        <h2>{{#i18n "complete-library-title"}}{{/i18n}}</h2>
+        <p>{{#i18n "complete-library-intro1"}}{{/i18n}} <a href="{{root}}/get-started/">{{#i18n "complete-library-intro2"}}{{/i18n}}</a>{{#i18n "complete-library-intro3"}}{{/i18n}}</p>
+
+        <a  class='support_link p5_link' href="https://github.com/processing/p5.js/releases/download/[p5_version]/p5.zip">
+          <div class="download_box">
+
+            <span class="download_name">{{#i18n "p5.js-complete"}}{{/i18n}}</span>
+            <p>{{#i18n "includes-1"}}{{/i18n}}
+              <br>{{#i18n "includes-2"}}{{/i18n}}
+            <br>{{#i18n "includes-3"}}{{/i18n}} <span id="p5_version"></span> (<span id="p5_date"></span>)
+            </p>
+
+          </div>
+        </a>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- SINGLE FILES -->
+      <div class="link_group">
+
+        <h2 id="single-files">{{#i18n "single-files-title"}}{{/i18n}}</h2>
+        <p>{{#i18n "single-files-intro"}}{{/i18n}}</p>
+        <ul aria-labelledby="single-files">
+          <li>
+            <a class='support_link p5_link' href="https://github.com/processing/p5.js/releases/download/[p5_version]/p5.js">
+              <div class="download_box half_box">
+                <span class="download_name">p5.js</span>
+                <p>{{#i18n "single-file"}}{{/i18n}}
+                  <br>{{#i18n "p5.js-uncompressed"}}{{/i18n}}</p>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a class='support_link p5_link' href="https://github.com/processing/p5.js/releases/download/[p5_version]/p5.min.js">
+              <div class="download_box half_box">
+                <span class="download_name">p5.min.js</span>
+                <p>{{#i18n "single-file"}}{{/i18n}}
+                  <br>{{#i18n "compressed"}}{{/i18n}}</p>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a class='support_link p5_link' href="https://cdnjs.com/libraries/p5.js" target="_blank">
+              <div class="download_box half_box last_box">
+                <span class="download_name">CDN</span>
+                <p>{{#i18n "link"}}{{/i18n}}
+                  <br>{{#i18n "statically-hosted-file"}}{{/i18n}}</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="spacer"></div>
+
+      </div>
+
+      <!-- Github resources -->
+      <div class="link_group">
+        <h2 id="etc">{{#i18n "etc-title"}}{{/i18n}}</h2>
+        <ul aria-labelledby="etc" id='etc_list' class="list_view bullets">
+          <li><a href="https://github.com/processing/p5.js/releases">{{#i18n "older-releases"}}{{/i18n}}</a></li>
+          <li><a href="https://github.com/processing/p5.js">{{#i18n "github-repository"}}{{/i18n}}</a></li>
+          <li><a href="https://github.com/processing/p5.js/issues">{{#i18n "report-bugs"}}{{/i18n}}</a></li>
+          <li><a href="https://github.com/processing/p5.js/blob/main/contributor_docs/supported_browsers.md">{{#i18n "supported-browsers"}}{{/i18n}}</a></li>
+        </ul>
+
+        <div class="spacer"></div>
+      </div>
+
+    </main>
+
+    <script>
+      $.getJSON('/download/version.json', function(data) {
+        $('#p5_version').text(data.version);
+        $('#p5_date').text(data.date);
+        $('.p5_link').each(function() {
+          var link = $(this).attr('href').replace('[p5_version]', data.version);
+          $(this).attr('href', link);
+        });
+        $('.editor_version').text(data.editor_version);
+        $('.editor_link').each(function() {
+          var link = $(this).attr('href').replace('[editor_version]', data.editor_version);
+          $(this).attr('href', link);
+        });
+      });
+      $('.support_link').on('click', function (e) {
+        if ($(this).hasClass('p5_link')) {
+          e.preventDefault();
+          window.location = $(this).attr('href');
+          setTimeout( function() { window.location = 'support.html'; }, 10000);
+        } else {
+          setTimeout( function() { window.location = 'support.html'; }, 1000);
+        }
+
+      });
+
+    </script>
+
+    {{> footer}}
+
+  </div> <!-- end column-span -->
+
+  {{> asterisk}}
+
+</div><!-- end id="get-started-page"  -->

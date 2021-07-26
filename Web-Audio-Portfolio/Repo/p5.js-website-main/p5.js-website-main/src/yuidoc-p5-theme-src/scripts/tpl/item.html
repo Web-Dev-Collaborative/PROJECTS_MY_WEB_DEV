@@ -1,0 +1,102 @@
+<h2><%=item.name%><% if (item.isMethod) { %>()<% } %></h2>
+
+<% if (item.example) { %>
+<div class="example">
+  <h3 id="reference-example">Examples</h3>
+
+  <div class="example-content" data-alt="<%= item.alt %>">
+    <% _.each(item.example, function(example, i){ %>
+      <%= example %>
+    <% }); %>
+  </div>
+</div>
+<% } %>
+
+<div class="description">
+
+  <h3 id="reference-description">Description</h3>
+
+  <% if (item.deprecated) { %>
+    <p>
+      Deprecated: <%=item.name%><% if (item.isMethod) { %>()<% } %> is deprecated and will be removed in a future version of p5. <% if (item.deprecationMessage) { %><%=item.deprecationMessage%><% } %>
+    </p>
+  <% } %>
+
+
+  <span class='description-text'><%= item.description %></span>
+
+  <% if (item.extends) { %>
+    <p><span id="reference-extends">Extends</span> <a href="/reference/#/<%=item.extends%>" title="<%=item.extends%> reference"><%=item.extends%></a></p>
+  <% } %>
+
+  <% if (item.module === 'p5.sound') { %>
+    <p>This function requires you include the p5.sound library.  Add the following into the head of your index.html file:
+      <pre><code class="language-javascript">&lt;script src="path/to/p5.sound.js"&gt;&lt;/script&gt;</code></pre>
+    </p>
+  <% } %>
+
+  <% if (item.constRefs) { %>
+    <p>Used by:
+  <%
+      var refs = item.constRefs;
+      for (var i = 0; i < refs.length; i ++) {
+        var ref = refs[i];
+        var name = ref;
+        if (name.substr(0, 3) === 'p5.') {
+          name = name.substr(3);
+        }
+  if (i !== 0) {
+          if (i == refs.length - 1) {
+            %> and <%
+          } else {
+            %>, <%
+          }
+        }
+        %><a href="./#/<%= ref.replace('.', '/') %>"><%= name %>()</a><%
+      }
+  %>
+    </p>
+  <% } %>
+</div>
+
+<% if (isConstructor || !isClass) { %>
+
+<div class="syntax">
+  <h3 id="reference-syntax">Syntax</h3>
+  <p>
+    <% syntaxes.forEach(function(syntax) { %>
+    <pre class="language-javascript"><%= syntax %></pre>
+    <% }) %>
+  </p>
+</div>
+
+
+<% if (item.params) { %>
+  <div class="params">
+    <h3 id="reference-parameters">Parameters</h3>
+    <ul aria-labelledby='reference-parameters'>
+    <% for (var i=0; i<item.params.length; i++) { %>
+      <% var p = item.params[i] %>
+      <li>
+        <div class='paramname'><%=p.name%></div>
+        <% if (p.type) { %>
+          <div class='paramtype'>
+          <% var type = p.type.replace(/(p5\.[A-Z][A-Za-z]*)/, '<a href="#/$1">$1</a>'); %>
+          <span class="param-type label label-info"><%=type%></span>: <%=p.description%>
+          <% if (p.optional) { %> (Optional)<% } %>
+          </div>
+        <% } %>
+      </li>
+    <% } %>
+    </ul>
+  </div>
+<% } %>
+
+<% if (item.return && item.return.type) { %>
+  <div>
+    <h3 id="reference-returns">Returns</h3>
+    <p class='returns'><span class="param-type label label-info"><%=item.return.type%></span>: <%= item.return.description %></p>
+  </div>
+<% } %>
+
+<% } %>

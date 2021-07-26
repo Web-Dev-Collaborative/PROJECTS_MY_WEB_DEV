@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>/** */ (doc comment)</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+/**
+   Draws two lines which divides the window 
+   into four quadrants. First draws a horizontal
+   line and then the vertical line 
+*/ 
+line(0, 50, 100, 50);
+line(50, 0, 50, 100);
+]]></code>
+</example>
+
+<description><![CDATA[
+Explanatory notes embedded within the code. Doc comments (documentation comments) are used to describe and document your sketch, classes, and methods. Comments are ignored by the compiler.
+<br><br>
+Doc comments may be converted into browseable documentation using external editors and tools such as the command line javadoc, doc generators such as Doxygen, or IDEs such as Eclipse, Netbeans, or IntelliJ IDEA.
+]]></description>
+
+<syntax>
+/**
+  <c>comment</c>
+*/
+</syntax>
+
+<parameter>
+<label>comment</label>
+<description><![CDATA[any sequence of characters]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>
+// (comment)
+/* */ (multiline comment)
+</related>
+
+<availability>1.0</availability>
+
+<type>Operator</type>
+
+<partof>PDE</partof>
+
+
+
+
+
+
+
+
+</root>
