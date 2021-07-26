@@ -1,0 +1,36 @@
+
+  <style>
+    .message{
+        position:absolute; 
+        border:0px solid black;
+        opacity: 0.8;
+        text-align:left;
+        max-width:200px;
+        overflow-x: auto; 
+        overflow-y: auto;
+        width:200px;
+        font-size:11px;
+    }
+    </style>
+    
+
+          <span class="message draggable" style="left:<%= obj.x %>px; top:<%= obj.y %>px;"  id="<%= obj.id %>">
+            <%= obj.title %>ooooooo
+          </span>
+
+
+<script>
+$(document).ready(function() {
+var id="<%= obj.id %>";
+ $("#"+id).click(function(){
+    var msg="<%= obj.title %>";     
+     var obj=findbyid(id);
+     if(obj){
+       obj.sendmessage(0, msg);   
+     }
+     else{console.log('obj not found man')
+     }
+ });
+});
+</script>
+
