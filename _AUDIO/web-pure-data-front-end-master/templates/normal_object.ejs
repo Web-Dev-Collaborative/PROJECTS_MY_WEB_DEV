@@ -1,0 +1,93 @@
+
+  <style>
+    .object{
+        position:absolute; 
+    }
+    .letgroup{
+      text-align:center;
+    }
+    a.let{
+      position:relative;
+      background:black;
+      font-size:10px;    
+      height:1px;       
+    }
+    .inlet{
+      top:0px;     
+      height:2px;       
+    }
+    .outlet{
+      height:2px;    
+      bottom:0px;
+    }
+    .border{    
+        border:1px solid black;
+        min-width:25px;
+        min-height:10px;
+        opacity: 0.8;
+        background:white; 
+        text-align:center;
+        height:10px;
+        padding-top:3px;
+        padding-bottom:3px;
+        padding-right:5px;
+        padding-left:5px;    
+    }
+    </style>
+    
+
+<table class='object' style="left:<%= obj.x %>px; top:<%= obj.y %>px;">
+         <Tr class="inlet">
+         <Td>   
+                    <table style="width:100%;">
+                      <tr class="letgroup">
+                       <% for(var i in obj.inlets){ %>
+                          <td><a class="let">&nbsp;w</a></td>
+                        <% } %>
+                      </tr>
+                    </table>
+         </td>     
+        </tr>
+        
+        <Tr class="title" title="<%= obj.description %>"><Td>
+          <span class="border draggable" id="<%= obj.id %>"><%= obj.title %></span>
+        </td></tr>
+        
+         <Tr class="outlet">
+         <Td>   
+           <table style="width:100%;">
+            <tr class="letgroup">
+                <% for(var i in obj.outlets){ %>
+                  <td><a href="#" class="let">&nbsp;w</a></td>
+                <% } %>
+            </tr>
+          </table>
+        </td>
+        </tr>
+       
+</table>
+
+
+
+<script>
+$(document).ready(function() {
+
+var id="<%= obj.id %>";
+
+ $("#<%= obj.id %>").click(function(){
+    console.log("<%= obj.title %>") 
+    
+    var obj=findbyid(id);
+     if(obj){
+       obj.sendmessage(0, "booooooom");   
+    //  obj.message(inlet, msg){
+       //console.log(msg+'333333333333333333')
+     // }
+      
+     }
+    
+ });
+});
+</script>
+
+

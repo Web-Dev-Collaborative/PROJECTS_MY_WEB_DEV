@@ -1,0 +1,32 @@
+
+  <span class="checkbox draggable" style="left:<%= obj.x %>px;  top:<%= obj.y %>px; "><input type="checkbox"  id="<%= obj.id %>" style=""/></span>
+
+<script>
+$(document).ready(function() {
+   var id="<%= obj.id %>";
+   var obj=findbyid(id);
+
+//obj.pd.addlistener(id, this);
+
+obj.pd.receive(id, function(msg){
+
+$("#"+id).prop("checked", msg);
+
+console.log(msg)
+})
+
+ $("#<%= obj.id %>").click(function(){
+   var id="<%= obj.id %>";
+   var obj=findbyid(id);
+   if($(this).is(':checked') ){   
+     obj.state=1;
+     obj.sendmessage(0, 1);
+   }
+   else{   
+     obj.state=0;
+     obj.sendmessage(0, 0);
+   }   
+ });
+});
+</script>
+
