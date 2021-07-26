@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>TriOsc</name>
+
+<category>Sound</category>
+
+<subcategory>Category</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image>../../../images/LIB_sound_TriOsc.png</image>
+<code><![CDATA[
+import processing.sound.*;
+TriOsc triangle;
+
+void setup() {
+  size(640, 360);
+  background(255);
+    
+  // Create triangle wave oscillator.
+  triangle = new TriOsc(this);
+  triangle.play();
+}
+
+void draw() {
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+This is a simple Triangle Wave Oscillator
+]]></description>
+
+</root>

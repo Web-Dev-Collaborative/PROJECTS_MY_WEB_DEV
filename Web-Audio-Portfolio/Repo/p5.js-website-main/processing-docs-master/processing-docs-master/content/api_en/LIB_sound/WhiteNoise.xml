@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>WhiteNoise</name>
+
+<category>Sound</category>
+
+<subcategory>Noise</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+WhiteNoise noise;
+
+void setup() {
+  size(640, 360);
+  background(255);
+  
+  // Create the noise generator
+  noise = new WhiteNoise(this);
+  noise.play();
+}      
+
+void draw() {
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+This is a White Noise Generator. White Noise has a flat spectrum.
+]]></description>
+
+</root>

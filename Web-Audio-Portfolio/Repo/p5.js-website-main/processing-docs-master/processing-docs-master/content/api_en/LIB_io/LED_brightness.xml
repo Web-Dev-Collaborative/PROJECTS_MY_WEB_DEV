@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>brightness()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.io.*;
+LED greenLed;
+boolean ledOn = false;
+
+void setup() {
+  // the green LED is led0 on the Raspberry Pi
+  greenLed = new LED("led0");
+  frameRate(0.5);
+}
+
+void draw() {
+  ledOn = !ledOn;
+  if (ledOn) {
+  	greenLed.brightness(1.0);
+  } else {
+  	greenLed.brightness(0.0);
+  }
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the brightness
+]]></description>
+
+<syntax>
+<c>led</c>.brightness()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>list()</name>
+
+<category>Capture</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.video.*;
+
+Capture cam;
+
+void setup() {
+  size(640, 480);
+
+  String[] cameras = Capture.list();
+  
+  if (cameras.length == 0) {
+    println("There are no cameras available for capture.");
+    exit();
+  } else {
+    println("Available cameras:");
+    for (int i = 0; i < cameras.length; i++) {
+      println(cameras[i]);
+    }
+  }      
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Gets a list of all available capture devices such as a camera. Use <b>print()</b> to write the information to the text window.
+]]></description>
+
+<syntax>
+<c>cam</c>.list()
+</syntax>
+
+<parameter>
+<label>cam</label>
+<description><![CDATA[any variable of type Capture]]></description>
+</parameter>
+
+<returns>String[]</returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>jump()</name>
+
+<category>Sound Files</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+AudioSample sample;
+
+void setup() {
+  size(640, 360);
+  background(255);
+
+  // Create a new audiosample
+  sample = new AudioSample(this, 100000, 22050);
+  sample.jump(3.5);
+}      
+
+void draw() {
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Jump to a specific position in the audiosample while continuing to play (or starting to play if it wasn't playing already).
+]]></description>
+
+</root>

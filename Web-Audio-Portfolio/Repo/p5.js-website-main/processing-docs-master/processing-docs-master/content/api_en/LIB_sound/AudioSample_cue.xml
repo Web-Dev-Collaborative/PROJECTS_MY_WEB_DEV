@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>cue()</name>
+
+<category>Sound Files</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+AudioSample sample;
+
+void setup() {
+  size(640, 360);
+  background(255);
+
+  // Create a new audiosample
+  sample = new AudioSample(this, 100000, 22050);
+  file.cue(3.5);
+  file.play();
+}      
+
+void draw() {
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Cues the playhead to a fixed position in the audiosample. Note that cue() only affects the playhead for future calls to play(), but not to loop().
+]]></description>
+
+</root>

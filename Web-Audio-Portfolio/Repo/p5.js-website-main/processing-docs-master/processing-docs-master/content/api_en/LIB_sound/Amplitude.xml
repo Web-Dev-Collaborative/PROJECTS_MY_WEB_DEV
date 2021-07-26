@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>Amplitude</name>
+
+<category>Sound</category>
+
+<subcategory>Analyzer</subcategory>
+
+<usage>Application</usage>
+
+<type>Object</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+Amplitude amp;
+AudioIn in;
+
+void setup() {
+  size(640, 360);
+  background(255);
+    
+  // Create an Input stream which is routed into the Amplitude analyzer
+  amp = new Amplitude(this);
+  in = new AudioIn(this, 0);
+  in.start();
+  amp.input(in);
+}      
+
+void draw() {
+  println(amp.analyze());
+}
+]]></code>
+</example>
+
+<description><![CDATA[	
+This is a volume analyzer. It calculates the root mean square of the amplitude of each audio block and returns that value.
+]]></description>
+
+
+</root>

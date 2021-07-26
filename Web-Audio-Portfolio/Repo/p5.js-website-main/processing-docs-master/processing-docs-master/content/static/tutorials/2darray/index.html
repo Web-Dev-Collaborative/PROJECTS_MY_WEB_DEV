@@ -1,0 +1,206 @@
+<table width="650">
+    <tr>
+    <td>
+
+    <p class="license">
+      This tutorial is from the book <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a> by Daniel Shiffman, published by Morgan Kaufmann, &copy; 2008 Elsevier Inc. All rights reserved. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
+    </p>
+
+    <h1 style="line-height: 0.7em;">Two-dimensional Arrays</h1>
+    <h3 style="line-height: 0.7em;"><em>Daniel Shiffman</em></h3>
+
+   	
+
+    <p class="txt">
+      An <a href="http://www.processing.org/reference/Array.html">array</a> keeps track of multiple pieces of information in linear order, a one-dimensional list. However, the data associated with certain systems (a digital image, a board game, etc.) lives in two dimensions. To visualize this data, we need a multi-dimensional data structure, that is, a multi-dimensional array. A two-dimensional array is really nothing more than an array of arrays (a three-dimensional array is an array of arrays of arrays). Think of your dinner. You could have a one-dimensional list of everything you eat: 
+    </p>
+
+    <p class="txt">
+      <pre>(lettuce, tomatoes, steak, mashed potatoes, cake, ice cream)</pre> 
+</p>
+
+    <p class="txt">
+Or you could have a two-dimensional list of three courses, each containing two things you eat: 
+</p>
+
+    <p class="txt">
+<pre>(lettuce, tomatoes) and (steak, mashed potatoes) and (cake, ice cream)</pre> 
+</p>
+
+    <p class="txt">
+        In the case of an array, our old-fashioned one-dimensional array looks like this:<br />
+    </p>
+
+<pre>
+<span style="color: #E2661A;">int</span>[] myArray = {0,1,2,3};
+</pre>     
+
+    <p class="txt">
+      And a two-dimensional array looks like this:
+    </p>
+
+<pre>
+<span style="color: #E2661A;">int</span>[][] myArray = { {0,1,2,3}, {3,2,1,0}, {3,5,6,1}, {3,8,3,4} };   
+</pre>
+
+    <p class="txt">
+        For our purposes, it is better to think of the two-dimensional array as a matrix. A matrix can be thought of as a grid of numbers, arranged in rows and columns, kind of like a bingo board. We might write the two-dimensional array out as follows to illustrate this point: <br />
+    </p>
+
+<pre>
+<span style="color: #E2661A;">int</span>[][] myArray = {  {0, 1, 2, 3},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{3,&nbsp;2,&nbsp;1,&nbsp;0},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{3,&nbsp;5,&nbsp;6,&nbsp;1},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{3,&nbsp;8,&nbsp;3,&nbsp;4}&nbsp;&nbsp;};
+</pre>
+
+    <p class="txt">
+        We can use this type of data structure to encode information about an image. For example, the following grayscale image could be represented by the following array: 
+    </p>
+
+    <img src="imgs/grid.jpg"  class="tut">
+
+<pre>
+<span style="color: #E2661A;">int</span>[][] myArray = {  {236, 189, 189,   0},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{236,&nbsp;&nbsp;80,&nbsp;189,&nbsp;189},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{236,&nbsp;&nbsp;&nbsp;0,&nbsp;189,&nbsp;&nbsp;80},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{236,&nbsp;189,&nbsp;189,&nbsp;&nbsp;80}&nbsp;&nbsp;};
+</pre>
+
+    <p class="txt">
+        To walk through every element of a one-dimensional array, we use a  for  loop, that is:
+    </p>
+
+<pre> 
+<span style="color: #E2661A;">int</span>[] myArray = <span style="color: #33997E;">new</span> <span style="color: #E2661A;">int</span>[10];
+<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; myArray.<span style="color: #33997E;">length</span>; i++) {
+&nbsp;&nbsp;myArray[i]&nbsp;=&nbsp;0;
+}
+</pre>
+
+
+    <p class="txt">
+        For a two-dimensional array, in order to reference every element, we must use two nested loops. This gives us a counter variable for every column and every row in the matrix.<br />
+</p>
+
+<pre>
+<span style="color: #E2661A;">int</span> cols = 10;
+<span style="color: #E2661A;">int</span> rows = 10;
+<span style="color: #E2661A;">int</span>[][] myArray = <span style="color: #33997E;">new</span> <span style="color: #E2661A;">int</span>[cols][rows];
+
+<span style="color: #666666;">//&nbsp;Two&nbsp;nested&nbsp;loops&nbsp;allow&nbsp;us&nbsp;to&nbsp;visit&nbsp;every&nbsp;spot&nbsp;in&nbsp;a&nbsp;2D&nbsp;array.&nbsp;&nbsp;&nbsp;</span>
+<span style="color: #666666;">//&nbsp;For&nbsp;every&nbsp;column&nbsp;I,&nbsp;visit&nbsp;every&nbsp;row&nbsp;J.</span>
+<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; cols; i++) {
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &lt; rows; j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;myArray[i][j]&nbsp;=&nbsp;0;
+&nbsp;&nbsp;}
+}
+</pre>
+
+
+    <p class="txt">
+        For example, we might write a program using a two-dimensional array to draw a grayscale image.
+    </p>
+
+    <p class="txt">
+
+<img src="imgs/points.jpg"  class="tut">
+
+<pre>
+<span style="color: #006699;">size</span>(200,200);
+<span style="color: #E2661A;">int</span> cols = <span style="color: #D94A7A;">width</span>;
+<span style="color: #E2661A;">int</span> rows = <span style="color: #D94A7A;">height</span>;
+
+<span style="color: #666666;">//&nbsp;Declare&nbsp;2D&nbsp;array</span>
+<span style="color: #E2661A;">int</span>[][] myArray = <span style="color: #33997E;">new</span> <span style="color: #E2661A;">int</span>[cols][rows];
+
+<span style="color: #666666;">//&nbsp;Initialize&nbsp;2D&nbsp;array&nbsp;values</span>
+<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; cols; i++) {
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &lt; rows; j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;myArray[i][j]&nbsp;=&nbsp;<span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(255));
+&nbsp;&nbsp;}
+}
+
+<span style="color: #666666;">//&nbsp;Draw&nbsp;points</span>
+<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; cols; i++) {
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &lt; rows; j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(myArray[i][j]);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">point</span>(i,j);
+&nbsp;&nbsp;}
+}
+</pre>
+
+    <p class="txt">
+      A two-dimensional array can also be used to store objects, which is especially convenient for programming sketches that involve some sort of "grid"  or "board."  The following example displays a grid of Cell objects stored in a two-dimensional array. Each cell is a rectangle whose brightness oscillates from 0-255 with a sine function.  
+    </p>
+
+<img src="imgs/cells.jpg"  class="tut">
+
+<pre>
+<span style="color: #666666;">//&nbsp;2D&nbsp;Array&nbsp;of&nbsp;objects</span>
+Cell[][]&nbsp;grid;
+
+<span style="color: #666666;">//&nbsp;Number&nbsp;of&nbsp;columns&nbsp;and&nbsp;rows&nbsp;in&nbsp;the&nbsp;grid</span>
+<span style="color: #E2661A;">int</span> cols = 10;
+<span style="color: #E2661A;">int</span> rows = 10;
+
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(200,200);
+&nbsp;&nbsp;grid&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Cell[cols][rows];
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; cols; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &lt; rows; j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Initialize each object</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid[i][j]&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Cell(i*20,j*20,20,20,i+j);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}
+
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+&nbsp;&nbsp;<span style="color: #666666;">// The counter variables i and j are also the column and row numbers and </span>
+&nbsp;&nbsp;<span style="color: #666666;">// are used as arguments to the constructor for each object in the grid.  </span>
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; cols; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &lt; rows; j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Oscillate and display each object</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid[i][j].oscillate();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid[i][j].display();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}
+
+<span style="color: #666666;">//&nbsp;A&nbsp;Cell&nbsp;object</span>
+<span style="color: #33997E;">class</span> Cell {
+&nbsp;&nbsp;<span style="color: #666666;">// A cell object knows about its location in the grid </span>
+&nbsp;&nbsp;<span style="color: #666666;">// as well as its size with the variables x,y,w,h</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> x,y;   <span style="color: #666666;">// x,y location</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> w,h;   <span style="color: #666666;">// width and height</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> angle; <span style="color: #666666;">// angle for oscillating brightness</span>
+
+&nbsp;&nbsp;<span style="color: #666666;">// Cell Constructor</span>
+&nbsp;&nbsp;Cell(<span style="color: #E2661A;">float</span> tempX, <span style="color: #E2661A;">float</span> tempY, <span style="color: #E2661A;">float</span> tempW, <span style="color: #E2661A;">float</span> tempH, <span style="color: #E2661A;">float</span> tempAngle) {
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;tempX;
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;=&nbsp;tempY;
+&nbsp;&nbsp;&nbsp;&nbsp;w&nbsp;=&nbsp;tempW;
+&nbsp;&nbsp;&nbsp;&nbsp;h&nbsp;=&nbsp;tempH;
+&nbsp;&nbsp;&nbsp;&nbsp;angle&nbsp;=&nbsp;tempAngle;
+&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">// Oscillation means increase angle</span>
+&nbsp;&nbsp;<span style="color: #33997E;">void</span> oscillate() {
+&nbsp;&nbsp;&nbsp;&nbsp;angle&nbsp;+=&nbsp;0.02;&nbsp;
+&nbsp;&nbsp;}
+
+&nbsp;&nbsp;<span style="color: #33997E;">void</span> display() {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(255);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Color calculated using sine wave</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">fill</span>(127+127*<span style="color: #006699;">sin</span>(angle));
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">rect</span>(x,y,w,h); 
+&nbsp;&nbsp;}
+}
+</pre>
+
+	
+</td>
+	</tr>
+  </table>
+

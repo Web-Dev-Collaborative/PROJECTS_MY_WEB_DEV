@@ -1,0 +1,58 @@
+/**
+ * Smoke Particle System
+ * by Daniel Shiffman.
+ *
+ * A basic smoke effect using a particle system. Each particle
+ * is rendered as an alpha masked image.
+ */
+
+// @pjs preload must be used to preload media if the program is
+// running with Processing.js
+/* @pjs preload="texture.png"; */
+
+var ps;
+
+function preload() {
+  img = loadImage("texture.png");
+}
+
+function setup() {
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
+  ps = new ParticleSystem(0,createVector(width/2,height-60),img);
+}
+
+function draw() {
+  background(0);
+
+  // Calculate a "wind" force based on mouse horizontal position
+  var dx = map(mouseX,0,width,-0.2,0.2);
+  var wind = createVector(dx,0);
+  ps.applyForce(wind);
+  ps.run();
+  for (var i = 0; i < 2; i++) {
+    ps.addParticle();
+  }
+
+  // Draw an arrow representing the wind force
+  drawVector(wind, createVector(width/2,50,0),500);
+
+}
+
+// Renders a vector object 'v' as an arrow and a location 'loc'
+function drawVector(v, loc, scayl) {
+  push();
+  var arrowsize = 4;
+  // Translate to location to render vector
+  translate(loc.x,loc.y);
+  stroke(255);
+  // Call vector heading function to get direction (note that pointing up is a heading of 0) and rotate
+  rotate(v.heading());
+  // Calculate length of vector & scale it to be bigger or smaller if necessary
+  var len = v.mag()*scayl;
+  // Draw three lines to make an arrow (draw pointing up since we've rotate to the proper direction)
+  line(0,0,len,0);
+  line(len,0,len-arrowsize,+arrowsize/2);
+  line(len,0,len-arrowsize,-arrowsize/2);
+  pop();
+}

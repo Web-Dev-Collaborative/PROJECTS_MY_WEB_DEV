@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>releaseInterrupt()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.io.*;
+color bgcolor = 0;
+
+void setup() {
+  GPIO.pinMode(4, GPIO.INPUT);
+  GPIO.attachInterrupt(4, this, "pinEvent", GPIO.RISING);
+}
+
+void draw() {
+  background(bgcolor);
+}
+
+void pinEvent(int pin) {
+  println("Received interrupt");
+  bgcolor = color(255);
+  // disable further interrupts from occuring on this pin
+  GPIO.releaseInterrupt(pin);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Stops listening for interrupts on an input pin
+]]></description>
+
+<syntax>
+<c>GPIO</c>.releaseInterrupt()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>

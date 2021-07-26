@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>AudioDevice</name>
+
+<category>Sound</category>
+
+<subcategory>Configuration</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+AudioDevice myAudioServer;
+
+void setup() {
+  size(200, 200);
+  myAudioServer = new AudioDevice(this, 44100, 128);
+}
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Audio Device allows for configuring the audio server. If you need a low latency server you can reduce the buffer size. Allowed values are power of 2. For changing the sample rate pass the appropriate value in the constructor. 
+]]></description>
+
+<constructor>
+AudioDevice(<c>parent</c>, <c>samplerate</c>, <c>buffersize</c>)
+</constructor>
+<cparameter>
+<clabel>parent</clabel>
+<cdescription>PApplet: typically use "this"</cdescription>
+</cparameter>
+
+<cparameter>
+<clabel>sampleRate</clabel>
+<cdescription>int: samplerate (i.e. 44100/48000/96000) </cdescription>
+</cparameter>
+
+<cparameter>
+<clabel>bufferSize</clabel>
+<cdescription>int: buffersize (i.e. 32/64/128 ..) </cdescription>
+</cparameter>
+
+<related>
+Sound
+</related>
+
+<availability>1.0</availability>
+
+<type>Object</type>
+
+<partof>Library</partof>
+
+</root>
