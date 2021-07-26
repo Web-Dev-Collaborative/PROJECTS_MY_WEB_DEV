@@ -1,53 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Musician's Toolkit</title>
+    <script src="../dist/NexusUI.js"></script>
+    <script src="../api/js/jquery.js"></script>
+    <script src="js/Tone9.js"></script>
+    <meta name="viewport" content="width=200, initial-scale=1" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Musician's Toolkit</title>
-  <script src="../dist/NexusUI.js"></script>
-  <script src="../api/js/jquery.js"></script>
-  <script src="js/Tone9.js"></script>
-  <meta name="viewport" content="width=200, initial-scale=1">
-</head>
+  <body style="margin: 0; padding: 0">
+    <div style="font-size: 25px; margin: 10px">Testing Sandbox</div>
 
-<body style="margin:0;padding:0;">
+    <div id="target"></div>
+  </body>
+  <style>
+    body {
+      font-family: helvetica;
+    }
 
+    [nexus-ui] {
+      margin: 10px;
+      float: left;
+    }
 
-  <div style="font-size:25px;margin:10px;">
-    Testing Sandbox
-  </div>
+    #target {
+      width: 500px;
+      height: 500px;
+      border: dashed 2px #333;
+    }
+  </style>
+  <script>
+    var thing = new Nexus.Sequencer("#target", {
+      size: [400, 200],
+      mode: "toggle",
+      rows: 5,
+      columns: 10,
+    });
 
-  <div id="target"></div>
-
-
-</body>
-<style>
-  body {
-    font-family: helvetica;
-  }
-
-  [nexus-ui] {
-    margin: 10px;
-    float: left;
-  }
-
-  #target {
-    width: 500px;
-    height: 500px;
-    border: dashed 2px #333;
-  }
-</style>
-<script>
-  var thing = new Nexus.Sequencer('#target',{
-    'size': [400,200],
-    'mode': 'toggle',
-    'rows': 5,
-    'columns': 10,
-   })
-
-  thing.on('change', x => console.log(x))
-
-
-</script>
-
+    thing.on("change", (x) => console.log(x));
+  </script>
 </html>

@@ -3,8 +3,8 @@ name: Update i18n files
 on:
   push:
     paths:
-    - 'src/data/reference/*.json'
-    - 'src/data/*.yml'
+      - "src/data/reference/*.json"
+      - "src/data/*.yml"
 
 jobs:
   build:
@@ -29,6 +29,6 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
-          message: 'Automatic update of translation files (${{ github.sha }})'
+          message: "Automatic update of translation files (${{ github.sha }})"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

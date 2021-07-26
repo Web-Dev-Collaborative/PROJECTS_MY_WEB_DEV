@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
-import NexusUI from './lib/main';
+import NexusUI from "./lib/main";
 
 export default NexusUI;

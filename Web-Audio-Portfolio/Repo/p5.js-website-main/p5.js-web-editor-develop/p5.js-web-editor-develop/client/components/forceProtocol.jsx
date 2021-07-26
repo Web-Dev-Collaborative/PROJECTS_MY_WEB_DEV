@@ -33,28 +33,26 @@ const redirectToProtocol = (
  * disable: if true, the redirection will not happen but what should
  *          have happened will be logged to the console
  */
-const forceProtocol = ({
-  targetProtocol = 'https',
-  sourceProtocol,
-  disable = false
-}) => (WrappedComponent) =>
-  class ForceProtocol extends React.Component {
-    static propTypes = {};
+const forceProtocol =
+  ({ targetProtocol = 'https', sourceProtocol, disable = false }) =>
+  (WrappedComponent) =>
+    class ForceProtocol extends React.Component {
+      static propTypes = {};
 
-    componentDidMount() {
-      redirectToProtocol(targetProtocol, { appendSource: true, disable });
-    }
-
-    componentWillUnmount() {
-      if (sourceProtocol != null) {
-        redirectToProtocol(sourceProtocol, { appendSource: false, disable });
+      componentDidMount() {
+        redirectToProtocol(targetProtocol, { appendSource: true, disable });
       }
-    }
 
-    render() {
-      return <WrappedComponent {...this.props} />;
-    }
-  };
+      componentWillUnmount() {
+        if (sourceProtocol != null) {
+          redirectToProtocol(sourceProtocol, { appendSource: false, disable });
+        }
+      }
+
+      render() {
+        return <WrappedComponent {...this.props} />;
+      }
+    };
 
 const protocols = {
   http: 'http:',

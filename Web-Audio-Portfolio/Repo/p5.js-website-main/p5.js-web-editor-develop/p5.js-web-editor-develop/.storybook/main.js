@@ -9,21 +9,21 @@ module.exports = {
     '@storybook/addon-links',
     'storybook-addon-theme-playground/dist/register'
   ],
-  webpackFinal: async config => {
+  webpackFinal: async (config) => {
     // do mutation to the config
 
     const rules = config.module.rules;
 
     // modify storybook's file-loader rule to avoid conflicts with svgr
-    const fileLoaderRule = rules.find(rule => rule.test.test('.svg'));
+    const fileLoaderRule = rules.find((rule) => rule.test.test('.svg'));
     fileLoaderRule.exclude = path.resolve(__dirname, '../client');
 
     // use svgr for svg files
     rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    })
+      use: ['@svgr/webpack']
+    });
 
     return config;
-  },
+  }
 };

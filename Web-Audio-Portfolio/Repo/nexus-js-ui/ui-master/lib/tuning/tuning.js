@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-import math from '../util/math';
+import math from "../util/math";
 
 export default class Tune {
   constructor() {
@@ -9,20 +9,14 @@ export default class Tune {
 
     // i/o modes
     this.mode = {
-      output: 'frequency',
-      input: 'step'
+      output: "frequency",
+      input: "step",
     };
 
     // ET major
     this.etmajor = [
-      261.62558,
-      293.664764,
-      329.627563,
-      349.228241,
-      391.995422,
-      440,
-      493.883301,
-      523.25116
+      261.62558, 293.664764, 329.627563, 349.228241, 391.995422, 440,
+      493.883301, 523.25116,
     ];
 
     // Root frequency.
@@ -36,11 +30,11 @@ export default class Tune {
   note(input, octave) {
     let newvalue;
 
-    if (this.mode.output === 'frequency') {
+    if (this.mode.output === "frequency") {
       newvalue = this.frequency(input, octave);
-    } else if (this.mode.output === 'ratio') {
+    } else if (this.mode.output === "ratio") {
       newvalue = this.ratio(input, octave);
-    } else if (this.mode.output === 'MIDI') {
+    } else if (this.mode.output === "MIDI") {
       newvalue = this.MIDI(input, octave);
     } else {
       newvalue = this.frequency(input, octave);
@@ -51,7 +45,7 @@ export default class Tune {
 
   /* Return freq data */
   frequency(stepIn, octaveIn) {
-    if (this.mode.input === 'midi' || this.mode.input === 'MIDI') {
+    if (this.mode.input === "midi" || this.mode.input === "MIDI") {
       this.stepIn += 60;
     }
 
@@ -84,7 +78,7 @@ export default class Tune {
   /* Force return ratio data */
 
   ratio(stepIn, octaveIn) {
-    if (this.mode.input === 'midi' || this.mode.input === 'MIDI') {
+    if (this.mode.input === "midi" || this.mode.input === "MIDI") {
       this.stepIn += 60;
     }
 

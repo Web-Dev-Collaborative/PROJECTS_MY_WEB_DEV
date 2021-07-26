@@ -1,25 +1,25 @@
-'use strict';
+"use strict";
 
-let svg = require('../util/svg');
-let dom = require('../util/dom');
-let Interface = require('../core/interface');
-let ButtonTemplate = require('../components/buttontemplate');
-let MatrixModel = require('../models/matrix');
-let CounterModel = require('../models/counter');
-let Interval = require('../time/interval');
-let touch = require('../util/touch');
+let svg = require("../util/svg");
+let dom = require("../util/dom");
+let Interface = require("../core/interface");
+let ButtonTemplate = require("../components/buttontemplate");
+let MatrixModel = require("../models/matrix");
+let CounterModel = require("../models/counter");
+let Interval = require("../time/interval");
+let touch = require("../util/touch");
 
 class MatrixCell extends ButtonTemplate {
   constructor() {
-    let options = ['value'];
+    let options = ["value"];
 
     let defaults = {
       size: [80, 80],
       target: false,
-      mode: 'toggle',
+      mode: "toggle",
       value: 0,
       paddingRow: 2,
-      paddingColumn: 2
+      paddingColumn: 2,
     };
 
     super(arguments, options, defaults);
@@ -50,17 +50,17 @@ class MatrixCell extends ButtonTemplate {
   }
 
   buildFrame() {
-    this.element = svg.create('svg');
-    this.element.setAttribute('width', this.width);
-    this.element.setAttribute('height', this.height);
-    this.element.style.top = '0px';
-    this.element.style.left = '0px';
-    this.element.style.position = 'absolute';
+    this.element = svg.create("svg");
+    this.element.setAttribute("width", this.width);
+    this.element.setAttribute("height", this.height);
+    this.element.style.top = "0px";
+    this.element.style.left = "0px";
+    this.element.style.position = "absolute";
     this.parent.appendChild(this.element);
   }
 
   buildInterface() {
-    this.pad = svg.create('rect');
+    this.pad = svg.create("rect");
     this.element.appendChild(this.pad);
 
     this.interactionTarget = this.pad;
@@ -73,14 +73,14 @@ class MatrixCell extends ButtonTemplate {
         this.matrix.paintbrush = !this.state;
         this.down(this.matrix.paintbrush);
       };
-      this.pad.addEventListener('mouseover', () => {
+      this.pad.addEventListener("mouseover", () => {
         if (this.matrix.interacting) {
           this.down(this.matrix.paintbrush);
         }
       });
 
       this.move = () => {};
-      this.pad.addEventListener('mousemove', e => {
+      this.pad.addEventListener("mousemove", (e) => {
         if (this.matrix.interacting) {
           if (!this.offset) {
             this.offset = dom.findPosition(this.element);
@@ -93,12 +93,12 @@ class MatrixCell extends ButtonTemplate {
       this.release = () => {
         this.matrix.interacting = false;
       };
-      this.pad.addEventListener('mouseup', () => {
+      this.pad.addEventListener("mouseup", () => {
         if (this.matrix.interacting) {
           this.up();
         }
       });
-      this.pad.addEventListener('mouseout', () => {
+      this.pad.addEventListener("mouseout", () => {
         if (this.matrix.interacting) {
           this.up();
         }
@@ -107,26 +107,26 @@ class MatrixCell extends ButtonTemplate {
   }
 
   sizeInterface() {
-    this.pad.setAttribute('x', this.paddingColumn / 2);
-    this.pad.setAttribute('y', this.paddingRow / 2);
+    this.pad.setAttribute("x", this.paddingColumn / 2);
+    this.pad.setAttribute("y", this.paddingRow / 2);
     if (this.width > 2) {
-      this.pad.setAttribute('width', this.width - this.paddingColumn);
+      this.pad.setAttribute("width", this.width - this.paddingColumn);
     } else {
-      this.pad.setAttribute('width', this.width);
+      this.pad.setAttribute("width", this.width);
     }
     if (this.height > 2) {
-      this.pad.setAttribute('height', this.height - this.paddingRow);
+      this.pad.setAttribute("height", this.height - this.paddingRow);
     } else {
-      this.pad.setAttribute('height', this.height);
+      this.pad.setAttribute("height", this.height);
     }
-    this.pad.setAttribute('fill', this.matrix.colors.fill);
+    this.pad.setAttribute("fill", this.matrix.colors.fill);
   }
 
   render() {
     if (!this.state) {
-      this.pad.setAttribute('fill', this.matrix.colors.fill);
+      this.pad.setAttribute("fill", this.matrix.colors.fill);
     } else {
-      this.pad.setAttribute('fill', this.matrix.colors.accent);
+      this.pad.setAttribute("fill", this.matrix.colors.accent);
     }
   }
 }
@@ -174,13 +174,13 @@ class MatrixCell extends ButtonTemplate {
 
 export default class Sequencer extends Interface {
   constructor() {
-    let options = ['value'];
+    let options = ["value"];
 
     let defaults = {
       size: [400, 200],
-      mode: 'toggle',
+      mode: "toggle",
       rows: 5,
-      columns: 10
+      columns: 10,
     };
 
     super(arguments, options, defaults);
@@ -198,7 +198,7 @@ export default class Sequencer extends Interface {
      * The interval object which controls timing and sequence scheduling.
      * @type {interval}
      */
-    this.interval = new Interval(200, function() {}, false); // jshint ignore:line
+    this.interval = new Interval(200, function () {}, false); // jshint ignore:line
 
     /**
      * A Matrix model containing methods for manipulating the sequencer's array of values. To learn how to manipulate the matrix, read about the matrix model.
@@ -220,11 +220,11 @@ export default class Sequencer extends Interface {
   }
 
   buildFrame() {
-    this.element = document.createElement('div');
-    this.element.style.position = 'relative';
-    this.element.style.display = 'block';
-    this.element.style.width = '100%';
-    this.element.style.height = '100%';
+    this.element = document.createElement("div");
+    this.element.style.position = "relative";
+    this.element.style.display = "block";
+    this.element.style.width = "100%";
+    this.element.style.height = "100%";
     this.parent.appendChild(this.element);
     if (touch.exists) {
       this.addTouchListeners();
@@ -237,8 +237,8 @@ export default class Sequencer extends Interface {
       let location = this.matrix.locate(i);
       // returns {row,col}
 
-      let container = document.createElement('span');
-      container.style.position = 'absolute';
+      let container = document.createElement("span");
+      container.style.position = "absolute";
 
       let cell = new MatrixCell(
         container,
@@ -250,7 +250,7 @@ export default class Sequencer extends Interface {
           mode: this.mode,
           matrix: this,
           paddingRow: this.paddingRow,
-          paddingColumn: this.paddingColumn
+          paddingColumn: this.paddingColumn,
         },
         this.keyChange.bind(this, i)
       );
@@ -276,8 +276,8 @@ export default class Sequencer extends Interface {
 
     for (let i = 0; i < this.cells.length; i++) {
       let container = this.cells[i].parent;
-      container.style.left = this.cells[i].column * cellWidth + 'px';
-      container.style.top = this.cells[i].row * cellHeight + 'px';
+      container.style.left = this.cells[i].column * cellWidth + "px";
+      container.style.top = this.cells[i].row * cellHeight + "px";
       this.cells[i].resize(cellWidth, cellHeight);
     }
   }
@@ -320,20 +320,20 @@ export default class Sequencer extends Interface {
     var data = {
       row: cell.row,
       column: cell.column,
-      state: on
+      state: on,
     };
-    this.emit('change', data);
+    this.emit("change", data);
   }
 
   render() {
     if (this.stepper.value >= 0) {
       this.matrix.iterate((r, c, i) => {
         if (c === this.stepper.value) {
-          this.cells[i].pad.setAttribute('stroke', this.colors.mediumLight);
-          this.cells[i].pad.setAttribute('stroke-width', '1');
-          this.cells[i].pad.setAttribute('stroke-opacity', '1');
+          this.cells[i].pad.setAttribute("stroke", this.colors.mediumLight);
+          this.cells[i].pad.setAttribute("stroke-width", "1");
+          this.cells[i].pad.setAttribute("stroke-opacity", "1");
         } else {
-          this.cells[i].pad.setAttribute('stroke', 'none');
+          this.cells[i].pad.setAttribute("stroke", "none");
         }
       });
     }
@@ -363,7 +363,7 @@ export default class Sequencer extends Interface {
   */
   next() {
     this.stepper.next();
-    this.emit('step', this.matrix.column(this.stepper.value).reverse());
+    this.emit("step", this.matrix.column(this.stepper.value).reverse());
     this.render();
   }
 
@@ -375,7 +375,7 @@ export default class Sequencer extends Interface {
 
     this.currentElement = false;
 
-    this.element.addEventListener('touchstart', e => {
+    this.element.addEventListener("touchstart", (e) => {
       let element = document.elementFromPoint(
         e.targetTouches[0].clientX,
         e.targetTouches[0].clientY
@@ -388,7 +388,7 @@ export default class Sequencer extends Interface {
       e.stopPropagation();
     });
 
-    this.element.addEventListener('touchmove', e => {
+    this.element.addEventListener("touchmove", (e) => {
       let element = document.elementFromPoint(
         e.targetTouches[0].clientX,
         e.targetTouches[0].clientY
@@ -408,7 +408,7 @@ export default class Sequencer extends Interface {
       e.stopPropagation();
     });
 
-    this.element.addEventListener('touchend', e => {
+    this.element.addEventListener("touchend", (e) => {
       // no touches to calculate because none remaining
       let cell = this.cells[this.currentElement];
       cell.up();

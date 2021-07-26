@@ -1,7 +1,13 @@
-'use strict';
+"use strict";
 
 exports.isObject = (obj) => {
-  if (typeof obj === 'object' && !Array.isArray(obj) && obj !== null && obj instanceof SVGElement === false && obj instanceof HTMLElement === false ) {
+  if (
+    typeof obj === "object" &&
+    !Array.isArray(obj) &&
+    obj !== null &&
+    obj instanceof SVGElement === false &&
+    obj instanceof HTMLElement === false
+  ) {
     return true;
   } else {
     return false;
@@ -11,8 +17,17 @@ exports.isObject = (obj) => {
 // Restricts input for the given textbox to the given inputFilter function
 // cf https://stackoverflow.com/a/469362
 exports.setInputFilter = (textbox, inputFilter) => {
-  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
-    textbox.addEventListener(event, function() {
+  [
+    "input",
+    "keydown",
+    "keyup",
+    "mousedown",
+    "mouseup",
+    "select",
+    "contextmenu",
+    "drop",
+  ].forEach(function (event) {
+    textbox.addEventListener(event, function () {
       if (inputFilter(this.value)) {
         this.oldValue = this.value;
         this.oldSelectionStart = this.selectionStart;
@@ -26,4 +41,3 @@ exports.setInputFilter = (textbox, inputFilter) => {
     });
   });
 };
-

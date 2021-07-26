@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Limit a number to within a minimum and maximum
@@ -12,12 +12,12 @@
  * Nexus.clip(5,0,10)    // returns 5
  */
 
-exports.clip = (value,min,max) => {
-  return Math.min(Math.max(value,min),max);
+exports.clip = (value, min, max) => {
+  return Math.min(Math.max(value, min), max);
 };
 
-exports.normalize = (value,min,max) => {
-  return ( (value-min) / (max-min) );
+exports.normalize = (value, min, max) => {
+  return (value - min) / (max - min);
 };
 
 /**
@@ -36,23 +36,23 @@ exports.scale = (inNum, inMin, inMax, outMin, outMax) => {
   if (inMin === inMax) {
     return outMin;
   }
-  return (((inNum - inMin) * (outMax - outMin)) / (inMax - inMin)) + outMin;
+  return ((inNum - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 };
 
-exports.toPolar = (x,y) => {
-  var r = Math.sqrt(x*x + y*y);
+exports.toPolar = (x, y) => {
+  var r = Math.sqrt(x * x + y * y);
 
-  var theta = Math.atan2(y,x);
+  var theta = Math.atan2(y, x);
   if (theta < 0) {
-    theta = theta + (2 * Math.PI);
+    theta = theta + 2 * Math.PI;
   }
-  return {radius: r, angle: theta};
+  return { radius: r, angle: theta };
 };
 
-exports.toCartesian = function(radius, angle){
+exports.toCartesian = function (radius, angle) {
   var cos = Math.cos(angle);
   var sin = Math.sin(angle);
-  return {x: radius*cos, y: radius*sin*-1};
+  return { x: radius * cos, y: radius * sin * -1 };
 };
 /*
 exports.polarToCartesian(centerX, centerY, radius, angleInDegrees) {
@@ -64,9 +64,7 @@ exports.polarToCartesian(centerX, centerY, radius, angleInDegrees) {
   };
 }  */
 
-
-
-exports.prune = function(data, scale) {
+exports.prune = function (data, scale) {
   return parseFloat(data.toFixed(scale));
 };
 
@@ -81,8 +79,8 @@ exports.invert = function (inNum) {
  * @example
  * Nexus.mtof(60)  // returns the frequency number of Middle C
  */
-exports.mtof = function(midi) {
-  return Math.pow(2, ((midi-69)/12)) * 440;
+exports.mtof = function (midi) {
+  return Math.pow(2, (midi - 69) / 12) * 440;
 };
 
 /**
@@ -95,7 +93,7 @@ exports.mtof = function(midi) {
  * Nexus.interp(0.5,2,4)   // returns 3
  * Nexus.interp(0.1,0,10)     // returns 1
  */
-exports.interp = function(loc,min,max) {
+exports.interp = function (loc, min, max) {
   return loc * (max - min) + min;
 };
 
@@ -106,8 +104,8 @@ exports.interp = function(loc,min,max) {
  * Nexus.pick(1,2,3,4)   // returns 1, 2, 3, or 4
  * Nexus.pick(function1,function2)   // returns either function1 or function2
  */
-exports.pick = function() {
-  return arguments[~~(Math.random()*arguments.length)];
+exports.pick = function () {
+  return arguments[~~(Math.random() * arguments.length)];
 };
 
 /**
@@ -120,8 +118,8 @@ exports.pick = function() {
  * Nexus.octave(1)   // returns 2
  * Nexus.octave(2)   // returns 4
  */
-exports.octave = function(num) {
-  return Math.pow(2,num);
+exports.octave = function (num) {
+  return Math.pow(2, num);
 };
 
 /**
@@ -133,14 +131,14 @@ exports.octave = function(num) {
  * Nexus.ri(10)    // returns random int from 0 to 10
  * Nexus.ri(20,2000) // returns random int from 20 to 2000
  */
-exports.ri = function(bound1,bound2) {
+exports.ri = function (bound1, bound2) {
   if (!bound2) {
     bound2 = bound1;
     bound1 = 0;
   }
-  var low = Math.min(bound1,bound2);
-  var high = Math.max(bound1,bound2);
-  return Math.floor(Math.random()*(high-low)+low);
+  var low = Math.min(bound1, bound2);
+  var high = Math.max(bound1, bound2);
+  return Math.floor(Math.random() * (high - low) + low);
 };
 
 /**
@@ -152,18 +150,17 @@ exports.ri = function(bound1,bound2) {
  * Nexus.rf(1)    // returns random float from 0 to 1
  * Nexus.rf(1,2) // returns random float from 1 to 2
  */
-exports.rf = function(bound1,bound2) {
+exports.rf = function (bound1, bound2) {
   if (!bound2) {
     bound2 = bound1;
     bound1 = 0;
   }
-  var low = Math.min(bound1,bound2);
-  var high = Math.max(bound1,bound2);
-  return Math.random()*(high-low)+low;
+  var low = Math.min(bound1, bound2);
+  var high = Math.max(bound1, bound2);
+  return Math.random() * (high - low) + low;
 };
 
-
-exports.cycle = function(input,min,max) {
+exports.cycle = function (input, min, max) {
   input++;
   if (input >= max) {
     input = min;
@@ -178,9 +175,9 @@ exports.cycle = function(input,min,max) {
  * @example
  * Nexus.average([0,2,4,6,8,10])   // returns 5
  */
-exports.average = function(data) {
+exports.average = function (data) {
   let total = 0;
-  for (var i=0;i<data.length;i++) {
+  for (var i = 0; i < data.length; i++) {
     total += data[i];
   }
   return total / data.length;
@@ -196,13 +193,13 @@ exports.average = function(data) {
  * @example
  * Nexus.distance(0,0,3,4)   // returns 5
  */
-exports.distance = function(x1,y1,x2,y2) {
+exports.distance = function (x1, y1, x2, y2) {
   let a = x1 - x2;
   let b = y1 - y2;
-  return Math.sqrt( a*a + b*b );
+  return Math.sqrt(a * a + b * b);
 };
 
-exports.gainToDB = function(gain) {
+exports.gainToDB = function (gain) {
   return 20 * Math.log10(gain);
 };
 
@@ -213,8 +210,8 @@ exports.gainToDB = function(gain) {
  * @example
  * Nexus.coin(0.1)   // returns 1 (10% of the time) or 0 (90% of the time)
  */
-exports.coin = function(odds=0.5) {
-  if (exports.rf(0,1) < odds) {
+exports.coin = function (odds = 0.5) {
+  if (exports.rf(0, 1) < odds) {
     return 1;
   } else {
     return 0;

@@ -76,8 +76,8 @@ class Toolbar extends React.Component {
     });
     const nameContainerClass = classNames({
       'toolbar__project-name-container': true,
-      'toolbar__project-name-container--editing': this.props.project
-        .isEditingName
+      'toolbar__project-name-container--editing':
+        this.props.project.isEditingName
     });
 
     const canEditProjectName = this.canEditProjectName();
@@ -159,7 +159,8 @@ class Toolbar extends React.Component {
             onBlur={this.handleProjectNameSave}
             onKeyPress={this.handleKeyPress}
           />
-          {(() => { // eslint-disable-line
+          {(() => {
+            // eslint-disable-line
             if (this.props.owner) {
               return (
                 <p className="toolbar__project-owner">

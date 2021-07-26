@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-let dom = require('../util/dom');
-let Interface = require('../core/interface');
+let dom = require("../util/dom");
+let Interface = require("../core/interface");
 
 /**
  * Oscilloscope
@@ -31,7 +31,7 @@ export default class Oscilloscope extends Interface {
     let options = [];
 
     let defaults = {
-      size: [300, 150]
+      size: [300, 150],
     };
 
     super(arguments, options, defaults);

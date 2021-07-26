@@ -7,7 +7,6 @@ if (process.env.NODE_ENV === 'development') {
   require('dotenv').config();
 }
 
-
 // react hmr being fucked up has to do with the multiple entries!!! cool.
 module.exports = {
   mode: 'development',
@@ -18,11 +17,9 @@ module.exports = {
       'core-js/modules/es6.array.iterator',
       'webpack-hot-middleware/client',
       'react-hot-loader/patch',
-      './client/index.jsx',
+      './client/index.jsx'
     ],
-    previewScripts: [
-      path.resolve(__dirname, '../client/utils/previewEntry.js')
-    ]
+    previewScripts: [path.resolve(__dirname, '../client/utils/previewEntry.js')]
   },
   output: {
     path: `${__dirname}`,
@@ -31,10 +28,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    modules: [
-      'client',
-      'node_modules'
-    ]
+    modules: ['client', 'node_modules']
   },
   plugins: [
     new ESLintPlugin({
@@ -48,23 +42,27 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: path.resolve(__dirname, '../translations/locales'), to: path.resolve(__dirname, 'locales') }
+        {
+          from: path.resolve(__dirname, '../translations/locales'),
+          to: path.resolve(__dirname, 'locales')
+        }
       ]
-    }
-    )
+    })
   ],
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: [/node_modules/, /.+\.config.js/],
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
-            plugins: ['react-hot-loader/babel'],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+              plugins: ['react-hot-loader/babel']
+            }
           }
-        }]
+        ]
       },
       {
         test: /main\.scss$/,
@@ -118,10 +116,12 @@ module.exports = {
         use: {
           loader: 'sass-extract-loader',
           options: {
-            plugins: [{ plugin: 'sass-extract-js', options: { camelCase: false } }]
+            plugins: [
+              { plugin: 'sass-extract-js', options: { camelCase: false } }
+            ]
           }
         }
       }
-    ],
-  },
+    ]
+  }
 };

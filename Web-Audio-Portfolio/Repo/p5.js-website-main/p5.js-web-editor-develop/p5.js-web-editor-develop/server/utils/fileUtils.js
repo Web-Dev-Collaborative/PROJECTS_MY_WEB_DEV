@@ -67,8 +67,10 @@ export const STRING_REGEX = /(['"])((\\\1|.)*?)\1/gm;
 // these are files that have to be linked to with a blob url
 export const PLAINTEXT_FILE_REGEX = /.+\.(json|txt|csv|vert|frag|tsv|xml)$/i;
 // these are files that users would want to edit as text (maybe svg should be here?)
-export const TEXT_FILE_REGEX = /.+\.(json|txt|csv|tsv|vert|frag|js|css|html|htm|jsx|xml)$/i;
+export const TEXT_FILE_REGEX =
+  /.+\.(json|txt|csv|tsv|vert|frag|js|css|html|htm|jsx|xml)$/i;
 export const NOT_EXTERNAL_LINK_REGEX = /^(?!(http:\/\/|https:\/\/))/;
 export const EXTERNAL_LINK_REGEX = /^(http:\/\/|https:\/\/)/;
 
-export const CREATE_FILE_REGEX = /.+\.(json|txt|csv|tsv|js|css|frag|vert|xml|html|htm)$/i;
+export const CREATE_FILE_REGEX =
+  /.+\.(json|txt|csv|tsv|js|css|frag|vert|xml|html|htm)$/i;

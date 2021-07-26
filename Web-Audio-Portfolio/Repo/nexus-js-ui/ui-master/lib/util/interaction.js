@@ -1,8 +1,7 @@
-'use strict';
+"use strict";
 
-import math from '../util/math';
-import ToggleModel from '../models/toggle';
-
+import math from "../util/math";
+import ToggleModel from "../models/toggle";
 
 /*
 how to use :
@@ -37,30 +36,34 @@ console.log( dial.interaction.value ); should be a normalized value.
 */
 
 export class Handle {
-
-  constructor(mode='absolute',direction='vertical',xbound=[0,100],ybound=[0,100]) {
+  constructor(
+    mode = "absolute",
+    direction = "vertical",
+    xbound = [0, 100],
+    ybound = [0, 100]
+  ) {
     this.mode = mode;
     this.direction = direction;
     this.previous = 0;
     this.value = 0;
     this.sensitivity = 1;
-    this.resize(xbound,ybound);
+    this.resize(xbound, ybound);
   }
 
-  resize(xbound,ybound) {
+  resize(xbound, ybound) {
     this.boundary = {
       min: {
         x: xbound[0],
-        y: ybound[0]
+        y: ybound[0],
       },
       max: {
         x: xbound[1],
-        y: ybound[1]
+        y: ybound[1],
       },
       center: {
-        x: (xbound[1] - xbound[0])/2 + xbound[0],
-        y: (ybound[1] - ybound[0])/2 + ybound[0]
-      }
+        x: (xbound[1] - xbound[0]) / 2 + xbound[0],
+        y: (ybound[1] - ybound[0]) / 2 + ybound[0],
+      },
     };
   }
 
@@ -72,39 +75,52 @@ export class Handle {
     return this._anchor;
   }
 
-
   update(mouse) {
-    if (this.mode==='relative') {
+    if (this.mode === "relative") {
       let increment = this.convertPositionToValue(mouse) - this.anchor;
-      if (Math.abs(increment) > 0.5) { increment = 0; }
+      if (Math.abs(increment) > 0.5) {
+        increment = 0;
+      }
       this.anchor = mouse;
       this.value = this.value + increment * this.sensitivity;
     } else {
       this.value = this.convertPositionToValue(mouse);
     }
-    this.value = math.clip(this.value,0,1);
+    this.value = math.clip(this.value, 0, 1);
   }
 
   convertPositionToValue(current) {
-    switch(this.direction) {
-      case 'radial':
-        let position = math.toPolar(current.x - this.boundary.center.x, current.y - this.boundary.center.y);
-        position = position.angle / (Math.PI*2);
-        position = ((position - 0.25) + 1) % 1;
+    switch (this.direction) {
+      case "radial":
+        let position = math.toPolar(
+          current.x - this.boundary.center.x,
+          current.y - this.boundary.center.y
+        );
+        position = position.angle / (Math.PI * 2);
+        position = (position - 0.25 + 1) % 1;
         return position;
-      case 'vertical':
-        return math.scale(current.y,this.boundary.min.y,this.boundary.max.y,0,1);
-      case 'horizontal':
-        return math.scale(current.x,this.boundary.min.x,this.boundary.max.x,0,1);
+      case "vertical":
+        return math.scale(
+          current.y,
+          this.boundary.min.y,
+          this.boundary.max.y,
+          0,
+          1
+        );
+      case "horizontal":
+        return math.scale(
+          current.x,
+          this.boundary.min.x,
+          this.boundary.max.x,
+          0,
+          1
+        );
     }
   }
-
 }
 
-
 export class Button {
-
-  constructor(mode='button') {
+  constructor(mode = "button") {
     this.mode = mode;
     this.state = new ToggleModel();
     this.paintbrush = false;
@@ -112,45 +128,44 @@ export class Button {
 
   click() {
     switch (this.mode) {
-      case 'impulse':
+      case "impulse":
         this.state.on();
         if (this.timeout) {
           clearTimeout(this.timeout);
         }
-        this.timeout = setTimeout(this.state.off.bind(this),30);
-        this.emit('change',this.state);
+        this.timeout = setTimeout(this.state.off.bind(this), 30);
+        this.emit("change", this.state);
         break;
-      case 'button':
+      case "button":
         this.turnOn();
-        this.emit('change',this.state);
+        this.emit("change", this.state);
         break;
-      case 'aftertouch':
+      case "aftertouch":
         this.position = {
-          x: math.clip(this.mouse.x / this.width,0,1),
-          y: math.clip(1 - this.mouse.y / this.height,0,1)
+          x: math.clip(this.mouse.x / this.width, 0, 1),
+          y: math.clip(1 - this.mouse.y / this.height, 0, 1),
         };
         this.turnOn();
-        this.emit('change',{
+        this.emit("change", {
           state: this.state,
           x: this.position.x,
           y: this.position.y,
         });
         break;
-      case 'toggle':
+      case "toggle":
         this.flip();
-        this.emit('change',this.state);
+        this.emit("change", this.state);
         break;
     }
-
   }
 
   move() {
-    if (this.mode==='aftertouch') {
+    if (this.mode === "aftertouch") {
       this.position = {
-        x: math.clip(this.mouse.x / this.width,0,1),
-        y: math.clip(1 - this.mouse.y / this.height,0,1)
+        x: math.clip(this.mouse.x / this.width, 0, 1),
+        y: math.clip(1 - this.mouse.y / this.height, 0, 1),
       };
-      this.emit('change',{
+      this.emit("change", {
         state: this.state,
         x: this.position.x,
         y: this.position.y,
@@ -161,17 +176,17 @@ export class Button {
 
   release() {
     switch (this.mode) {
-      case 'button':
+      case "button":
         this.turnOff();
-        this.emit('change',this.state);
+        this.emit("change", this.state);
         break;
-      case 'aftertouch':
+      case "aftertouch":
         this.turnOff();
         this.position = {
           x: this.mouse.x / this.width,
-          y: 1 - this.mouse.y / this.height
+          y: 1 - this.mouse.y / this.height,
         };
-        this.emit('change',{
+        this.emit("change", {
           state: this.state,
           x: this.position.x,
           y: this.position.y,

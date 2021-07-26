@@ -1,60 +1,62 @@
-'use strict';
+"use strict";
 
-let Interface = require('../core/interface');
-let Step = require('../models/step');
-let math = require('../util/math');
-let util = require('../util/util');
+let Interface = require("../core/interface");
+let Step = require("../models/step");
+let math = require("../util/math");
+let util = require("../util/util");
 
 /**
-* Number
-*
-* @description Number interface which is controllable by dragging or typing.
-*
-* @demo <span nexus-ui="number"></span>
-*
-* @example
-* var number = new Nexus.Number('#target')
-*
-* @example
-* var number = new Nexus.Number('#target',{
-*   'size': [60,30],
-*   'value': 0,
-*   'min': 0,
-*   'max': 20000,
-*   'step': 1
-* })
-*
-* @output
-* change
-* Fires any time the interface's value changes. <br>
-* The event data is the number value of the interface.
-*
-* @outputexample
-* number.on('change',function(v) {
-*   console.log(v);
-* })
-*
-*
-*/
-
+ * Number
+ *
+ * @description Number interface which is controllable by dragging or typing.
+ *
+ * @demo <span nexus-ui="number"></span>
+ *
+ * @example
+ * var number = new Nexus.Number('#target')
+ *
+ * @example
+ * var number = new Nexus.Number('#target',{
+ *   'size': [60,30],
+ *   'value': 0,
+ *   'min': 0,
+ *   'max': 20000,
+ *   'step': 1
+ * })
+ *
+ * @output
+ * change
+ * Fires any time the interface's value changes. <br>
+ * The event data is the number value of the interface.
+ *
+ * @outputexample
+ * number.on('change',function(v) {
+ *   console.log(v);
+ * })
+ *
+ *
+ */
 
 export default class Number extends Interface {
-
   constructor() {
-
-    let options = ['value'];
+    let options = ["value"];
 
     let defaults = {
-      'size': [60,30],
-      'value': 0,
-      'min': 0,
-      'max': 20000,
-      'step': 1
+      size: [60, 30],
+      value: 0,
+      min: 0,
+      max: 20000,
+      step: 1,
     };
 
-    super(arguments,options,defaults);
+    super(arguments, options, defaults);
 
-    this._value = new Step(this.settings.min,this.settings.max,this.settings.step,this.settings.value);
+    this._value = new Step(
+      this.settings.min,
+      this.settings.max,
+      this.settings.step,
+      this.settings.value
+    );
 
     /*
     Default: 2. How many decimal places to clip the number's visual rendering to. This does not affect number's actual value output -- for that, set the step property to .01, .1, or 1.
@@ -72,107 +74,116 @@ export default class Number extends Interface {
 
     this.init();
     this.render();
-
   }
 
   buildFrame() {
-    this.element = document.createElement('input');
-    this.element.type = 'text';
+    this.element = document.createElement("input");
+    this.element.type = "text";
 
-    this.element.addEventListener('blur', function () {
-      this.element.style.backgroundColor = this.colors.fill;
-      this.element.style.color = this.colors.dark;
-      if (this.element.value !== this.value) {
-        this.value = parseFloat(this.element.value);
-        this.render();
-      }
-    }.bind(this));
+    this.element.addEventListener(
+      "blur",
+      function () {
+        this.element.style.backgroundColor = this.colors.fill;
+        this.element.style.color = this.colors.dark;
+        if (this.element.value !== this.value) {
+          this.value = parseFloat(this.element.value);
+          this.render();
+        }
+      }.bind(this)
+    );
 
-    util.setInputFilter(this.element, function(value) {
-      return /^-?\d*\.?\d*$/.test(value); });
+    util.setInputFilter(this.element, function (value) {
+      return /^-?\d*\.?\d*$/.test(value);
+    });
 
-    this.element.addEventListener('keydown', function (e) {
-      if (e.which===13) {
-        this.element.blur();
-        this.value = this.element.value;
-        this.emit('change',this.value);
-        this.render();
-      }
-    }.bind(this), true);
+    this.element.addEventListener(
+      "keydown",
+      function (e) {
+        if (e.which === 13) {
+          this.element.blur();
+          this.value = this.element.value;
+          this.emit("change", this.value);
+          this.render();
+        }
+      }.bind(this),
+      true
+    );
 
     this.parent.appendChild(this.element);
-
   }
 
   sizeInterface() {
+    this._minDimension = Math.min(this.width, this.height);
 
-    this._minDimension = Math.min(this.width,this.height);
-
-    let styles = 'width: ' + this.width + 'px;';
-    styles += 'height: ' + this.height + 'px;';
-    styles += 'background-color: #e7e7e7;';
-    styles += 'color: #333;';
-    styles += 'font-family: arial;';
-    styles += 'font-weight: 500;';
-    styles += 'font-size:' + this._minDimension/2 + 'px;';
-  //  styles += 'highlight: #d18;';
-    styles += 'border: none;';
-    styles += 'outline: none;';
-    styles += 'padding: '+this._minDimension/4+'px '+this._minDimension/4+'px;';
-    styles += 'box-sizing: border-box;';
-    styles += 'userSelect: text;';
-    styles += 'mozUserSelect: text;';
-    styles += 'webkitUserSelect: text;';
+    let styles = "width: " + this.width + "px;";
+    styles += "height: " + this.height + "px;";
+    styles += "background-color: #e7e7e7;";
+    styles += "color: #333;";
+    styles += "font-family: arial;";
+    styles += "font-weight: 500;";
+    styles += "font-size:" + this._minDimension / 2 + "px;";
+    //  styles += 'highlight: #d18;';
+    styles += "border: none;";
+    styles += "outline: none;";
+    styles +=
+      "padding: " +
+      this._minDimension / 4 +
+      "px " +
+      this._minDimension / 4 +
+      "px;";
+    styles += "box-sizing: border-box;";
+    styles += "userSelect: text;";
+    styles += "mozUserSelect: text;";
+    styles += "webkitUserSelect: text;";
     this.element.style.cssText += styles;
 
     // to add eventually
     // var css = '#'+this.elementID+'::selection{ background-color: transparent }';
 
     this.element.value = this.value;
-
   }
 
   colorInterface() {
-      this.element.style.backgroundColor = this.colors.fill;
-      this.element.style.color = this.colors.dark;
+    this.element.style.backgroundColor = this.colors.fill;
+    this.element.style.color = this.colors.dark;
   }
 
   render() {
-
-    this.element.value = math.prune(this.value,this.decimalPlaces);
-
+    this.element.value = math.prune(this.value, this.decimalPlaces);
   }
 
   click() {
     this.hasMoved = false;
     this.element.readOnly = true;
-	  this.actual = this.value;
+    this.actual = this.value;
     this.initial = { y: this.mouse.y };
-    this.changeFactor = math.invert( this.mouse.x / this.width );
+    this.changeFactor = math.invert(this.mouse.x / this.width);
   }
 
   move() {
     this.hasMoved = true;
     if (this.clicked) {
-
-      let newvalue = this.actual - (this.mouse.y - this.initial.y) * ( math.clip( this.max-this.min, 0, 1000 ) / 200 ) * Math.pow(this.changeFactor,2);
+      let newvalue =
+        this.actual -
+        (this.mouse.y - this.initial.y) *
+          (math.clip(this.max - this.min, 0, 1000) / 200) *
+          Math.pow(this.changeFactor, 2);
       this.value = newvalue;
 
-  		this.render();
+      this.render();
       if (this._value.changed) {
-        this.emit('change',this.value);
+        this.emit("change", this.value);
       }
-
-  	}
+    }
   }
 
   release() {
     if (!this.hasMoved) {
       this.element.readOnly = false;
-  		this.element.focus();
-  		this.element.setSelectionRange(0, this.element.value.length);
-  		this.element.style.backgroundColor = this.colors.accent;
-  		this.element.style.color = this.colors.light;
+      this.element.focus();
+      this.element.setSelectionRange(0, this.element.value.length);
+      this.element.style.backgroundColor = this.colors.accent;
+      this.element.style.color = this.colors.light;
     } else {
       document.body.focus();
     }
@@ -187,14 +198,14 @@ export default class Number extends Interface {
     this.min = destination.min;
     this.max = destination.max;
     this.step = destination.step;
-    destination.on('change',(v) => {
+    destination.on("change", (v) => {
       this.passiveUpdate(v);
     });
-    this.on('change',(v) => {
+    this.on("change", (v) => {
       destination.value = v;
     });
     this.value = destination.value;
-  /*  return {
+    /*  return {
       listener1: listener1,
       listener2: listener2,
       destroy: () => {
@@ -219,7 +230,7 @@ export default class Number extends Interface {
   }
   set value(v) {
     this._value.update(v);
-    this.emit('change',this.value);
+    this.emit("change", this.value);
     this.render();
   }
 
@@ -258,5 +269,4 @@ export default class Number extends Interface {
   set step(v) {
     this._value.step = v;
   }
-
 }

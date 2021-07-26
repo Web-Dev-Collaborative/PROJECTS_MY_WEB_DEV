@@ -1,36 +1,33 @@
-'use strict';
+"use strict";
 
-let svg = require('../util/svg');
-let math = require('../util/math');
-let ToggleModel = require('../models/toggle');
-let Interface = require('../core/interface');
+let svg = require("../util/svg");
+let math = require("../util/math");
+let ToggleModel = require("../models/toggle");
+let Interface = require("../core/interface");
 
 /**
 Button Template
 */
 
 export default class ButtonTemplate extends Interface {
+  constructor(args, options, defaults) {
+    super(args, options, defaults);
 
-  constructor(args,options,defaults) {
-
-    super(args,options,defaults);
-
-    this.mode = this.settings.mode || 'button';
+    this.mode = this.settings.mode || "button";
 
     this.position = {
       x: 0,
-      y: 0
+      y: 0,
     };
 
     this._state = new ToggleModel(this.settings.state);
-
   }
 
   buildInterface() {
-    this.pad = svg.create('circle');
-    this.pad.setAttribute('fill', '#d18');
-    this.pad.setAttribute('stroke', '#d18');
-    this.pad.setAttribute('stroke-width', 4);
+    this.pad = svg.create("circle");
+    this.pad.setAttribute("fill", "#d18");
+    this.pad.setAttribute("stroke", "#d18");
+    this.pad.setAttribute("stroke-width", 4);
 
     this.element.appendChild(this.pad);
 
@@ -40,63 +37,62 @@ export default class ButtonTemplate extends Interface {
   }
 
   sizeInterface() {
-    this.pad.setAttribute('cx',this.width/2);
-    this.pad.setAttribute('cy',this.height/2);
-    this.pad.setAttribute('r', Math.min(this.width,this.height) / 2 - 2);
+    this.pad.setAttribute("cx", this.width / 2);
+    this.pad.setAttribute("cy", this.height / 2);
+    this.pad.setAttribute("r", Math.min(this.width, this.height) / 2 - 2);
   }
 
   render() {
     if (!this.state) {
-      this.pad.setAttribute('fill', this.colors.fill);
-      this.pad.setAttribute('stroke', this.colors.mediumLight);
+      this.pad.setAttribute("fill", this.colors.fill);
+      this.pad.setAttribute("stroke", this.colors.mediumLight);
     } else {
-      this.pad.setAttribute('fill', this.colors.accent);
-      this.pad.setAttribute('stroke', this.colors.accent);
+      this.pad.setAttribute("fill", this.colors.accent);
+      this.pad.setAttribute("stroke", this.colors.accent);
     }
   }
 
   down(paintbrush) {
     switch (this.mode) {
-      case 'impulse':
+      case "impulse":
         this.turnOn();
         if (this.timeout) {
           clearTimeout(this.timeout);
         }
-        this.timeout = setTimeout(this.turnOff.bind(this),30);
-    //    this.emit('change',this.state);
+        this.timeout = setTimeout(this.turnOff.bind(this), 30);
+        //    this.emit('change',this.state);
         break;
-      case 'button':
+      case "button":
         this.turnOn();
-    //    this.emit('change',this.state);
+        //    this.emit('change',this.state);
         break;
-      case 'aftertouch':
+      case "aftertouch":
         this.position = {
-          x: math.clip(this.mouse.x / this.width,0,1),
-          y: math.clip(1-this.mouse.y / this.height,0,1)
+          x: math.clip(this.mouse.x / this.width, 0, 1),
+          y: math.clip(1 - this.mouse.y / this.height, 0, 1),
         };
         this.turnOn();
-    //    this.emit('change',{
-    //      state: this.state,
-    //      x: this.position.x,
-    //      y: this.position.y,
-    //    });
+        //    this.emit('change',{
+        //      state: this.state,
+        //      x: this.position.x,
+        //      y: this.position.y,
+        //    });
         break;
-      case 'toggle':
+      case "toggle":
         this.flip(paintbrush);
-    //    this.emit('change',this.state);
+        //    this.emit('change',this.state);
         break;
     }
-
   }
 
   bend(mouse) {
-    if (this.mode==='aftertouch') {
+    if (this.mode === "aftertouch") {
       this.mouse = mouse || this.mouse;
       this.position = {
-        x: math.clip(this.mouse.x / this.width,0,1),
-        y: math.clip(1 - this.mouse.y / this.height,0,1)
+        x: math.clip(this.mouse.x / this.width, 0, 1),
+        y: math.clip(1 - this.mouse.y / this.height, 0, 1),
       };
-      this.emit('change',{
+      this.emit("change", {
         state: this.state,
         x: this.position.x,
         y: this.position.y,
@@ -107,21 +103,21 @@ export default class ButtonTemplate extends Interface {
 
   up() {
     switch (this.mode) {
-      case 'button':
+      case "button":
         this.turnOff();
-      //  this.emit('change',this.state);
+        //  this.emit('change',this.state);
         break;
-      case 'aftertouch':
+      case "aftertouch":
         this.turnOff();
         this.position = {
-          x: math.clip(this.mouse.x / this.width,0,1),
-          y: math.clip(1 - this.mouse.y / this.height,0,1)
+          x: math.clip(this.mouse.x / this.width, 0, 1),
+          y: math.clip(1 - this.mouse.y / this.height, 0, 1),
         };
-      //  this.emit('change',{
-      //    state: this.state,
-      //    x: this.position.x,
-      //    y: this.position.y,
-      //  });
+        //  this.emit('change',{
+        //    state: this.state,
+        //    x: this.position.x,
+        //    y: this.position.y,
+        //  });
         break;
     }
   }
@@ -148,14 +144,14 @@ export default class ButtonTemplate extends Interface {
   }
   set state(value) {
     this._state.flip(value);
-    if (this.mode==='aftertouch') {
-      this.emit('change',{
+    if (this.mode === "aftertouch") {
+      this.emit("change", {
         state: this.state,
         x: this.position.x,
         y: this.position.y,
       });
     } else {
-      this.emit('change',this.state);
+      this.emit("change", this.state);
     }
     this.render();
   }
@@ -167,14 +163,14 @@ export default class ButtonTemplate extends Interface {
   */
   flip(value) {
     this._state.flip(value);
-    if (this.mode==='aftertouch') {
-      this.emit('change',{
+    if (this.mode === "aftertouch") {
+      this.emit("change", {
         state: this.state,
         x: this.position.x,
         y: this.position.y,
       });
     } else {
-      this.emit('change',this.state);
+      this.emit("change", this.state);
     }
     this.render();
   }
@@ -185,15 +181,15 @@ export default class ButtonTemplate extends Interface {
   */
   turnOn(emitting) {
     this._state.on();
-    if (emitting!==false) {
-      if (this.mode==='aftertouch') {
-        this.emit('change',{
+    if (emitting !== false) {
+      if (this.mode === "aftertouch") {
+        this.emit("change", {
           state: this.state,
           x: this.position.x,
           y: this.position.y,
         });
       } else {
-        this.emit('change',this.state);
+        this.emit("change", this.state);
       }
     }
     this.render();
@@ -205,18 +201,17 @@ export default class ButtonTemplate extends Interface {
   */
   turnOff(emitting) {
     this._state.off();
-    if (emitting!==false) {
-      if (this.mode==='aftertouch') {
-        this.emit('change',{
+    if (emitting !== false) {
+      if (this.mode === "aftertouch") {
+        this.emit("change", {
           state: this.state,
           x: this.position.x,
           y: this.position.y,
         });
       } else {
-        this.emit('change',this.state);
+        this.emit("change", this.state);
       }
     }
     this.render();
   }
-
 }

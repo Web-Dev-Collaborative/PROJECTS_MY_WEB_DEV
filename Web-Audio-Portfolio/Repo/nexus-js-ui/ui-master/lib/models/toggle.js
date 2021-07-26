@@ -1,7 +1,6 @@
-'use strict';
+"use strict";
 
 export default class Toggle {
-
   constructor(state) {
     this.state = state || false;
   }
@@ -21,5 +20,4 @@ export default class Toggle {
   off() {
     this.state = false;
   }
-
 }
