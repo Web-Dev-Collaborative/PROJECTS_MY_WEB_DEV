@@ -1,8 +1,8 @@
-div.control-container{
+div.control-container {
   margin-top: 40px;
   display: flex;
 
-  div.amplitude-prev{
+  div.amplitude-prev {
     width: 18px;
     height: 24px;
     background: url("../img/prev.svg");
@@ -12,22 +12,22 @@ div.control-container{
     margin-top: 10px;
   }
 
-  div.amplitude-play-pause{
+  div.amplitude-play-pause {
     width: 30px;
     height: 44px;
     cursor: pointer;
     margin: auto;
 
-    &.amplitude-playing{
+    &.amplitude-playing {
       background: url("../img/pause.svg") no-repeat center;
     }
 
-    &.amplitude-paused{
+    &.amplitude-paused {
       background: url("../img/play.svg") no-repeat center;
     }
   }
 
-  div.amplitude-next{
+  div.amplitude-next {
     width: 18px;
     height: 24px;
     background: url("../img/next.svg");
@@ -42,19 +42,16 @@ div.control-container{
   Small only
 */
 @media screen and (max-width: 39.9375em) {
-
 }
 
 /*
   Medium only
 */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-
 }
 
 /*
   Large Only
 */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {
-
 }

@@ -45,7 +45,7 @@ import Callbacks from "../utilities/callbacks.js";
  *
  * @module events/TimeUpdate
  */
-let TimeUpdate = (function() {
+let TimeUpdate = (function () {
   /**
    * When the time updates on the active song, we sync the current time displays
    *
@@ -189,7 +189,7 @@ let TimeUpdate = (function() {
    * Returns public functions
    */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

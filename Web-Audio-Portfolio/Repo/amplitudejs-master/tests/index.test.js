@@ -231,7 +231,7 @@ test("AmplitudeJS adds songs correctly to songs array", () => {
     artist: "Emancipator",
     name: "Test New Song",
     album: "Test New Album",
-    url: "https://www.google.com/test.mp3"
+    url: "https://www.google.com/test.mp3",
   };
 
   var index = Amplitude.addSong(newSong);
@@ -248,7 +248,7 @@ test("AmplitudeJS adds songs correctly to playlist songs array", () => {
     artist: "Emancipator",
     name: "Test New Song",
     album: "Test New Album",
-    url: "https://www.google.com/test.mp3"
+    url: "https://www.google.com/test.mp3",
   };
 
   var index = Amplitude.addSongToPlaylist(newSong, "emancipator");
@@ -266,11 +266,11 @@ test("AmplitudeJS can add playlists", () => {
   var song = {
     artist: "Emancipator",
     name: "Test New Song",
-    album: "Test New Album"
+    album: "Test New Album",
   };
 
   var playlist = {
-    name: "test_playlist"
+    name: "test_playlist",
   };
 
   var newPlaylist = Amplitude.addPlaylist("test_playlist", playlist, song);
@@ -315,7 +315,7 @@ test("AmplitudeJS can play songs from an object", () => {
     artist: "Emancipator",
     name: "Test New Song",
     album: "Test New Album",
-    url: "https://emancipator.com/url"
+    url: "https://emancipator.com/url",
   };
 
   Amplitude.playNow(song);
@@ -475,7 +475,7 @@ test("AmplitudeJS returns the current version", () => {
 test("AmplitudeJS sets the meta data correctly", () => {
   var metaData = {
     artist: "Updated Artist",
-    album: "Updated Album"
+    album: "Updated Album",
   };
 
   Amplitude.setSongMetaData(3, metaData);
@@ -490,7 +490,7 @@ test("AmplitudeJS sets the meta data correctly", () => {
 test("AmplitudeJS sets the meta data correctly for a song in the playlist", () => {
   var metaData = {
     artist: "Updated Artist",
-    album: "Updated Album"
+    album: "Updated Album",
   };
 
   Amplitude.setSongMetaData(2, metaData, "trip_hop");
@@ -505,7 +505,7 @@ test("AmplitudeJS sets the meta data correctly for a song in the playlist", () =
 test("AmplitudeJS sets the proper meta data for the playlist", () => {
   var metaData = {
     name: "Updated Name",
-    created_by: "Dan"
+    created_by: "Dan",
   };
 
   Amplitude.setPlaylistMetaData("emancipator", metaData);

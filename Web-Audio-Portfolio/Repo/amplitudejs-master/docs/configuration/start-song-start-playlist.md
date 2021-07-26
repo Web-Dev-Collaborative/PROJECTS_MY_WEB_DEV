@@ -36,6 +36,7 @@ meta:
 ---
 
 # Setting the Starting Audio and Starting Playlist
+
 <carbon-ads/>
 When you initialize AmplitudeJS you can instruct AmplitudeJS to start at a certain song, certain playlist, and a certain song in a playlist.
 
@@ -44,10 +45,10 @@ When you initialize AmplitudeJS you can instruct AmplitudeJS to start at a certa
 To set a starting song, you simply need to add the `start_song` key and pass it the index of the song you want to start. By default this is 0, the first song in the array. To set it to the fourth song in the array, index 3, do this:
 
 ```javascript
-  Amplitude.init({
-    songs: ["..."],
-    start_song: 3
-  });
+Amplitude.init({
+  songs: ["..."],
+  start_song: 3,
+});
 ```
 
 ## Set Starting Playlist

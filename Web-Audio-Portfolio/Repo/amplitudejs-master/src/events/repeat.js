@@ -21,7 +21,7 @@ import RepeatElements from "../visual/repeatElements.js";
  *
  * @module events/Repeat
  */
-let Repeat = (function() {
+let Repeat = (function () {
   /**
    * Handles an event on the repeat button
    *
@@ -98,7 +98,7 @@ let Repeat = (function() {
     Returns the public facing methods.
   */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

@@ -1,12 +1,14 @@
 body {
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
 }
 
-button, input {
-  font-family: 'Source Sans Pro';
+button,
+input {
+  font-family: "Source Sans Pro";
 }
 
-button, input[type="submit"] {
+button,
+input[type="submit"] {
   cursor: pointer;
   border: none;
 }

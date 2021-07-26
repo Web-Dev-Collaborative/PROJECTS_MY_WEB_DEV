@@ -57,11 +57,11 @@ div#player-progress-bar-container {
   }
 
   progress#song-buffered-progress[value]::-webkit-progress-value {
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, 0.5);
     transition: width 0.1s ease;
   }
 
   progress#song-buffered-progress[value]::-moz-progress-bar {
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, 0.5);
   }
 }

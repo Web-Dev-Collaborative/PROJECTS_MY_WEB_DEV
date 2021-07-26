@@ -21,25 +21,24 @@
  * @param {Object} [inDict] An optional dictionary of initial event properties.
  * @return {Event} A new PointerEvent of type `inType` and initialized with properties from `inDict`.
  */
-(function(scope) {
-
+(function (scope) {
   var MOUSE_PROPS = [
-    'bubbles',
-    'cancelable',
-    'view',
-    'detail',
-    'screenX',
-    'screenY',
-    'clientX',
-    'clientY',
-    'ctrlKey',
-    'altKey',
-    'shiftKey',
-    'metaKey',
-    'button',
-    'relatedTarget',
-    'pageX',
-    'pageY'
+    "bubbles",
+    "cancelable",
+    "view",
+    "detail",
+    "screenX",
+    "screenY",
+    "clientX",
+    "clientY",
+    "ctrlKey",
+    "altKey",
+    "shiftKey",
+    "metaKey",
+    "button",
+    "relatedTarget",
+    "pageX",
+    "pageY",
   ];
 
   var MOUSE_DEFAULTS = [
@@ -58,21 +57,23 @@
     0,
     null,
     0,
-    0
+    0,
   ];
 
-  var NOP_FACTORY = function(){ return function(){}; };
+  var NOP_FACTORY = function () {
+    return function () {};
+  };
 
   var eventFactory = {
     // TODO(dfreedm): this is overridden by tap recognizer, needs review
     preventTap: NOP_FACTORY,
-    makeBaseEvent: function(inType, inDict) {
-      var e = document.createEvent('Event');
+    makeBaseEvent: function (inType, inDict) {
+      var e = document.createEvent("Event");
       e.initEvent(inType, inDict.bubbles || false, inDict.cancelable || false);
       e.preventTap = eventFactory.preventTap(e);
       return e;
     },
-    makeGestureEvent: function(inType, inDict) {
+    makeGestureEvent: function (inType, inDict) {
       inDict = inDict || Object.create(null);
 
       var e = this.makeBaseEvent(inType, inDict);
@@ -82,12 +83,12 @@
       }
       return e;
     },
-    makePointerEvent: function(inType, inDict) {
+    makePointerEvent: function (inType, inDict) {
       inDict = inDict || Object.create(null);
 
       var e = this.makeBaseEvent(inType, inDict);
       // define inherited MouseEvent properties
-      for(var i = 0, p; i < MOUSE_PROPS.length; i++) {
+      for (var i = 0, p; i < MOUSE_PROPS.length; i++) {
         p = MOUSE_PROPS[i];
         e[p] = inDict[p] || MOUSE_DEFAULTS[i];
       }
@@ -113,12 +114,12 @@
       e.pressure = pressure;
       e.tiltX = inDict.tiltX || 0;
       e.tiltY = inDict.tiltY || 0;
-      e.pointerType = inDict.pointerType || '';
+      e.pointerType = inDict.pointerType || "";
       e.hwTimestamp = inDict.hwTimestamp || 0;
       e.isPrimary = inDict.isPrimary || false;
-      e._source = inDict._source || '';
+      e._source = inDict._source || "";
       return e;
-    }
+    },
   };
 
   scope.eventFactory = eventFactory;

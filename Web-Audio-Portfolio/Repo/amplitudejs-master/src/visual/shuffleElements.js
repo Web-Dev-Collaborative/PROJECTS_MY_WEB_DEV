@@ -8,7 +8,7 @@ import config from "../config.js";
  * Handles all of the shuffle elements
  * @module visual/ShuffleElements
  */
-let ShuffleElements = (function() {
+let ShuffleElements = (function () {
   /**
    * Syncs the global shuffle button visual state.
    *
@@ -85,7 +85,7 @@ let ShuffleElements = (function() {
    */
   return {
     syncMain: syncMain,
-    syncPlaylist: syncPlaylist
+    syncPlaylist: syncPlaylist,
   };
 })();
 

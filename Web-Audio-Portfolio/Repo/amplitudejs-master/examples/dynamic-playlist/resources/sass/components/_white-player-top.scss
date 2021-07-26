@@ -1,25 +1,25 @@
-div.white-player-top{
+div.white-player-top {
   height: 64px;
   display: flex;
   width: 100%;
   align-items: center;
 
-  div{
+  div {
     flex: 1;
 
-    &.center{
+    &.center {
       text-align: center;
     }
   }
 
-  span.now-playing{
+  span.now-playing {
     color: #414344;
     font-family: "Lato", sans-serif;
     line-height: 64px;
     font-weight: 600;
   }
 
-  img.show-playlist{
+  img.show-playlist {
     float: right;
     cursor: pointer;
     margin-right: 10px;

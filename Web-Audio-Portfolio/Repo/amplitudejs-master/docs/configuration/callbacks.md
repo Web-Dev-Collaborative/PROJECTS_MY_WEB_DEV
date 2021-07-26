@@ -36,20 +36,20 @@ meta:
 ---
 
 # Callbacks
+
 <carbon-ads/>
 There are a variety of callbacks specific to AmplitudeJS that get called at certain times that the developer can bind to.
 
-
-| Callback            | Called When 										   
-| ------------------- |--------------------------------------------------------|
-| stop                | The active audio is stopped
-| initialized         | AmplitudeJS has finished initializing
-| song_repeated       | When the active audio has been repeated
-| next                | When the next audio has been played
-| prev                | When the prev audio has been played
-| album_change        | When the album has changed
-| song_change         | When the song has changed
-| playlist_changed    | When the playlist has changed.
+| Callback         | Called When                             |
+| ---------------- | --------------------------------------- |
+| stop             | The active audio is stopped             |
+| initialized      | AmplitudeJS has finished initializing   |
+| song_repeated    | When the active audio has been repeated |
+| next             | When the next audio has been played     |
+| prev             | When the prev audio has been played     |
+| album_change     | When the album has changed              |
+| song_change      | When the song has changed               |
+| playlist_changed | When the playlist has changed.          |
 
 To bind to a callback you add a function to your callbacks object with the key
 of one of the callbacks listed above. That key will be a function. When the
@@ -59,35 +59,35 @@ callback that has a method to increase the play count:
 
 ```javascript
 Amplitude.init({
-		 songs: [
-				 {
-						 "name": "Song Name 1",
-						 "artist": "Artist Name",
-						 "album": "Album Name",
-						 "url": "/song/url.mp3",
-						 "cover_art_url": "/cover/art/url.jpg"
-				 },
-				 {
-						 "name": "Song Name 2",
-						 "artist": "Artist Name",
-						 "album": "Album Name",
-						 "url": "/song/url.mp3",
-						 "cover_art_url": "/cover/art/url.jpg"
-				 },
-				 {
-						 "name": "Song Name 3",
-						 "artist": "Artist Name",
-						 "album": "Album Name",
-						 "url": "/song/url.mp3",
-						 "cover_art_url": "/cover/art/url.jpg"
-				 }
-		 ],
-		 callbacks: {
-			 stop: function(){
-				 console.log("Audio has been stopped.")
-			 }
-		 }
- });
+  songs: [
+    {
+      name: "Song Name 1",
+      artist: "Artist Name",
+      album: "Album Name",
+      url: "/song/url.mp3",
+      cover_art_url: "/cover/art/url.jpg",
+    },
+    {
+      name: "Song Name 2",
+      artist: "Artist Name",
+      album: "Album Name",
+      url: "/song/url.mp3",
+      cover_art_url: "/cover/art/url.jpg",
+    },
+    {
+      name: "Song Name 3",
+      artist: "Artist Name",
+      album: "Album Name",
+      url: "/song/url.mp3",
+      cover_art_url: "/cover/art/url.jpg",
+    },
+  ],
+  callbacks: {
+    stop: function () {
+      console.log("Audio has been stopped.");
+    },
+  },
+});
 ```
 
 Every time the audio has been stopped, a message is printed to the console.
@@ -96,26 +96,26 @@ There are also the native HTML 5 Audio events that the developer can bind too. F
 
 The list of native HTML 5 Audio Events that AmplitudeJS listens to are:
 
-* `abort`
-* `error`
-* `loadeddata`
-* `loadedmetadata`
-* `loadstart`
-* `pause`
-* `playing`
-* `play`
-* `progress`
-* `ratechange`
-* `seeked`
-* `seeking`
-* `stalled`
-* `suspend`
-* `timeupdate`
-* `volumechange`
-* `waiting`
-* `canplay`
-* `canplaythrough`
-* `durationchange`
-* `ended`
+- `abort`
+- `error`
+- `loadeddata`
+- `loadedmetadata`
+- `loadstart`
+- `pause`
+- `playing`
+- `play`
+- `progress`
+- `ratechange`
+- `seeked`
+- `seeking`
+- `stalled`
+- `suspend`
+- `timeupdate`
+- `volumechange`
+- `waiting`
+- `canplay`
+- `canplaythrough`
+- `durationchange`
+- `ended`
 
 Specifically the 'timeupdate' callback is super helpful because this gets triggered when the song time updates. This can be used to call other AmplitudeJS events such as song played percentage and set 3rd party visualizations.

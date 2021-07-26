@@ -1,19 +1,19 @@
-div.white-player-playlist-top{
+div.white-player-playlist-top {
   height: 64px;
   text-align: center;
   display: flex;
 
-  div{
+  div {
     flex: 1;
 
-    span.queue{
+    span.queue {
       color: #414344;
       font-family: "Lato", sans-serif;
       line-height: 64px;
       font-weight: 600;
     }
-  
-    img.close-playlist{
+
+    img.close-playlist {
       margin-right: 16px;
       margin-top: 22px;
       float: right;

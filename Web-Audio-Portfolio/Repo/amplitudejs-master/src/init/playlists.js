@@ -33,7 +33,7 @@ import SoundCloud from "../soundcloud/soundcloud.js";
  *
  * @module init/PlaylistsInitializer
  */
-let PlaylistsInitializer = (function() {
+let PlaylistsInitializer = (function () {
   /**
    * Initializes the playlists for AmplitudeJS
    *
@@ -146,7 +146,7 @@ let PlaylistsInitializer = (function() {
             /*
               If not an int, then is a dedicated song, just set the index.
             */
-            if (!Checks.isInt(config.playlists[key].songs[i]) ){
+            if (!Checks.isInt(config.playlists[key].songs[i])) {
               config.playlists[key].songs[i].index = i;
             }
           }
@@ -270,7 +270,7 @@ let PlaylistsInitializer = (function() {
     Returns the public facing methods
   */
   return {
-    initialize: initialize
+    initialize: initialize,
   };
 })();
 

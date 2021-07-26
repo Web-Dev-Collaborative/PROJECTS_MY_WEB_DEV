@@ -1,6 +1,6 @@
-div#amplitude-player{
-  background: #FFFFFF;
-  box-shadow: 0 2px 12px 8px rgba(0,0,0,0.10);
+div#amplitude-player {
+  background: #ffffff;
+  box-shadow: 0 2px 12px 8px rgba(0, 0, 0, 0.1);
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -10,21 +10,21 @@ div#amplitude-player{
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-  div#amplitude-player{
+  div#amplitude-player {
     flex-direction: column;
   }
 }
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-  div#amplitude-player{
+  div#amplitude-player {
     max-height: 715px;
-  } 
+  }
 }
 
 /* Large and up */
 @media screen and (min-width: 64em) {
- div#amplitude-player{
-   max-height: 715px;
- } 
+  div#amplitude-player {
+    max-height: 715px;
+  }
 }

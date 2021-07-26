@@ -139,7 +139,7 @@ import RepeatElements from "../visual/repeatElements.js";
  *
  * @module init/Initializer
  */
-let Initializer = (function() {
+let Initializer = (function () {
   /**
    * The main init function.  The user will call this through
    * Amplitude.init({}) and pass in their settings.
@@ -178,9 +178,9 @@ let Initializer = (function() {
     /*
       Set default artwork, if specified.
     */
-    setArt(userConfig)
-    
-    if( canAmplitudeRun( userConfig ) ){
+    setArt(userConfig);
+
+    if (canAmplitudeRun(userConfig)) {
       ready = true;
     }
 
@@ -189,7 +189,7 @@ let Initializer = (function() {
 			user wants to use visualizations or not before proceeding.
 		*/
     if (Fx.webAudioAPIAvailable()) {
-      if( Fx.determineUsingAnyFX() ){
+      if (Fx.determineUsingAnyFX()) {
         /*
           Configure the Web Audio API If It's available.
         */
@@ -198,61 +198,58 @@ let Initializer = (function() {
         /*
             Activates the audio context after an event for the user.
         */
-        document.documentElement.addEventListener(
-          "mousedown", function(){
-            if (config.context.state !== 'running') {
-              config.context.resume();
-            }
-          });
+        document.documentElement.addEventListener("mousedown", function () {
+          if (config.context.state !== "running") {
+            config.context.resume();
+          }
+        });
 
-          document.documentElement.addEventListener(
-          "keydown", function(){
-            if (config.context.state !== 'running') {
-              config.context.resume();
-            }
-          });
+        document.documentElement.addEventListener("keydown", function () {
+          if (config.context.state !== "running") {
+            config.context.resume();
+          }
+        });
 
-          document.documentElement.addEventListener(
-            "keyup", function(){
-              if (config.context.state !== 'running') {
-                config.context.resume();
-              }
-          });
-  
-          /*
+        document.documentElement.addEventListener("keyup", function () {
+          if (config.context.state !== "running") {
+            config.context.resume();
+          }
+        });
+
+        /*
             Set the user waveform settings if provided.
           */
-          if (
-            userConfig.waveforms != undefined &&
-            userConfig.waveforms.sample_rate != undefined
-          ) {
-            config.waveforms.sample_rate = userConfig.waveforms.sample_rate;
-          }
+        if (
+          userConfig.waveforms != undefined &&
+          userConfig.waveforms.sample_rate != undefined
+        ) {
+          config.waveforms.sample_rate = userConfig.waveforms.sample_rate;
+        }
 
-          /*
+        /*
             Initialize the waveform.
           */
-          WaveForm.init();
+        WaveForm.init();
 
-          /*
+        /*
             If the user is registering visualizations on init,
             we set them right away.
           */
-          if (
-            userConfig.visualizations != undefined &&
-            userConfig.visualizations.length > 0
-          ) {
-            /*
+        if (
+          userConfig.visualizations != undefined &&
+          userConfig.visualizations.length > 0
+        ) {
+          /*
                   Iterate over all of the visualizations and
                   register them in our player.
                 */
-            for (let i = 0; i < userConfig.visualizations.length; i++) {
-              Visualizations.register(
-                userConfig.visualizations[i].object,
-                userConfig.visualizations[i].params
-              );
-            }
+          for (let i = 0; i < userConfig.visualizations.length; i++) {
+            Visualizations.register(
+              userConfig.visualizations[i].object,
+              userConfig.visualizations[i].params
+            );
           }
+        }
       }
     } else {
       Debug.writeMessage(
@@ -263,7 +260,7 @@ let Initializer = (function() {
     /*
       Initialize songs
     */
-    initializeSongs( userConfig );
+    initializeSongs(userConfig);
 
     /*
       Initialize default live settings
@@ -372,11 +369,11 @@ let Initializer = (function() {
       If there are no songs and no defined starting playlist,
       then we go with the first song in the first playlist.
     */
-    if( config.songs.length == 0 && !userConfig.starting_playlist ){
-      let firstPlaylist = Object.keys( config.playlists )[0];
-      AudioNavigation.changeSongPlaylist( 
+    if (config.songs.length == 0 && !userConfig.starting_playlist) {
+      let firstPlaylist = Object.keys(config.playlists)[0];
+      AudioNavigation.changeSongPlaylist(
         firstPlaylist,
-        config.playlists[ firstPlaylist ].songs[0],
+        config.playlists[firstPlaylist].songs[0],
         0
       );
     }
@@ -403,7 +400,7 @@ let Initializer = (function() {
         Ensure we have a song to change to. Otherwise we might just
         only be using playlists.
       */
-      if( config.songs.length > 0 ){
+      if (config.songs.length > 0) {
         AudioNavigation.changeSong(config.songs[0], 0);
       }
     }
@@ -412,7 +409,7 @@ let Initializer = (function() {
       If the shuffle is on by default, shuffle the songs and
       switch to the shuffled song.
     */
-    if( config.songs.length > 0 ){
+    if (config.songs.length > 0) {
       if (userConfig.shuffle_on != undefined && userConfig.shuffle_on) {
         config.shuffle_on = true;
         Shuffler.shuffleSongs();
@@ -503,7 +500,7 @@ let Initializer = (function() {
     /*
      Set default artwork, if specified
      */
-    setArt(userConfig)
+    setArt(userConfig);
 
     /*
       Initialize the visual elements
@@ -597,7 +594,7 @@ let Initializer = (function() {
    * @access public
    * @param {object} userConfig - A JSON object of user defined values that help configure and initialize AmplitudeJS.
    */
-  function setArt(userConfig){
+  function setArt(userConfig) {
     /*
       If the user defines default album art, this image will display if the active
       song doesn't have album art defined.
@@ -707,10 +704,10 @@ let Initializer = (function() {
 
   /**
    * Initializes the songs
-   * 
+   *
    * @access private
    */
-  function initializeSongs( userConfig ) {
+  function initializeSongs(userConfig) {
     config.songs = userConfig.songs ? userConfig.songs : [];
   }
 
@@ -727,13 +724,13 @@ let Initializer = (function() {
     }
   }
 
-  /** 
+  /**
    * Initializes the index of the song in the songs array so
    * we can reference it if needed
-   * 
+   *
    * @access private
    */
-  function initializeDefaultSongIndexes(){
+  function initializeDefaultSongIndexes() {
     for (let i = 0; i < config.songs.length; i++) {
       config.songs[i].index = i;
     }
@@ -742,24 +739,25 @@ let Initializer = (function() {
   /**
    * Determines if we can run Amplitude. Amplitude can only run
    * IF there are songs, playlists or songs and playlists
-   * 
+   *
    * @access private
    */
-  function canAmplitudeRun( userConfig ){
+  function canAmplitudeRun(userConfig) {
     // If the user has provided songs, we can run AmplitudeJS
-    if( userConfig.songs && userConfig.songs.length != 0 ){
+    if (userConfig.songs && userConfig.songs.length != 0) {
       return true;
     }
 
     // If the user has provided playlists, we can run AmplitudeJS
     if (userConfig.playlists && countPlaylists(userConfig.playlists) > 0) {
-     return true;
+      return true;
     }
 
-    Debug.writeMessage( "Please provide a playlist or some songs for AmplitudeJS to run!" );
+    Debug.writeMessage(
+      "Please provide a playlist or some songs for AmplitudeJS to run!"
+    );
     return false;
   }
-
 
   /*
 		Returns the publicly accessible methods
@@ -767,7 +765,7 @@ let Initializer = (function() {
   return {
     initialize: initialize,
     setConfig: setConfig,
-    rebindDisplay: rebindDisplay
+    rebindDisplay: rebindDisplay,
   };
 })();
 

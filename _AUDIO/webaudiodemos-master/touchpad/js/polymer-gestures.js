@@ -6,41 +6,42 @@
  * Code distributed by Google as part of the polymer project is also
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
-(function() {
-  var thisFile = 'polymer-gestures.js';
-  var scopeName = 'PolymerGestures';
+(function () {
+  var thisFile = "polymer-gestures.js";
+  var scopeName = "PolymerGestures";
   var modules = [
-    'src/scope.js',
-    'src/targetfind.js',
-    'src/touch-action.js',
-    'src/eventFactory.js',
-    'src/pointermap.js',
-    'src/dispatcher.js',
-    'src/mouse.js',
-    'src/touch.js',
-    'src/ms.js',
-    'src/pointer.js',
-    'src/platform-events.js',
-    'src/track.js',
-    'src/hold.js',
-    'src/tap.js',
-    'src/pinch.js'
+    "src/scope.js",
+    "src/targetfind.js",
+    "src/touch-action.js",
+    "src/eventFactory.js",
+    "src/pointermap.js",
+    "src/dispatcher.js",
+    "src/mouse.js",
+    "src/touch.js",
+    "src/ms.js",
+    "src/pointer.js",
+    "src/platform-events.js",
+    "src/track.js",
+    "src/hold.js",
+    "src/tap.js",
+    "src/pinch.js",
   ];
 
   window[scopeName] = {
     entryPointName: thisFile,
-    modules: modules
+    modules: modules,
   };
 
-  var script = document.currentScript || document.querySelector('script[src $= "' + thisFile + '"]');
+  var script =
+    document.currentScript ||
+    document.querySelector('script[src $= "' + thisFile + '"]');
   var src = script.attributes.src.value;
   var basePath = src.slice(0, src.indexOf(thisFile));
 
   if (!window.PolymerLoader) {
-    var path = basePath + '../tools/loader/loader.js';
+    var path = basePath + "../tools/loader/loader.js";
     document.write('<script src="' + path + '"></script>');
   }
 
   document.write('<script>PolymerLoader.load("' + scopeName + '")</script>');
-
 })();

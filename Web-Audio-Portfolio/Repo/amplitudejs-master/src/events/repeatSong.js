@@ -21,7 +21,7 @@ import RepeatElements from "../visual/repeatElements.js";
  *
  * @module events/RepeatSong
  */
-let RepeatSong = (function() {
+let RepeatSong = (function () {
   /**
    * Handles an event on the repeat song button
    *
@@ -51,7 +51,7 @@ let RepeatSong = (function() {
    * Returns the public facing methods
    */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

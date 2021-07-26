@@ -55,7 +55,7 @@ import Visualizations from "../fx/visualizations.js";
  *
  * @module core/Core
  */
-let Core = (function() {
+let Core = (function () {
   /**
    * Plays the active song. If the current song is live, it reconnects
    * the stream before playing.
@@ -97,13 +97,8 @@ let Core = (function() {
     */
     let playPromise = config.audio.play();
 
-    if( playPromise !== undefined ){
-      playPromise.then( _ => {
-
-      })
-      .catch( error => {
-
-      });
+    if (playPromise !== undefined) {
+      playPromise.then((_) => {}).catch((error) => {});
     }
     config.audio.play();
     config.audio.playbackRate = config.playback_speed;
@@ -241,7 +236,7 @@ let Core = (function() {
 		*/
     config.audio.addEventListener(
       "canplaythrough",
-      function() {
+      function () {
         /*
 				If the active song duration is greater than or equal to the
 				amount of seconds the user wants to skip to and the seconds
@@ -314,7 +309,7 @@ let Core = (function() {
     skipToLocation: skipToLocation,
     disconnectStream: disconnectStream,
     reconnectStream: reconnectStream,
-    setPlaybackSpeed: setPlaybackSpeed
+    setPlaybackSpeed: setPlaybackSpeed,
   };
 })();
 

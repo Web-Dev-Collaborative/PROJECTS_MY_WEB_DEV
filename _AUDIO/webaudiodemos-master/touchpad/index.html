@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width user-scalable=no">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width user-scalable=no" />
     <title>TouchPad</title>
     <style>
       * {
         -webkit-user-select: none;
       }
-      body, html {
+      body,
+      html {
         margin: 0;
         height: 100%;
         position: relative;
@@ -45,31 +46,42 @@
     <script src="js/audio.js"></script>
   </head>
   <body>
-<!--
+    <!--
     <div id="capture">
       <div id="enterleave">
       </div>
     </div>
 -->
-    <div id="output" touch-action="none" style="position: absolute; width: 100%; z-index: 1000; height: 100px; bottom: 0px; left:0px"></div>
+    <div
+      id="output"
+      touch-action="none"
+      style="
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+        height: 100px;
+        bottom: 0px;
+        left: 0px;
+      "
+    ></div>
     <script>
       var events = [
         // base events
-        'click',
-        'pointerdown',
-        'pointerup',
-        'pointermove',
-        'pointerover',
-        'pointerout'
+        "click",
+        "pointerdown",
+        "pointerup",
+        "pointermove",
+        "pointerover",
+        "pointerout",
       ];
 
       function appendOutput(inString) {
-//        var it = output.innerText;
-//        output.innerText = inString + '\n' + it;
+        //        var it = output.innerText;
+        //        output.innerText = inString + '\n' + it;
       }
-//      find('capture', 'output', 'enterleave');
+      //      find('capture', 'output', 'enterleave');
 
-/*
+      /*
       events.forEach(function(en) {
         capture.addEventListener(en, function(inEvent) {
           appendOutput(inEvent.type + ' [' + inEvent.pointerId + ']');

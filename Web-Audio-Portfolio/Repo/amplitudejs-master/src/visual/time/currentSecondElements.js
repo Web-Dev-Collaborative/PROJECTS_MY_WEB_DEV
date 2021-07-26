@@ -9,7 +9,7 @@ import config from "../../config.js";
  *
  * @module visual/time/CurrentSecondElements
  */
-let CurrentSecondElements = (function() {
+let CurrentSecondElements = (function () {
   /**
    * Syncs the current seconds elements.
    *
@@ -175,7 +175,7 @@ let CurrentSecondElements = (function() {
    */
   return {
     sync: sync,
-    resetTimes: resetTimes
+    resetTimes: resetTimes,
   };
 })();
 

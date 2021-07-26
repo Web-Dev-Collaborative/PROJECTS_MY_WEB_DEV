@@ -34,20 +34,28 @@ meta:
   - name: creator
     content: "@521dimensions"
 ---
+
 # Installation
+
 <carbon-ads/>
 ## Option 1: Use CDN from [jsDelivr](https://cdn.jsdelivr.net/npm/amplitudejs/)
 No installation is required to use Amplitude.js. All you need to do is include a single line in your `<head>` section of your HTML page.
 
 Replace `{{'version-number'}}` with the exact version number that you would like to use (see [our releases](https://github.com/521dimensions/amplitudejs/releases) for what version number to use):
+
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@{{version-number}}/dist/amplitude.js"></script>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/amplitudejs@{{version-number}}/dist/amplitude.js"
+></script>
 ```
+
 **NOTE:** It's best to set your version number manually to make sure you have full control of what version you are running. If you need to upgrade in the future, just change `{{'version-number'}}` to the latest version.
 
-
 ## Option 2: Automatic install via `npm`
+
 Download it via NPM to your existing project:
+
 ```sh
 npm install --save amplitudejs
 ```
@@ -55,6 +63,7 @@ npm install --save amplitudejs
 You will see the file under `node_modules/amplitudejs/dist/amplitude.js`.
 
 ## Option 3: Manual download
+
 Download the `amplitude.js` file from [our releases page](https://github.com/521dimensions/amplitudejs/releases) and include the file manually with your project.
 
 Amplitude.js is now available for use! All that's left is [initializing &rarr;](https://521dimensions.com/open-source/amplitudejs/docs/installation/initialization).

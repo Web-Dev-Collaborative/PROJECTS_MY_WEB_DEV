@@ -8,7 +8,7 @@ import config from "../config.js";
  * Keeps the volume slider elements in sync.
  * @module visual/VolumeSliderElements
  */
-let VolumeSliderElements = (function() {
+let VolumeSliderElements = (function () {
   /**
    * Visually syncs the volume sliders so they are all the same if there
    * are more than one.
@@ -33,7 +33,7 @@ let VolumeSliderElements = (function() {
    * Returns the public facing methods
    */
   return {
-    sync: sync
+    sync: sync,
   };
 })();
 

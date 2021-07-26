@@ -9,7 +9,7 @@ import config from "../../config.js";
  *
  * @module visual/CurrentTimeElements
  */
-let CurrentTimeElements = (function() {
+let CurrentTimeElements = (function () {
   /**
    * Visually displays the current time on the screen. This is called on
    * time update for the current song.
@@ -207,7 +207,7 @@ let CurrentTimeElements = (function() {
    */
   return {
     sync: sync,
-    resetTimes: resetTimes
+    resetTimes: resetTimes,
   };
 })();
 

@@ -36,21 +36,26 @@ meta:
 ---
 
 # How to contribute to AmplitudeJS
+
 <carbon-ads/>
 We greatly appeciate any efforts to help grow and maintain the AmplitudeJS community! There are number of ways that you can help AmplitudeJS:
 
 ## Share us on social media
+
 Any sort of help to get the word out is greatly appreciated. The easiest way to share us on social media is to [click the share icons on our homepage &rarr;](https://521dimensions.com/open-source/amplitudejs)
 
 ## Help answer bugs on Github
+
 There are a number of Github issues that need help being answered. If you have some time available, [view our open Github issues &rarr;](https://github.com/521dimensions/amplitudejs/issues)
 
 ## Answer questions on Gitter
+
 From time to time, people jump on Gitter to ask questions. You can be active in the discussion by [joining our Gitter &rarr;](https://gitter.im/521dimensions/amplitudejs)
 
 ## Submit a pull request
+
 If you are looking to submit a feature or a bugfix, contributions are always welcome. [View our contributing guidelines &rarr;](https://github.com/521dimensions/amplitudejs/blob/master/.github/CONTRIBUTING.md)
 
 ## Become a backer
-Maintaining an open source project takes a lot of effort and the project is not sustainable without proper financial support. If you really want to see AmplitudeJS grow and expand [support us on Open Collective &rarr;](https://opencollective.com/amplitudejs)
 
+Maintaining an open source project takes a lot of effort and the project is not sustainable without proper financial support. If you really want to see AmplitudeJS grow and expand [support us on Open Collective &rarr;](https://opencollective.com/amplitudejs)

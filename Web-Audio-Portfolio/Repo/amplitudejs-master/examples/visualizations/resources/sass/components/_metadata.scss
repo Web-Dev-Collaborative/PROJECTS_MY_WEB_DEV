@@ -1,8 +1,8 @@
-div.meta-data-container{
+div.meta-data-container {
   margin-top: 40px;
   font-family: "Avenir", sans-serif;
 
-  span.now-playing-name{
+  span.now-playing-name {
     display: block;
     text-align: center;
     margin-bottom: 15px;
@@ -14,14 +14,14 @@ div.meta-data-container{
     text-overflow: ellipsis;
   }
 
-  span.now-playing-artist-album{
+  span.now-playing-artist-album {
     display: block;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 14px;
-    color: rgba( 255, 255, 255, .7 );
+    color: rgba(255, 255, 255, 0.7);
   }
 }
 
@@ -29,19 +29,16 @@ div.meta-data-container{
   Small only
 */
 @media screen and (max-width: 39.9375em) {
-
 }
 
 /*
   Medium only
 */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-
 }
 
 /*
   Large Only
 */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {
-
 }

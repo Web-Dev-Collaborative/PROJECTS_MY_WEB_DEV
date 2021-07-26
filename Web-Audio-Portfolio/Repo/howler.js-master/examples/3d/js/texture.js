@@ -8,7 +8,7 @@
  *  MIT License
  */
 
-'use strict';
+"use strict";
 
 /**
  * Load a texture and store its details.
@@ -16,7 +16,7 @@
  * @param {Number} w   Image width.
  * @param {Number} h   Image height.
  */
-var Texture = function(src, w, h) {
+var Texture = function (src, w, h) {
   this.image = new Image();
   this.image.src = src;
   this.width = w;

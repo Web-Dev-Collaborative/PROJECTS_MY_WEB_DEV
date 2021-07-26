@@ -36,6 +36,7 @@ meta:
 ---
 
 # Default Art
+
 <carbon-ads/>
 If you have audio that doesn't have a specific piece of album art, you can define
 a default image url using the "default_album_art" key. The value can be set on initialization or through a public method. You can also set the default playlist art for metadata. If you don't define a piece of album art for your playlist you can also set that on initialization through the "default_playlist_art" key or through a public method.
@@ -52,7 +53,7 @@ a default image url using the "default_album_art" key. The value can be set on i
 ## Public Set Method Default Album Art
 
 ```javascript
-  Amplitude.setDefaultAlbumArt( "/url/to/default.jpg" );
+Amplitude.setDefaultAlbumArt("/url/to/default.jpg");
 ```
 
 ## Initialization Default Playlist Album Art
@@ -70,5 +71,5 @@ a default image url using the "default_album_art" key. The value can be set on i
 ## Public Set Method Default Playlist Art
 
 ```javascript
-  Amplitude.setDefaultPlaylistArt( "/url/to/default.jpg" );
+Amplitude.setDefaultPlaylistArt("/url/to/default.jpg");
 ```

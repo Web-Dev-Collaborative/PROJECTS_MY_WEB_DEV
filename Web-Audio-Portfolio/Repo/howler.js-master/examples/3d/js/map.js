@@ -8,30 +8,56 @@
  *  MIT License
  */
 
-'use strict';
+"use strict";
 
 /**
  * Generates the map and calculates the casting of arrays for the camera to display on screen.
  * @param {Number} size Grid size of the map to use.
  */
-var Map = function(size) {
+var Map = function (size) {
   this.size = size;
   this.grid = new Array(size * size);
-  this.skybox = new Texture('./assets/skybox.jpg', 4096, 1024);
-  this.wall = new Texture('./assets/wall.jpg', 1024, 1024);
-  this.speaker = new Texture('./assets/speaker.jpg', 1024, 1024);
+  this.skybox = new Texture("./assets/skybox.jpg", 4096, 1024);
+  this.wall = new Texture("./assets/wall.jpg", 1024, 1024);
+  this.speaker = new Texture("./assets/speaker.jpg", 1024, 1024);
   this.light = 0;
 
   // Define the pre-defined map template on a 25x25 grid.
-  this.grid = [1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 2, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 2, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1];
+  this.grid = [
+    1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 2, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+    1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1,
+    1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1,
+    1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+    1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1,
+    1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1,
+    1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1,
+    1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1,
+    1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1,
+    1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+    1, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 1,
+    1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+    1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1,
+    1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1,
+    1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1,
+    1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1,
+    1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1,
+    1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+    1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1,
+    1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1,
+    1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 2, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1,
+  ];
 };
 Map.prototype = {
   /**
    * Sets up the map including the speaker audio points.
    */
-  setup: function() {
+  setup: function () {
     // Loop through the tiles and setup the audio listeners.
-    for (var i=0; i<this.grid.length; i++) {
+    for (var i = 0; i < this.grid.length; i++) {
       if (this.grid[i] === 2) {
         var y = Math.floor(i / this.size);
         var x = i % this.size;
@@ -46,7 +72,7 @@ Map.prototype = {
    * @param  {Number} y y-coordinate
    * @return {Number}   -1, 0, 1
    */
-  check: function(x, y) {
+  check: function (x, y) {
     x = Math.floor(x);
     y = Math.floor(y);
 
@@ -64,13 +90,16 @@ Map.prototype = {
    * @param  {Number} range  Max length of the ray.
    * @param  {Object} origin x, y, height and sitance
    */
-  ray: function(sin, cos, range, origin) {
+  ray: function (sin, cos, range, origin) {
     var stepX = this.step(sin, cos, origin.x, origin.y, false);
     var stepY = this.step(cos, sin, origin.y, origin.x, true);
-    
+
     var inspectX = [sin, cos, stepX, 1, 0, origin.dist, stepX.y];
     var inspectY = [sin, cos, stepY, 0, 1, origin.dist, stepY.x];
-    var next = this.inspect.apply(this, (stepX.len2 < stepY.len2) ? inspectX : inspectY);
+    var next = this.inspect.apply(
+      this,
+      stepX.len2 < stepY.len2 ? inspectX : inspectY
+    );
 
     if (next.dist > range) {
       return [origin];
@@ -87,9 +116,9 @@ Map.prototype = {
    * @param  {Number} y        Origin y-position.
    * @param  {Boolean} inverted
    */
-  step: function(rise, run, x, y, inverted) {
+  step: function (rise, run, x, y, inverted) {
     if (run === 0) {
-      return {len2: Infinity};
+      return { len2: Infinity };
     }
 
     var dx = run > 0 ? Math.floor(x + 1) - x : Math.ceil(x - 1) - x;
@@ -98,7 +127,7 @@ Map.prototype = {
     return {
       x: inverted ? y + dy : x + dx,
       y: inverted ? x + dx : y + dy,
-      len2: dx * dx + dy * dy
+      len2: dx * dx + dy * dy,
     };
   },
 
@@ -112,18 +141,18 @@ Map.prototype = {
    * @param  {Number} dist   Distnace from origin.
    * @param  {Number} offset Step offset.
    */
-  inspect: function(sin, cos, step, shiftX, shiftY, dist, offset) {
-    var dx = (cos < 0) ? shiftX : 0;
-    var dy = (sin < 0) ? shiftY : 0;
+  inspect: function (sin, cos, step, shiftX, shiftY, dist, offset) {
+    var dx = cos < 0 ? shiftX : 0;
+    var dy = sin < 0 ? shiftY : 0;
 
     step.type = this.check(step.x - dx, step.y - dy);
-    step.height = (step.type) > 0 ? 1 : 0;
+    step.height = step.type > 0 ? 1 : 0;
     step.dist = dist + Math.sqrt(step.len2);
 
     if (shiftX) {
-      step.shading = (cos < 0) ? 2 : 0;
+      step.shading = cos < 0 ? 2 : 0;
     } else {
-      step.shading = (sin < 0) ? 2 : 1;
+      step.shading = sin < 0 ? 2 : 1;
     }
 
     step.offset = offset - Math.floor(offset);
@@ -137,7 +166,7 @@ Map.prototype = {
    * @param  {Number} angle Angle (in radians) of camera.
    * @param  {Number} range Max length of the ray.
    */
-  cast: function(point, angle, range) {
+  cast: function (point, angle, range) {
     var sin = Math.sin(angle);
     var cos = Math.cos(angle);
 
@@ -145,7 +174,7 @@ Map.prototype = {
       x: point.x,
       y: point.y,
       height: 0,
-      dist: 0
+      dist: 0,
     });
   },
 
@@ -153,7 +182,7 @@ Map.prototype = {
    * Update loop on the map, in this case used to add in lightning by adjusting global lighting.
    * @param  {Number} secs Seconds since last tick.
    */
-  update: function(secs) {
+  update: function (secs) {
     if (this.light > 0) {
       this.light = Math.max(this.light - 10 * secs, 0);
     } else if (Math.random() * 6 < secs) {
@@ -162,5 +191,5 @@ Map.prototype = {
       // Play the lightning sound.
       game.audio.lightning();
     }
-  }
+  },
 };

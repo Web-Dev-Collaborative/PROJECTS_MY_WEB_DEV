@@ -9,7 +9,7 @@ import config from "../../config.js";
  *
  * @module visual/time/DurationSecondElements.
  */
-let DurationSecondElements = (function() {
+let DurationSecondElements = (function () {
   /**
    * Sync the duration seconds elements.
    *
@@ -136,7 +136,7 @@ let DurationSecondElements = (function() {
    */
   return {
     sync: sync,
-    resetTimes: resetTimes
+    resetTimes: resetTimes,
   };
 })();
 

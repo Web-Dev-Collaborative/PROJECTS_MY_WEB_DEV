@@ -21,7 +21,7 @@ import SongSliderElements from "../visual/songSliderElements.js";
  *
  * @module events/SongSlider
  */
-let SongSlider = (function() {
+let SongSlider = (function () {
   /**
    * Handles a song slider element.
    *
@@ -221,7 +221,7 @@ let SongSlider = (function() {
     Return public facing methods
   */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

@@ -34,22 +34,22 @@ div#list-screen {
     }
   }
 
-  div#list{
+  div#list {
     overflow-y: scroll;
 
-    div.song{
+    div.song {
       padding: 15px;
       background-color: #242b33;
       margin-bottom: 1px;
       cursor: pointer;
       line-height: 24px;
 
-      span.song-number-now-playing{
+      span.song-number-now-playing {
         display: inline-block;
         width: 24px;
         text-align: center;
 
-        span.number{
+        span.number {
           opacity: 0.5;
           font-family: "Lato", sans-serif;
           font-size: 14px;
@@ -57,32 +57,32 @@ div#list-screen {
           letter-spacing: 0.5px;
         }
 
-        img.now-playing{
+        img.now-playing {
           display: none;
         }
       }
 
-      &.amplitude-active-song-container{
+      &.amplitude-active-song-container {
         background-color: #30363e;
 
-        span.song-number-now-playing{
+        span.song-number-now-playing {
           img.now-playing {
             display: inline-block;
           }
 
-          span.number{
+          span.number {
             display: none;
           }
         }
       }
 
-      div.song-meta-container{
+      div.song-meta-container {
         display: inline-block;
         margin-left: 8px;
         vertical-align: middle;
         width: calc(100% - 80px);
 
-        span.song-name{
+        span.song-name {
           font-family: "Lato", sans-serif;
           font-size: 14px;
           line-height: 16px;
@@ -101,10 +101,10 @@ div#list-screen {
         }
       }
 
-      span.song-duration{
+      span.song-duration {
         display: inline-block;
         opacity: 0.5;
-        font-family: 'Lato', sans-serif;
+        font-family: "Lato", sans-serif;
         font-size: 14px;
         color: #fff;
         letter-spacing: 0.5px;
@@ -112,17 +112,17 @@ div#list-screen {
         text-align: center;
       }
 
-      span.song-artist-album{
+      span.song-artist-album {
         color: #5277b0;
       }
     }
   }
 
-  div#list-screen-footer{
+  div#list-screen-footer {
     height: 80px;
     padding: 15px;
 
-    div#list-screen-meta-container{
+    div#list-screen-meta-container {
       width: calc(100% - 123px);
       float: left;
 
@@ -144,7 +144,7 @@ div#list-screen {
       }
     }
 
-    div.list-controls{
+    div.list-controls {
       width: 90px;
       float: right;
       margin-top: 8px;
@@ -153,7 +153,7 @@ div#list-screen {
         cursor: pointer;
         width: 15px;
         height: 17px;
-        background-image: url('../img/small-previous.svg');
+        background-image: url("../img/small-previous.svg");
         background-repeat: no-repeat;
         float: left;
         margin-right: 15px;
@@ -168,11 +168,11 @@ div#list-screen {
         float: left;
 
         &.amplitude-playing {
-          background-image: url('../img/small-pause.svg');
+          background-image: url("../img/small-pause.svg");
         }
 
         &.amplitude-paused {
-          background-image: url('../img/small-play.svg');
+          background-image: url("../img/small-play.svg");
         }
       }
 
@@ -180,7 +180,7 @@ div#list-screen {
         cursor: pointer;
         width: 15px;
         height: 17px;
-        background-image: url('../img/small-next.svg');
+        background-image: url("../img/small-next.svg");
         background-repeat: no-repeat;
         float: left;
         margin-left: 15px;

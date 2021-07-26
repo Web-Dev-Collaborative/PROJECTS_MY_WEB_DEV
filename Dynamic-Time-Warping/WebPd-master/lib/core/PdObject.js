@@ -18,19 +18,19 @@
  *
  */
 
-var _ = require('underscore')
-  , inherits = require('util').inherits
-  , portlets = require('./portlets')
-  , utils = require('./utils')
-  , BaseNode = require('./BaseNode')
-  , Patch = require('./Patch')
-  , pdGlob = require('../global')
+var _ = require("underscore"),
+  inherits = require("util").inherits,
+  portlets = require("./portlets"),
+  utils = require("./utils"),
+  BaseNode = require("./BaseNode"),
+  Patch = require("./Patch"),
+  pdGlob = require("../global");
 
-var PdObject = module.exports = function() {
-  BaseNode.apply(this, arguments)
-}
-PdObject.extend = utils.chainExtend
+var PdObject = (module.exports = function () {
+  BaseNode.apply(this, arguments);
+});
+PdObject.extend = utils.chainExtend;
 
 _.extend(PdObject.prototype, BaseNode.prototype, {
-  doResolveArgs: true
-})
+  doResolveArgs: true,
+});

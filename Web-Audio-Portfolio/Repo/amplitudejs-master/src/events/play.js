@@ -38,7 +38,7 @@ import PlayPauseElements from "../visual/playPauseElements.js";
  * Handles all of the play events
  * @module events/Play
  */
-let Play = (function() {
+let Play = (function () {
   /**
    * Handles an event on a play button in Amplitude.
    *
@@ -293,7 +293,7 @@ let Play = (function() {
     Returns the public facing elements
   */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

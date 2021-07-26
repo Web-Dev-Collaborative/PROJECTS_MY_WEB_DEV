@@ -1,5 +1,4 @@
-Authors
-----------
+## Authors
 
 ```
    259	Sébastien Piquemal

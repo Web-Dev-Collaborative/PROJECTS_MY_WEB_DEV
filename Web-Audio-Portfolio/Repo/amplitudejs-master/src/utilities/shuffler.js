@@ -10,7 +10,7 @@ import config from "../config.js";
  *
  * @module utilities/Shuffler
  */
-let Shuffler = (function() {
+let Shuffler = (function () {
   /**
    * Sets the shuffle state globally
    *
@@ -180,7 +180,7 @@ let Shuffler = (function() {
     setShufflePlaylist: setShufflePlaylist,
     toggleShufflePlaylist: toggleShufflePlaylist,
     shuffleSongs: shuffleSongs,
-    shufflePlaylistSongs: shufflePlaylistSongs
+    shufflePlaylistSongs: shufflePlaylistSongs,
   };
 })();
 

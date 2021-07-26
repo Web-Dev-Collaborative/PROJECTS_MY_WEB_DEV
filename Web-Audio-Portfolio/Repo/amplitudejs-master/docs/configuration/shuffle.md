@@ -36,14 +36,15 @@ meta:
 ---
 
 # Defaulting Shuffle On
+
 <carbon-ads/>
 You can turn shuffle on right away when initializing AmplitudeJS. To do that, simply initialize AmplitudeJS with the `shuffle_on` parameter like this:
 
 ```javascript
-  Amplitude.init({
-    songs: ["..."],
-    shuffle_on: true
-  });
+Amplitude.init({
+  songs: ["..."],
+  shuffle_on: true,
+});
 ```
 
 By default, AmplitudeJS will shuffle the songs and start with the first song in the shuffled list.

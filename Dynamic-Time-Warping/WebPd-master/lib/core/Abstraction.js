@@ -18,19 +18,17 @@
  *
  */
 
-var _ = require('underscore')
-  , Patch = require('./Patch')
+var _ = require("underscore"),
+  Patch = require("./Patch");
 
-var Abstraction = module.exports = function(patch, id, args) {
-  Patch.apply(this, arguments)
-}
+var Abstraction = (module.exports = function (patch, id, args) {
+  Patch.apply(this, arguments);
+});
 
 _.extend(Abstraction.prototype, Patch.prototype, {
-
   // An abstraction is always root, even if instantiated within another patch,
   // it needs its own id, and is completely encapsulated to its parent.
-  getPatchRoot: function() {
-    return this
-  }
-
-})
+  getPatchRoot: function () {
+    return this;
+  },
+});

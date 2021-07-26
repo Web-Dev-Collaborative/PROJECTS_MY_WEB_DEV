@@ -4,13 +4,13 @@ const BarVisualization = require("../dist/visualizations/bar.js");
 
 const config = require("../src/config.js");
 
-let Setup = (function() {
+let Setup = (function () {
   function initializeAmplitude() {
     Amplitude.init({
       bindings: {
         37: "prev",
         39: "next",
-        32: "play_pause"
+        32: "play_pause",
       },
       debug: false,
       visualization: "michaelbromley_visualization",
@@ -19,21 +19,20 @@ let Setup = (function() {
           name: "Risin' High (feat Raashan Ahmad)",
           artist: "Ancient Astronauts",
           album: "We Are to Answer",
-          url:
-            "../songs/Ancient Astronauts - Risin' High (feat Raashan Ahmad).mp3",
+          url: "../songs/Ancient Astronauts - Risin' High (feat Raashan Ahmad).mp3",
           // commented out in order to test default_album_art:
           // cover_art_url: "../album-art/we-are-to-answer.jpg",
           time_callbacks: {
-            1: function() {
+            1: function () {
               console.log(1);
             },
-            2: function() {
+            2: function () {
               console.log(2);
             },
-            30: function() {
+            30: function () {
               console.log(30);
-            }
-          }
+            },
+          },
         },
         {
           name: "The Gun",
@@ -41,7 +40,7 @@ let Setup = (function() {
           album: "Ask The Dust",
           url: "../songs/08 The Gun.mp3",
           cover_art_url: "../album-art/ask-the-dust.jpg",
-          visualization: "bar_visualization"
+          visualization: "bar_visualization",
         },
         {
           name: "Anvil",
@@ -49,7 +48,7 @@ let Setup = (function() {
           album: "Anvil",
           url: "../songs/LORN - ANVIL.mp3",
           cover_art_url: "../album-art/anvil.jpg",
-          visualization: "michaelbromley_visualization"
+          visualization: "michaelbromley_visualization",
         },
         {
           name: "I Came Running",
@@ -57,7 +56,7 @@ let Setup = (function() {
           album: "We Are to Answer",
           url: "../songs/ICameRunning-AncientAstronauts.mp3",
           cover_art_url: "../album-art/we-are-to-answer.jpg",
-          visualization: "bar_visualization"
+          visualization: "bar_visualization",
         },
         {
           name: "First Snow",
@@ -65,7 +64,7 @@ let Setup = (function() {
           album: "Soon It Will Be Cold Enough",
           url: "../songs/FirstSnow-Emancipator.mp3",
           cover_art_url: "../album-art/soon-it-will-be-cold-enough.jpg",
-          visualization: "michaelbromley_visualization"
+          visualization: "michaelbromley_visualization",
         },
         {
           name: "Terrain",
@@ -73,7 +72,7 @@ let Setup = (function() {
           album: "Key",
           url: "../songs/Terrain-pglost.mp3",
           cover_art_url: "../album-art/key.jpg",
-          visualization: "michaelbromley_visualization"
+          visualization: "michaelbromley_visualization",
         },
         {
           name: "Vorel",
@@ -81,7 +80,7 @@ let Setup = (function() {
           album: "Guidance",
           url: "../songs/Vorel-RussianCircles.mp3",
           cover_art_url: "../album-art/guidance.jpg",
-          visualization: "bar_visualization"
+          visualization: "bar_visualization",
         },
         {
           name: "Intro / Sweet Glory",
@@ -89,7 +88,7 @@ let Setup = (function() {
           album: "Die Digital",
           url: "../songs/IntroSweetGlory-Jimkata.mp3",
           cover_art_url: "../album-art/die-digital.jpg",
-          visualization: "michaelbromley_visualization"
+          visualization: "michaelbromley_visualization",
         },
         {
           name: "Offcut #6",
@@ -97,7 +96,7 @@ let Setup = (function() {
           album: "We Are But Hunks of Wood Remixes",
           url: "../songs/Offcut6-LittlePeople.mp3",
           cover_art_url: "../album-art/we-are-but-hunks-of-wood.jpg",
-          visualization: "bar_visualization"
+          visualization: "bar_visualization",
         },
         {
           name: "Dusk To Dawn",
@@ -105,7 +104,7 @@ let Setup = (function() {
           album: "Dusk To Dawn",
           url: "../songs/DuskToDawn-Emancipator.mp3",
           cover_art_url: "../album-art/from-dusk-to-dawn.jpg",
-          visualization: "michaelbromley_visualization"
+          visualization: "michaelbromley_visualization",
         },
         {
           name: "Anthem",
@@ -113,8 +112,8 @@ let Setup = (function() {
           album: "Soon It Will Be Cold Enough",
           url: "../songs/Anthem-Emancipator.mp3",
           cover_art_url: "../album-art/soon-it-will-be-cold-enough.jpg",
-          visualization: "bar_visualization"
-        }
+          visualization: "bar_visualization",
+        },
       ],
 
       default_album_art: "http://www.google.com",
@@ -122,33 +121,33 @@ let Setup = (function() {
       playlists: {
         ancient_astronauts: {
           songs: [0, 3],
-          title: "Best of Ancient Astronauts"
+          title: "Best of Ancient Astronauts",
         },
         trip_hop: {
           songs: [1, 2, 5, 6, 7, 8],
           title: "Trip Hop Mix 2018",
           author: "Dan Pastori",
-          visualization: "bar_visualization"
+          visualization: "bar_visualization",
         },
         emancipator: {
           songs: [4, 9, 10],
           title: "Emancipator's Greatest Hits",
-          visualization: "michaelbromley_visualization"
-        }
+          visualization: "michaelbromley_visualization",
+        },
       },
 
       visualizations: [
         {
           object: MichaelBromleyVisualization,
-          params: {}
+          params: {},
         },
         {
           object: BarVisualization,
           params: {
-            bar_color: "#00FF00"
-          }
-        }
-      ]
+            bar_color: "#00FF00",
+          },
+        },
+      ],
     });
 
     config.audio.currentTime = 30;
@@ -176,7 +175,7 @@ let Setup = (function() {
       set(newValue) {
         self.currentTime = newValue;
       },
-      writeable: true
+      writeable: true,
     });
 
     /*
@@ -189,7 +188,7 @@ let Setup = (function() {
       set(newValue) {
         self.duration = newValue;
       },
-      writeable: true
+      writeable: true,
     });
 
     /*
@@ -202,7 +201,7 @@ let Setup = (function() {
       set(newValue) {
         self.playbackRate = newValue;
       },
-      writeable: true
+      writeable: true,
     });
 
     /*
@@ -215,7 +214,7 @@ let Setup = (function() {
       set(newValue) {
         self.muted = newValue;
       },
-      writeable: true
+      writeable: true,
     });
 
     /*
@@ -228,7 +227,7 @@ let Setup = (function() {
       set(newValue) {
         self.volume = newValue;
       },
-      writeable: true
+      writeable: true,
     });
 
     /*
@@ -240,7 +239,7 @@ let Setup = (function() {
       },
       set(newValue) {
         self.paused = newValue;
-      }
+      },
     });
   }
 
@@ -335,7 +334,7 @@ let Setup = (function() {
   return {
     initializeAmplitude: initializeAmplitude,
     initializeTestingElement: initializeTestingElement,
-    resetConfig: resetConfig
+    resetConfig: resetConfig,
   };
 })();
 

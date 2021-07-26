@@ -6,7 +6,7 @@ div.control-container {
     width: 28px;
     height: 24px;
     cursor: pointer;
-    background: url('../img/previous.svg');
+    background: url("../img/previous.svg");
     display: inline-block;
     vertical-align: middle;
   }
@@ -18,12 +18,12 @@ div.control-container {
     display: inline-block;
     vertical-align: middle;
 
-    &.amplitude-paused{
-      background: url('../img/play.svg');
+    &.amplitude-paused {
+      background: url("../img/play.svg");
     }
 
-    &.amplitude-playing{
-      background: url('../img/pause.svg');
+    &.amplitude-playing {
+      background: url("../img/pause.svg");
     }
   }
 
@@ -31,7 +31,7 @@ div.control-container {
     width: 28px;
     height: 24px;
     cursor: pointer;
-    background: url('../img/next.svg');
+    background: url("../img/next.svg");
     display: inline-block;
     vertical-align: middle;
   }
@@ -41,7 +41,7 @@ div.control-container {
   Small only
 */
 @media screen and (max-width: 39.9375em) {
-  div.control-container{
+  div.control-container {
     div.amplitude-prev {
       margin-right: 75px;
     }
@@ -56,7 +56,7 @@ div.control-container {
   Medium only
 */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-  div.control-container{
+  div.control-container {
     div.amplitude-prev {
       margin-right: 40px;
     }
@@ -71,7 +71,7 @@ div.control-container {
   Large Only
 */
 @media screen and (min-width: 64em) {
-  div.control-container{
+  div.control-container {
     div.amplitude-prev {
       margin-right: 75px;
     }

@@ -1,18 +1,23 @@
-body{
-  background-image: linear-gradient(-134deg, #C182DC 0%, #FB7C62 94%, #FF7C5B 100%);
+body {
+  background-image: linear-gradient(
+    -134deg,
+    #c182dc 0%,
+    #fb7c62 94%,
+    #ff7c5b 100%
+  );
   -webkit-font-smoothing: antialiased;
-  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   line-height: 1.5;
 
-  div.example-container{
+  div.example-container {
     width: 100%;
     display: flex;
 
-    div.left{
+    div.left {
       width: 50%;
     }
 
-    div.right{
+    div.right {
       width: 50%;
       display: flex;
       flex-wrap: wrap;
@@ -21,15 +26,15 @@ body{
 }
 
 @media screen and (max-width: 39.9375em) {
-  body{
-    div.example-container{
+  body {
+    div.example-container {
       flex-direction: column;
 
-      div.left{
+      div.left {
         width: 100%;
       }
-  
-      div.right{
+
+      div.right {
         width: 100%;
       }
     }
@@ -37,8 +42,8 @@ body{
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-  body{
-    div.right{
+  body {
+    div.right {
       padding-left: 20px;
     }
   }

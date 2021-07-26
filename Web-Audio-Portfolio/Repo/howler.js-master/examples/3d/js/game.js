@@ -8,18 +8,20 @@
  *  MIT License
  */
 
-'use strict';
+"use strict";
 
 // Cache some commonly used values.
 var circle = Math.PI * 2;
-var isMobile = /iPhone|iPad|iPod|Android|BlackBerry|BB10|Silk/i.test(navigator.userAgent);
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var isMobile = /iPhone|iPad|iPod|Android|BlackBerry|BB10|Silk/i.test(
+  navigator.userAgent
+);
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 /**
  * Main game class that runs the tick and sets up all other components.
  */
-var Game = function() {
+var Game = function () {
   this.lastTime = 0;
 
   // Setup our different game components.
@@ -28,7 +30,7 @@ var Game = function() {
   this.controls = new Controls();
   this.map = new Map(25);
   this.camera = new Camera(isMobile ? 256 : 512);
-  
+
   requestAnimationFrame(this.tick.bind(this));
 };
 Game.prototype = {
@@ -36,7 +38,7 @@ Game.prototype = {
    * Main game loop that renders the full scene on each screen refresh.
    * @param  {Number} time
    */
-  tick: function(time) {
+  tick: function (time) {
     var ms = time - this.lastTime;
     this.lastTime = time;
 
@@ -47,7 +49,7 @@ Game.prototype = {
 
     // Continue the game loop.
     requestAnimationFrame(this.tick.bind(this));
-  }
+  },
 };
 
 // Setup and start the new game instance.

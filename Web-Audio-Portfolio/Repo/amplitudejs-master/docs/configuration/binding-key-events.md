@@ -36,6 +36,7 @@ meta:
 ---
 
 # Binding Key Events
+
 <carbon-ads/>
 This allows you to configure certain
 events to trigger on key presses. The main piece of information needed is the
@@ -54,12 +55,12 @@ To add a binding, for example, the right arrow key on a mac keyboard has code
 39 you'd add the following to your config:
 
 ```javascript
-	Amplitude.init({
-		"bindings": {
-			39: 'next'
-		},
-		"songs": [{}]
-	})
+Amplitude.init({
+  bindings: {
+    39: "next",
+  },
+  songs: [{}],
+});
 ```
 
 Now every time the right arrow down is pressed, AmplitudeJS will go to the next

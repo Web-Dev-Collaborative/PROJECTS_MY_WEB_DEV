@@ -9,7 +9,7 @@ import config from "../config.js";
  *
  * @module utilities/Checks
  */
-let Checks = (function() {
+let Checks = (function () {
   /**
    * Checks to see if the new song to be played is different than the song
    * that is currently playing. To be true, the user would have selected
@@ -105,7 +105,8 @@ let Checks = (function() {
     /*
 			Test the string against the URL pattern and return if it matches
 		*/
-    let pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+    let pattern =
+      /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
 
     return pattern.test(url);
   }
@@ -133,7 +134,7 @@ let Checks = (function() {
     newAlbum: newAlbum,
     newPlaylist: newPlaylist,
     isURL: isURL,
-    isInt: isInt
+    isInt: isInt,
   };
 })();
 

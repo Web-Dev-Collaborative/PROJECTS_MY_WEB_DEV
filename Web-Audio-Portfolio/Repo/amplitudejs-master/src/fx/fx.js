@@ -11,7 +11,7 @@ import config from "../config.js";
  *
  * @module fx/FX
  */
-let Fx = (function() {
+let Fx = (function () {
   /**
    * Configures the Web Audio API to work with AmplitudeJS
    */
@@ -36,7 +36,7 @@ let Fx = (function() {
 				Web Audio API is available, set the context in our config.
 			*/
       config.context = new browserContext();
-      
+
       /*
 				Create an analyzer that we will use in the context.
 			*/
@@ -47,7 +47,7 @@ let Fx = (function() {
 				to use the power of the Web Audio API.
 			*/
       config.audio.crossOrigin = "anonymous";
-      
+
       /*
 				Bind the source to the Javascript Audio Element.
 			*/
@@ -106,15 +106,15 @@ let Fx = (function() {
   /**
    * Determines if the user is using any of the web audio API features.
    */
-  function determineUsingAnyFX(){
+  function determineUsingAnyFX() {
     let waveforms = document.querySelectorAll(".amplitude-wave-form");
     let visualizationElements = document.querySelectorAll(
       ".amplitude-visualization"
     );
 
-    if( waveforms.length > 0 || visualizationElements.length > 0 ){
+    if (waveforms.length > 0 || visualizationElements.length > 0) {
       return true;
-    }else{
+    } else {
       return false;
     }
   }
@@ -125,7 +125,7 @@ let Fx = (function() {
   return {
     configureWebAudioAPI: configureWebAudioAPI,
     webAudioAPIAvailable: webAudioAPIAvailable,
-    determineUsingAnyFX: determineUsingAnyFX
+    determineUsingAnyFX: determineUsingAnyFX,
   };
 })();
 

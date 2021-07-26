@@ -17,7 +17,7 @@ import AmplitudeInitializer from "../init/init.js";
  *
  * @module soundcloud/SoundCloud
  */
-let SoundCloud = (function() {
+let SoundCloud = (function () {
   /**
    * Defines the temporary user config used while we configure soundcloud
    * @type {object}
@@ -72,7 +72,7 @@ let SoundCloud = (function() {
 			that the user passed in.
 		*/
     SC.initialize({
-      client_id: config.soundcloud_client
+      client_id: config.soundcloud_client,
     });
 
     /*
@@ -126,7 +126,7 @@ let SoundCloud = (function() {
     index,
     addToShuffleList = false
   ) {
-    SC.get("/resolve/?url=" + url, function(sound) {
+    SC.get("/resolve/?url=" + url, function (sound) {
       /*
         If streamable we get the url and bind the client ID to the end
         so Amplitude can just stream the song normally. We then overwrite
@@ -163,9 +163,8 @@ let SoundCloud = (function() {
           config.playlists[playlist].songs[index].soundcloud_data = sound;
 
           if (addToShuffleList) {
-            config.playlists[playlist].shuffle_list[
-              index
-            ].soundcloud_data = sound;
+            config.playlists[playlist].shuffle_list[index].soundcloud_data =
+              sound;
           }
         } else {
           config.songs[index].url =
@@ -235,7 +234,7 @@ let SoundCloud = (function() {
    * @param {number} index 	- The index of the soundcloud song in the songs array.
    */
   function resolveStreamable(url, index) {
-    SC.get("/resolve/?url=" + url, function(sound) {
+    SC.get("/resolve/?url=" + url, function (sound) {
       /*
 				If streamable we get the url and bind the client ID to the end
 				so Amplitude can just stream the song normally. We then overwrite
@@ -304,7 +303,7 @@ let SoundCloud = (function() {
   return {
     loadSoundCloud: loadSoundCloud,
     resolveIndividualStreamableURL: resolveIndividualStreamableURL,
-    isSoundCloudURL: isSoundCloudURL
+    isSoundCloudURL: isSoundCloudURL,
   };
 })();
 

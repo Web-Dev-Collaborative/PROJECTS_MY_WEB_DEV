@@ -1,6 +1,6 @@
-div#time-container{
-  span.current-time{
-    color: #607D8B;
+div#time-container {
+  span.current-time {
+    color: #607d8b;
     font-size: 14px;
     font-weight: 700;
     float: left;
@@ -8,8 +8,8 @@ div#time-container{
     text-align: center;
   }
 
-  span.duration{
-    color: #607D8B;
+  span.duration {
+    color: #607d8b;
     font-size: 14px;
     font-weight: 700;
     float: left;
@@ -18,7 +18,7 @@ div#time-container{
   }
 }
 
-div#time-container:after{
+div#time-container:after {
   content: "";
   display: table;
   clear: both;

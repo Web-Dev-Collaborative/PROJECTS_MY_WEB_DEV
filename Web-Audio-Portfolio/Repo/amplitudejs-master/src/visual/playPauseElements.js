@@ -8,7 +8,7 @@ import config from "../config.js";
  * Defines the visual representation of AmplitudeJS play pause elements.
  * @module visual/PlayPauseElements
  */
-let PlayPauseElements = (function() {
+let PlayPauseElements = (function () {
   /**
    * Syncs all play pause elements.
    *
@@ -272,7 +272,7 @@ let PlayPauseElements = (function() {
     syncPlaylist: syncPlaylist,
     syncSong: syncSong,
     syncSongInPlaylist: syncSongInPlaylist,
-    syncToPause: syncToPause
+    syncToPause: syncToPause,
   };
 })();
 

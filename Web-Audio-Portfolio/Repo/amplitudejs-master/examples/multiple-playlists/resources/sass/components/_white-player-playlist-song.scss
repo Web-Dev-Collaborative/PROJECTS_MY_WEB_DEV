@@ -1,18 +1,18 @@
-div.white-player-playlist-song{
-  border-bottom: 1px solid #F5F5F6;
+div.white-player-playlist-song {
+  border-bottom: 1px solid #f5f5f6;
   padding-top: 8px;
   padding-bottom: 8px;
   cursor: pointer;
 
-  &:hover{
-    background-color: rgba( 211, 94, 154, .30 );
+  &:hover {
+    background-color: rgba(211, 94, 154, 0.3);
   }
 
-  &.amplitude-active-song-container{
-    background-color: rgba( 238, 100, 82, .30 );
+  &.amplitude-active-song-container {
+    background-color: rgba(238, 100, 82, 0.3);
   }
 
-  img{
+  img {
     width: 48px;
     height: 48px;
     border-radius: 3px;
@@ -20,12 +20,12 @@ div.white-player-playlist-song{
     float: left;
   }
 
-  div.playlist-song-meta{
+  div.playlist-song-meta {
     float: left;
     margin-left: 15px;
-    width: calc( 100% - 80px );
+    width: calc(100% - 80px);
 
-    span.playlist-song-name{
+    span.playlist-song-name {
       color: #414344;
       font-size: 14px;
       display: block;
@@ -35,8 +35,8 @@ div.white-player-playlist-song{
       text-overflow: ellipsis;
     }
 
-    span.playlist-artist-album{
-      color: #AAAFB3;
+    span.playlist-artist-album {
+      color: #aaafb3;
       font-size: 12px;
       display: block;
       width: 100%;
@@ -47,7 +47,7 @@ div.white-player-playlist-song{
   }
 }
 
-div.white-player-playlist-song::after{
+div.white-player-playlist-song::after {
   content: "";
   display: table;
   clear: both;

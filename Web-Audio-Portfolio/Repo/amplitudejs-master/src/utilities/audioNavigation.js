@@ -69,7 +69,7 @@ import ContainerElements from "../visual/containerElements.js";
 
 /**
  * Time Update Handle
- * 
+ *
  * @module events/Events
  */
 import Events from "../events/events.js";
@@ -79,7 +79,7 @@ import Events from "../events/events.js";
  *
  * @module utilities/AudioNavigation
  */
-let AudioNavigation = (function() {
+let AudioNavigation = (function () {
   /**
    * Sets the next song
    *
@@ -109,7 +109,7 @@ let AudioNavigation = (function() {
         If the playlist is shuffled, get the now playing index.
       */
       if (config.shuffle_on) {
-        nextIndex = config.shuffle_list[ config.active_index ].index;
+        nextIndex = config.shuffle_list[config.active_index].index;
         nextSong = config.shuffle_list[nextIndex];
       } else {
         nextIndex = config.active_index;
@@ -130,13 +130,13 @@ let AudioNavigation = (function() {
           /*
             Set the next index to be the index of the song in the shuffle list.
           */
-          nextIndex = parseInt( config.active_index ) + 1;
+          nextIndex = parseInt(config.active_index) + 1;
         } else {
-          nextIndex = 0
+          nextIndex = 0;
           endOfList = true;
         }
 
-        nextSong = config.shuffle_list[ nextIndex ];
+        nextSong = config.shuffle_list[nextIndex];
       } else {
         /*
           If the active index + 1 is less than the length of the songs, then
@@ -489,17 +489,17 @@ let AudioNavigation = (function() {
     config.audio = new Audio(song.url);
     Events.rebindAudio();
     Callbacks.initialize();
-    
+
     config.audio.src = song.url;
     config.active_metadata = song;
     config.active_album = song.album;
-    
+
     config.active_index = parseInt(index);
 
     /*
       Set new information now that the song has changed.
     */
-    afterSongChange( direct );
+    afterSongChange(direct);
   }
 
   /**
@@ -536,7 +536,7 @@ let AudioNavigation = (function() {
     /*
       Set new information now that the song has changed.
     */
-    afterSongChange( direct );
+    afterSongChange(direct);
   }
 
   /**
@@ -573,9 +573,9 @@ let AudioNavigation = (function() {
    *      then don't care if shuffle is on or not.
    * @access private
    */
-  function afterSongChange( direct ) {
+  function afterSongChange(direct) {
     MetaDataElements.displayMetaData();
-    ContainerElements.setActive( direct );
+    ContainerElements.setActive(direct);
     TimeElements.resetDurationTimes();
 
     /*
@@ -619,7 +619,7 @@ let AudioNavigation = (function() {
     setPreviousPlaylist: setPreviousPlaylist,
     changeSong: changeSong,
     changeSongPlaylist: changeSongPlaylist,
-    setActivePlaylist: setActivePlaylist
+    setActivePlaylist: setActivePlaylist,
   };
 })();
 

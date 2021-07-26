@@ -12,25 +12,24 @@
  * From here, the dispatcher is called to create unified pointer events.
  * Included are touch events (v1), mouse events, and MSPointerEvents.
  */
-(function(scope) {
-
+(function (scope) {
   var dispatcher = scope.dispatcher;
   var nav = window.navigator;
 
   if (window.PointerEvent) {
-    dispatcher.registerSource('pointer', scope.pointerEvents);
+    dispatcher.registerSource("pointer", scope.pointerEvents);
   } else if (nav.msPointerEnabled) {
-    dispatcher.registerSource('ms', scope.msEvents);
+    dispatcher.registerSource("ms", scope.msEvents);
   } else {
-    dispatcher.registerSource('mouse', scope.mouseEvents);
+    dispatcher.registerSource("mouse", scope.mouseEvents);
     if (window.ontouchstart !== undefined) {
-      dispatcher.registerSource('touch', scope.touchEvents);
+      dispatcher.registerSource("touch", scope.touchEvents);
     }
   }
 
   // Work around iOS bugs https://bugs.webkit.org/show_bug.cgi?id=135628 and https://bugs.webkit.org/show_bug.cgi?id=136506
   var ua = navigator.userAgent;
-  var IS_IOS = ua.match(/iPad|iPhone|iPod/) && 'ontouchstart' in window;
+  var IS_IOS = ua.match(/iPad|iPhone|iPod/) && "ontouchstart" in window;
 
   dispatcher.IS_IOS = IS_IOS;
   scope.touchEvents.IS_IOS = IS_IOS;

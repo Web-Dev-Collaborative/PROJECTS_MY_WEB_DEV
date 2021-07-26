@@ -27,7 +27,7 @@ import PlayPauseElements from "../visual/playPauseElements.js";
  *
  * @module events/Ended
  */
-let Ended = (function() {
+let Ended = (function () {
   /**
    * When the song has ended, handles what to do next
    *
@@ -40,7 +40,7 @@ let Ended = (function() {
       Sets the time out for song ended. This determines if
       we should go to the next song or delay between songs.
     */
-    setTimeout(function() {
+    setTimeout(function () {
       /*
         If we continue next, we should move to the next song in the playlist.
       */
@@ -74,7 +74,7 @@ let Ended = (function() {
     Returns the public facing methods.
   */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

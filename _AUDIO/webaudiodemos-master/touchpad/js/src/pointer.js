@@ -7,40 +7,35 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-(function(scope) {
+(function (scope) {
   var dispatcher = scope.dispatcher;
   var pointermap = dispatcher.pointermap;
   var pointerEvents = {
-    events: [
-      'pointerdown',
-      'pointermove',
-      'pointerup',
-      'pointercancel'
-    ],
-    prepareEvent: function(inEvent) {
+    events: ["pointerdown", "pointermove", "pointerup", "pointercancel"],
+    prepareEvent: function (inEvent) {
       var e = dispatcher.cloneEvent(inEvent);
-      e._source = 'pointer';
+      e._source = "pointer";
       return e;
     },
-    register: function(target) {
+    register: function (target) {
       dispatcher.listen(target, this.events);
     },
-    unregister: function(target) {
+    unregister: function (target) {
       if (target === document) {
         return;
       }
       dispatcher.unlisten(target, this.events);
     },
-    cleanup: function(id) {
-      pointermap['delete'](id);
+    cleanup: function (id) {
+      pointermap["delete"](id);
     },
-    pointerdown: function(inEvent) {
+    pointerdown: function (inEvent) {
       var e = this.prepareEvent(inEvent);
       e.target = scope.findTarget(inEvent);
       pointermap.set(e.pointerId, e.target);
       dispatcher.down(e);
     },
-    pointermove: function(inEvent) {
+    pointermove: function (inEvent) {
       var target = pointermap.get(inEvent.pointerId);
       if (target) {
         var e = this.prepareEvent(inEvent);
@@ -48,20 +43,20 @@
         dispatcher.move(e);
       }
     },
-    pointerup: function(inEvent) {
+    pointerup: function (inEvent) {
       var e = this.prepareEvent(inEvent);
       e.relatedTarget = scope.findTarget(inEvent);
       e.target = pointermap.get(e.pointerId);
       dispatcher.up(e);
       this.cleanup(inEvent.pointerId);
     },
-    pointercancel: function(inEvent) {
+    pointercancel: function (inEvent) {
       var e = this.prepareEvent(inEvent);
       e.relatedTarget = scope.findTarget(inEvent);
       e.target = pointermap.get(e.pointerId);
       dispatcher.cancel(e);
       this.cleanup(inEvent.pointerId);
-    }
+    },
   };
 
   scope.pointerEvents = pointerEvents;

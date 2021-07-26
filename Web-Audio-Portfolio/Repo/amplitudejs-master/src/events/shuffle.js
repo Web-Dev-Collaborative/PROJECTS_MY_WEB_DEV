@@ -20,7 +20,7 @@ import ShuffleElements from "../visual/shuffleElements.js";
  * Handles all of the shuffle events
  * @module events/Shuffle
  */
-let Shuffle = (function() {
+let Shuffle = (function () {
   /**
    * Handles an event on the shuffle button
    *
@@ -89,7 +89,7 @@ let Shuffle = (function() {
    * Returns public facing methods
    */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

@@ -26,7 +26,7 @@ import Core from "../core/core.js";
  * Handles all of the stop events
  * @module events/Stop
  */
-let Stop = (function() {
+let Stop = (function () {
   /**
    * Handles an event on a stop element.
    *
@@ -61,7 +61,7 @@ let Stop = (function() {
    * Returns public facing methods
    */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

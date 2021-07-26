@@ -7,47 +7,47 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-(function(scope) {
+(function (scope) {
   var CLONE_PROPS = [
     // MouseEvent
-    'bubbles',
-    'cancelable',
-    'view',
-    'detail',
-    'screenX',
-    'screenY',
-    'clientX',
-    'clientY',
-    'ctrlKey',
-    'altKey',
-    'shiftKey',
-    'metaKey',
-    'button',
-    'relatedTarget',
+    "bubbles",
+    "cancelable",
+    "view",
+    "detail",
+    "screenX",
+    "screenY",
+    "clientX",
+    "clientY",
+    "ctrlKey",
+    "altKey",
+    "shiftKey",
+    "metaKey",
+    "button",
+    "relatedTarget",
     // DOM Level 3
-    'buttons',
+    "buttons",
     // PointerEvent
-    'pointerId',
-    'width',
-    'height',
-    'pressure',
-    'tiltX',
-    'tiltY',
-    'pointerType',
-    'hwTimestamp',
-    'isPrimary',
+    "pointerId",
+    "width",
+    "height",
+    "pressure",
+    "tiltX",
+    "tiltY",
+    "pointerType",
+    "hwTimestamp",
+    "isPrimary",
     // event instance
-    'type',
-    'target',
-    'currentTarget',
-    'which',
-    'pageX',
-    'pageY',
-    'timeStamp',
+    "type",
+    "target",
+    "currentTarget",
+    "which",
+    "pageX",
+    "pageY",
+    "timeStamp",
     // gesture addons
-    'preventTap',
-    'tapPrevented',
-    '_source'
+    "preventTap",
+    "tapPrevented",
+    "_source",
   ];
 
   var CLONE_DEFAULTS = [
@@ -75,22 +75,22 @@
     0,
     0,
     0,
-    '',
+    "",
     0,
     false,
     // event instance
-    '',
+    "",
     null,
     null,
     0,
     0,
     0,
     0,
-    function(){},
-    false
+    function () {},
+    false,
   ];
 
-  var HAS_SVG_INSTANCE = (typeof SVGElementInstance !== 'undefined');
+  var HAS_SVG_INSTANCE = typeof SVGElementInstance !== "undefined";
 
   var eventFactory = scope.eventFactory;
 
@@ -122,8 +122,8 @@
     // map gesture event -> {listeners: int, index: gestures[int]}
     dependencyMap: {
       // make sure down and up are in the map to trigger "register"
-      down: {listeners: 0, index: -1},
-      up: {listeners: 0, index: -1}
+      down: { listeners: 0, index: -1 },
+      up: { listeners: 0, index: -1 },
     },
     gestureQueue: [],
     /**
@@ -134,11 +134,11 @@
      * @param {string} name A name for the event source
      * @param {Object} source A new source of platform events.
      */
-    registerSource: function(name, source) {
+    registerSource: function (name, source) {
       var s = source;
       var newEvents = s.events;
       if (newEvents) {
-        newEvents.forEach(function(e) {
+        newEvents.forEach(function (e) {
           if (s[e]) {
             this.eventMap[e] = s[e].bind(s);
           }
@@ -147,7 +147,7 @@
         this.eventSourceList.push(s);
       }
     },
-    registerGesture: function(name, source) {
+    registerGesture: function (name, source) {
       var obj = Object.create(null);
       obj.listeners = 0;
       obj.index = this.gestures.length;
@@ -157,40 +157,40 @@
       }
       this.gestures.push(source);
     },
-    register: function(element, initial) {
+    register: function (element, initial) {
       var l = this.eventSourceList.length;
-      for (var i = 0, es; (i < l) && (es = this.eventSourceList[i]); i++) {
+      for (var i = 0, es; i < l && (es = this.eventSourceList[i]); i++) {
         // call eventsource register
         es.register.call(es, element, initial);
       }
     },
-    unregister: function(element) {
+    unregister: function (element) {
       var l = this.eventSourceList.length;
-      for (var i = 0, es; (i < l) && (es = this.eventSourceList[i]); i++) {
+      for (var i = 0, es; i < l && (es = this.eventSourceList[i]); i++) {
         // call eventsource register
         es.unregister.call(es, element);
       }
     },
     // EVENTS
-    down: function(inEvent) {
+    down: function (inEvent) {
       this.requiredGestures.set(inEvent.pointerId, currentGestures);
-      this.fireEvent('down', inEvent);
+      this.fireEvent("down", inEvent);
     },
-    move: function(inEvent) {
+    move: function (inEvent) {
       // pipe move events into gesture queue directly
-      inEvent.type = 'move';
+      inEvent.type = "move";
       this.fillGestureQueue(inEvent);
     },
-    up: function(inEvent) {
-      this.fireEvent('up', inEvent);
+    up: function (inEvent) {
+      this.fireEvent("up", inEvent);
       this.requiredGestures.delete(inEvent.pointerId);
     },
-    cancel: function(inEvent) {
+    cancel: function (inEvent) {
       inEvent.tapPrevented = true;
-      this.fireEvent('up', inEvent);
+      this.fireEvent("up", inEvent);
       this.requiredGestures.delete(inEvent.pointerId);
     },
-    addGestureDependency: function(node, currentGestures) {
+    addGestureDependency: function (node, currentGestures) {
       var gesturesWanted = node._pgEvents;
       if (gesturesWanted && currentGestures) {
         var gk = Object.keys(gesturesWanted);
@@ -208,7 +208,7 @@
       }
     },
     // LISTENER LOGIC
-    eventHandler: function(inEvent) {
+    eventHandler: function (inEvent) {
       // This is used to prevent multiple dispatch of events from
       // platform events. This can happen when two elements in different scopes
       // are set up to create pointer events, which is relevant to Shadow DOM.
@@ -216,7 +216,12 @@
       var type = inEvent.type;
 
       // only generate the list of desired events on "down"
-      if (type === 'touchstart' || type === 'mousedown' || type === 'pointerdown' || type === 'MSPointerDown') {
+      if (
+        type === "touchstart" ||
+        type === "mousedown" ||
+        type === "pointerdown" ||
+        type === "MSPointerDown"
+      ) {
         if (!inEvent._handledByPG) {
           currentGestures = {};
         }
@@ -224,10 +229,15 @@
         // in IOS mode, there is only a listener on the document, so this is not re-entrant
         if (this.IS_IOS) {
           var ev = inEvent;
-          if (type === 'touchstart') {
+          if (type === "touchstart") {
             var ct = inEvent.changedTouches[0];
             // set up a fake event to give to the path builder
-            ev = {target: inEvent.target, clientX: ct.clientX, clientY: ct.clientY, path: inEvent.path};
+            ev = {
+              target: inEvent.target,
+              clientX: ct.clientX,
+              clientY: ct.clientY,
+              path: inEvent.path,
+            };
           }
           // use event path if available, otherwise build a path from target finding
           var nodes = inEvent.path || scope.targetFinding.path(ev);
@@ -250,21 +260,21 @@
       inEvent._handledByPG = true;
     },
     // set up event listeners
-    listen: function(target, events) {
-      for (var i = 0, l = events.length, e; (i < l) && (e = events[i]); i++) {
+    listen: function (target, events) {
+      for (var i = 0, l = events.length, e; i < l && (e = events[i]); i++) {
         this.addEvent(target, e);
       }
     },
     // remove event listeners
-    unlisten: function(target, events) {
-      for (var i = 0, l = events.length, e; (i < l) && (e = events[i]); i++) {
+    unlisten: function (target, events) {
+      for (var i = 0, l = events.length, e; i < l && (e = events[i]); i++) {
         this.removeEvent(target, e);
       }
     },
-    addEvent: function(target, eventName) {
+    addEvent: function (target, eventName) {
       target.addEventListener(eventName, this.boundHandler);
     },
-    removeEvent: function(target, eventName) {
+    removeEvent: function (target, eventName) {
       target.removeEventListener(eventName, this.boundHandler);
     },
     // EVENT CREATION AND TRACKING
@@ -276,7 +286,7 @@
      * @param {Event} inEvent A platform event with a target
      * @return {Event} A PointerEvent of type `inType`
      */
-    makeEvent: function(inType, inEvent) {
+    makeEvent: function (inType, inEvent) {
       var e = eventFactory.makePointerEvent(inType, inEvent);
       e.preventDefault = inEvent.preventDefault;
       e.tapPrevented = inEvent.tapPrevented;
@@ -284,7 +294,7 @@
       return e;
     },
     // make and dispatch an event in one call
-    fireEvent: function(inType, inEvent) {
+    fireEvent: function (inType, inEvent) {
       var e = this.makeEvent(inType, inEvent);
       return this.dispatchEvent(e);
     },
@@ -295,22 +305,23 @@
      * @return {Object} An object containing shallow copies of `inEvent`'s
      *    properties.
      */
-    cloneEvent: function(inEvent) {
-      var eventCopy = Object.create(null), p;
+    cloneEvent: function (inEvent) {
+      var eventCopy = Object.create(null),
+        p;
       for (var i = 0; i < CLONE_PROPS.length; i++) {
         p = CLONE_PROPS[i];
         eventCopy[p] = inEvent[p] || CLONE_DEFAULTS[i];
         // Work around SVGInstanceElement shadow tree
         // Return the <use> element that is represented by the instance for Safari, Chrome, IE.
         // This is the behavior implemented by Firefox.
-        if (p === 'target' || p === 'relatedTarget') {
+        if (p === "target" || p === "relatedTarget") {
           if (HAS_SVG_INSTANCE && eventCopy[p] instanceof SVGElementInstance) {
             eventCopy[p] = eventCopy[p].correspondingUseElement;
           }
         }
       }
       // keep the semantics of preventDefault
-      eventCopy.preventDefault = function() {
+      eventCopy.preventDefault = function () {
         inEvent.preventDefault();
       };
       return eventCopy;
@@ -321,7 +332,7 @@
      * @param {Event} inEvent The event to be dispatched.
      * @return {Boolean} True if an event handler returns true, false otherwise.
      */
-    dispatchEvent: function(inEvent) {
+    dispatchEvent: function (inEvent) {
       var t = inEvent._target;
       if (t) {
         t.dispatchEvent(inEvent);
@@ -332,7 +343,7 @@
         this.fillGestureQueue(clone);
       }
     },
-    gestureTrigger: function() {
+    gestureTrigger: function () {
       // process the gesture queue
       for (var i = 0, e, rg; i < this.gestureQueue.length; i++) {
         e = this.gestureQueue[i];
@@ -352,14 +363,14 @@
       }
       this.gestureQueue.length = 0;
     },
-    fillGestureQueue: function(ev) {
+    fillGestureQueue: function (ev) {
       // only trigger the gesture queue once
       if (!this.gestureQueue.length) {
         requestAnimationFrame(this.boundGestureTrigger);
       }
       ev._requiredGestures = this.requiredGestures.get(ev.pointerId);
       this.gestureQueue.push(ev);
-    }
+    },
   };
   dispatcher.boundHandler = dispatcher.eventHandler.bind(dispatcher);
   dispatcher.boundGestureTrigger = dispatcher.gestureTrigger.bind(dispatcher);
@@ -374,7 +385,7 @@
    * @param {string} gesture
    * @return Boolean `gesture` is a valid gesture
    */
-  scope.activateGesture = function(node, gesture) {
+  scope.activateGesture = function (node, gesture) {
     var g = gesture.toLowerCase();
     var dep = dispatcher.dependencyMap[g];
     if (dep) {
@@ -385,21 +396,26 @@
       }
       // TODO(dfreedm): re-evaluate bookkeeping to avoid using attributes
       if (recognizer) {
-        var touchAction = recognizer.defaultActions && recognizer.defaultActions[g];
+        var touchAction =
+          recognizer.defaultActions && recognizer.defaultActions[g];
         var actionNode;
-        switch(node.nodeType) {
+        switch (node.nodeType) {
           case Node.ELEMENT_NODE:
             actionNode = node;
-          break;
+            break;
           case Node.DOCUMENT_FRAGMENT_NODE:
             actionNode = node.host;
-          break;
+            break;
           default:
             actionNode = null;
-          break;
+            break;
         }
-        if (touchAction && actionNode && !actionNode.hasAttribute('touch-action')) {
-          actionNode.setAttribute('touch-action', touchAction);
+        if (
+          touchAction &&
+          actionNode &&
+          !actionNode.hasAttribute("touch-action")
+        ) {
+          actionNode.setAttribute("touch-action", touchAction);
         }
       }
       if (!node._pgEvents) {
@@ -420,7 +436,7 @@
    * @param {Function} handler
    * @param {Boolean} capture
    */
-  scope.addEventListener = function(node, gesture, handler, capture) {
+  scope.addEventListener = function (node, gesture, handler, capture) {
     if (handler) {
       scope.activateGesture(node, gesture);
       node.addEventListener(gesture, handler, capture);
@@ -436,7 +452,7 @@
    * @param {string} gesture
    * @return Boolean `gesture` is a valid gesture
    */
-  scope.deactivateGesture = function(node, gesture) {
+  scope.deactivateGesture = function (node, gesture) {
     var g = gesture.toLowerCase();
     var dep = dispatcher.dependencyMap[g];
     if (dep) {
@@ -465,7 +481,7 @@
    * @param {Function} handler
    * @param {Boolean} capture
    */
-  scope.removeEventListener = function(node, gesture, handler, capture) {
+  scope.removeEventListener = function (node, gesture, handler, capture) {
     if (handler) {
       scope.deactivateGesture(node, gesture);
       node.removeEventListener(gesture, handler, capture);

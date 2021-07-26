@@ -1,20 +1,20 @@
-div#progress-container{
+div#progress-container {
   width: 70%;
   float: left;
   position: relative;
   height: 20px;
   cursor: pointer;
 
-  &:hover{
-    input[type=range].amplitude-song-slider::-webkit-slider-thumb{
+  &:hover {
+    input[type="range"].amplitude-song-slider::-webkit-slider-thumb {
       display: block;
     }
-    input[type=range].amplitude-song-slider::-moz-range-thumb{
+    input[type="range"].amplitude-song-slider::-moz-range-thumb {
       visibility: visible;
     }
   }
 
-  progress#song-played-progress{
+  progress#song-played-progress {
     width: 100%;
     position: absolute;
     left: 0;
@@ -30,41 +30,41 @@ div#progress-container{
     background: transparent;
     border: none; /* Needed for Firefox */
   }
-  @media all and (-ms-high-contrast:none)
-  {
-    *::-ms-backdrop, progress#song-played-progress {
-      color: #00A0FF;
-      border: none;
-      background-color: #CFD8DC;
-    }
-  }
-
-  @supports (-ms-ime-align:auto) {
+  @media all and (-ms-high-contrast: none) {
+    *::-ms-backdrop,
     progress#song-played-progress {
-      color: #00A0FF;
+      color: #00a0ff;
+      border: none;
+      background-color: #cfd8dc;
+    }
+  }
+
+  @supports (-ms-ime-align: auto) {
+    progress#song-played-progress {
+      color: #00a0ff;
       border: none;
     }
   }
 
-  progress#song-played-progress[value]::-webkit-progress-bar{
+  progress#song-played-progress[value]::-webkit-progress-bar {
     background: none;
     border-radius: 5px;
   }
 
-  progress#song-played-progress[value]::-webkit-progress-value{
-    background-color: #00A0FF;
+  progress#song-played-progress[value]::-webkit-progress-value {
+    background-color: #00a0ff;
     border-radius: 5px;
   }
 
-  progress#song-played-progress::-moz-progress-bar{
+  progress#song-played-progress::-moz-progress-bar {
     background: none;
     border-radius: 5px;
-    background-color: #00A0FF;
+    background-color: #00a0ff;
     height: 5px;
     margin-top: -2px;
   }
 
-  progress#song-buffered-progress{
+  progress#song-buffered-progress {
     position: absolute;
     left: 0;
     top: 8px;
@@ -78,55 +78,55 @@ div#progress-container{
     border-radius: 5px;
     background: transparent;
     border: none;
-    background-color: #D7DEE3;
+    background-color: #d7dee3;
   }
 
-  progress#song-buffered-progress[value]::-webkit-progress-bar{
-    background-color: #CFD8DC;
+  progress#song-buffered-progress[value]::-webkit-progress-bar {
+    background-color: #cfd8dc;
     border-radius: 5px;
   }
 
-  progress#song-buffered-progress[value]::-webkit-progress-value{
-    background-color: #78909C;
+  progress#song-buffered-progress[value]::-webkit-progress-value {
+    background-color: #78909c;
     border-radius: 5px;
-    transition: width .1s ease;
+    transition: width 0.1s ease;
   }
 
-  progress#song-buffered-progress::-moz-progress-bar{
+  progress#song-buffered-progress::-moz-progress-bar {
     background: none;
     border-radius: 5px;
-    background-color: #78909C;
+    background-color: #78909c;
     height: 5px;
     margin-top: -2px;
   }
 
   progress::-ms-fill {
-      border: none;
+    border: none;
   }
 
   @-moz-document url-prefix() {
-    progress#song-buffered-progress{
+    progress#song-buffered-progress {
       top: 9px;
       border: none;
     }
   }
 
-  @media all and (-ms-high-contrast:none)
-  {
-    *::-ms-backdrop, progress#song-buffered-progress {
-      color: #78909C;
-      border: none;
-    }
-  }
-
-  @supports (-ms-ime-align:auto) {
+  @media all and (-ms-high-contrast: none) {
+    *::-ms-backdrop,
     progress#song-buffered-progress {
-      color: #78909C;
+      color: #78909c;
       border: none;
     }
   }
 
-  input[type=range] {
+  @supports (-ms-ime-align: auto) {
+    progress#song-buffered-progress {
+      color: #78909c;
+      border: none;
+    }
+  }
+
+  input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
     margin: 7.5px 0;
@@ -137,10 +137,10 @@ div#progress-container{
     cursor: pointer;
     background-color: inherit;
   }
-  input[type=range]:focus {
+  input[type="range"]:focus {
     outline: none;
   }
-  input[type=range]::-webkit-slider-runnable-track {
+  input[type="range"]::-webkit-slider-runnable-track {
     width: 100%;
     height: 0px;
     cursor: pointer;
@@ -149,7 +149,7 @@ div#progress-container{
     border-radius: 0px;
     border: 0px solid #010101;
   }
-  input[type=range]::-webkit-slider-thumb {
+  input[type="range"]::-webkit-slider-thumb {
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     border: 1px solid #00a0ff;
     height: 15px;
@@ -160,10 +160,10 @@ div#progress-container{
     -webkit-appearance: none;
     margin-top: -7.5px;
   }
-  input[type=range]:focus::-webkit-slider-runnable-track {
+  input[type="range"]:focus::-webkit-slider-runnable-track {
     background: #00adfb;
   }
-  input[type=range]::-moz-range-track {
+  input[type="range"]::-moz-range-track {
     width: 100%;
     height: 0px;
     cursor: pointer;
@@ -172,7 +172,7 @@ div#progress-container{
     border-radius: 0px;
     border: 0px solid #010101;
   }
-  input[type=range]::-moz-range-thumb {
+  input[type="range"]::-moz-range-thumb {
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     border: 1px solid #00a0ff;
     height: 15px;
@@ -181,7 +181,7 @@ div#progress-container{
     background: #00a0ff;
     cursor: pointer;
   }
-  input[type=range]::-ms-track {
+  input[type="range"]::-ms-track {
     width: 100%;
     height: 0px;
     cursor: pointer;
@@ -189,19 +189,19 @@ div#progress-container{
     border-color: transparent;
     color: transparent;
   }
-  input[type=range]::-ms-fill-lower {
+  input[type="range"]::-ms-fill-lower {
     background: #003d57;
     border: 0px solid #010101;
     border-radius: 0px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
   }
-  input[type=range]::-ms-fill-upper {
+  input[type="range"]::-ms-fill-upper {
     background: #0075a9;
     border: 0px solid #010101;
     border-radius: 0px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
   }
-  input[type=range]::-ms-thumb {
+  input[type="range"]::-ms-thumb {
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     border: 1px solid #00a0ff;
     height: 15px;
@@ -215,12 +215,14 @@ div#progress-container{
   /*
     IE 11
   */
-  @media all and (-ms-high-contrast:none){
-    *::-ms-backdrop, input[type="range"].amplitude-song-slider{
+  @media all and (-ms-high-contrast: none) {
+    *::-ms-backdrop,
+    input[type="range"].amplitude-song-slider {
       padding: 0px;
     }
 
-    *::-ms-backdrop, input[type=range].amplitude-song-slider::-ms-thumb{
+    *::-ms-backdrop,
+    input[type="range"].amplitude-song-slider::-ms-thumb {
       height: 15px;
       width: 15px;
       border-radius: 10px;
@@ -228,32 +230,35 @@ div#progress-container{
       margin-top: -8px;
     }
 
-    *::-ms-backdrop, input[type=range].amplitude-song-slider::-ms-track{
+    *::-ms-backdrop,
+    input[type="range"].amplitude-song-slider::-ms-track {
       border-width: 15px 0;
       border-color: transparent;
     }
 
-    *::-ms-backdrop, input[type=range].amplitude-song-slider::-ms-fill-lower {
-      background: #CFD8DC;
+    *::-ms-backdrop,
+    input[type="range"].amplitude-song-slider::-ms-fill-lower {
+      background: #cfd8dc;
       border-radius: 10px;
     }
 
-    *::-ms-backdrop, input[type=range].amplitude-song-slider::-ms-fill-upper {
-      background: #CFD8DC;
+    *::-ms-backdrop,
+    input[type="range"].amplitude-song-slider::-ms-fill-upper {
+      background: #cfd8dc;
       border-radius: 10px;
     }
   }
-  @supports (-ms-ime-align:auto) {
-    input[type=range].amplitude-song-slider::-ms-thumb{
+  @supports (-ms-ime-align: auto) {
+    input[type="range"].amplitude-song-slider::-ms-thumb {
       height: 15px;
       width: 15px;
       margin-top: 3px;
     }
   }
-  input[type=range]:focus::-ms-fill-lower {
+  input[type="range"]:focus::-ms-fill-lower {
     background: #0075a9;
   }
-  input[type=range]:focus::-ms-fill-upper {
+  input[type="range"]:focus::-ms-fill-upper {
     background: #00adfb;
   }
 }

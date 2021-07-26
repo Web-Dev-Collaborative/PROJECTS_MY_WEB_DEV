@@ -4,27 +4,36 @@
     <title>AmplitudeJS Single Song Example</title>
 
     <!-- Include font -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,400i"
+      rel="stylesheet"
+    />
 
+    <!-- Include Amplitude JS -->
+    <script type="text/javascript" src="../../dist/amplitude.js"></script>
 
-		<!-- Include Amplitude JS -->
-		<script type="text/javascript" src="../../dist/amplitude.js"></script>
-
-		<!-- Include Style Sheet -->
-    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <!-- Include Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
   </head>
   <body>
     <div id="single-song-player">
-      <img data-amplitude-song-info="cover_art_url"/>
+      <img data-amplitude-song-info="cover_art_url" />
       <div class="bottom-container">
-        <progress class="amplitude-song-played-progress" id="song-played-progress"></progress>
+        <progress
+          class="amplitude-song-played-progress"
+          id="song-played-progress"
+        ></progress>
 
         <div class="time-container">
           <span class="current-time">
-            <span class="amplitude-current-minutes"></span>:<span class="amplitude-current-seconds"></span>
+            <span class="amplitude-current-minutes"></span>:<span
+              class="amplitude-current-seconds"
+            ></span>
           </span>
           <span class="duration">
-            <span class="amplitude-duration-minutes"></span>:<span class="amplitude-duration-seconds"></span>
+            <span class="amplitude-duration-minutes"></span>:<span
+              class="amplitude-duration-seconds"
+            ></span>
           </span>
         </div>
 
@@ -40,6 +49,6 @@
     <!--
 			Include UX functions JS
 		-->
-		<script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
   </body>
 </html>
