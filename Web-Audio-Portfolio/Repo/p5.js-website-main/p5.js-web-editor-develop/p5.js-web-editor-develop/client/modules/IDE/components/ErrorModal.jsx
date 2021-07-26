@@ -53,7 +53,8 @@ class ErrorModal extends React.Component {
   render() {
     return (
       <div className="error-modal__content">
-        {(() => { // eslint-disable-line
+        {(() => {
+          // eslint-disable-line
           if (this.props.type === 'forceAuthentication') {
             return this.forceAuthentication();
           } else if (this.props.type === 'staleSession') {

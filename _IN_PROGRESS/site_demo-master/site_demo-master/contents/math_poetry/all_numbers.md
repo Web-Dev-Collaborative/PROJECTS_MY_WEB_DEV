@@ -9,7 +9,7 @@ before the numbers get uninteresting.
 But this would be a curious amount,  
 which contradicts how we defined the thing!  
 So every number has something to show,  
-including ones whom we will never know.  
+including ones whom we will never know.
 
 Let’s see if this joke proof applies as well  
 to real numbers; do they all stand out?  
@@ -20,7 +20,8 @@ but real sets might lack a minimum.
 Will there be a special one to choose  
 from subsets of the whole continuum?  
 It isn’t clear where such a choice comes from,  
-yet some treat “choice” like it’s an axiom.  
+yet some treat “choice” like it’s an axiom.
 
 ---
+
 April 27, 2015

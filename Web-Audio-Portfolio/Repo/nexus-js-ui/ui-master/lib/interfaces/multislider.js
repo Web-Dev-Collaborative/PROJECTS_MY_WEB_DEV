@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-let math = require('../util/math');
-let svg = require('../util/svg');
-let Interface = require('../core/interface');
+let math = require("../util/math");
+let svg = require("../util/svg");
+let Interface = require("../core/interface");
 
 /**
  * Multislider
@@ -41,7 +41,7 @@ let Interface = require('../core/interface');
 
 export default class Multislider extends Interface {
   constructor() {
-    let options = ['value'];
+    let options = ["value"];
 
     let defaults = {
       size: [200, 100],
@@ -52,7 +52,7 @@ export default class Multislider extends Interface {
       candycane: 3,
       values: [0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1],
       smoothing: 0,
-      mode: 'bar' // 'bar', 'line'
+      mode: "bar", // 'bar', 'line'
     };
 
     super(arguments, options, defaults);
@@ -69,7 +69,10 @@ export default class Multislider extends Interface {
     @type {Array}
     */
     const vs = this.settings.values;
-    this.values = vs.length > this._numberOfSliders ? vs.slice(0, this._numberOfSliders) : vs.concat(Array(this._numberOfSliders - vs.length).fill(0));
+    this.values =
+      vs.length > this._numberOfSliders
+        ? vs.slice(0, this._numberOfSliders)
+        : vs.concat(Array(this._numberOfSliders - vs.length).fill(0));
 
     this.candycane = this.settings.candycane;
 
@@ -86,26 +89,26 @@ export default class Multislider extends Interface {
   }
 
   buildInterface() {
-    if (this._mode == 'line') {
-      this.line = svg.create('polyline');
-      this.line.setAttribute('stroke-width', 2);
-      this.line.setAttribute('fill', 'none');
+    if (this._mode == "line") {
+      this.line = svg.create("polyline");
+      this.line.setAttribute("stroke-width", 2);
+      this.line.setAttribute("fill", "none");
 
       this.element.appendChild(this.line);
 
-      this.fill = svg.create('polyline');
-      this.fill.setAttribute('fill-opacity', '0.2');
+      this.fill = svg.create("polyline");
+      this.fill.setAttribute("fill-opacity", "0.2");
 
       this.element.appendChild(this.fill);
 
       this.nodes = [];
 
       this.values.forEach(
-        function(value, index) {
-          let node = svg.create('circle');
+        function (value, index) {
+          let node = svg.create("circle");
 
-          node.setAttribute('cx', this.getX(index));
-          node.setAttribute('cy', this.getY(value));
+          node.setAttribute("cx", this.getX(index));
+          node.setAttribute("cy", this.getY(value));
 
           this.element.appendChild(node);
           this.nodes.push(node);
@@ -116,30 +119,30 @@ export default class Multislider extends Interface {
       this.caps = [];
 
       this.values.forEach(
-        function(value, index) {
-          let bar = svg.create('rect');
+        function (value, index) {
+          let bar = svg.create("rect");
 
           let x = this.getBarX(index);
           let y = this.getY(value);
 
-          bar.setAttribute('x', x - 0.1);
-          bar.setAttribute('y', y);
-          bar.setAttribute('width', this.sliderWidth + 0.2);
-          bar.setAttribute('height', this.height);
+          bar.setAttribute("x", x - 0.1);
+          bar.setAttribute("y", y);
+          bar.setAttribute("width", this.sliderWidth + 0.2);
+          bar.setAttribute("height", this.height);
           bar.setAttribute(
-            'opacity',
+            "opacity",
             1 - ((index % this.candycane) + 1) / (this.candycane + 1)
           );
 
           this.element.appendChild(bar);
           this.bars.push(bar);
 
-          let cap = svg.create('rect');
+          let cap = svg.create("rect");
 
-          cap.setAttribute('x', x - 0.1);
-          cap.setAttribute('y', y);
-          cap.setAttribute('width', this.sliderWidth + 0.2);
-          cap.setAttribute('height', 5);
+          cap.setAttribute("x", x - 0.1);
+          cap.setAttribute("y", y);
+          cap.setAttribute("width", this.sliderWidth + 0.2);
+          cap.setAttribute("height", 5);
 
           this.element.appendChild(cap);
           this.caps.push(cap);
@@ -188,7 +191,7 @@ export default class Multislider extends Interface {
 
   adjustAllValues() {
     this.values.forEach(
-      function(value, index) {
+      function (value, index) {
         value = this.adjustValueToStep(value);
         this.values[index] = math.clip(value, this._min, this._max);
       }.bind(this)
@@ -198,7 +201,7 @@ export default class Multislider extends Interface {
   getNormalizedValues() {
     this.normalizedValues = [];
     this.values.forEach(
-      function(value) {
+      function (value) {
         this.normalizedValues.push(
           math.scale(value, this._min, this._max, 0, 1)
         );
@@ -209,18 +212,18 @@ export default class Multislider extends Interface {
   colorInterface() {
     this.element.style.backgroundColor = this.colors.fill;
 
-    if (this._mode == 'line') {
-      this.line.setAttribute('stroke', this.colors.accent);
-      this.fill.setAttribute('fill', this.colors.accent);
-      this.nodes.forEach(node => {
-        node.setAttribute('fill', this.colors.accent);
+    if (this._mode == "line") {
+      this.line.setAttribute("stroke", this.colors.accent);
+      this.fill.setAttribute("fill", this.colors.accent);
+      this.nodes.forEach((node) => {
+        node.setAttribute("fill", this.colors.accent);
       });
     } else {
-      this.bars.forEach(bar => {
-        bar.setAttribute('fill', this.colors.accent);
+      this.bars.forEach((bar) => {
+        bar.setAttribute("fill", this.colors.accent);
       });
-      this.caps.forEach(cap => {
-        cap.setAttribute('fill', this.colors.accent);
+      this.caps.forEach((cap) => {
+        cap.setAttribute("fill", this.colors.accent);
       });
     }
   }
@@ -228,12 +231,12 @@ export default class Multislider extends Interface {
   sizeInterface() {
     this.sliderWidth = this.width / this.values.length;
 
-    if (this._mode == 'line') {
+    if (this._mode == "line") {
       this.nodes.forEach(
-        function(node) {
+        function (node) {
           let r = ~~(Math.min(this.width, this.height) / 50) + 2;
           r = Math.min(this.sliderWidth, r);
-          node.setAttribute('r', r);
+          node.setAttribute("r", r);
         }.bind(this)
       );
     }
@@ -242,32 +245,32 @@ export default class Multislider extends Interface {
   }
 
   render() {
-    if (this._mode == 'line') {
-      let data = '0 ' + this.getY(this.values[0]) + ', ';
+    if (this._mode == "line") {
+      let data = "0 " + this.getY(this.values[0]) + ", ";
 
       this.values.forEach((value, index) => {
         let x = this.getX(index);
         let y = this.getY(value);
-        data += x + ' ' + y + ', ';
-        this.nodes[index].setAttribute('cx', this.getX(index));
-        this.nodes[index].setAttribute('cy', this.getY(value));
+        data += x + " " + y + ", ";
+        this.nodes[index].setAttribute("cx", this.getX(index));
+        this.nodes[index].setAttribute("cy", this.getY(value));
       });
 
-      data += this.width + ' ' + this.getY(this.values[this.values.length - 1]);
+      data += this.width + " " + this.getY(this.values[this.values.length - 1]);
 
-      this.line.setAttribute('points', data);
+      this.line.setAttribute("points", data);
 
       // fill data
       // add bottom corners
 
-      data += ', ' + this.width + ' ' + this.height + ', ';
-      data += '0 ' + this.height;
+      data += ", " + this.width + " " + this.height + ", ";
+      data += "0 " + this.height;
 
-      this.fill.setAttribute('points', data);
+      this.fill.setAttribute("points", data);
     } else {
       this.values.forEach((value, index) => {
-        this.bars[index].setAttribute('y', this.getY(value));
-        this.caps[index].setAttribute('y', this.getY(value));
+        this.bars[index].setAttribute("y", this.getY(value));
+        this.caps[index].setAttribute("y", this.getY(value));
       });
     }
   }
@@ -327,7 +330,10 @@ export default class Multislider extends Interface {
 
           if (upCenter < this.values.length - 1) {
             let upLowerNeighbor = upCenter - 1;
-            let upUpperNeighbor = upCenter + 1 < this.values.length ? upCenter + 1 : this.values.length - 1;
+            let upUpperNeighbor =
+              upCenter + 1 < this.values.length
+                ? upCenter + 1
+                : this.values.length - 1;
             this.values[upCenter] =
               (this.values[upLowerNeighbor] + this.values[upUpperNeighbor]) / 2;
             this.values[upCenter] = this.adjustValueToStep(
@@ -339,7 +345,7 @@ export default class Multislider extends Interface {
 
       this.previousSlider = this.selectedSlider;
 
-      this.emit('change', this.values);
+      this.emit("change", this.values);
       this.render();
     }
   }
@@ -349,9 +355,9 @@ export default class Multislider extends Interface {
 
   update(index, value) {
     this.values[index] = this.adjustValueToStep(value);
-    this.emit('change', {
+    this.emit("change", {
       index: index,
-      value: value
+      value: value,
     });
   }
 
@@ -416,9 +422,9 @@ export default class Multislider extends Interface {
   setSlider(index, value) {
     this.values[index] = this.adjustValueToStep(value);
     this.values[index] = math.clip(this.values[index], this._min, this._max);
-    this.emit('change', {
+    this.emit("change", {
       index: index,
-      value: value
+      value: value,
     });
   }
 

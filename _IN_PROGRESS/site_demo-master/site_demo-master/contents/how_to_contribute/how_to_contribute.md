@@ -68,7 +68,7 @@ In general, please use the following guidelines when creating content for the 3B
 In general, the workflow for creating blog content should be the following:
 
 1. Find a video that you would like to transcribe and find the video in the M<aster Overview.
-If the video is already being worked on, please contact the person working on it or choose another video to transcribe.
+   If the video is already being worked on, please contact the person working on it or choose another video to transcribe.
 2. Once a video has been chosen, update the Master Overview to let others know you are working on the video and then create a fork of the blog and also a branch within that fork for the blog content
 3. Create a script for the video and create any necessary graphics
 4. Create a Pull Request for the video and wait for review
@@ -101,7 +101,9 @@ In general, the workflow for creating graphics should be the following:
 3. Open the video in a video editor (such as Premiere, Microsoft Movie Maker, Kdenlive, or Blender) and remove the sound from the video.
 4. Cut specific clips of the video that are relevant
 5. Embed those clips into the markdown file with:
+
 ```
 Add HTML here
 ```
+
 6. Update the master overview to show others that key graphics have been generated

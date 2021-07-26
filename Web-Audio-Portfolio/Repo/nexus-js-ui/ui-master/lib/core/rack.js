@@ -36,26 +36,24 @@ new Nexus.Rack('#target',{
 
 */
 
-import * as transform from '../util/transform';
-import dom from '../util/dom';
+import * as transform from "../util/transform";
+import dom from "../util/dom";
 
-import { colors } from '../main';
+import { colors } from "../main";
 
 export default class Rack {
-
   constructor(target, settings) {
-
     this.meta = {};
     this.meta.target = target;
     this.meta.parent = dom.parseElement(target); // should be a generic function for parsing a 'target' argument that checks for string/DOM/jQUERY
     this.meta.colors = {};
 
     if (settings) {
-      this.meta.attribute = settings.attribute || 'nexus-ui';
+      this.meta.attribute = settings.attribute || "nexus-ui";
       this.meta.title = settings.name || false;
       this.meta.open = settings.open || false;
     } else {
-      this.meta.attribute = 'nexus-ui';
+      this.meta.attribute = "nexus-ui";
       this.meta.title = false;
       this.meta.open = false;
     }
@@ -72,47 +70,47 @@ export default class Rack {
   }
 
   buildInterface() {
-    this.meta.parent.style.boxSizing = 'border-box';
-    this.meta.parent.style.userSelect = 'none';
-    this.meta.parent.style.mozUserSelect = 'none';
-    this.meta.parent.style.webkitUserSelect = 'none';
+    this.meta.parent.style.boxSizing = "border-box";
+    this.meta.parent.style.userSelect = "none";
+    this.meta.parent.style.mozUserSelect = "none";
+    this.meta.parent.style.webkitUserSelect = "none";
 
-    this.meta.contents = document.createElement('div');
+    this.meta.contents = document.createElement("div");
 
     while (this.meta.parent.childNodes.length > 0) {
-        this.meta.contents.appendChild(this.meta.parent.childNodes[0]);
+      this.meta.contents.appendChild(this.meta.parent.childNodes[0]);
     }
 
-    this.meta.contents.style.padding = '0px';
-    this.meta.contents.style.boxSizing = 'border-box';
+    this.meta.contents.style.padding = "0px";
+    this.meta.contents.style.boxSizing = "border-box";
 
     if (this.meta.title) {
-      this.meta.titleBar = document.createElement('div');
+      this.meta.titleBar = document.createElement("div");
       this.meta.titleBar.innerHTML = this.meta.title;
-      this.meta.titleBar.style.fontFamily = 'arial';
-      this.meta.titleBar.style.position = 'relative';
-      this.meta.titleBar.style.color = '#888';
-      this.meta.titleBar.style.padding = '7px';
-      this.meta.titleBar.style.fontSize = '12px';
+      this.meta.titleBar.style.fontFamily = "arial";
+      this.meta.titleBar.style.position = "relative";
+      this.meta.titleBar.style.color = "#888";
+      this.meta.titleBar.style.padding = "7px";
+      this.meta.titleBar.style.fontSize = "12px";
 
-      this.meta.button = document.createElement('div');
-      this.meta.button.style.position = 'absolute';
-      this.meta.button.style.top = '5px' ;
-      this.meta.button.style.right = '5px' ;
-      this.meta.button.innerHTML = '-';
-      this.meta.button.style.padding = '0px 5px 2px';
-      this.meta.button.style.lineHeight = '12px';
-      this.meta.button.style.fontSize = '15px';
+      this.meta.button = document.createElement("div");
+      this.meta.button.style.position = "absolute";
+      this.meta.button.style.top = "5px";
+      this.meta.button.style.right = "5px";
+      this.meta.button.innerHTML = "-";
+      this.meta.button.style.padding = "0px 5px 2px";
+      this.meta.button.style.lineHeight = "12px";
+      this.meta.button.style.fontSize = "15px";
 
-      this.meta.button.style.cursor = 'pointer';
+      this.meta.button.style.cursor = "pointer";
 
-      this.meta.button.addEventListener('mouseover', () => {
+      this.meta.button.addEventListener("mouseover", () => {
         this.meta.button.style.backgroundColor = this.meta.colors.mediumDark;
       });
-      this.meta.button.addEventListener('mouseleave', () => {
+      this.meta.button.addEventListener("mouseleave", () => {
         this.meta.button.style.backgroundColor = this.meta.colors.mediumLight;
       });
-      this.meta.button.addEventListener('click', () => {
+      this.meta.button.addEventListener("click", () => {
         if (this.meta.open) {
           this.hide();
         } else {
@@ -120,15 +118,14 @@ export default class Rack {
         }
       });
 
-
       this.meta.titleBar.appendChild(this.meta.button);
 
       this.meta.parent.appendChild(this.meta.titleBar);
     }
     this.meta.parent.appendChild(this.meta.contents);
 
-  //  var width = this.meta.parent.style.width = getComputedStyle(this.meta.parent).getPropertyValue('width');
-//    this.meta.parent.style.width = width;
+    //  var width = this.meta.parent.style.width = getComputedStyle(this.meta.parent).getPropertyValue('width');
+    //    this.meta.parent.style.width = width;
 
     let ui = transform.section(this.meta.target, this.meta.attribute);
     for (var key in ui) {
@@ -139,27 +136,28 @@ export default class Rack {
   colorInterface() {
     if (this.meta.title) {
       this.meta.button.style.backgroundColor = this.meta.colors.mediumLight;
-      this.meta.button.style.border = 'solid 0px '+this.meta.colors.fill;
-      this.meta.parent.style.border = 'solid 1px '+this.meta.colors.mediumLight;
+      this.meta.button.style.border = "solid 0px " + this.meta.colors.fill;
+      this.meta.parent.style.border =
+        "solid 1px " + this.meta.colors.mediumLight;
       this.meta.parent.style.backgroundColor = this.meta.colors.light;
       this.meta.titleBar.style.backgroundColor = this.meta.colors.fill;
     }
   }
 
   show() {
-    this.meta.contents.style.display = 'block';
+    this.meta.contents.style.display = "block";
     this.meta.open = true;
   }
 
   hide() {
-    this.meta.contents.style.display = 'none';
+    this.meta.contents.style.display = "none";
     this.meta.open = false;
   }
 
-  colorize(type,color) {
+  colorize(type, color) {
     for (var key in this) {
       if (this[key].colorize) {
-        this[key].colorize(type,color);
+        this[key].colorize(type, color);
       }
     }
     this.meta.colors[type] = color;
@@ -173,5 +171,4 @@ export default class Rack {
       }
     }
   }
-
 }

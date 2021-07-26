@@ -21,10 +21,7 @@
         "singleQuote": true
       }
     ],
-    "no-cond-assign": [
-      2,
-      "except-parens"
-    ],
+    "no-cond-assign": [2, "except-parens"],
     "eqeqeq": ["error", "smart"],
     "no-use-before-define": [
       2,

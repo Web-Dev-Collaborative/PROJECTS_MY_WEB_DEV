@@ -115,12 +115,8 @@ const Console = ({ t }) => {
   const isPlaying = useSelector((state) => state.ide.isPlaying);
   const { theme, fontSize } = useSelector((state) => state.preferences);
 
-  const {
-    collapseConsole,
-    expandConsole,
-    clearConsole,
-    dispatchConsoleEvent
-  } = bindActionCreators({ ...IDEActions, ...ConsoleActions }, useDispatch());
+  const { collapseConsole, expandConsole, clearConsole, dispatchConsoleEvent } =
+    bindActionCreators({ ...IDEActions, ...ConsoleActions }, useDispatch());
 
   const cm = useRef({});
 

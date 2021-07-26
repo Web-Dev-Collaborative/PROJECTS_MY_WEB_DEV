@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-let dom = require('../util/dom');
-let math = require('../util/math');
-let Interface = require('../core/interface');
+let dom = require("../util/dom");
+let math = require("../util/math");
+let Interface = require("../core/interface");
 
 /**
  * Meter
@@ -32,7 +32,7 @@ export default class Meter extends Interface {
     let options = [];
 
     let defaults = {
-      size: [30, 100]
+      size: [30, 100],
     };
 
     super(arguments, options, defaults);

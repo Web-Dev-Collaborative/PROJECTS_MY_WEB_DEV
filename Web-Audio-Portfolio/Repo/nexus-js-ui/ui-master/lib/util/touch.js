@@ -1,3 +1,3 @@
-'use strict';
+"use strict";
 
-exports.exists = ('ontouchstart' in document.documentElement);
+exports.exists = "ontouchstart" in document.documentElement;

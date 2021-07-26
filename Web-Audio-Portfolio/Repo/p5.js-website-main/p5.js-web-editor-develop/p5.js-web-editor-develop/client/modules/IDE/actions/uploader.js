@@ -103,7 +103,8 @@ export function dropzoneSendingCallback(file, xhr, formData) {
 }
 
 export function dropzoneCompleteCallback(file) {
-  return (dispatch) => { // eslint-disable-line
+  return (dispatch) => {
+    // eslint-disable-line
     if (
       (!file.name.match(TEXT_FILE_REGEX) || file.size >= MAX_LOCAL_FILE_SIZE) &&
       file.status !== 'error'

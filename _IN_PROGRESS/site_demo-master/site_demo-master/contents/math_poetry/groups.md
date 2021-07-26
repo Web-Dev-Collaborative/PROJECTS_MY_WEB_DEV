@@ -7,7 +7,7 @@ $$\qquad$$ “A symmetry of things.”
 $$\qquad$$ “Oh, those from any place.”
 
 “But where in math?”  
-$$\qquad$$ “In math?  A vector space.”
+$$\qquad$$ “In math? A vector space.”
 
 “And what is that?”  
 $$\qquad$$ “It’s what a field brings.”
@@ -31,9 +31,9 @@ $$\qquad$$ “From anywhere within.”
 $$\qquad$$ “Then why would you begin?”
 
 ---
+
 March 3, 2015
 
 <script>
 MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 </script>
-

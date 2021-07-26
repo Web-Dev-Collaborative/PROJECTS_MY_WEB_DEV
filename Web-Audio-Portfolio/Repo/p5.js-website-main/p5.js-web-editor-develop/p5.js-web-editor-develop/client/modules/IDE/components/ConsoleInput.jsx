@@ -19,7 +19,8 @@ class ConsoleInput extends React.Component {
   }
 
   componentDidMount() {
-    this._cm = CodeMirror(this.codemirrorContainer, { // eslint-disable-line
+    this._cm = CodeMirror(this.codemirrorContainer, {
+      // eslint-disable-line
       theme: `p5-${this.props.theme}`,
       scrollbarStyle: null,
       keymap: 'sublime',

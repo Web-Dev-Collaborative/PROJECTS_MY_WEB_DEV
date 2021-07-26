@@ -85,7 +85,8 @@ export function updateProject(req, res) {
 
 export function getProject(req, res) {
   const { project_id: projectId, username } = req.params;
-  User.findByUsername(username, (err, user) => { // eslint-disable-line
+  User.findByUsername(username, (err, user) => {
+    // eslint-disable-line
     if (!user) {
       return res
         .status(404)
@@ -96,7 +97,8 @@ export function getProject(req, res) {
       $or: [{ _id: projectId }, { slug: projectId }]
     })
       .populate('user', 'username')
-      .exec((err, project) => { // eslint-disable-line
+      .exec((err, project) => {
+        // eslint-disable-line
         if (err) {
           console.log(err);
           return res
@@ -125,7 +127,8 @@ export function getProjectsForUserId(userId) {
 export function getProjectAsset(req, res) {
   Project.findById(req.params.project_id)
     .populate('user', 'username')
-    .exec(async (err, project) => { // eslint-disable-line
+    .exec(async (err, project) => {
+      // eslint-disable-line
       if (err) {
         return res
           .status(404)
@@ -246,8 +249,9 @@ function bundleExternalLibs(project, zip, callback) {
 function buildZip(project, req, res) {
   const zip = archiver('zip');
   const rootFile = project.files.find((file) => file.name === 'root');
-  const numFiles = project.files.filter((file) => file.fileType !== 'folder')
-    .length;
+  const numFiles = project.files.filter(
+    (file) => file.fileType !== 'folder'
+  ).length;
   const { files } = project;
   let numCompletedFiles = 0;
 

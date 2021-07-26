@@ -16,7 +16,8 @@ function updatePreferences(formParams, dispatch) {
 }
 
 export function setFontSize(value) {
-  return (dispatch, getState) => { // eslint-disable-line
+  return (dispatch, getState) => {
+    // eslint-disable-line
     dispatch({
       type: ActionTypes.SET_FONT_SIZE,
       value

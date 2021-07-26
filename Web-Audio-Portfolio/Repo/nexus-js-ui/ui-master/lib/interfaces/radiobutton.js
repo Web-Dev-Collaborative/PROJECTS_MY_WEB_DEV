@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 //let svg = require('../util/svg');
-let Interface = require('../core/interface');
-let Button = require('../interfaces/button');
+let Interface = require("../core/interface");
+let Button = require("../interfaces/button");
 
 /**
  * RadioButton
@@ -35,12 +35,12 @@ let Button = require('../interfaces/button');
 
 export default class RadioButton extends Interface {
   constructor() {
-    let options = ['value'];
+    let options = ["value"];
 
     let defaults = {
       size: [120, 25],
       numberOfButtons: 4,
-      active: -1
+      active: -1,
     };
 
     super(arguments, options, defaults);
@@ -54,19 +54,19 @@ export default class RadioButton extends Interface {
   }
 
   buildFrame() {
-    this.element = document.createElement('div');
+    this.element = document.createElement("div");
     this.parent.appendChild(this.element);
   }
 
   buildInterface() {
     for (let i = 0; i < this._numberOfButtons; i++) {
-      let container = document.createElement('span');
+      let container = document.createElement("span");
 
       let button = new Button(
         container,
         {
-          mode: 'toggle',
-          component: true
+          mode: "toggle",
+          component: true,
         },
         this.update.bind(this, i)
       );
@@ -79,15 +79,15 @@ export default class RadioButton extends Interface {
   sizeInterface() {
     let orientation;
     if (this.width > this.height) {
-      orientation = 'horizontal';
+      orientation = "horizontal";
     } else {
-      orientation = 'vertical';
+      orientation = "vertical";
     }
 
     let buttonWidth =
-      this.width / (orientation === 'vertical' ? 1 : this._numberOfButtons);
+      this.width / (orientation === "vertical" ? 1 : this._numberOfButtons);
     let buttonHeight =
-      this.height / (orientation === 'vertical' ? this._numberOfButtons : 1);
+      this.height / (orientation === "vertical" ? this._numberOfButtons : 1);
 
     for (let i = 0; i < this._numberOfButtons; i++) {
       this.buttons[i].resize(buttonWidth, buttonHeight);
@@ -127,7 +127,7 @@ export default class RadioButton extends Interface {
   select(index) {
     if (index >= 0 && index < this.buttons.length) {
       this.active = index;
-      this.emit('change', this.active);
+      this.emit("change", this.active);
       this.render();
     }
   }
@@ -137,7 +137,7 @@ export default class RadioButton extends Interface {
   */
   deselect() {
     this.active = -1;
-    this.emit('change', this.active);
+    this.emit("change", this.active);
     this.render();
   }
 

@@ -1,25 +1,25 @@
-ul.summary{
-    padding: 20px 30px !important;
+ul.summary {
+  padding: 20px 30px !important;
 }
 
-.book-summary ul.summary li{
-    position: relative;
-    padding-left:10px;
+.book-summary ul.summary li {
+  position: relative;
+  padding-left: 10px;
 }
 
 li.chapter i {
-    position: absolute;
-    left: -10px;
-    top: 7px;
-    cursor: default;
-    width: 14px;
-    height: 14px;
+  position: absolute;
+  left: -10px;
+  top: 7px;
+  cursor: default;
+  width: 14px;
+  height: 14px;
 }
 
-.collapse-button{
-    background-image: url("data:image/png;base64,R0lGODlhEAAQAMQAAAAAANLMv3iYtcK4qPX18bDC0+Xh2tzYz8/Iu////+3t59/b0tjTyca+rvDw7Pj4+OTh2f///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUUABEALAAAAAAQABAAAAVEYCSOZGmeaKqubFkIcCwUp5DceCLU+f3sJsFjOHQYgCUBAcBkLpAkgcOhqEIO0JHgyugGEFmRINAYmM3hyEsGo7XeqBAAOw==")
+.collapse-button {
+  background-image: url("data:image/png;base64,R0lGODlhEAAQAMQAAAAAANLMv3iYtcK4qPX18bDC0+Xh2tzYz8/Iu////+3t59/b0tjTyca+rvDw7Pj4+OTh2f///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUUABEALAAAAAAQABAAAAVEYCSOZGmeaKqubFkIcCwUp5DceCLU+f3sJsFjOHQYgCUBAcBkLpAkgcOhqEIO0JHgyugGEFmRINAYmM3hyEsGo7XeqBAAOw==");
 }
 
-.expand-button{
-    background-image: url("data:image/png;base64,R0lGODlhEAAQAMQAAAAAAM/Iu3iYtcK4qPX18bDC09/b0ubm5v///9jTye3t59LMv8a+ruXh2tzYz/j4+PDw7NbRxuTh2f///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUUABMALAAAAAAQABAAAAVI4CSOZGmeaKqubFkIcCwUp4DcOCLUOHA/O5PgQQQ8II1gSUAAOJ0GJUkAgSgAB4lDOhJoE4DIIsAVCRaMgVpdnrxkMFprjgoBADs=")
+.expand-button {
+  background-image: url("data:image/png;base64,R0lGODlhEAAQAMQAAAAAAM/Iu3iYtcK4qPX18bDC09/b0ubm5v///9jTye3t59LMv8a+ruXh2tzYz/j4+PDw7NbRxuTh2f///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUUABMALAAAAAAQABAAAAVI4CSOZGmeaKqubFkIcCwUp4DcOCLUOHA/O5PgQQQ8II1gSUAAOJ0GJUkAgSgAB4lDOhJoE4DIIsAVCRaMgVpdnrxkMFprjgoBADs=");
 }
