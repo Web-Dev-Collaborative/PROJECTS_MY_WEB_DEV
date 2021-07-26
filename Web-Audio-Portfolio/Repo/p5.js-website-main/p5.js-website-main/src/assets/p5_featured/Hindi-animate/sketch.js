@@ -3,8 +3,8 @@ let offset = 0;
 let easing = 0.05;
 
 function setup() {
-  createCanvas(1000,1000);
-  img = loadImage('assets/bg.jpg'); // Load an image into the program
+  createCanvas(1000, 1000);
+  img = loadImage("assets/bg.jpg"); // Load an image into the program
 }
 
 function draw() {

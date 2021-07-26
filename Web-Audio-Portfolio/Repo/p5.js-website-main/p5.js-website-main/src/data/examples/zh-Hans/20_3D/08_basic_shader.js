@@ -7,9 +7,9 @@
 // this variable will hold our shader object
 let theShader;
 
-function preload(){
+function preload() {
   // load the shader
-  theShader = loadShader('assets/basic.vert', 'assets/basic.frag');
+  theShader = loadShader("assets/basic.vert", "assets/basic.frag");
 }
 
 function setup() {
@@ -23,5 +23,5 @@ function draw() {
   shader(theShader);
 
   // rect gives us some geometry on the screen
-  rect(0,0,width, height);
+  rect(0, 0, width, height);
 }

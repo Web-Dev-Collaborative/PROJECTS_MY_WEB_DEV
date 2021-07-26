@@ -4,9 +4,9 @@
       "name": "p5.sound",
       "url": "{{root}}/reference/#/libraries/p5.sound",
       "authors": [
-        { 
+        {
           "name": "Jason Sigal",
-          "url": "https://www.jasonsigal.cc/" 
+          "url": "https://www.jasonsigal.cc/"
         }
       ]
     },
@@ -20,9 +20,9 @@
       "name": "asciiart",
       "url": "https://tetoki.eu/asciiart",
       "authors": [
-        { 
+        {
           "name": "Pawel Janicki",
-          "url": "https://paweljanicki.jp" 
+          "url": "https://paweljanicki.jp"
         }
       ]
     },
@@ -30,17 +30,17 @@
       "name": "p5.ble",
       "url": "https://itpnyu.github.io/p5ble-website/",
       "authors": [
-        { 
+        {
           "name": "Yining Shi",
-          "url": "http://1023.io" 
+          "url": "http://1023.io"
         },
-        { 
+        {
           "name": "Jingwen Zhu",
-          "url": "http://www.jingwen-zhu.com/" 
+          "url": "http://www.jingwen-zhu.com/"
         },
-        { 
+        {
           "name": "Tom Igoe",
-          "url": "https://tigoe.com/" 
+          "url": "https://tigoe.com/"
         }
       ]
     },
@@ -48,9 +48,9 @@
       "name": "blizard.js",
       "url": "https://github.com/Slitherlizard/blizard.js  ",
       "authors": [
-        { 
+        {
           "name": "Rohan Samra-O'Neill",
-          "url": "https://github.com/rohanThegreaTT" 
+          "url": "https://github.com/rohanThegreaTT"
         }
       ]
     },
@@ -58,9 +58,9 @@
       "name": "p5.bots",
       "url": "https://github.com/sarahgp/p5bots",
       "authors": [
-        { 
+        {
           "name": "Sarah Groff-Palermo",
-          "url": "http://www.sarahgp.com" 
+          "url": "http://www.sarahgp.com"
         }
       ]
     },
@@ -68,9 +68,9 @@
       "name": "p5.clickable",
       "url": "https://github.com/Lartu/p5.clickable",
       "authors": [
-        { 
+        {
           "name": "Martín del Río",
-          "url": "https://www.lartu.net" 
+          "url": "https://www.lartu.net"
         }
       ]
     },
@@ -78,9 +78,9 @@
       "name": "p5.cmyk.js",
       "url": "https://github.com/jtnimoy/p5.cmyk.js",
       "authors": [
-        { 
+        {
           "name": "JT Nimoy",
-          "url": "http://jtnimoy.net" 
+          "url": "http://jtnimoy.net"
         }
       ]
     },
@@ -88,9 +88,9 @@
       "name": "p5.collide2D",
       "url": "https://github.com/bmoren/p5.collide2D",
       "authors": [
-        { 
+        {
           "name": "Ben Moren",
-          "url": "http://www.benmoren.com/" 
+          "url": "http://www.benmoren.com/"
         }
       ]
     },
@@ -98,9 +98,9 @@
       "name": "p5.createloop",
       "url": "https://www.npmjs.com/package/p5.createloop",
       "authors": [
-        { 
+        {
           "name": "Peter Hayman",
-          "url": "http://www.piratesjustar.com/" 
+          "url": "http://www.piratesjustar.com/"
         }
       ]
     },
@@ -108,13 +108,13 @@
       "name": "p5.dimensions",
       "url": "https://github.com/Smilebags/p5.dimensions.js",
       "authors": [
-        { 
+        {
           "name": "Smilebags",
-          "url": "https://github.com/Smilebags" 
+          "url": "https://github.com/Smilebags"
         },
-        { 
+        {
           "name": "Max Segal",
-          "url": "https://github.com/max0410" 
+          "url": "https://github.com/max0410"
         }
       ]
     },
@@ -122,9 +122,9 @@
       "name": "p5.EasyCam",
       "url": "https://github.com/freshfork/p5.EasyCam",
       "authors": [
-        { 
+        {
           "name": "jWilliam Dunn",
-          "url": "https://jwilliamdunn.com" 
+          "url": "https://jwilliamdunn.com"
         }
       ]
     },
@@ -132,9 +132,9 @@
       "name": "p5.experience",
       "url": "https://github.com/loneboarder/p5.experience.js",
       "authors": [
-        { 
+        {
           "name": "Felix Meichelböck",
-          "url": "https://github.com/loneboarder" 
+          "url": "https://github.com/loneboarder"
         }
       ]
     },
@@ -142,9 +142,9 @@
       "name": "p5.func",
       "url": "https://idmnyu.github.io/p5.js-func",
       "authors": [
-        { 
+        {
           "name": "R. Luke DuBois",
-          "url": "http://lukedubois.com/" 
+          "url": "http://lukedubois.com/"
         }
       ]
     },
@@ -152,9 +152,9 @@
       "name": "p5.geolocation",
       "url": "https://github.com/bmoren/p5.geolocation",
       "authors": [
-        { 
+        {
           "name": "Ben Moren",
-          "url": "http://www.benmoren.com/" 
+          "url": "http://www.benmoren.com/"
         }
       ]
     },
@@ -162,9 +162,9 @@
       "name": "p5.gibber",
       "url": "http://charlie-roberts.com/gibber/p5-gibber/",
       "authors": [
-        { 
+        {
           "name": "Charlie Roberts",
-          "url": "http://charlie-roberts.com" 
+          "url": "http://charlie-roberts.com"
         }
       ]
     },
@@ -172,9 +172,9 @@
       "name": "grafica.js",
       "url": "https://github.com/jagracar/grafica.js",
       "authors": [
-        { 
+        {
           "name": "Javier Graciá Carpio",
-          "url": "http://jagracar.com/p5jsSketches.php" 
+          "url": "http://jagracar.com/p5jsSketches.php"
         }
       ]
     },
@@ -182,9 +182,9 @@
       "name": "p5.gui",
       "url": "https://github.com/bitcraftlab/p5.gui",
       "authors": [
-        { 
+        {
           "name": "Martin Schneider",
-          "url": "http://www.bitcraftlab.com/" 
+          "url": "http://www.bitcraftlab.com/"
         }
       ]
     },
@@ -192,9 +192,9 @@
       "name": "p5.localmessage",
       "url": "https://github.com/bmoren/p5.localmessage",
       "authors": [
-        { 
+        {
           "name": "Ben Moren",
-          "url": "http://benmoren.com" 
+          "url": "http://benmoren.com"
         }
       ]
     },
@@ -202,9 +202,9 @@
       "name": "marching",
       "url": "https://github.com/jtnimoy/marching",
       "authors": [
-        { 
+        {
           "name": "jtnimoy",
-          "url": "http://jtnimoy.net" 
+          "url": "http://jtnimoy.net"
         }
       ]
     },
@@ -212,9 +212,9 @@
       "name": "mappa",
       "url": "https://github.com/cvalenzuela/Mappa",
       "authors": [
-        { 
+        {
           "name": "Cristóbal Valenzuela",
-          "url": "https://github.com/cvalenzuela/" 
+          "url": "https://github.com/cvalenzuela/"
         }
       ]
     },
@@ -222,9 +222,9 @@
       "name": "ml5.js",
       "url": "https://ml5js.org/",
       "authors": [
-        { 
+        {
           "name": "NYU ITP/IMA and contributors",
-          "url": "https://ml5js.org/" 
+          "url": "https://ml5js.org/"
         }
       ]
     },
@@ -232,9 +232,9 @@
       "name": "p5.play",
       "url": "http://p5play.molleindustria.org",
       "authors": [
-        { 
+        {
           "name": "Paolo Pedercini",
-          "url": "http://www.molleindustria.org/" 
+          "url": "http://www.molleindustria.org/"
         }
       ]
     },
@@ -242,9 +242,9 @@
       "name": "p5.particle",
       "url": "https://github.com/bobcgausa/cook-js",
       "authors": [
-        { 
+        {
           "name": "Robert Cook",
-          "url": "http://professorcook.org/" 
+          "url": "http://professorcook.org/"
         }
       ]
     },
@@ -252,13 +252,13 @@
       "name": "p5.Riso",
       "url": "https://antiboredom.github.io/p5.riso",
       "authors": [
-        { 
+        {
           "name": "Sam Lavigne",
-          "url": "https://lav.io/" 
+          "url": "https://lav.io/"
         },
-        { 
+        {
           "name": "Tega Brain",
-          "url": "http://tegabrain.com/" 
+          "url": "http://tegabrain.com/"
         }
       ]
     },
@@ -266,9 +266,9 @@
       "name": "rita.js",
       "url": "http://rednoise.org/rita",
       "authors": [
-        { 
+        {
           "name": "Daniel C. Howe",
-          "url": "http://rednoise.org/daniel" 
+          "url": "http://rednoise.org/daniel"
         }
       ]
     },
@@ -276,9 +276,9 @@
       "name": "Rotating knobs",
       "url": "http://codeforartists.com/RotatingKnobMaker",
       "authors": [
-        { 
+        {
           "name": "Miles DeCoster",
-          "url": "http://codeforartists.com" 
+          "url": "http://codeforartists.com"
         }
       ]
     },
@@ -286,9 +286,9 @@
       "name": "p5.scenemanager",
       "url": "https://github.com/mveteanu/p5.SceneManager",
       "authors": [
-        { 
+        {
           "name": "Marian Veteanu",
-          "url": "https://github.com/mveteanu/" 
+          "url": "https://github.com/mveteanu/"
         }
       ]
     },
@@ -296,9 +296,9 @@
       "name": "p5.screenPosition",
       "url": "https://github.com/bohnacker/p5js-screenPosition",
       "authors": [
-        { 
+        {
           "name": "Hartmut Bohnacker",
-          "url": "https://hartmut-bohnacker.de/" 
+          "url": "https://hartmut-bohnacker.de/"
         }
       ]
     },
@@ -306,9 +306,9 @@
       "name": "p5.scribble",
       "url": "https://github.com/generative-light/p5.scribble.js",
       "authors": [
-        { 
+        {
           "name": "handy",
-          "url": "https://github.com/gicentre/handy" 
+          "url": "https://github.com/gicentre/handy"
         }
       ]
     },
@@ -316,17 +316,17 @@
       "name": "p5.serial",
       "url": "https://github.com/vanevery/p5.serialport",
       "authors": [
-        { 
+        {
           "name": "Shawn Van Every",
-          "url": "http://www.walking-productions.com/notslop/abou/" 
+          "url": "http://www.walking-productions.com/notslop/abou/"
         },
-        { 
+        {
           "name": "Jen Kagan",
-          "url": "https://kaganjd.github.io/portfolio/" 
+          "url": "https://kaganjd.github.io/portfolio/"
         },
-        { 
+        {
           "name": "Tom Igoe",
-          "url": "http://tigoe.net/" 
+          "url": "http://tigoe.net/"
         }
       ]
     },
@@ -334,9 +334,9 @@
       "name": "Shape5",
       "url": "https://github.com/pfe1223/Shape5js",
       "authors": [
-        { 
+        {
           "name": "Patrick Ester",
-          "url": "https://github.com/pfe1223" 
+          "url": "https://github.com/pfe1223"
         }
       ]
     },
@@ -344,9 +344,9 @@
       "name": "p5.shape.js",
       "url": "https://github.com/gaba5/p5.shape.js",
       "authors": [
-        { 
+        {
           "name": "Sebastien Lorentz",
-          "url": "https://github.com/gaba5" 
+          "url": "https://github.com/gaba5"
         }
       ]
     },
@@ -354,9 +354,9 @@
       "name": "p5.speech",
       "url": "https://idmnyu.github.io/p5.js-speech/",
       "authors": [
-        { 
+        {
           "name": "R. Luke DuBois",
-          "url": "http://lukedubois.com/" 
+          "url": "http://lukedubois.com/"
         }
       ]
     },
@@ -364,9 +364,9 @@
       "name": "p5.start2d.js",
       "url": "https://github.com/eltapir/p5.start2d.js",
       "authors": [
-        { 
+        {
           "name": "Kris HEYSE",
-          "url": "https://github.com/eltapir" 
+          "url": "https://github.com/eltapir"
         }
       ]
     },
@@ -374,9 +374,9 @@
       "name": "p5.tiledmap",
       "url": "https://github.com/linux-man/p5.tiledmap",
       "authors": [
-        { 
+        {
           "name": "Caldas Lopes",
-          "url": "http://softlab.pt/" 
+          "url": "http://softlab.pt/"
         }
       ]
     },
@@ -384,9 +384,9 @@
       "name": "p5.touchgui",
       "url": "https://github.com/L05/p5.touchgui",
       "authors": [
-        { 
+        {
           "name": "Carlos L05 Garcia",
-          "url": "https://L05.is" 
+          "url": "https://L05.is"
         }
       ]
     },
@@ -394,9 +394,9 @@
       "name": "tramontana",
       "url": "http://www.tramontana.xyz",
       "authors": [
-        { 
+        {
           "name": "Pierluigi Dalla Rosa",
-          "url": "http://www.pierdr.com" 
+          "url": "http://www.pierdr.com"
         }
       ]
     },
@@ -404,9 +404,9 @@
       "name": "vida",
       "url": "https://tetoki.eu/vida",
       "authors": [
-        { 
+        {
           "name": "Pawel Janicki",
-          "url": "https://paweljanicki.jp" 
+          "url": "https://paweljanicki.jp"
         }
       ]
     },
@@ -414,9 +414,9 @@
       "name": "p5.voronoi",
       "url": "https://github.com/Dozed12/p5.voronoi",
       "authors": [
-        { 
+        {
           "name": "Francisco Moreira",
-          "url": "https://github.com/Dozed12" 
+          "url": "https://github.com/Dozed12"
         }
       ]
     },
@@ -424,9 +424,9 @@
       "name": "p5.xr",
       "url": "http://p5xr.org/#/",
       "authors": [
-        { 
+        {
           "name": "Stalgia Grigg",
-          "url": "http://www.stalgiagrigg.name/" 
+          "url": "http://www.stalgiagrigg.name/"
         }
       ]
     },
@@ -434,9 +434,9 @@
       "name": "p5.3D",
       "url": "https://github.com/FreddieRa/p5.3D",
       "authors": [
-        { 
+        {
           "name": "Freddie Rawlins",
-          "url": "https://freddierawlins.wixsite.com/site" 
+          "url": "https://freddierawlins.wixsite.com/site"
         }
       ]
     }

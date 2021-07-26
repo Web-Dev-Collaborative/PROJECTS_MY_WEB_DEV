@@ -8,7 +8,7 @@ let img; // 변수 'img' 선언
 
 function setup() {
   createCanvas(720, 400);
-  img = loadImage('assets/moonwalk.jpg'); // 이미지 불러오기
+  img = loadImage("assets/moonwalk.jpg"); // 이미지 불러오기
 }
 
 function draw() {

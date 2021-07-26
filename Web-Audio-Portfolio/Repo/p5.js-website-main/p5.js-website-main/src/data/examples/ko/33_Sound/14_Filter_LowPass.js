@@ -4,7 +4,7 @@
  *  FFT를 사용해 사운드를 시각화해보세요.
  *  mouseX를 필터의 차단 주파수에, mouseY를 밴드패스 필터의 울림/폭에 맵핑합니다.
  * <p><em><span class="small"> 로컬 프로젝트에서 이 예제를 실행하려면
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며, 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며,
  * <a href="https://github.com/processing/p5.js/wiki/Local-server">로컬 서버</a>를 작동시켜야 합니다.</span></em></p>
  */
 let soundFile;
@@ -13,8 +13,8 @@ let fft;
 let filter, filterFreq, filterRes;
 
 function preload() {
-  soundFormats('mp3', 'ogg');
-  soundFile = loadSound('assets/beat');
+  soundFormats("mp3", "ogg");
+  soundFile = loadSound("assets/beat");
 }
 
 function setup() {

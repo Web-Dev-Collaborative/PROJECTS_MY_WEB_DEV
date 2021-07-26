@@ -1,4 +1,3 @@
-
 /*
  * @name Espirógrafo
  * @description Este bosquejo usa transformaciones siples para crear un
@@ -58,15 +57,14 @@ function draw() {
     if (trace) ellipse(0, 0, erad, erad); // dibujar con erad si estamos trazando
     pop(); // bajar un nivel
     translate(0, radius); // moverse a la posición de la siguiente sinusoide
-    sines[i] = (sines[i] + (fund + (fund * i * ratio))) % TWO_PI; // actualizar ángulo basado en la fundamental
+    sines[i] = (sines[i] + (fund + fund * i * ratio)) % TWO_PI; // actualizar ángulo basado en la fundamental
   }
 
   pop(); // bajar a la transformación final
-
 }
 
 function keyReleased() {
-  if (key==' ') {
+  if (key == " ") {
     trace = !trace;
     background(255);
   }

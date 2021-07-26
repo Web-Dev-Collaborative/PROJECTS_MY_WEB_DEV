@@ -2,7 +2,7 @@
  * @name 마이크 임계값
  * @description <p>입력된 오디오의 볼륨이 임계값을 초과하면
  * 특정 이벤트(이 경우, 사각형 그리기)가 발생합니다.</p>
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며, 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며,
  * <a href="https://github.com/processing/p5.js/wiki/Local-server">로컬 서버</a>를 작동시켜야 합니다.</span></em></p>
  */
 // 다니엘 쉬프만(Daniel Shiffman)저 Learning Processing을 적용

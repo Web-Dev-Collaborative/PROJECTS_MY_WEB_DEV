@@ -3,7 +3,7 @@
  * @description La palabra "tickle" se mueve cuando el cursor está sobre ella.
  * A veces, puede ser incluso arrastrada fuera de la pantalla.
  */
-let message = 'tickle',
+let message = "tickle",
   font,
   bounds, // almacena  la posición, ancho y alto de la caja contenedora del texto
   fontsize = 60,
@@ -11,7 +11,7 @@ let message = 'tickle',
   y; // coordenadas x e y del texto
 
 function preload() {
-  font = loadFont('assets/SourceSansPro-Regular.otf');
+  font = loadFont("assets/SourceSansPro-Regular.otf");
 }
 
 function setup() {

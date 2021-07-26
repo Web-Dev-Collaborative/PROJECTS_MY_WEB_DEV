@@ -1,6 +1,6 @@
 /*
  * @name 1D 마우스
- * @description 마우스를 좌우로 움직여 균형점을 이동해보세요. 
+ * @description 마우스를 좌우로 움직여 균형점을 이동해보세요.
  * mouseX 변수로 사각형의 크기와 색상 모두를 조정할 수 있습니다.
  */
 function setup() {

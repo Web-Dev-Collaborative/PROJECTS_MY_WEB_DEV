@@ -4,12 +4,17 @@
  * <br><br>curveVertex() 와 curveTightness()를 사용한 소프트 바디 역학 시뮬레이션.
  */
 // 중심점
-let centerX = 0.0, centerY = 0.0;
+let centerX = 0.0,
+  centerY = 0.0;
 
-let radius = 45, rotAngle = -90;
-let accelX = 0.0, accelY = 0.0;
-let deltaX = 0.0, deltaY = 0.0;
-let springing = 0.0009, damping = 0.98;
+let radius = 45,
+  rotAngle = -90;
+let accelX = 0.0,
+  accelY = 0.0;
+let deltaX = 0.0,
+  deltaY = 0.0;
+let springing = 0.0009,
+  damping = 0.98;
 
 // 모서리의 노드들
 let nodes = 5;
@@ -33,7 +38,7 @@ function setup() {
   centerY = height / 2;
 
   // 배열을 0으로 초기화
-  for (let i = 0; i < nodes; i++){
+  for (let i = 0; i < nodes; i++) {
     nodeStartX[i] = 0;
     nodeStartY[i] = 0;
     nodeY[i] = 0;
@@ -42,7 +47,7 @@ function setup() {
   }
 
   // 모서리 노드들의 빈도수 초기화
-  for (let i = 0; i < nodes; i++){
+  for (let i = 0; i < nodes; i++) {
     frequency[i] = random(5, 12);
   }
 
@@ -60,7 +65,7 @@ function draw() {
 
 function drawShape() {
   // 노드 시작 위치 계산
-  for (let i = 0; i < nodes; i++){
+  for (let i = 0; i < nodes; i++) {
     nodeStartX[i] = centerX + cos(radians(rotAngle)) * radius;
     nodeStartY[i] = centerY + sin(radians(rotAngle)) * radius;
     rotAngle += 360.0 / nodes;
@@ -70,10 +75,10 @@ function drawShape() {
   curveTightness(organicConstant);
   fill(255);
   beginShape();
-  for (let i = 0; i < nodes; i++){
+  for (let i = 0; i < nodes; i++) {
     curveVertex(nodeX[i], nodeY[i]);
   }
-  for (let i = 0; i < nodes-1; i++){
+  for (let i = 0; i < nodes - 1; i++) {
     curveVertex(nodeX[i], nodeY[i]);
   }
   endShape(CLOSE);
@@ -99,10 +104,10 @@ function moveShape() {
   accelY *= damping;
 
   // 커브의 탄성 바꾸기
-  organicConstant = 1 - ((abs(accelX) + abs(accelY)) * 0.1);
+  organicConstant = 1 - (abs(accelX) + abs(accelY)) * 0.1;
 
   // 노드 옮기기
-  for (let i = 0; i < nodes; i++){
+  for (let i = 0; i < nodes; i++) {
     nodeX[i] = nodeStartX[i] + sin(radians(angle[i])) * (accelX * 2);
     nodeY[i] = nodeStartY[i] + sin(radians(angle[i])) * (accelY * 2);
     angle[i] += frequency[i];

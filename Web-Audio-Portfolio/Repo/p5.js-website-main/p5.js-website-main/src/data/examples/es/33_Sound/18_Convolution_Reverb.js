@@ -20,24 +20,24 @@ let rawImpulse;
 
 function preload() {
   // hemos incluido versiones MP3 y OGG de todos los impulsos y sonidos
-  soundFormats('ogg', 'mp3');
+  soundFormats("ogg", "mp3");
 
   // crear un objeto p5.Convolver
-  cVerb = createConvolver('assets/bx-spring');
+  cVerb = createConvolver("assets/bx-spring");
 
   // añadir respuestas al impulso al arreglo cVerb.impulses, además del ya agregado bx-spring
-  cVerb.addImpulse('assets/small-plate');
-  cVerb.addImpulse('assets/drum');
-  cVerb.addImpulse('assets/beatbox');
-  cVerb.addImpulse('assets/concrete-tunnel');
+  cVerb.addImpulse("assets/small-plate");
+  cVerb.addImpulse("assets/drum");
+  cVerb.addImpulse("assets/beatbox");
+  cVerb.addImpulse("assets/concrete-tunnel");
 
   // cargar un sonido que será procesado por el objeto p5.ConvultionReverb
-  sound = loadSound('assets/Damscray_DancingTiger');
+  sound = loadSound("assets/Damscray_DancingTiger");
 }
 
 function setup() {
   createCanvas(710, 400);
-  rawImpulse = loadSound('assets/' + cVerb.impulses[currentIR].name);
+  rawImpulse = loadSound("assets/" + cVerb.impulses[currentIR].name);
 
   // desconectar de la salida maestra
   sound.disconnect();
@@ -75,9 +75,9 @@ function mousePressed() {
   sound.play();
 
   // muestra en pantalla el nombre de la respuesta al impulso actual (el nombre del archivo)
-  println('Convolution Impulse Response: ' + cVerb.impulses[currentIR].name);
+  println("Convolution Impulse Response: " + cVerb.impulses[currentIR].name);
 
-  rawImpulse.setPath('assets/' + cVerb.impulses[currentIR].name);
+  rawImpulse.setPath("assets/" + cVerb.impulses[currentIR].name);
 }
 
 // reproduce el impulso (sin convolución)

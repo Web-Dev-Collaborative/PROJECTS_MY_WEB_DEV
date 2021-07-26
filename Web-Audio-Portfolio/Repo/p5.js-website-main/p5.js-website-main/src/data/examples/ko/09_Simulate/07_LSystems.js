@@ -12,11 +12,11 @@ let step = 20; // 매 'F'마다 거북이가 움직이는 크기
 let angle = 90; // '-' 또는 '+'에 따라 거북이가 회전하는 크기
 
 // 린덴마이어 시스템(L-SYSTEMS)
-let thestring = 'A'; // 공리, 또는 문자열의 시작
+let thestring = "A"; // 공리, 또는 문자열의 시작
 let numloops = 5; // 전처리할 반복문 개수
 let therules = []; // 규칙 배열
-therules[0] = ['A', '-BF+AFA+FB-']; // 첫 번째 규칙
-therules[1] = ['B', '+AF-BFB-FA+']; // 두 번째 규칙
+therules[0] = ["A", "-BF+AFA+FB-"]; // 첫 번째 규칙
+therules[1] = ["B", "+AF-BFB-FA+"]; // 두 번째 규칙
 
 let whereinstring = 0; // L-시스템 상 현재 위치?
 
@@ -27,7 +27,7 @@ function setup() {
 
   // 좌측 하단 코너에서 x와 y 위치 시작
   x = 0;
-  y = height-1;
+  y = height - 1;
 
   // L-시스템 처리하기
   for (let i = 0; i < numloops; i++) {
@@ -36,33 +36,31 @@ function setup() {
 }
 
 function draw() {
-
   // 현재의 문자를 문자열로 그리기:
   drawIt(thestring[whereinstring]);
 
   // 문자열을 읽는 지점 증가하기
   // 마지막에 wrap around
   whereinstring++;
-  if (whereinstring > thestring.length-1) whereinstring = 0;
-
+  if (whereinstring > thestring.length - 1) whereinstring = 0;
 }
 
 // L-시스템 해석하기
 function lindenmayer(s) {
-  let outputstring = ''; // 빈 출력 문자열 시작하기
+  let outputstring = ""; // 빈 출력 문자열 시작하기
 
   // 'therules'를 반복하여 일치하는 기호 찾기:
   for (let i = 0; i < s.length; i++) {
     let ismatch = 0; // 기본값으로, 일치하는 기호 없음
     for (let j = 0; j < therules.length; j++) {
-      if (s[i] == therules[j][0])  {
+      if (s[i] == therules[j][0]) {
         outputstring += therules[j][1]; // 대체내용 작성
         ismatch = 1; // 일치하는 기호가 있으므로 복사하지 않음
         break; // for() 반복문 나오기
       }
     }
     // 일치하는 기호가 없으면 복사
-    if (ismatch == 0) outputstring+= s[i];
+    if (ismatch == 0) outputstring += s[i];
   }
 
   return outputstring; // 수정된 문자열 전송
@@ -70,19 +68,19 @@ function lindenmayer(s) {
 
 // 아래는 거북이를 그리는 사용자 정의 함수입니다.
 function drawIt(k) {
-
-  if (k=='F') { // 앞으로 그리기
+  if (k == "F") {
+    // 앞으로 그리기
     // step과 currentangle을 기준으로, 극좌표에서 직교 좌표로 변환하기:
-    let x1 = x + step*cos(radians(currentangle));
-    let y1 = y + step*sin(radians(currentangle));
+    let x1 = x + step * cos(radians(currentangle));
+    let y1 = y + step * sin(radians(currentangle));
     line(x, y, x1, y1); // 이전의 것과 새로운 것을 연결
 
     // 거북이의 위치 업데이트:
     x = x1;
     y = y1;
-  } else if (k == '+') {
+  } else if (k == "+") {
     currentangle += angle; // 왼쪽으로 돌기
-  } else if (k == '-') {
+  } else if (k == "-") {
     currentangle -= angle; // 오른쪽으로 돌기
   }
 

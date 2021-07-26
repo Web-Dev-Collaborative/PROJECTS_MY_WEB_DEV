@@ -23,7 +23,6 @@ function draw() {
   }
 }
 
-
 // Boid class
 // Methods for Separation, Cohesion, Alignment added
 class Boid {
@@ -32,7 +31,7 @@ class Boid {
     this.velocity = p5.Vector.random2D();
     this.position = createVector(x, y);
     this.r = 3.0;
-    this.maxspeed = 3;    // Maximum speed
+    this.maxspeed = 3; // Maximum speed
     this.maxforce = 0.05; // Maximum steering force
   }
 
@@ -50,7 +49,7 @@ class Boid {
   // We accumulate a new acceleration each time based on three rules
   flock(boids) {
     let sep = this.separate(boids); // Separation
-    let ali = this.align(boids);    // Alignment
+    let ali = this.align(boids); // Alignment
     let coh = this.cohesion(boids); // Cohesion
     // Arbitrarily weight these forces
     sep.mult(2.5);
@@ -111,7 +110,7 @@ class Boid {
     for (let i = 0; i < boids.length; i++) {
       let d = p5.Vector.dist(this.position, boids[i].position);
       // If the distance is greater than 0 and less than an arbitrary amount (0 when you are yourself)
-      if ((d > 0) && (d < desiredseparation)) {
+      if (d > 0 && d < desiredseparation) {
         // Calculate vector pointing away from neighbor
         let diff = p5.Vector.sub(this.position, boids[i].position);
         diff.normalize();
@@ -144,7 +143,7 @@ class Boid {
     let count = 0;
     for (let i = 0; i < boids.length; i++) {
       let d = p5.Vector.dist(this.position, boids[i].position);
-      if ((d > 0) && (d < neighbordist)) {
+      if (d > 0 && d < neighbordist) {
         sum.add(boids[i].velocity);
         count++;
       }
@@ -169,7 +168,7 @@ class Boid {
     let count = 0;
     for (let i = 0; i < boids.length; i++) {
       let d = p5.Vector.dist(this.position, boids[i].position);
-      if ((d > 0) && (d < neighbordist)) {
+      if (d > 0 && d < neighbordist) {
         sum.add(boids[i].position); // Add location
         count++;
       }
@@ -182,7 +181,3 @@ class Boid {
     }
   }
 }
-
-
-
-

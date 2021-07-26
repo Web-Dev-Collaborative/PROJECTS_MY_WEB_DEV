@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-  background('brown');
+  background("brown");
   let t = frameCount / 60; // 시간 업데이트
 
   // 매 프라임마다 무작위 개수의 눈송이 생성
@@ -41,7 +41,7 @@ function snowflake() {
   // 눈송이를 화면에 고루 퍼뜨리기 위해 선택
   this.radius = sqrt(random(pow(width / 2, 2)));
 
-  this.update = function(time) {
+  this.update = function (time) {
     // 원형을 따라다니는 x 위치
     let w = 0.6; // 각속도
     let angle = w * time + this.initialangle;
@@ -57,7 +57,7 @@ function snowflake() {
     }
   };
 
-  this.display = function() {
+  this.display = function () {
     ellipse(this.posX, this.posY, this.size);
   };
 }

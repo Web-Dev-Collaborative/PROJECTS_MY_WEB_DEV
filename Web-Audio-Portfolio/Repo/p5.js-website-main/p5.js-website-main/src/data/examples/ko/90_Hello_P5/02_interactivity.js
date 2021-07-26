@@ -2,7 +2,7 @@
  * @name 인터랙티비티 1
  * @frame 720,425
  * @description 원을 클릭하면 색상이 바뀝니다.
- * <p><em><span class="small"> 로컬 프로젝트에서 이 예제를 실행하려면, 
+ * <p><em><span class="small"> 로컬 프로젝트에서 이 예제를 실행하려면,
  * <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom 라이브러리</a>.
  * </em>를 추가해야 됩니다.</p>
  */

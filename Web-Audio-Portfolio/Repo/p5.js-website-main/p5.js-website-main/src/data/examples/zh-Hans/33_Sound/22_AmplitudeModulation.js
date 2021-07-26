@@ -43,7 +43,7 @@ function setup() {
 
   carrier.start();
 
-  modulator = new p5.Oscillator('triangle');
+  modulator = new p5.Oscillator("triangle");
   modulator.disconnect(); // disconnect the modulator from master output
   modulator.freq(5);
   modulator.amp(1);
@@ -90,6 +90,6 @@ function drawWaveform() {
 
 function drawText(modFreq, modAmp) {
   strokeWeight(1);
-  text('Modulator Frequency: ' + modFreq.toFixed(3) + ' Hz', 20, 20);
-  text('Modulator Amplitude: ' + modAmp.toFixed(3), 20, 40);
+  text("Modulator Frequency: " + modFreq.toFixed(3) + " Hz", 20, 20);
+  text("Modulator Amplitude: " + modAmp.toFixed(3), 20, 40);
 }

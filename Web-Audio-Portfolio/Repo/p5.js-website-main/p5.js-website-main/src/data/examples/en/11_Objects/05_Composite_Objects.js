@@ -7,8 +7,8 @@ let er1, er2;
 
 function setup() {
   createCanvas(640, 360);
-  er1 = new EggRing(width*0.45, height*0.5, 0.1, 120);
-  er2 = new EggRing(width*0.65, height*0.8, 0.05, 180);
+  er1 = new EggRing(width * 0.45, height * 0.5, 0.1, 120);
+  er2 = new EggRing(width * 0.65, height * 0.8, 0.05, 180);
 }
 
 function draw() {
@@ -60,7 +60,7 @@ class Ring {
   grow() {
     if (this.on == true) {
       this.diameter += 0.5;
-      if (this.diameter > width*2) {
+      if (this.diameter > width * 2) {
         this.diameter = 0.0;
       }
     }
@@ -84,7 +84,7 @@ class EggRing {
     this.sp = sp;
     this.circle = new Ring();
     this.ovoid = new Egg(this.x, this.y, this.t, this.sp);
-    this.circle.start(this.x, this.y - this.sp/2);
+    this.circle.start(this.x, this.y - this.sp / 2);
   }
 
   transmit() {

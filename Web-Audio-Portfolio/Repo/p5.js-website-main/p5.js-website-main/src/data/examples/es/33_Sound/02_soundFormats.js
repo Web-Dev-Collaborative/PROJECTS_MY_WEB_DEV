@@ -25,12 +25,12 @@ let song;
 
 function preload() {
   // hemos incluido un archivo .ogg y otro .mp3
-  soundFormats('ogg', 'mp3');
+  soundFormats("ogg", "mp3");
 
   // si mp3 no es soportado por este navegador,
   // loadSound() cargará el archivo ogg
   // que hemos incluido con nuestro bosquejo
-  song = loadSound('assets/lucky_dragons_-_power_melody.mp3');
+  song = loadSound("assets/lucky_dragons_-_power_melody.mp3");
 }
 
 function setup() {

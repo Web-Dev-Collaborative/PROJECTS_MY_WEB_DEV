@@ -8,7 +8,7 @@
 
 // La serpiente se divide en pequeños segmentos, los que son dibujados y editados en cada ejecución de draw()
 let numeroSegmentos = 10;
-let direccion = 'derecha';
+let direccion = "derecha";
 
 const xInicio = 0; //coordenada x de partida de la serpiente
 const yInicio = 250; //coordenada y de partida de la serpiente
@@ -22,10 +22,10 @@ let yFruta = 0;
 let elementoPuntaje;
 
 function setup() {
-  elementoPuntaje = createDiv('Puntaje = 0');
+  elementoPuntaje = createDiv("Puntaje = 0");
   elementoPuntaje.position(20, 20);
-  elementoPuntaje.id = 'puntaje';
-  elementoPuntaje.style('color', 'white');
+  elementoPuntaje.id = "puntaje";
+  elementoPuntaje.style("color", "white");
 
   createCanvas(500, 500);
   frameRate(15);
@@ -67,19 +67,19 @@ function actualizarCoordenadasSerpiente() {
     yCuerpo[i] = yCuerpo[i + 1];
   }
   switch (direccion) {
-    case 'derecha':
+    case "derecha":
       xCuerpo[numeroSegmentos - 1] = xCuerpo[numeroSegmentos - 2] + diferencia;
       yCuerpo[numeroSegmentos - 1] = yCuerpo[numeroSegmentos - 2];
       break;
-    case 'arriba':
+    case "arriba":
       xCuerpo[numeroSegmentos - 1] = xCuerpo[numeroSegmentos - 2];
       yCuerpo[numeroSegmentos - 1] = yCuerpo[numeroSegmentos - 2] - diferencia;
       break;
-    case 'izquierda':
+    case "izquierda":
       xCuerpo[numeroSegmentos - 1] = xCuerpo[numeroSegmentos - 2] - diferencia;
       yCuerpo[numeroSegmentos - 1] = yCuerpo[numeroSegmentos - 2];
       break;
-    case 'abajo':
+    case "abajo":
       xCuerpo[numeroSegmentos - 1] = xCuerpo[numeroSegmentos - 2];
       yCuerpo[numeroSegmentos - 1] = yCuerpo[numeroSegmentos - 2] + diferencia;
       break;
@@ -101,7 +101,7 @@ function comprobarEstadoJuego() {
   ) {
     noLoop();
     const puntajeValor = parseInt(elementoPuntaje.html().substring(8));
-    elementoPuntaje.html('Juego finalizado! Tu puntaje fue: ' + puntajeValor);
+    elementoPuntaje.html("Juego finalizado! Tu puntaje fue: " + puntajeValor);
   }
 }
 
@@ -131,7 +131,7 @@ function comprobarFruta() {
     yCuerpo[yCuerpo.length - 1] === yFruta
   ) {
     const prevScore = parseInt(elementoPuntaje.html().substring(8));
-    elementoPuntaje.html('Score = ' + (prevScore + 1));
+    elementoPuntaje.html("Score = " + (prevScore + 1));
     xCuerpo.unshift(xCuerpo[0]);
     yCuerpo.unshift(yCuerpo[0]);
     numeroSegmentos++;
@@ -153,23 +153,23 @@ function actualizarCoordenadasFruta() {
 function keyPressed() {
   switch (keyCode) {
     case 74:
-      if (direccion !== 'derecha') {
-        direccion = 'izquierda';
+      if (direccion !== "derecha") {
+        direccion = "izquierda";
       }
       break;
     case 76:
-      if (direccion !== 'izquierda') {
-        direccion = 'derecha';
+      if (direccion !== "izquierda") {
+        direccion = "derecha";
       }
       break;
     case 73:
-      if (direccion !== 'abajo') {
-        direccion = 'arriba';
+      if (direccion !== "abajo") {
+        direccion = "arriba";
       }
       break;
     case 75:
-      if (direccion !== 'arriba') {
-        direccion = 'abajo';
+      if (direccion !== "arriba") {
+        direccion = "abajo";
       }
       break;
   }

@@ -24,7 +24,7 @@ function draw() {
   background(0);
 
   // 将原点设为屏幕中心
-  translate(width/2, height/2);
+  translate(width / 2, height / 2);
 
   // 转换极坐标到笛卡尔坐标
   let x = r * cos(theta);

@@ -10,7 +10,7 @@ let font,
 function preload() {
   // Ensure the .ttf or .otf font stored in the assets directory
   // is loaded before setup() and draw() are called
-  font = loadFont('assets/SourceSansPro-Regular.otf');
+  font = loadFont("assets/SourceSansPro-Regular.otf");
 }
 
 function setup() {
@@ -46,14 +46,14 @@ function drawWords(x) {
   // the text to draw, the horizontal position,
   // and the vertical position
   fill(0);
-  text('ichi', x, 80);
+  text("ichi", x, 80);
 
   fill(65);
-  text('ni', x, 150);
+  text("ni", x, 150);
 
   fill(190);
-  text('san', x, 220);
+  text("san", x, 220);
 
   fill(255);
-  text('shi', x, 290);
+  text("shi", x, 290);
 }

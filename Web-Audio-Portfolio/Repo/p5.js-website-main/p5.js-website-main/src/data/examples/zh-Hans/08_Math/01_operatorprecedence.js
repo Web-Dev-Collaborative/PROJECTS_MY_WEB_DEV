@@ -39,7 +39,7 @@ function setup() {
   stroke(153);
   for (let i = 0; i < width; i += 2) {
     // 先算关系表达式，再是逻辑与 (AND)，最后是逻辑或 (OR)
-    // 更清楚的写法是： 
+    // 更清楚的写法是：
     // "if(((i > 20) && (i < 50)) || ((i > 100) && (i < width-20))) {"
     if ((i > 20 && i < 50) || (i > 100 && i < width - 20)) {
       line(i, 151, i, height - 1);

@@ -18,5 +18,5 @@ function draw() {
   // Escala el valor de mouseX de 0 a 720 a un rango entre 40 y 300
   let d = map(mouseX, 0, width, 40, 300);
   fill(255, c, 0);
-  ellipse(width/2, height/2, d, d);
+  ellipse(width / 2, height / 2, d, d);
 }

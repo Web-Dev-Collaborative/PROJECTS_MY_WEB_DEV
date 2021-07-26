@@ -21,8 +21,8 @@ function draw() {
   const h = (w * height) / width;
 
   // Start at negative half the width and height
-  const xmin = -w/2;
-  const ymin = -h/2;
+  const xmin = -w / 2;
+  const ymin = -h / 2;
 
   // Make sure we can write to the pixels[] array.
   // Only need to do this once since we don't do any other drawing.
@@ -37,8 +37,8 @@ function draw() {
   const ymax = ymin + h;
 
   // Calculate amount we increment x,y for each pixel
-  const dx = (xmax - xmin) / (width);
-  const dy = (ymax - ymin) / (height);
+  const dx = (xmax - xmin) / width;
+  const dy = (ymax - ymin) / height;
 
   // Start y
   let y = ymin;
@@ -46,7 +46,6 @@ function draw() {
     // Start x
     let x = xmin;
     for (let i = 0; i < width; i++) {
-
       // Now we test, as we iterate z = z^2 + cm does z tend towards infinity?
       let a = x;
       let b = y;
@@ -59,14 +58,14 @@ function draw() {
         b = twoab + y;
         // Infinty in our finite world is simple, let's just consider it 16
         if (dist(aa, bb, 0, 0) > 16) {
-          break;  // Bail
+          break; // Bail
         }
         n++;
       }
 
       // We color each pixel based on how long it takes to get to infinity
       // If we never got there, let's pick the color black
-      const pix = (i+j*width)*4;
+      const pix = (i + j * width) * 4;
       const norm = map(n, 0, maxiterations, 0, 1);
       let bright = map(sqrt(norm), 0, 1, 0, 255);
       if (n == maxiterations) {

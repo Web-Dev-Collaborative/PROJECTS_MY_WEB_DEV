@@ -2,7 +2,7 @@
  * @name 키보드
  * @description 이미지를 클릭하여 포커스를 주고
  * 키보드 입력을 통해 화면에 모양을 만듭니다.
- * 각 자판은 고유의 식별 번호를 갖습니다. 
+ * 각 자판은 고유의 식별 번호를 갖습니다.
  * 이 번호들은 도형의 화면 상 위치를 정합니다.
  */
 let rectWidth;
@@ -20,8 +20,8 @@ function draw() {
 
 function keyPressed() {
   let keyIndex = -1;
-  if (key >= 'a' && key <= 'z') {
-    keyIndex = key.charCodeAt(0) - 'a'.charCodeAt(0);
+  if (key >= "a" && key <= "z") {
+    keyIndex = key.charCodeAt(0) - "a".charCodeAt(0);
   }
   if (keyIndex === -1) {
     // 글자 자판이 아닐 경우, 화면을 비웁니다.

@@ -9,8 +9,8 @@ let img;
 let imgMask;
 
 function preload() {
-  img = loadImage('assets/moonwalk.jpg');
-  imgMask = loadImage('assets/mask.png');
+  img = loadImage("assets/moonwalk.jpg");
+  imgMask = loadImage("assets/mask.png");
 }
 
 function setup() {

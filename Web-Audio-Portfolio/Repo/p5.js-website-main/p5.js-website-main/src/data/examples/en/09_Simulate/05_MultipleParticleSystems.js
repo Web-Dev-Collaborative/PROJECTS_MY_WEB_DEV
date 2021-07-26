@@ -31,20 +31,20 @@ function mousePressed() {
 }
 
 // A simple Particle class
-let Particle = function(position) {
+let Particle = function (position) {
   this.acceleration = createVector(0, 0.05);
   this.velocity = createVector(random(-1, 1), random(-1, 0));
   this.position = position.copy();
   this.lifespan = 255.0;
 };
 
-Particle.prototype.run = function() {
+Particle.prototype.run = function () {
   this.update();
   this.display();
 };
 
 // Method to update position
-Particle.prototype.update = function(){
+Particle.prototype.update = function () {
   this.velocity.add(this.acceleration);
   this.position.add(this.velocity);
   this.lifespan -= 2;
@@ -76,8 +76,7 @@ ParticleSystem.prototype.addParticle = function () {
   // Add either a Particle or CrazyParticle to the system
   if (int(random(0, 2)) == 0) {
     p = new Particle(this.origin);
-  }
-  else {
+  } else {
     p = new CrazyParticle(this.origin);
   }
   this.particles.push(p);
@@ -102,7 +101,7 @@ function CrazyParticle(origin) {
 
   // Initialize our added properties
   this.theta = 0.0;
-};
+}
 
 // Create a Crazy.prototype object that inherits from Particle.prototype.
 // Note: A common error here is to use "new Particle()" to create the
@@ -118,14 +117,14 @@ CrazyParticle.prototype.constructor = CrazyParticle;
 // Notice we don't have the method run() here; it is inherited from Particle
 
 // This update() method overrides the parent class update() method
-CrazyParticle.prototype.update=function() {
+CrazyParticle.prototype.update = function () {
   Particle.prototype.update.call(this);
   // Increment rotation based on horizontal velocity
   this.theta += (this.velocity.x * this.velocity.mag()) / 10.0;
-}
+};
 
 // This display() method overrides the parent class display() method
-CrazyParticle.prototype.display=function() {
+CrazyParticle.prototype.display = function () {
   // Render the ellipse just like in a regular particle
   Particle.prototype.display.call(this);
   // Then add a rotating line
@@ -135,4 +134,4 @@ CrazyParticle.prototype.display=function() {
   stroke(255, this.lifespan);
   line(0, 0, 25, 0);
   pop();
-}
+};

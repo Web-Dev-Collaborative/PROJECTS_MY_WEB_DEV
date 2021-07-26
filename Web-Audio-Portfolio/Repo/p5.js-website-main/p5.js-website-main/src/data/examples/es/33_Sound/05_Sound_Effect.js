@@ -49,8 +49,8 @@ function setup() {
 
   // cargar el archivo de sonido
   // hemos incluido versiones MP3 y OGG.
-  soundFormats('mp3', 'ogg');
-  dingdong = loadSound('assets/doorbell.mp3');
+  soundFormats("mp3", "ogg");
+  dingdong = loadSound("assets/doorbell.mp3");
 
   // crear un nuevo timbre
   doorbell = new Doorbell(width / 2, height / 2, 32);

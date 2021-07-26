@@ -1,6 +1,6 @@
 /*
  * @name 스네이크 게임
- * @description 그 유명한 스네이크 게임입니다! 실행(run)을 누르고, 
+ * @description 그 유명한 스네이크 게임입니다! 실행(run)을 누르고,
  * 검은 화면 위 아무 지점을 클릭한 뒤, i,j,k,l 키로 뱀을 조종할 수 있습니다.
  * 뱀이 벽이나 자신의 몸에 닿지 않도록 하세요!<br>
  * 예제 제작: <a href='https://github.com/prashantgupta24' target='_blank'>프라샨트 굽타(Prashant Gupta)
@@ -9,7 +9,7 @@
 // 뱀의 형상은 작은 조각(segment)들로 구성되는데,
 // 이는 매 'draw' 호출에서 그려지고 수정됩니다.
 let numSegments = 10;
-let direction = 'right';
+let direction = "right";
 
 const xStart = 0; // 뱀의 시작 x좌표
 const yStart = 250; // 뱀의 시작 y좌표
@@ -23,10 +23,10 @@ let yFruit = 0;
 let scoreElem;
 
 function setup() {
-  scoreElem = createDiv('Score = 0');
+  scoreElem = createDiv("Score = 0");
   scoreElem.position(20, 20);
-  scoreElem.id = 'score';
-  scoreElem.style('color', 'white');
+  scoreElem.id = "score";
+  scoreElem.style("color", "white");
 
   createCanvas(500, 500);
   frameRate(15);
@@ -64,19 +64,19 @@ function updateSnakeCoordinates() {
     yCor[i] = yCor[i + 1];
   }
   switch (direction) {
-    case 'right':
+    case "right":
       xCor[numSegments - 1] = xCor[numSegments - 2] + diff;
       yCor[numSegments - 1] = yCor[numSegments - 2];
       break;
-    case 'up':
+    case "up":
       xCor[numSegments - 1] = xCor[numSegments - 2];
       yCor[numSegments - 1] = yCor[numSegments - 2] - diff;
       break;
-    case 'left':
+    case "left":
       xCor[numSegments - 1] = xCor[numSegments - 2] - diff;
       yCor[numSegments - 1] = yCor[numSegments - 2];
       break;
-    case 'down':
+    case "down":
       xCor[numSegments - 1] = xCor[numSegments - 2];
       yCor[numSegments - 1] = yCor[numSegments - 2] + diff;
       break;
@@ -97,7 +97,7 @@ function checkGameStatus() {
   ) {
     noLoop();
     const scoreVal = parseInt(scoreElem.html().substring(8));
-    scoreElem.html('Game ended! Your score was : ' + scoreVal);
+    scoreElem.html("Game ended! Your score was : " + scoreVal);
   }
 }
 
@@ -122,7 +122,7 @@ function checkForFruit() {
   point(xFruit, yFruit);
   if (xCor[xCor.length - 1] === xFruit && yCor[yCor.length - 1] === yFruit) {
     const prevScore = parseInt(scoreElem.html().substring(8));
-    scoreElem.html('Score = ' + (prevScore + 1));
+    scoreElem.html("Score = " + (prevScore + 1));
     xCor.unshift(xCor[0]);
     yCor.unshift(yCor[0]);
     numSegments++;
@@ -145,23 +145,23 @@ function updateFruitCoordinates() {
 function keyPressed() {
   switch (keyCode) {
     case 74:
-      if (direction !== 'right') {
-        direction = 'left';
+      if (direction !== "right") {
+        direction = "left";
       }
       break;
     case 76:
-      if (direction !== 'left') {
-        direction = 'right';
+      if (direction !== "left") {
+        direction = "right";
       }
       break;
     case 73:
-      if (direction !== 'down') {
-        direction = 'up';
+      if (direction !== "down") {
+        direction = "up";
       }
       break;
     case 75:
-      if (direction !== 'up') {
-        direction = 'down';
+      if (direction !== "up") {
+        direction = "down";
       }
       break;
   }

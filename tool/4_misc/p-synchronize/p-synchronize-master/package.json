@@ -1,0 +1,22 @@
+{
+	"name": "p-synchronize",
+	"version": "1.0.0",
+	"description": "Limit async function invocations to one at a time",
+	"license": "MIT",
+	"repository": "https://github.com/djmitche/p-synchronize",
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"devDependencies": {
+		"ava": "^1.2.1",
+		"delay": "^4.1.0",
+		"promise.allsettled": "^1.0.2",
+		"xo": "^0.24.0"
+	}
+}

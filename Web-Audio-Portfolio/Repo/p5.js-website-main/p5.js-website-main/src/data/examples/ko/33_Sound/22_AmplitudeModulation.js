@@ -39,7 +39,7 @@ function setup() {
 
   carrier.start();
 
-  modulator = new p5.Oscillator('triangle');
+  modulator = new p5.Oscillator("triangle");
   modulator.disconnect(); // 변조기를 마스터 출력과 연결 해제합니다.
   modulator.freq(5);
   modulator.amp(1);
@@ -86,6 +86,6 @@ function drawWaveform() {
 
 function drawText(modFreq, modAmp) {
   strokeWeight(1);
-  text('Modulator Frequency: ' + modFreq.toFixed(3) + ' Hz', 20, 20);
-  text('Modulator Amplitude: ' + modAmp.toFixed(3), 20, 40);
+  text("Modulator Frequency: " + modFreq.toFixed(3) + " Hz", 20, 20);
+  text("Modulator Amplitude: " + modAmp.toFixed(3), 20, 40);
 }

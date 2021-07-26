@@ -9,8 +9,8 @@ let spots, arm;
 
 function setup() {
   createCanvas(640, 360);
-  arm = new SpinArm(width/2, height/2, 0.01);
-  spots = new SpinSpots(width/2, height/2, -0.02, 90.0);
+  arm = new SpinArm(width / 2, height / 2, 0.01);
+  spots = new SpinSpots(width / 2, height / 2, -0.02, 90.0);
 }
 
 function draw() {
@@ -36,7 +36,7 @@ class Spin {
 
 class SpinArm extends Spin {
   constructor(x, y, s) {
-    super(x, y, s)
+    super(x, y, s);
   }
 
   display() {
@@ -53,7 +53,7 @@ class SpinArm extends Spin {
 
 class SpinSpots extends Spin {
   constructor(x, y, s, d) {
-    super(x, y, s)
+    super(x, y, s);
     this.dim = d;
   }
 
@@ -63,8 +63,8 @@ class SpinSpots extends Spin {
     translate(this.x, this.y);
     this.angle += this.speed;
     rotate(this.angle);
-    ellipse(-this.dim/2, 0, this.dim, this.dim);
-    ellipse(this.dim/2, 0, this.dim, this.dim);
+    ellipse(-this.dim / 2, 0, this.dim, this.dim);
+    ellipse(this.dim / 2, 0, this.dim, this.dim);
     pop();
   }
 }

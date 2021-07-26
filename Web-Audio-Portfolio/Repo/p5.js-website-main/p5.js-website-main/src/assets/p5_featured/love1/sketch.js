@@ -16,27 +16,33 @@ var partners = {
   8: 22,
   9: 16,
   10: 20,
-  11: 12
-}
+  11: 12,
+};
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  var a = 255;  // change this to lighten
+  var a = 255; // change this to lighten
   colors = [
     color(228, 3, 3, a),
     color(255, 140, 0, a),
     color(255, 237, 0, a),
     color(0, 128, 38, a),
     color(0, 77, 255, a),
-    color(117, 7, 135, a)
+    color(117, 7, 135, a),
   ];
   for (var i = 0; i < numBalls; i++) {
-    balls[i] = new Ball(width/2, (i%6)*height*0.133+height*0.15, 60, i, balls);
+    balls[i] = new Ball(
+      width / 2,
+      (i % 6) * height * 0.133 + height * 0.15,
+      60,
+      i,
+      balls
+    );
   }
-  for (var i = 0; i < numBalls/2; i++) {
+  for (var i = 0; i < numBalls / 2; i++) {
     balls[i].p = partners[i];
     balls[partners[i]].p = i;
-    console.log('partners '+partners[i]+" "+i)
+    console.log("partners " + partners[i] + " " + i);
   }
   noStroke();
   noFill();
@@ -49,11 +55,10 @@ function draw() {
     var ball = balls[i];
     ball.collide();
     ball.move();
-    ball.display();  
+    ball.display();
   }
 }
 
- 
 function Ball(xin, yin, din, idin, oin) {
   this.x = xin;
   this.y = yin;
@@ -64,13 +69,13 @@ function Ball(xin, yin, din, idin, oin) {
   this.vy = 0;
   this.collided = false;
 
-  this.collide = function() {
+  this.collide = function () {
     for (var i = this.id + 1; i < numBalls; i++) {
       if (this.others[i].id !== this.p) {
         var dx = this.others[i].x - this.x;
         var dy = this.others[i].y - this.y;
-        var distance = sqrt(dx*dx + dy*dy);
-        var minDist = this.others[i].diameter/2 + this.diameter/2;
+        var distance = sqrt(dx * dx + dy * dy);
+        var minDist = this.others[i].diameter / 2 + this.diameter / 2;
         if (distance < minDist) {
           var angle = atan2(dy, dx);
           var targetX = this.x + cos(angle) * minDist;
@@ -83,46 +88,44 @@ function Ball(xin, yin, din, idin, oin) {
           this.others[i].vy += ay;
         }
       }
-    }   
-  }
-  
-  this.move = function() {
+    }
+  };
+
+  this.move = function () {
     this.vy += gravity;
     this.x += this.vx;
     this.y += this.vy;
-    if (this.x + this.diameter/2 > width) {
-      this.x = width - this.diameter/2;
-      this.vx *= friction; 
-    }
-    else if (this.x - this.diameter/2 < 0) {
-      this.x = this.diameter/2;
+    if (this.x + this.diameter / 2 > width) {
+      this.x = width - this.diameter / 2;
+      this.vx *= friction;
+    } else if (this.x - this.diameter / 2 < 0) {
+      this.x = this.diameter / 2;
       this.vx *= friction;
     }
-    if (this.y + this.diameter/2 > height) {
-      this.y = height - this.diameter/2;
-      this.vy *= friction; 
-    } 
-    else if (this.y - this.diameter/2 < 0) {
-      this.y = this.diameter/2;
+    if (this.y + this.diameter / 2 > height) {
+      this.y = height - this.diameter / 2;
+      this.vy *= friction;
+    } else if (this.y - this.diameter / 2 < 0) {
+      this.y = this.diameter / 2;
       this.vy *= friction;
     }
     this.vx += (balls[this.p].x - this.x) * 0.0001;
     this.vy += (balls[this.p].y - this.y) * 0.0001;
-  }
-   
-  this.display = function() {
-    push();  
-    fill(colors[this.id%6]);
-    stroke(colors[this.id%6]);
+  };
+
+  this.display = function () {
+    push();
+    fill(colors[this.id % 6]);
+    stroke(colors[this.id % 6]);
     //ellipse(this.x, this.y, this.diameter, this.diameter);
-    translate(this.x-50, this.y-this.diameter/2);
-    scale(1.5)
+    translate(this.x - 50, this.y - this.diameter / 2);
+    scale(1.5);
     beginShape();
-    vertex(50, 15); 
-    bezierVertex(50, -5, 90, 5, 50, 40); 
-    vertex(50, 15); 
-    bezierVertex(50, -5, 10, 5, 50, 40); 
+    vertex(50, 15);
+    bezierVertex(50, -5, 90, 5, 50, 40);
+    vertex(50, 15);
+    bezierVertex(50, -5, 10, 5, 50, 40);
     endShape();
-    pop(); 
-  }
+    pop();
+  };
 }

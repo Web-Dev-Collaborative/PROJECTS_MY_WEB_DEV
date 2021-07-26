@@ -24,7 +24,7 @@ function draw() {
   const g = gSlider.value();
   const b = bSlider.value();
   background(r, g, b);
-  text('red', 165, 35);
-  text('green', 165, 65);
-  text('blue', 165, 95);
+  text("red", 165, 35);
+  text("green", 165, 65);
+  text("blue", 165, 95);
 }

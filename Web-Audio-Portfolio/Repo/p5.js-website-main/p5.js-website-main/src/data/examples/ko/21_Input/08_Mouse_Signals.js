@@ -3,7 +3,7 @@
  * @description 마우스를 움직이고 클릭하여 신호를 만들어보세요.
  * 상단의 행은 "mouseX", 가운데 행은 "mouseY",
  * 하단의 행은 "mouseIsPressed"에 대한 신호입니다.
-  */
+ */
 let xvals = [];
 let yvals = [];
 let bvals = [];

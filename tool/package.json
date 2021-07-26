@@ -1,0 +1,22 @@
+{
+  "name": "webdevutilities-site",
+  "version": "1.0.0",
+  "description": "a website that consolidates web development tools and assets",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgoonz/WEB-DEV-TOOLS-HUB.git"
+  },
+  "author": "Bryan Guner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bgoonz/WEB-DEV-TOOLS-HUB/issues"
+  },
+  "homepage": "https://github.com/bgoonz/WEB-DEV-TOOLS-HUB#readme",
+  "devDependencies": {
+    "babel-plugin-wildcard": "^6.0.0"
+  }
+}

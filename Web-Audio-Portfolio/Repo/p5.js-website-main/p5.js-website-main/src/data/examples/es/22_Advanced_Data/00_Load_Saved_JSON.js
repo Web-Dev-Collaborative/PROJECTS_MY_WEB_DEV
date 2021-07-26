@@ -44,24 +44,24 @@ let bubbles = []; // Global array to hold all bubble objects
 
 // Put any asynchronous data loading in preload to complete before "setup" is run
 function preload() {
-  data = loadJSON('assets/bubbles.json');
+  data = loadJSON("assets/bubbles.json");
 }
 
 // Convert saved Bubble data into Bubble Objects
 function loadData() {
-  let bubbleData = data['bubbles'];
+  let bubbleData = data["bubbles"];
   for (let i = 0; i < bubbleData.length; i++) {
     // Get each object in the array
     let bubble = bubbleData[i];
     // Get a position object
-    let position = bubble['position'];
+    let position = bubble["position"];
     // Get x,y from position
-    let x = position['x'];
-    let y = position['y'];
+    let x = position["x"];
+    let y = position["y"];
 
     // Get diameter and label
-    let diameter = bubble['diameter'];
-    let label = bubble['label'];
+    let diameter = bubble["diameter"];
+    let label = bubble["label"];
 
     // Put object in array
     bubbles.push(new Bubble(x, y, diameter, label));
@@ -72,7 +72,7 @@ function loadData() {
 function mousePressed() {
   // Add diameter and label to bubble
   let diameter = random(40, 80);
-  let label = 'New Label';
+  let label = "New Label";
 
   // Append the new JSON bubble object to the array
   bubbles.push(new Bubble(mouseX, mouseY, diameter, label));
@@ -100,5 +100,5 @@ function draw() {
   // Label directions at bottom
   textAlign(LEFT);
   fill(0);
-  text('Click to add bubbles.', 10, height - 10);
+  text("Click to add bubbles.", 10, height - 10);
 }

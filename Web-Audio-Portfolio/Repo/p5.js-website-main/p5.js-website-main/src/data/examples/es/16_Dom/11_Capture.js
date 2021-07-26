@@ -5,7 +5,7 @@
  * en el lienzo con un filtro de inversión. Fíjate que por defecto la
  * captura también aparece. Puedes esconderla
  * si quitas el comentario a la línea de código capture.hide().
- * Para correr este ejemplo localmente, necesitarás correr un 
+ * Para correr este ejemplo localmente, necesitarás correr un
  * <a href="https://github.com/processing/p5.js/wiki/Local-server">servidor local</a>.
  */
 let capture;

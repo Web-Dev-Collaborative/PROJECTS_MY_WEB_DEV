@@ -1,4 +1,3 @@
-
 /*
  * @name Spirograph
  * @description This sketch uses simple transformations to create a
@@ -49,7 +48,7 @@ function draw() {
       fill(0, 0, 255, alpha / 2); // also, um, blue
       erad = 5.0 * (1.0 - float(i) / sines.length); // pen width will be related to which sine
     }
-    let radius = rad / (i+1); // radius for circle itself
+    let radius = rad / (i + 1); // radius for circle itself
     rotate(sines[i]); // rotate circle
     if (!trace) ellipse(0, 0, radius * 2, radius * 2); // if we're simulating, draw the sine
     push(); // go up one level
@@ -58,15 +57,14 @@ function draw() {
     if (trace) ellipse(0, 0, erad, erad); // draw with erad if tracing
     pop(); // go down one level
     translate(0, radius); // move into position for next sine
-    sines[i] = (sines[i] + (fund + (fund * i * ratio))) % TWO_PI; // update angle based on fundamental
+    sines[i] = (sines[i] + (fund + fund * i * ratio)) % TWO_PI; // update angle based on fundamental
   }
 
   pop(); // pop down final transformation
-
 }
 
 function keyReleased() {
-  if (key==' ') {
+  if (key == " ") {
     trace = !trace;
     background(255);
   }

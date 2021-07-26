@@ -76,7 +76,7 @@ function draw() {
     );
     velocity.mult(speed);
 
-      // 충돌 지점에서 밑바닥 상단 표준 그리기
+    // 충돌 지점에서 밑바닥 상단 표준 그리기
     stroke(255, 128, 0);
     line(
       position.x,

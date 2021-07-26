@@ -32,7 +32,7 @@ class Boid {
     this.velocity = p5.Vector.random2D();
     this.position = createVector(x, y);
     this.r = 3.0;
-    this.maxspeed = 3;    // 최고 속도
+    this.maxspeed = 3; // 최고 속도
     this.maxforce = 0.05; // 최고 조타력
   }
 
@@ -42,16 +42,16 @@ class Boid {
     this.borders();
     this.render();
   }
-  
+
   // Force는 acceleration에 담깁니다.
   applyForce(force) {
     this.acceleration.add(force);
   }
-  
+
   // 세 가지 규칙을 기반으로 새로운 accerlation(가속도)를 축적합니다.
   flock(boids) {
     let sep = this.separate(boids); // 분리
-    let ali = this.align(boids);    // 정렬
+    let ali = this.align(boids); // 정렬
     let coh = this.cohesion(boids); // 응집
     // 세 힘들을 임의로 가중하기
     sep.mult(2.5);
@@ -62,7 +62,7 @@ class Boid {
     this.applyForce(ali);
     this.applyForce(coh);
   }
-  
+
   // 위치 업데이트를 위한 메소드
   update() {
     // 속도 업데이트
@@ -73,12 +73,12 @@ class Boid {
     // 매 사이클마다 acceleration을 0으로 리셋하기
     this.acceleration.mult(0);
   }
-  
+
   // 목표점을 향한 조타력을 계산하고 적용하는 메소드
   // STEER(조타력) = DESIRED(목표점) - VELOCITY(속도)
   seek(target) {
     let desired = p5.Vector.sub(target, this.position); // A vector pointing from the location to the target
-  // desired를 표준화하고 최대 속도로 조정
+    // desired를 표준화하고 최대 속도로 조정
     desired.normalize();
     desired.mult(this.maxspeed);
     // Steering = Desired minus Velocity
@@ -86,14 +86,14 @@ class Boid {
     steer.limit(this.maxforce); // 최대 조타력으로 제한
     return steer;
   }
-  
+
   // 개체(boid)를 원형으로 그리기
   render() {
     fill(127, 127);
     stroke(200);
     ellipse(this.position.x, this.position.y, 16, 16);
   }
-  
+
   // Wraparound
   borders() {
     if (this.position.x < -this.r) this.position.x = width + this.r;
@@ -101,7 +101,7 @@ class Boid {
     if (this.position.x > width + this.r) this.position.x = -this.r;
     if (this.position.y > height + this.r) this.position.y = -this.r;
   }
-  
+
   // 분리 Seperation
   // 인근의 개체를 확인하고 이로부터 거리를 유지하며 조타하게 만드는 메소드
   separate(boids) {
@@ -112,7 +112,7 @@ class Boid {
     for (let i = 0; i < boids.length; i++) {
       let d = p5.Vector.dist(this.position, boids[i].position);
       // 만약 그 거리가 0보다 크고 임의의 값보다 작다면(0은 개체의 현위치)
-      if ((d > 0) && (d < desiredseparation)) {
+      if (d > 0 && d < desiredseparation) {
         // 인근의 개체로부터 떨어진 지점을 향하는 벡터 계산
         let diff = p5.Vector.sub(this.position, boids[i].position);
         diff.normalize();
@@ -125,7 +125,7 @@ class Boid {
     if (count > 0) {
       steer.div(count);
     }
-  
+
     // 벡터가 0보다 크다면,
     if (steer.mag() > 0) {
       // 레이놀즈의 공식 Steering = Desired - Velocity을 적용한다.
@@ -136,7 +136,7 @@ class Boid {
     }
     return steer;
   }
-  
+
   // 배열 Alignment
   // 서로 인근에 있는 모든 개체에 대한 평균 속도 계산
   align(boids) {
@@ -145,7 +145,7 @@ class Boid {
     let count = 0;
     for (let i = 0; i < boids.length; i++) {
       let d = p5.Vector.dist(this.position, boids[i].position);
-      if ((d > 0) && (d < neighbordist)) {
+      if (d > 0 && d < neighbordist) {
         sum.add(boids[i].velocity);
         count++;
       }
@@ -161,7 +161,7 @@ class Boid {
       return createVector(0, 0);
     }
   }
-  
+
   // 응집 Cohesion
   // 서로 인근에 있는 모든 개체의 평균 위치값(예: 중앙)에 대해, 이 지점을 향한 조타 벡터값 계산
   cohesion(boids) {
@@ -170,7 +170,7 @@ class Boid {
     let count = 0;
     for (let i = 0; i < boids.length; i++) {
       let d = p5.Vector.dist(this.position, boids[i].position);
-      if ((d > 0) && (d < neighbordist)) {
+      if (d > 0 && d < neighbordist) {
         sum.add(boids[i].position); // 위치 추가
         count++;
       }
@@ -181,6 +181,5 @@ class Boid {
     } else {
       return createVector(0, 0);
     }
-  }  
+  }
 }
-

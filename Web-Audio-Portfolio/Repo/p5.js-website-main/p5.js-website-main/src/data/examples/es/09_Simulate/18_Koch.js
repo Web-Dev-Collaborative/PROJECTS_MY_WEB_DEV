@@ -8,7 +8,7 @@ let k;
 
 function setup() {
   createCanvas(710, 400);
-  frameRate(1);  // Animate slowly
+  frameRate(1); // Animate slowly
   k = new KochFractal();
 }
 
@@ -28,7 +28,7 @@ function draw() {
 // Includes methods to calculate midp5.Vectors along the line according to the Koch algorithm
 
 class KochLine {
-  constructor(a,b) {
+  constructor(a, b) {
     // Two p5.Vectors,
     // start is the "left" p5.Vector and
     // end is the "right p5.Vector
@@ -58,16 +58,16 @@ class KochLine {
     let a = this.start.copy(); // Start at the beginning
     let v = p5.Vector.sub(this.end, this.start);
     v.div(3);
-    a.add(v);  // Move to point B
-    v.rotate(-PI/3); // Rotate 60 degrees
-    a.add(v);  // Move to point C
+    a.add(v); // Move to point B
+    v.rotate(-PI / 3); // Rotate 60 degrees
+    a.add(v); // Move to point C
     return a;
   }
 
   // Easy, just 2/3 of the way
   kochD() {
     let v = p5.Vector.sub(this.end, this.start);
-    v.mult(2/3.0);
+    v.mult(2 / 3.0);
     v.add(this.start);
     return v;
   }
@@ -81,9 +81,9 @@ class KochLine {
 
 class KochFractal {
   constructor() {
-    this.start = createVector(0,height-20);   // A p5.Vector for the start
-    this.end = createVector(width,height-20); // A p5.Vector for the end
-    this.lines = [];                         // An array to keep track of all the lines
+    this.start = createVector(0, height - 20); // A p5.Vector for the start
+    this.end = createVector(width, height - 20); // A p5.Vector for the end
+    this.lines = []; // An array to keep track of all the lines
     this.count = 0;
     this.restart();
   }
@@ -96,9 +96,9 @@ class KochFractal {
   }
 
   restart() {
-    this.count = 0;      // Reset count
-    this.lines = [];  // Empty the array list
-    this.lines.push(new KochLine(this.start,this.end));  // Add the initial line (from one end p5.Vector to the other)
+    this.count = 0; // Reset count
+    this.lines = []; // Empty the array list
+    this.lines.push(new KochLine(this.start, this.end)); // Add the initial line (from one end p5.Vector to the other)
   }
 
   getCount() {
@@ -107,7 +107,7 @@ class KochFractal {
 
   // This is easy, just draw all the lines
   render() {
-    for(let i = 0; i < this.lines.length; i++) {
+    for (let i = 0; i < this.lines.length; i++) {
       this.lines[i].display();
     }
   }
@@ -121,8 +121,8 @@ class KochFractal {
 
   // As we do this over and over again, each line gets broken into 4 lines, which gets broken into 4 lines, and so on. . .
   iterate(before) {
-    let now = [];    // Create emtpy list
-    for(let i = 0; i < this.lines.length; i++) {
+    let now = []; // Create emtpy list
+    for (let i = 0; i < this.lines.length; i++) {
       let l = this.lines[i];
       // Calculate 5 koch p5.Vectors (done for us by the line object)
       let a = l.kochA();
@@ -131,10 +131,10 @@ class KochFractal {
       let d = l.kochD();
       let e = l.kochE();
       // Make line segments between all the p5.Vectors and add them
-      now.push(new KochLine(a,b));
-      now.push(new KochLine(b,c));
-      now.push(new KochLine(c,d));
-      now.push(new KochLine(d,e));
+      now.push(new KochLine(a, b));
+      now.push(new KochLine(b, c));
+      now.push(new KochLine(c, d));
+      now.push(new KochLine(d, e));
     }
     return now;
   }

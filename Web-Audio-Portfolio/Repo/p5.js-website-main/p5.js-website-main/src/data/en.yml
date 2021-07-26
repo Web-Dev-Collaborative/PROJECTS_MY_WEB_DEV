@@ -16,11 +16,11 @@ Contribute: Contribute
 Forum: Forum
 Showcase: Showcase
 footerxh1: Credits
-footer1: 'p5.js is currently led by '
-footer2: ' and was created by '
-footer3: '. p5.js is developed by a community of collaborators, with support from the '
-footer4: ' and '
-footer5: 'Identity and graphic design by '
+footer1: "p5.js is currently led by "
+footer2: " and was created by "
+footer3: ". p5.js is developed by a community of collaborators, with support from the "
+footer4: " and "
+footer5: "Identity and graphic design by "
 tagline1: Processing fun times JavaScript quirkiness
 tagline2: Processing simplicity times JavaScript flexibility
 tagline3: Processing intuition times JavaScript power
@@ -50,21 +50,21 @@ home:
     acknowledge that not everyone has the time, financial means, or capacity to
     actively participate, but we recognize and encourage involvement of all
     kinds. We facilitate and foster access and empowerment. We are all learners.
-  p2x2: 'p5.js is an interpretation of '
-  p2x3: ' for today’s web. We hold events and operate with support from the '
+  p2x2: "p5.js is an interpretation of "
+  p2x3: " for today’s web. We hold events and operate with support from the "
   p2x4: .
-  p2x5: 'Learn more about '
+  p2x5: "Learn more about "
   p2x6: our community
   p2x7: .
   p3xh2: Get Started
-  p3xp1: 'Make your first sketch in the '
-  p3xp2: '. Learn more about sketching with p5.js on the '
+  p3xp1: "Make your first sketch in the "
+  p3xp2: ". Learn more about sketching with p5.js on the "
   p3xp3: Get Started page
-  p3xp4: ' and everything you can do in the '
+  p3xp4: " and everything you can do in the "
   p3xp5: Reference
   p3xp6: .
   p4xh2: Get Involved
-  p4xp1: 'There are many ways to contribute to p5.js:'
+  p4xp1: "There are many ways to contribute to p5.js:"
   p4xp2: Involvement Options
   p4xp3: Share something you've made!
   p4xp4: Teach a workshop or class.
@@ -77,33 +77,33 @@ copyright:
   copyright1: >-
     The p5.js library is free software; you can redistribute it and/or modify it
     under the terms of the
-  copyright2: ' as published by the Free Software Foundation, version 2.1.'
-  copyright3: 'The Reference for the language is under a '
-  copyright4: ' license which makes it possible to reuse this content for non-commercial purposes if it is credited.'
+  copyright2: " as published by the Free Software Foundation, version 2.1."
+  copyright3: "The Reference for the language is under a "
+  copyright4: " license which makes it possible to reuse this content for non-commercial purposes if it is credited."
 get started:
   get-started-title: Get Started
   get-started1: >-
     This page walks you through setting up a p5.js project and making your first
     sketch.
-  get-started2: 'The easiest way to start is using the '
+  get-started2: "The easiest way to start is using the "
   get-started3: p5.js editor
-  get-started4: ', you can open the web editor and can scroll down to '
+  get-started4: ", you can open the web editor and can scroll down to "
   get-started5: Your First Sketch
   get-started6: >-
     . If you would like to work on the the desktop version of p5.js you can
     scroll down to
   get-started7: downloading instructions,
-  get-started-button: 'Copy'
+  get-started-button: "Copy"
   settingUp-title: Setting up p5.js with an editor on your own computer
   download-title: Downloading a copy of the p5.js library
   hosted-title: Using a hosted version of the p5.js library
-  download1: 'The easiest way to start is by using the empty example that comes with the '
+  download1: "The easiest way to start is by using the empty example that comes with the "
   download2: p5.js complete
-  download3: ' download.'
-  download8: 'After download, you need to set up a local server. See instructions '
+  download3: " download."
+  download8: "After download, you need to set up a local server. See instructions "
   download9: here
-  download10: '. Run your local server within the downloaded folder and on your browser, go to '
-  download11: 'http://localhost:{your-port-num}/empty-example'
+  download10: ". Run your local server within the downloaded folder and on your browser, go to "
+  download11: "http://localhost:{your-port-num}/empty-example"
   download4: >-
     If you look in index.html, you'll notice that it links to the file p5.js. If
     you would like to use the minified version (compressed for faster page
@@ -112,19 +112,19 @@ get started:
     Alternatively, you can link to a p5.js file hosted online. All versions of
     p5.js are stored in a CDN (Content Delivery Network). You can find a history
     of these versions in the
-  download6: '. In this case you can change the link to:'
-  download7: 'A sample HTML page might look like this:'
+  download6: ". In this case you can change the link to:"
+  download7: "A sample HTML page might look like this:"
   environment-title: Environment
-  environment1: 'To run p5.js in your computer you will need a text editor. You can use the '
-  environmentlink: 'http://en.wikipedia.org/wiki/Source_code_editor'
-  environment2: ' code editor '
-  environment3: 'of your choice. Instructions for getting set up with '
-  environment4: ' are included below, other good editor options include '
-  environment5: ' and '
+  environment1: "To run p5.js in your computer you will need a text editor. You can use the "
+  environmentlink: "http://en.wikipedia.org/wiki/Source_code_editor"
+  environment2: " code editor "
+  environment3: "of your choice. Instructions for getting set up with "
+  environment4: " are included below, other good editor options include "
+  environment5: " and "
   environment6: >-
     If you are a screen reader user and not using the p5 web editor, you may
     want to use
-  environment7: ' or '
+  environment7: " or "
   environment8: >-
     Open Sublime. Go to the File menu and choose Open... and choose the folder
     that your html and js files are located in. On the left sidebar, you should
@@ -137,19 +137,19 @@ get started:
   environment11: >-
     Open the index.html file in your browser by double clicking on it in your
     file manager or type:
-  environment12: 'file:///the/file/path/to/your/html'
-  environment14: ' (or '
-  environment15: 'http://localhost:{your-port-num}/empty-example'
-  environment16: ' if you are using a local server)'
-  environment13: ' in the address bar to view your sketch.'
+  environment12: "file:///the/file/path/to/your/html"
+  environment14: " (or "
+  environment15: "http://localhost:{your-port-num}/empty-example"
+  environment16: " if you are using a local server)"
+  environment13: " in the address bar to view your sketch."
   your-first-sketch-title: Your First Sketch
-  your-first-sketch-intro1: 'In the '
-  your-first-sketch-intro2: 'https://editor.p5js.org/'
+  your-first-sketch-intro1: "In the "
+  your-first-sketch-intro2: "https://editor.p5js.org/"
   your-first-sketch-intro3: p5.js web editor
-  your-first-sketch-intro4: ' you should find the following code:'
-  your-first-sketch1: 'After '
-  your-first-sketch2: ' include this line of code: '
-  your-first-sketch3: 'Now your code should be like this: '
+  your-first-sketch-intro4: " you should find the following code:"
+  your-first-sketch1: "After "
+  your-first-sketch2: " include this line of code: "
+  your-first-sketch3: "Now your code should be like this: "
   your-first-sketch4: >-
     The line you just added draws an ellipse, with its center 50 pixels over
     from the left and 50 pixels down from the top, with a width and height of 80
@@ -159,7 +159,7 @@ get started:
     If you are using a screen reader, you must turn on the accessible outputs in
     the p5 online editor, outside the editor you must add the accessibility
     library in your html. To learn more visit&#32;
-  your-first-sketch7: 'using p5 with a screen reader tutorial'
+  your-first-sketch7: "using p5 with a screen reader tutorial"
   your-first-sketch8: >-
     If you've typed everything correctly, this will appear in the display
     window:
@@ -191,25 +191,25 @@ get started:
   first-sketch-heading2: Note for screenreader users
   first-sketch-heading3: Code snippet with interaction
   what-next-title: What Next?
-  learn1: 'Check out the '
+  learn1: "Check out the "
   learn2: learn page
-  learn3: ' and '
+  learn3: " and "
   learn4: examples page
-  learn5: ' for more.'
-  learn6: 'Watch '
+  learn5: " for more."
+  learn6: "Watch "
   learn7: The Coding Train
-  learn8: ' and '
+  learn8: " and "
   learn9: Kadenze
-  learn10: ' video tutorials.'
-  reference1: 'View the '
-  reference2: ' reference'
-  reference3: ' for full documentation.'
-  learn11: 'If you wish to use p5 with a screenreader, check out the '
+  learn10: " video tutorials."
+  reference1: "View the "
+  reference2: " reference"
+  reference3: " for full documentation."
+  learn11: "If you wish to use p5 with a screenreader, check out the "
   learn12: p5 with a screenreader tutorial
-  processing-transition1: 'If you have used Processing in the past, read the '
-  processing-transition2: 'https://github.com/processing/p5.js/wiki/Processing-transition'
+  processing-transition1: "If you have used Processing in the past, read the "
+  processing-transition2: "https://github.com/processing/p5.js/wiki/Processing-transition"
   processing-transition3: Processing transition tutorial
-  processing-transition4: ' to learn how to convert from Processing to p5.js, and the main differences between them.'
+  processing-transition4: " to learn how to convert from Processing to p5.js, and the main differences between them."
   book1: >-
     Parts of this tutorial were adapted from the book, Getting Started with
     p5.js, by Lauren McCarthy, Casey Reas, and Ben Fry, O'Reilly / Make 2015.
@@ -227,43 +227,43 @@ download:
   p5.js-editor-intro: >-
     This link redirects you to the p5.js Editor online so you can begin using
     p5.js immediately.
-  editor-includes: 'Start coding using the p5.js Editor, no setup required!'
+  editor-includes: "Start coding using the p5.js Editor, no setup required!"
   complete-library-title: Complete Library
   complete-library-intro1: >-
     This is a download containing the p5.js library file, the p5.sound addon,
     and an example project. It does not contain an editor. Visit
   complete-library-intro2: Get Started
-  complete-library-intro3: ' to learn how to setup a p5.js project.'
+  complete-library-intro3: " to learn how to setup a p5.js project."
   p5.js-complete: p5.js complete
-  includes-1: 'Includes:'
-  includes-2: 'p5.js, p5.sound.js, and an example project'
-  includes-3: 'Version '
+  includes-1: "Includes:"
+  includes-2: "p5.js, p5.sound.js, and an example project"
+  includes-3: "Version "
   single-files-title: Single Files
   single-files-intro: >-
     These are downloads or links to the p5.js library file. No additional
     contents are included.
-  single-file: 'Single file: '
+  single-file: "Single file: "
   p5.js-uncompressed: Full uncompressed version
   compressed: Compressed version
-  link: 'Link: '
+  link: "Link: "
   statically-hosted-file: Statically hosted file
   etc-title: Github Resources
   older-releases: Previous versions (older releases and changelog)
   github-repository: Code repository (GitHub)
-  report-bugs: 'Report issues, bugs, and errors'
-  supported-browsers: 'Supported browsers '
+  report-bugs: "Report issues, bugs, and errors"
+  supported-browsers: "Supported browsers "
   support-title: Support p5.js!
   support-options: Support Options
   support-1: >-
     We need your help! p5.js is free, open-source software. We want to make our community as open
     and inclusive as possible. You can support this work by making a donation to
-    the 
+    the
   support-2: >-
     , the organization that supports p5.js.
     Your donation supports software development for p5.js, education resources
     like code examples and tutorials,
   support-3: Fellowships
-  support-4: ', and '
+  support-4: ", and "
   support-5: community events.
   support-17: >-
     p5.js Contributors Conference at CMU STUDIO for Creative Inquiry in
@@ -280,7 +280,7 @@ download:
   support-21: >-
     Taeyoon Choi and ASL interpretor at Signing Coders p5.js workshop (Image
     credit: Taeyoon Choi)
-  support-22: 'Google Summer of Code kickoff (Image credit: Taeyoon Choi)'
+  support-22: "Google Summer of Code kickoff (Image credit: Taeyoon Choi)"
   support-23: >-
     Processing Foundation Fellow Cassie Tarakajian's workshop at Code Art Miami
     (Image credit: Christian Arévalo Photography)
@@ -306,28 +306,28 @@ download:
   support-30: Processing Fellow Digital Citizens Lab
   support-31: Bicoastal p5.js meetup at UCLA DMA and NYU ITP
   support-32: The Processing Foundation
-  support-33: ' was founded in 2012 after more than a decade of work with the original Processing software. The Foundation’s mission is to promote software literacy within the visual arts, and visual literacy within technology-related fields — and to make these fields accessible to diverse communities. Our goal is to empower people of all interests and backgrounds to learn how to program and make creative work with code, especially those who might not otherwise have access to these tools and resources.'
-  support-17-alt: ''
-  support-18-alt: ''
-  support-19-alt: ''
-  support-20-alt: ''
-  support-21-alt: ''
-  support-22-alt: ''
-  support-23-alt: ''
-  support-24-alt: ''
-  support-25-alt: ''
-  support-26-alt: ''
-  support-27-alt: ''
-  support-28-alt: ''
-  support-29-alt: ''
-  support-30-alt: ''
-  support-31-alt: ''
+  support-33: " was founded in 2012 after more than a decade of work with the original Processing software. The Foundation’s mission is to promote software literacy within the visual arts, and visual literacy within technology-related fields — and to make these fields accessible to diverse communities. Our goal is to empower people of all interests and backgrounds to learn how to program and make creative work with code, especially those who might not otherwise have access to these tools and resources."
+  support-17-alt: ""
+  support-18-alt: ""
+  support-19-alt: ""
+  support-20-alt: ""
+  support-21-alt: ""
+  support-22-alt: ""
+  support-23-alt: ""
+  support-24-alt: ""
+  support-25-alt: ""
+  support-26-alt: ""
+  support-27-alt: ""
+  support-28-alt: ""
+  support-29-alt: ""
+  support-30-alt: ""
+  support-31-alt: ""
 learn:
   learn-title: Learn
   teach-title2: Teach
   learn1: >-
     These tutorials provide more in-depth or step-by-step overviews of
-    particular topics. Check out the 
+    particular topics. Check out the
   learn2: examples page
   learn3: to explore short demonstrations of various p5.js topics.
   introduction-to-p5js-title: Introduction to p5.js
@@ -348,14 +348,14 @@ learn:
   p5-screen-reader-title: p5 with a screen reader
   p5-screen-reader: Setting up p5 so that it can be used easily with a screen reader.
   using-local-server-title: Using a local server
-  using-local-server: 'How to set up a local server on Mac OSX, Windows, or Linux.'
+  using-local-server: "How to set up a local server on Mac OSX, Windows, or Linux."
   p5js-wiki-title: p5.js wiki
   p5js-wiki: Additonal documentation and tutorials contributed by the community
   connecting-p5js-title: Connecting p5.js
   creating-libraries-title: Creating libraries
   creating-libraries: Creating p5.js addon libraries.
   nodejs-and-socketio-title: node.js and socket.io
-  nodejs-and-socketio: 'Using a node.js server with p5.js, communication via socket.io.'
+  nodejs-and-socketio: "Using a node.js server with p5.js, communication via socket.io."
   programming-topics-title: Programming topics
   beyond-the-canvas-title: Beyond the canvas
   beyond-the-canvas: Creating and manipulating elements on the page beyond the canvas.
@@ -405,8 +405,8 @@ learn:
   writing-a-tutorial-2: >-
     We welcome new written tutorial contributions and this guide outlines the
     steps of how to propose, prepare and contribute.
-  writing-a-tutorial-how-start-title: 'How to get started:'
-  writing-a-tutorial-how-start-1: 'Check that your proposed topic has not already been covered. There is '
+  writing-a-tutorial-how-start-title: "How to get started:"
+  writing-a-tutorial-how-start-1: "Check that your proposed topic has not already been covered. There is "
   writing-a-tutorial-how-start-2: a working spreadsheet here
   writing-a-tutorial-how-start-3: >-
     that outlines in progress tutorials. If your topic is listed as in progress,
@@ -416,19 +416,19 @@ learn:
     If your topic is not already covered and is not listed as in progress,
     please write a few sentences on what you propose to cover and email us this
     description at education@p5js.org.
-  writing-a-tutorial-how-prepare-title: 'How to prepare a p5js tutorial for publication online:'
+  writing-a-tutorial-how-prepare-title: "How to prepare a p5js tutorial for publication online:"
   writing-a-tutorial-how-prepare-1: >-
     When your tutorial is ready for publication, please follow these steps to
     prepare your content for the p5js website.
-  writing-a-tutorial-how-prepare-2: 'Prepare the content of your tutorial as a tutorial-name.hbs file with '
+  writing-a-tutorial-how-prepare-2: "Prepare the content of your tutorial as a tutorial-name.hbs file with "
   writing-a-tutorial-how-prepare-3: this basic structure
-  writing-a-tutorial-how-prepare-4: '. As is shown in this file, it must contain a header as shown below:'
+  writing-a-tutorial-how-prepare-4: ". As is shown in this file, it must contain a header as shown below:"
   writing-a-tutorial-how-prepare-5: >-
     The folder containing your tutorial will be placed in the 'tutorials' folder
-    of the p5js site. The file called index.hbs is the 
-  writing-a-tutorial-how-prepare-6: 'p5.js tutorials landing page,'
-  writing-a-tutorial-how-prepare-7: ' and the test-tutorial.hbs file is the test tutorial.'
-  writing-a-tutorial-how-prepare-8: 'All content should go in the:'
+    of the p5js site. The file called index.hbs is the
+  writing-a-tutorial-how-prepare-6: "p5.js tutorials landing page,"
+  writing-a-tutorial-how-prepare-7: " and the test-tutorial.hbs file is the test tutorial."
+  writing-a-tutorial-how-prepare-8: "All content should go in the:"
   writing-a-tutorial-how-prepare-9: >-
     tags on the page, with formatting defined by the &lt;h1&gt; and &lt;h2&gt;
     tags, the &lt;p&gt; paragraph tags as is done shown on the
@@ -437,20 +437,20 @@ learn:
     If your tutorial contains images, they are to be placed in the assets folder
     of the p5 site, in the location src/assets/learn/test-tutorial/images as
     shown below.
-  writing-a-tutorial-how-prepare-12: 'To correctly format code in the html of the page use the tag:'
+  writing-a-tutorial-how-prepare-12: "To correctly format code in the html of the page use the tag:"
   writing-a-tutorial-embedding-title: Embedding p5.js sketches
   writing-a-tutorial-embedding-1: >-
     Using p5js means you can illustrate your tutorial with animated, interactive
     or editable code examples to demonstrate programming concepts. Your examples
     should be prepared as p5.js sketches and can be embedded into the tutorial
     in two ways.
-  writing-a-tutorial-embedding-2: 'If the example is to be editable like in '
+  writing-a-tutorial-embedding-2: "If the example is to be editable like in "
   writing-a-tutorial-embedding-3: the reference pages
-  writing-a-tutorial-embedding-4: ' of the p5js site, the p5 sketch should be embedded into the html page using the p5js widget. Follow '
-  writing-a-tutorial-embedding-5: 'this guide '
-  writing-a-tutorial-embedding-6: 'on how to embed p5js sketches using the widget written by '
+  writing-a-tutorial-embedding-4: " of the p5js site, the p5 sketch should be embedded into the html page using the p5js widget. Follow "
+  writing-a-tutorial-embedding-5: "this guide "
+  writing-a-tutorial-embedding-6: "on how to embed p5js sketches using the widget written by "
   writing-a-tutorial-embedding-7: . You can also explore this in action on the
-  writing-a-tutorial-embedding-8: ' test tutorial page'
+  writing-a-tutorial-embedding-8: " test tutorial page"
   writing-a-tutorial-embedding-9: .
   writing-a-tutorial-embedding-10: >-
     If the example is to be animated and/or interactive but not editable. The
@@ -460,7 +460,7 @@ learn:
   writing-a-tutorial-iframe-1: >-
     An iframe is like creating a window through which you can explore another
     page, sandboxed from the rest of your page. In this case it will be a window
-    to the index.html containing your p5.js sketch. 
+    to the index.html containing your p5.js sketch.
   writing-a-tutorial-iframe-2: >-
     Put your p5 sketches in the /src/assets/learn folder of the site, in a
     folder labelled with the name of your sketch as shown in the screenshot.
@@ -468,7 +468,7 @@ learn:
     stored.
   writing-a-tutorial-iframe-3: >-
     In the subfolders containing your p5 examples there should be a sketch.js
-    file and the embed.html file for the sketch. 
+    file and the embed.html file for the sketch.
   writing-a-tutorial-iframe-4: >-
     Make sure your embed.html file has the correct paths to the p5 libraries of
     the site. If your file structure is the same as above, the path to the p5.js
@@ -476,12 +476,12 @@ learn:
   writing-a-tutorial-iframe-5: >-
     You can then embed the p5js index files as iframes in the .hbs file that
     contains your tutorial content. The embed code for the iframe would then
-    be: 
+    be:
   writing-a-tutorial-iframe-6: >-
     Styling for the iframe (this could directly into the post or in a
-    stylesheet):  
-  writing-a-tutorial-iframe-7: 'Here you can find the naked sketch running: '
-  writing-a-tutorial-iframe-8: 'And here it is embedded in the p5 site using the code below:  '
+    stylesheet):
+  writing-a-tutorial-iframe-7: "Here you can find the naked sketch running: "
+  writing-a-tutorial-iframe-8: "And here it is embedded in the p5 site using the code below:  "
   writing-a-tutorial-iframe-9: >-
     One thing to note is that you need to manually set the size of the iframe,
     so it works best if things are a standard size.
@@ -489,7 +489,7 @@ learn:
     Also note that the links to the p5.js library files do not happen from the
     .eps page with all the tutorial content. Instead they will be located in the
     html page that is rendering your sketch (in this case, called embed.html).
-  writing-a-tutorial-iframe-11: 'More information on embedding p5.js sketches can be found '
+  writing-a-tutorial-iframe-11: "More information on embedding p5.js sketches can be found "
   writing-a-tutorial-embed-iframe-12: here.
   writing-a-tutorial-finishing-title: Finishing up
   writing-a-tutorial-finishing-1: >-
@@ -501,8 +501,8 @@ learn:
   color-description1: >-
     This tutorial is from the book Learning Processing by Daniel Shiffman,
     published by Morgan Kaufmann, © 2008 Elsevier Inc. All rights reserved. It
-    was ported to P5 by Kelly Chang. If you find any errors or have comments, 
-  color-description2: ' please let us know.'
+    was ported to P5 by Kelly Chang. If you find any errors or have comments,
+  color-description2: " please let us know."
   color-p1x1: >-
     In the digital world, when we want to talk about a color, precision is
     required. Saying "Hey, can you make that circle bluish-green?" will not do.
@@ -510,23 +510,23 @@ learn:
     simplest case: black & white or grayscale. 0 means black, 255 means white.
     In between, every other number—50, 87, 162, 209, and so on—is a shade of
     gray ranging from black to white.
-  color-p2x1: 'By adding the '
-  color-p2x2: ' and '
-  color-p2x3: ' functions before something is drawn, we can set the color of any given shape. There is also the function '
-  color-p2x4: ', which sets a background color for the window. Here''s an example.'
+  color-p2x1: "By adding the "
+  color-p2x2: " and "
+  color-p2x3: " functions before something is drawn, we can set the color of any given shape. There is also the function "
+  color-p2x4: ", which sets a background color for the window. Here's an example."
   color-code1: |-
     background(255);    // Setting the background to white 
      stroke(0);          // Setting the outline (stroke) to black 
      fill(150);          // Setting the interior of a shape (fill) to grey 
      rect(50,50,75,100); // Drawing the rectangle
-  color-p3x1: 'Stroke or fill can be eliminated with the functions: '
-  color-p3x2: ' and '
+  color-p3x1: "Stroke or fill can be eliminated with the functions: "
+  color-p3x2: " and "
   color-p3x3: >-
     . Our instinct might be to say "stroke(0)" for no outline, however, it is
     important to remember that 0 is not "nothing", but rather denotes the color
-    black. Also, remember not to eliminate both—with 
-  color-p3x4: ' and '
-  color-p3x5: ', nothing will appear!'
+    black. Also, remember not to eliminate both—with
+  color-p3x4: " and "
+  color-p3x5: ", nothing will appear!"
   color-p4x1: >-
     In addition, if we draw two shapes, p5.js will always use the most recently
     specified stroke and fill, reading the code from top to bottom.
@@ -579,7 +579,7 @@ learn:
     RGB color with ranges of 0 to 255 is not the only way you can handle color
     in p5.js, in fact, it allows us to think about color any way we like. For
     example, you might prefer to think of color as ranging from 0 to 100 (like a
-    percentage). You can do this by specifying a custom 
+    percentage). You can do this by specifying a custom
   color-custom-ranges-p2x1: >-
     The above function says: "OK, we want to think about color in terms of red,
     green, and blue. The range of RGB values will be from 0 to 100."
@@ -595,16 +595,16 @@ learn:
     and brightness) mode. Without getting into too much detail, HSB color works
     as follows:
   color-custom-ranges-li1x1: Hue
-  color-custom-ranges-li1x2: '—The color type, ranges from 0 to 360 by default.'
+  color-custom-ranges-li1x2: "—The color type, ranges from 0 to 360 by default."
   color-custom-ranges-li2x1: Saturation
-  color-custom-ranges-li2x2: '—The vibrancy of the color, 0 to 100 by default.'
+  color-custom-ranges-li2x2: "—The vibrancy of the color, 0 to 100 by default."
   color-custom-ranges-li3x1: Brightness
-  color-custom-ranges-li3x2: '—The, well, brightness of the color, 0 to 100 by default.'
-  color-custom-ranges-p6x1: 'With '
-  color-custom-ranges-p6x2: ' you can set your own ranges for these values. Some prefer a range of 0-360 for hue (think of 360 degrees on a color wheel) and 0-100 for saturation and brightness (think of 0-100%).'
-  coordinate-system-description1: 'This tutorial is from the book '
+  color-custom-ranges-li3x2: "—The, well, brightness of the color, 0 to 100 by default."
+  color-custom-ranges-p6x1: "With "
+  color-custom-ranges-p6x2: " you can set your own ranges for these values. Some prefer a range of 0-360 for hue (think of 360 degrees on a color wheel) and 0-100 for saturation and brightness (think of 0-100%)."
+  coordinate-system-description1: "This tutorial is from the book "
   coordinate-system-description2: Learning Processing
-  coordinate-system-description3: ' by Daniel Shiffman, published by Morgan Kaufmann, © 2008 Elsevier Inc. All rights reserved. It was ported to p5.js by Alex Yixuan Xu. If you find any errors or have comments, please '
+  coordinate-system-description3: " by Daniel Shiffman, published by Morgan Kaufmann, © 2008 Elsevier Inc. All rights reserved. It was ported to p5.js by Alex Yixuan Xu. If you find any errors or have comments, please "
   coordinate-system-description4: let us know
   coordinate-system-description5: .
   coordinate-system-description-title: Coordinate System and Shapes
@@ -655,11 +655,11 @@ learn:
     specify the location and size (and later color) of that shape and learn how
     p5 expects to receive that information. In each of the diagrams below, we'll
     assume a window with a width of 100 pixels and height of 100 pixels.
-  coordinate-system-simple-shapes-p3x1: 'A '
-  coordinate-system-simple-shapes-p3x2: ' is the easiest of the shapes and a good place to start. To draw a point, we only need an x and y coordinate.'
-  coordinate-system-simple-shapes-p4x1: 'A '
-  coordinate-system-simple-shapes-p4x2: ' isn''t terribly difficult either and simply requires two points: (x1,y1) and (x2,y2):'
-  coordinate-system-simple-shapes-p5x1: 'Once we arrive at drawing a '
+  coordinate-system-simple-shapes-p3x1: "A "
+  coordinate-system-simple-shapes-p3x2: " is the easiest of the shapes and a good place to start. To draw a point, we only need an x and y coordinate."
+  coordinate-system-simple-shapes-p4x1: "A "
+  coordinate-system-simple-shapes-p4x2: " isn't terribly difficult either and simply requires two points: (x1,y1) and (x2,y2):"
+  coordinate-system-simple-shapes-p5x1: "Once we arrive at drawing a "
   coordinate-system-simple-shapes-p5x2: >-
     , things become a bit more complicated. In p5, a rectangle is specified by
     the coordinate for the top left corner of the rectangle, as well as its
@@ -667,29 +667,29 @@ learn:
   coordinate-system-simple-shapes-p6x1: >-
     A second way to draw a rectangle involves specifying the centerpoint, along
     with width and height. If we prefer this method, we first indicate that we
-    want to use the 
-  coordinate-system-simple-shapes-p6x2: ' mode before the instruction for the rectangle itself. Note that p5 is case-sensitive.'
+    want to use the
+  coordinate-system-simple-shapes-p6x2: " mode before the instruction for the rectangle itself. Note that p5 is case-sensitive."
   coordinate-system-simple-shapes-p7x1: >-
     Finally, we can also draw a rectangle with two points (the top left corner
-    and the bottom right corner). The mode here is 
+    and the bottom right corner). The mode here is
   coordinate-system-simple-shapes-p7x2: . Note this example gives the same result on screen as the example above.
-  coordinate-system-simple-shapes-p8x1: 'Once we have become comfortable with the concept of drawing a rectangle, an '
-  coordinate-system-simple-shapes-p8x2: ' is a snap. In fact, it is identical to '
-  coordinate-system-simple-shapes-p8x3: ' with the difference being that an ellipse is drawn where the bounding box of the rectangle would be. The default mode for '
-  coordinate-system-simple-shapes-p8x4: ' is '
-  coordinate-system-simple-shapes-p8x5: ', rather than '
+  coordinate-system-simple-shapes-p8x1: "Once we have become comfortable with the concept of drawing a rectangle, an "
+  coordinate-system-simple-shapes-p8x2: " is a snap. In fact, it is identical to "
+  coordinate-system-simple-shapes-p8x3: " with the difference being that an ellipse is drawn where the bounding box of the rectangle would be. The default mode for "
+  coordinate-system-simple-shapes-p8x4: " is "
+  coordinate-system-simple-shapes-p8x5: ", rather than "
   coordinate-system-simple-shapes-p8x6: .
   coordinate-system-simple-shapes-p9x1: >-
     Now let's look at what some code with shapes in more complete form, with
     canvas dimensions of 200 by 200. Note the use of the createCanvas() function
     to specify the width and height of the canvas.
-  teach-desc: 'Teach a p5 workshop or class, or create teaching materials!'
+  teach-desc: "Teach a p5 workshop or class, or create teaching materials!"
 test-tutorial: null
 libraries:
   Libraries: Libraries
   core-libraries: Core Libraries
   community-libraries: Community Libraries
-  libraries-created-by: 'Created by:'
+  libraries-created-by: "Created by:"
   p5.sound: >-
     p5.sound extends p5 with Web Audio functionality including audio input,
     playback, analysis and synthesis.
@@ -707,7 +707,7 @@ libraries:
     With p5.bots you can interact with your Arduino (or other microprocessor)
     from within the browser. Use sensor data to drive a sketch; use a sketch to
     drive LEDs, motors, and more!
-  p5.clickable: 'Event driven, easy-to-use button library for p5.js.'
+  p5.clickable: "Event driven, easy-to-use button library for p5.js."
   p5.cmyk.js: CMYK ColorSpace
   p5.collide2D: >-
     p5.collide2D provides tools for calculating collision detection for 2D
@@ -736,7 +736,7 @@ libraries:
   p5.localmessage: >-
     p5.localmessage provides a simple interface to send messages locally from
     one sketch to another for easy multi-window sketching!
-  marching: 'Raster to vector conversion, isosurfaces.'
+  marching: "Raster to vector conversion, isosurfaces."
   mappa: >-
     Mappa provides a set of tools for working with static maps, tile maps, and
     geo-data. Useful when building geolocation-based visual representations.
@@ -775,7 +775,7 @@ libraries:
     p5.speech provides simple, clear access to the Web Speech and Speech
     Recognition APIs, allowing for the easy creation of sketches that can talk
     and listen.
-  p5.start2d.js: 'p5 extension for 2D static art using px, mm, cm or inches'
+  p5.start2d.js: "p5 extension for 2D static art using px, mm, cm or inches"
   p5.tiledmap: >-
     p5.tiledmap provides drawing and helper functions to include maps in your
     sketches.
@@ -828,8 +828,8 @@ community:
     efficiency), #newKidLove (because we all started somewhere), #unassumeCore
     (because we don't assume knowledge), and #BlackLivesMatter (because of
     course).
-  in-practice-title: 'In practice:'
-  in-practice1: ' We are not code snobs. We do not assume knowledge or imply there are things that somebody should know. '
+  in-practice-title: "In practice:"
+  in-practice1: " We are not code snobs. We do not assume knowledge or imply there are things that somebody should know. "
   in-practice2: >-
     We insist on actively engaging with requests for feedback regardless of
     their complexity.
@@ -841,7 +841,7 @@ community:
     We consistently make the effort to actively recognize and validate multiple
     types of contributions.
   in-practice5: We are always willing to offer help or guidance.
-  in-times-conflict-title: 'In times of conflict:'
+  in-times-conflict-title: "In times of conflict:"
   in-times-conflict1: We listen.
   in-times-conflict2: We clearly communicate while acknowledging other's feelings.
   in-times-conflict3: >-
@@ -851,12 +851,12 @@ community:
   in-times-conflict5: We keep our community respectful and open.
   in-times-conflict6: We make everyone feel heard.
   in-times-conflict7: We are mindful and kind in our interactions.
-  in-the-future-title: 'In the future:'
+  in-the-future-title: "In the future:"
   in-the-future1: The future is now.
   notes-title: Notes
-  notes1: 'Please also visit our '
+  notes1: "Please also visit our "
   notes2: p5.js Code of Conduct
-  notes3: '. The p5.js Community Statement is licensed under a '
+  notes3: ". The p5.js Community Statement is licensed under a "
   notes4: Creative Commons license
   notes5: . Please feel free to share and remix with attribution.
   contribute-title: Contribute
@@ -865,24 +865,24 @@ community:
     ways.
   develop-title: Develop.
   develop1: GitHub
-  develop2: ' is the main place where code is collected, issues are documented, and discussions about code are had. Check out the '
-  develop3: ' development tutorial'
-  develop4: ' to get started, or '
+  develop2: " is the main place where code is collected, issues are documented, and discussions about code are had. Check out the "
+  develop3: " development tutorial"
+  develop4: " to get started, or "
   develop5: create your own library.
   document-title: Document.
-  document1: ' Everyone loves documentation. Help is needed '
+  document1: " Everyone loves documentation. Help is needed "
   document2: porting examples
-  document3: ', and'
-  document4: ' adding documentation'
-  document5: ', and creating tutorials.'
+  document3: ", and"
+  document4: " adding documentation"
+  document5: ", and creating tutorials."
   teach-title: Teach.
-  teach1: ' Teach a workshop, a class, a friend, a collaborator! Tag @p5xjs on Twitter and we will do our best to share what you''re doing.'
+  teach1: " Teach a workshop, a class, a friend, a collaborator! Tag @p5xjs on Twitter and we will do our best to share what you're doing."
   create-title: Create.
-  create1: ' p5.js is looking for designers, artists, coders, programmers to bring your creative and amazing work to show on the front page and inspire other people. Submit your work to '
+  create1: " p5.js is looking for designers, artists, coders, programmers to bring your creative and amazing work to show on the front page and inspire other people. Submit your work to "
   create2: hello@p5js.org
   create3: .
   donate-title: Donate.
-  donate1: ' p5.js is free and open source and made by artists. Help support the development of p5.js through a donation to the '
+  donate1: " p5.js is free and open source and made by artists. Help support the development of p5.js through a donation to the "
   donate2: Processing Foundation
   donate3: .
   contributors-conference-title: p5.js Contributors Conference
@@ -909,7 +909,7 @@ community:
     Foundation.
   2015contributors-conference-title: Contributors Conference 2015
   2015contributors-conference-date: May 25-31
-  2015contributors-conference1: 'A group of approximately 30 participants gathered spent a week at the '
+  2015contributors-conference1: "A group of approximately 30 participants gathered spent a week at the "
   2015contributors-conference2: >-
     , advancing the code, documentation, and community outreach tools of the
     p5.js programming environment. Participants came from as far away as Hong
@@ -925,17 +925,17 @@ community:
   2015contributors-conference-diversity2: >-
     Diversity: Seven Voices on Race, Gender, Ability &amp; Class for FLOSS and
     the Internet
-  2015contributors-conference-diversity3: '. '
+  2015contributors-conference-diversity3: ". "
   2015contributors-conference-diversity4: Organized by
   2015contributors-conference-diversity5: and
-  2015contributors-conference-diversity6: ', '
+  2015contributors-conference-diversity6: ", "
   2015contributors-conference-diversity7: >-
     the panel took place Tuesday, 25 May 2015 in Kresge Auditorium at Carnegie
     Mellon University. Speakers included
   2015contributors-conference-diversity8: and
   2015contributors-conference-diversity9: .
   2015cc_1: Diverse group of participants smile and make a p5 sign with their hands
-  2015cc_2: 'Participants jump, smile and throw their hands in the air on a green lawn'
+  2015cc_2: "Participants jump, smile and throw their hands in the air on a green lawn"
   2015cc_3: Woman presenting the p5.js community statement from her laptop
   2015cc_4: >-
     Woman expressively speaks into a microphone while two male collaborators
@@ -961,7 +961,7 @@ community:
   2015cc_15: Man in a classroom with a microphone speaking out to a group of participants
   2019contributors-conference-title: Contributors Conference 2019
   2019contributors-conference-date: August 13-18
-  2019contributors-conference1: 'An interdisciplinary group of 35 participants gathered at the '
+  2019contributors-conference1: "An interdisciplinary group of 35 participants gathered at the "
   2019contributors-conference2: >-
     , advancing the code, documentation, and community outreach tools and
     exploring the current landscape of the p5.js programming environment.
@@ -988,7 +988,7 @@ community:
     A panel on Blackness and Gender in Virtual Space led by American Artist,
     with shawné michaelain holloway and LaJuné McMillian.
   output5: Workshops led by Everest Pipkin and Jon Chambers.
-  output6: 'A prototype of a '
+  output6: "A prototype of a "
   output6-1: notebook interface for p5.js.
   output6-2: Created by Allison Parrish.
   output7: >-
@@ -999,7 +999,7 @@ community:
     Created by Aarón Montoya-Moraga, Kenneth Lim, Guillermo Montecinos, Qianqian
     Ye,  Dorothy R. Santos, and Yasheng She.
   output9: How to write non-violent creative code.
-  output9-1: ' A zine led by Olivia Ross.'
+  output9-1: " A zine led by Olivia Ross."
   output10: >-
     An overhaul of the p5.js website for accessibility. Including updates for
     screen reader accessibility, and improvements to the home, download, getting
@@ -1019,7 +1019,7 @@ community:
   output15: A closing campfire circle led by Golan Levin.
   2019cc_1: Man at a podium giving a presentation to the group
   2019cc_2: Participants sitting at a long table having lunch and a discussion
-  2019cc_3: 'Participants in a classroom, some working on their laptops, others talking '
+  2019cc_3: "Participants in a classroom, some working on their laptops, others talking "
   2019cc_4: Classroom of participants working on their laptops
   2019cc_5: Participants in a meeting in a dark classroom
   2019cc_6: Woman giving presentation in a classroom of diverse participants
@@ -1032,10 +1032,10 @@ community:
     Person with a microphone speaking to fellow participants in front of text
     that reads p5.js will not add any new features except those that increase
     access
-  2019cc_11: 'Woman speaking into a microphone talking to fellow participants '
+  2019cc_11: "Woman speaking into a microphone talking to fellow participants "
   2019cc_12: A man with a microphone speaking to fellow participants
   2019cc_13: Participants sit in a classroom towards the speakers listening intently
-  2019cc_14: 'Classroom of participants facing a speaker listen intently '
+  2019cc_14: "Classroom of participants facing a speaker listen intently "
   2019cc_15: >-
     Woman with microphone speaking to fellow participants with the text sacred
     boundaries in the projection behind her
@@ -1062,9 +1062,9 @@ community:
 books:
   books-title: Books
   book-1-title: Getting Started with p5.js
-  book-1-authors: 'Lauren McCarthy, Casey Reas, and Ben Fry. Illustrations by Taeyoon Choi.'
-  book-1-publisher: 'Published October 2015, Maker Media. '
-  book-1-pages: '246 pages. '
+  book-1-authors: "Lauren McCarthy, Casey Reas, and Ben Fry. Illustrations by Taeyoon Choi."
+  book-1-publisher: "Published October 2015, Maker Media. "
+  book-1-pages: "246 pages. "
   book-1-type: Paperback.
   book-1-description: >-
     Written by the lead p5.js developer and the founders of Processing, this
@@ -1076,8 +1076,8 @@ books:
   book-2-authors: >-
     Lauren McCarthy, Casey Reas, and Ben Fry. Translated by Aarón
     Montoya-Moraga. Ilustraciones de Taeyoon Choi.
-  book-2-publisher: 'Published 2018, Processing Foundation, Inc. '
-  book-2-pages: '246 pages. '
+  book-2-publisher: "Published 2018, Processing Foundation, Inc. "
+  book-2-pages: "246 pages. "
   book-2-type: Soft cover.
   book-2-description: >-
     Written by the lead p5.js developer and the founders of Processing, this
@@ -1086,9 +1086,9 @@ books:
   book-2-order-a: Order the PDF from The Processing Foundation Press
   book-2-order-b: Order the physical version from Amazon
   book-3-title: Generative Design
-  book-3-authors: 'Benedikt Gross, Hartmut Bohnacker, Julia Laub and Claudius Lazzeroni.'
-  book-3-publisher: 'Published October 30, 2018, Princeton Architectural Press; Reprint edition. '
-  book-3-pages: '255 pages. '
+  book-3-authors: "Benedikt Gross, Hartmut Bohnacker, Julia Laub and Claudius Lazzeroni."
+  book-3-publisher: "Published October 30, 2018, Princeton Architectural Press; Reprint edition. "
+  book-3-pages: "255 pages. "
   book-3-type: Paperback.
   book-3-description: >-
     By using simple languages such as JavaScript in p5.js, artists and makers
@@ -1097,9 +1097,9 @@ books:
   book-3-order-a: Order from Princeton Architectural Press
   book-3-order-b: Order from Amazon
   book-4-title: Generative Gestaltung (German Edition)
-  book-4-authors: 'Benedikt Gross, Hartmut Bohnacker, Julia Laub and Claudius Lazzeroni.'
-  book-4-publisher: 'Published March 1, 2018, Schmidt Hermann Verlag. '
-  book-4-pages: '256 pages. '
+  book-4-authors: "Benedikt Gross, Hartmut Bohnacker, Julia Laub and Claudius Lazzeroni."
+  book-4-publisher: "Published March 1, 2018, Schmidt Hermann Verlag. "
+  book-4-pages: "256 pages. "
   book-4-type: Hardcover.
   book-4-description: >-
     By using simple languages such as JavaScript in p5.js, artists and makers
@@ -1109,8 +1109,8 @@ books:
   book-4-order-b: Order from Amazon
   book-5-title: Learn JavaScript with p5.js
   book-5-authors: Engin Arslan.
-  book-5-publisher: 'Published 2018, Apress. '
-  book-5-pages: '217 pages. '
+  book-5-publisher: "Published 2018, Apress. "
+  book-5-pages: "217 pages. "
   book-5-type: Paperback.
   book-5-description: >-
     Learn coding from scratch in a highly engaging and visual manner using the
@@ -1151,8 +1151,8 @@ reference:
   Reference: Reference
 showcase:
   showcase-title: Showcase
-  showcase-intro1: 'Introducing Showcase, created by '
-  showcase-intro2: ' in 2019 and currently curated by '
+  showcase-intro1: "Introducing Showcase, created by "
+  showcase-intro2: " in 2019 and currently curated by "
   showcase-intro3: >-
     We're celebrating how people are using p5.js to make creative work,
     learning, and open source more interesting and inclusive. Together, we make
@@ -1196,10 +1196,10 @@ showcase:
     and technology, including p5.js tutorials for beginners. Available on
     YouTube, Instagram, Bilibili, and TikTok.
   project-casey-louise: p5.js Shaders
-  credit-casey-louise: 'Casey Conchinha, Louise Lessél'
-  description-casey-louise: 'A resource for learning the what, why, and how of using shaders in p5.js.'
+  credit-casey-louise: "Casey Conchinha, Louise Lessél"
+  description-casey-louise: "A resource for learning the what, why, and how of using shaders in p5.js."
   project-moon-xin: Moving Responsive Posters
-  credit-moon-xin: 'Moon Jang, Xin Xin, and students'
+  credit-moon-xin: "Moon Jang, Xin Xin, and students"
   description-moon-xin: >-
     Browser-based moving posters that use graphical systems, transformation
     methods, and p5.js to address the connotations of a word less than 8
@@ -1207,7 +1207,7 @@ showcase:
     Systems) at the University of Georgia.
   created-by: Created By
   pronouns-female: (she/her)
-  creator-from-roni-cantor: 'From Toronto, Canada'
+  creator-from-roni-cantor: "From Toronto, Canada"
   project-links: Project Links
   project-links-text-1-roni-cantor: Example sketch in p5.js Web Editor
   project-links-text-2-roni-cantor: AxiDraw V3 demo video
@@ -1218,9 +1218,9 @@ showcase:
     years of coding and making robots, I decided to take a break and play with
     some more traditional forms of art—while still coding and playing with
     robots.
-  project-a-1-2-roni-cantor: 'I first started using p5.js at '
-  project-a-1-3-roni-cantor: '! After using '
-  project-a-1-4-roni-cantor: ' for many years, I wanted to try something new.'
+  project-a-1-2-roni-cantor: "I first started using p5.js at "
+  project-a-1-3-roni-cantor: "! After using "
+  project-a-1-4-roni-cantor: " for many years, I wanted to try something new."
   project-q-2: How did you use p5.js in this project?
   project-a-2-1-roni-cantor: >-
     I used p5.js in this project to generate the sine wave and lerp (linear
@@ -1228,11 +1228,11 @@ showcase:
   project-a-2-2-roni-cantor: >-
     . I then used a feature in my code that exported my programmed graphic into
     an
-  project-a-2-3-roni-cantor: ' file. I needed an SVG file to give to the plotter—an '
+  project-a-2-3-roni-cantor: " file. I needed an SVG file to give to the plotter—an "
   project-a-2-4-roni-cantor: >-
     —so that it understood where to draw the lines that I programmed. I sent
     this information to the plotter with a program called
-  project-a-2-5-roni-cantor: '!'
+  project-a-2-5-roni-cantor: "!"
   project-q-3: What's your favorite p5.js feature?
   project-a-3-roni-cantor: ' because lines are fun and "lerp" is a fun word to say!'
   project-q-4: >-
@@ -1243,11 +1243,11 @@ showcase:
     benefited from the people around me who had used p5 before, as well as
     online guides and forums.
   project-q-5: What's a cool thing we should check out?
-  project-a-5-roni-cantor: ' on Instagram—super cool analog plotter stuff.'
+  project-a-5-roni-cantor: " on Instagram—super cool analog plotter stuff."
   project-q-6: Where can people learn more about you?
-  project-a-6-roni-cantor: ' (Instagram)'
+  project-a-6-roni-cantor: " (Instagram)"
   project-resources: Project Resources
-  creator-from-qianqian: 'Los Angeles, California'
+  creator-from-qianqian: "Los Angeles, California"
   interview-link-qianqian: Processing Foundation interview with Qianqian Ye
   project-a-1-1-qianqian: I am a Chinese artist and designer based in Los Angeles.
   project-a-1-2-qianqian: >-
@@ -1263,7 +1263,7 @@ showcase:
     free resources to learn creative coding are unavailable in China. The p5.js
     tutorials on YouTube as well as the p5.js Twitter and Instagram accounts are
     inaccessible in China because of internet censorship.
-  project-a-2-2-qianqian: 'I learned a lot from YouTube videos such as the '
+  project-a-2-2-qianqian: "I learned a lot from YouTube videos such as the "
   project-a-2-3-qianqian: >-
     , but the more I watched coding tutorials online, the more I realized how
     difficult it is to find other womxn and people of color teaching coding,
@@ -1274,8 +1274,8 @@ showcase:
     want to contribute to the educational resource together, like interviews and
     guest tutorials. If you are interested in teaching/talking about creative
     coding in Mandarin, HMU!
-  project-a-3-1-qianqian: 'The '
-  project-a-3-2-qianqian: ' is my favorite feature. It makes web-based creative coding seamless.'
+  project-a-3-1-qianqian: "The "
+  project-a-3-2-qianqian: " is my favorite feature. It makes web-based creative coding seamless."
   project-a-4-1-qianqian: >-
     Learning to code in a second language was difficult and the lack of
     community made this process even harder. I hope to speak from my experience
@@ -1294,14 +1294,14 @@ showcase:
     womxn and people of color that it’s ok to put yourselves online and
     strengthen your communities by sharing your knowledge. Eventually, we will
     be able to stop online harassment by creating strong diverse communities.
-  project-a-5-1-qianqian: 'I am very excited about '
-  project-a-5-2-qianqian: ' in LA.'
-  creator-from-phuong: 'From Kyiv, Ukraine'
-  project-a-1-1-phuong: 'I''m a creative coder and designer, a '
+  project-a-5-1-qianqian: "I am very excited about "
+  project-a-5-2-qianqian: " in LA."
+  creator-from-phuong: "From Kyiv, Ukraine"
+  project-a-1-1-phuong: "I'm a creative coder and designer, a "
   link-1-phuong: Play Airi Flies!
   link-2-phuong: Code for AiriFlies on GitHub
   link-3-phuong: More info in Phuong Ngo's portfolio
-  project-a-1-2-phuong: ' diversity scholarship recipient, and just a curious creature.'
+  project-a-1-2-phuong: " diversity scholarship recipient, and just a curious creature."
   project-a-1-3-phuong: >-
     I was taking a course at the School of Machines in Berlin this summer
     called! "
@@ -1309,34 +1309,34 @@ showcase:
   project-a-2-1-phuong: >-
     I used p5.js to work on the visual part of the game. The animation sprites
     for Airi and the ghosts were drawn on an iPad app called
-  project-a-2-2-phuong: ' and then integrated into '
-  project-a-2-3-phuong: ' code. I mainly used examples at p5.play as a reference.'
-  project-a-2-4-phuong: 'For the endless scrolling background, I found a '
+  project-a-2-2-phuong: " and then integrated into "
+  project-a-2-3-phuong: " code. I mainly used examples at p5.play as a reference."
+  project-a-2-4-phuong: "For the endless scrolling background, I found a "
   p5-sketch-by-chjno-phuong: p5 sketch by chjno
   project-a-2-5-phuong: >-
     . I set a condition so whenever the word "pew" or a mouse click was
     detected, the scrolling speed would change to make an illusion of Airi
     flying up. When the user does not do anything, the scrolling speed is
     negative, which makes it look like Airi is falling down.
-  project-a-2-6-phuong: 'For sound recognition, I used '
+  project-a-2-6-phuong: "For sound recognition, I used "
   project-a-2-7-phuong: ' (currently, there is a beta version not available in public yet, but it will be very soon!). I added around 120 samples of my classmates saying the word "pew" with different intonations and 80 samples of background noise to train it. Then I integrated the model into the game with '
   project-a-3-1-phuong: >-
     I really love how easily you can create, manipulate, and delete HTML blocks
     and classes with the
-  project-a-3-2-phuong: ' via '
-  project-a-3-3-phuong: ' etc. But my most favorite function is '
-  project-a-3-4-phuong: ', since this is where you create magic.'
+  project-a-3-2-phuong: " via "
+  project-a-3-3-phuong: " etc. But my most favorite function is "
+  project-a-3-4-phuong: ", since this is where you create magic."
   project-a-4-1-phuong: >-
     There were a lot of challenges simply because p5.js was something new to me.
     I did not work much with JavaScript in general before. Reading documentation
     and searching for similar examples helped a lot.
-  project-a-5-1-phuong: 'Check out '
+  project-a-5-1-phuong: "Check out "
   school-of-machines-phuong: School of Machines' courses
   project-a-5-2-phuong: >-
     ! They try hard to connect the most creative people in the world and they do
     it well so far. ❤️
   pronouns-male: (he/him)
-  creator-from-chung: 'From Baltimore, Maryland'
+  creator-from-chung: "From Baltimore, Maryland"
   link-1-casey-louise: p5.js Shaders guide
   link-2-casey-louise: Glitch collection of p5.js shader examples
   link-1-chung: View Chillin'
@@ -1346,14 +1346,14 @@ showcase:
     I am a graphic designer and a faculty member at Maryland Institute College
     of Art, where I mainly teach coding (with p5.js and Processing, of course)
     and motion graphics.
-  project-a-1-2-chung: 'I have been using '
-  project-a-1-3-chung: ' for some time, and when p5.js came along, I started using it without a second thought because it was easy to convert existing Processing code and share projects online.'
+  project-a-1-2-chung: "I have been using "
+  project-a-1-3-chung: " for some time, and when p5.js came along, I started using it without a second thought because it was easy to convert existing Processing code and share projects online."
   project-a-2-1-chung: >-
     This summer, I gave myself a challenge of making typographic posters with
     coding, and this is one of the posters I made. I didn’t know until very
     recently that I could use motion sensor data with p5.js. I was also watching
   dan-shiffman-matterjs-tutorial: Dan Shiffman’s matter.js tutorial videos
-  project-a-2-2-chung: ', so I thought why not combine the two and practice what I was learning?'
+  project-a-2-2-chung: ", so I thought why not combine the two and practice what I was learning?"
   project-a-3-1-chung: >-
     There are many things I love about p5.js such as the online community and
     beginner friendliness. What I really like right now is the
@@ -1362,14 +1362,14 @@ showcase:
     quickly in the present mode. For this project in particular, I had to do a
     lot of testing on my phone, and it was much easier and quicker than
     committing to GitHub.
-  project-a-4-1-chung: 'I had some troubles with handling font, alpha channel and z-depth in '
-  project-a-4-2-chung: ' mode. I am still not happy with all my decisions. But in general, it was helpful to search the forum and not to forget to break down problems into smaller ones and iterate little by little. Also, I had issues with rendering out video files directly out of p5.js. Screen recording was not an option because of intermittent frame rate drops (my laptop is pretty slow). After doing some research, I decided to learn some basics of '
-  project-a-4-3-chung: ' and build a tool for myself.'
+  project-a-4-1-chung: "I had some troubles with handling font, alpha channel and z-depth in "
+  project-a-4-2-chung: " mode. I am still not happy with all my decisions. But in general, it was helpful to search the forum and not to forget to break down problems into smaller ones and iterate little by little. Also, I had issues with rendering out video files directly out of p5.js. Screen recording was not an option because of intermittent frame rate drops (my laptop is pretty slow). After doing some research, I decided to learn some basics of "
+  project-a-4-3-chung: " and build a tool for myself."
   project-a-5-1-chung: >-
     As mentioned above, if you want to render out frames and video files out of
     p5.js sketches, check out my
-  project-a-5-2-chung: ' and let me know what you think.'
-  creator-from-casey-louise: 'From New York, New York'
+  project-a-5-2-chung: " and let me know what you think."
+  creator-from-casey-louise: "From New York, New York"
   project-a-1-1-casey-louise: >-
     Casey: I'm a student at NYU ITP who's interested in computer graphics and
     interactive spaces, physical and digital.
@@ -1379,7 +1379,7 @@ showcase:
   project-a-1-3-casey-louise: >-
     Casey: I started learning p5.js in 2018 in my first semester at ITP, though
     I had been dabbling in
-  project-a-1-4-casey-louise: ' since 2012. I was introduced to Processing by my friend Pedro while I was studying graphic design, and it blew my mind. The idea of making my own tools for creating graphics and interactive art piqued my interest, but once I actually tried it, I was hooked. The first project I can remember was an eye that followed you around the screen, and it was sad when you left it alone.'
+  project-a-1-4-casey-louise: " since 2012. I was introduced to Processing by my friend Pedro while I was studying graphic design, and it blew my mind. The idea of making my own tools for creating graphics and interactive art piqued my interest, but once I actually tried it, I was hooked. The first project I can remember was an eye that followed you around the screen, and it was sad when you left it alone."
   project-a-1-5-casey-louise: >-
     Louise: I initially learned p5.js to make a website I was creating more
     playful. I’m a C# programmer, so this was a good segway into JavaScript for
@@ -1395,21 +1395,21 @@ showcase:
     immediately excited about learning and teaching shaders in p5.js. She's been
     great about making sure the project is a learning resource and not just a
     collection of examples.
-  project-a-3-1-casey-louise: 'Casey: Does '
-  project-a-3-2-casey-louise: ' count as a feature? I also love having the ability to share my programs on the web so that people don''t have to install special software or come to NYC to see my work.'
-  project-a-3-3-casey-louise: 'Louise: My favorite feature is '
-  project-a-3-4-casey-louise: ' and '
-  project-a-3-5-casey-louise: ' for transformation of the coordinate system to make generative visuals.'
+  project-a-3-1-casey-louise: "Casey: Does "
+  project-a-3-2-casey-louise: " count as a feature? I also love having the ability to share my programs on the web so that people don't have to install special software or come to NYC to see my work."
+  project-a-3-3-casey-louise: "Louise: My favorite feature is "
+  project-a-3-4-casey-louise: " and "
+  project-a-3-5-casey-louise: " for transformation of the coordinate system to make generative visuals."
   project-a-4-1-casey-louise: >-
     Casey: The beginning of the project (figuring out how things work) was us
     reaching out to amazing people, asking questions, and asking for permission
     to use their examples in our project.
   adam-ferris-repo-casey-louise: Adam Ferriss' GitHub repo
-  project-a-4-2-casey-louise: ' really laid the groundwork for us in understanding how shaders work in p5.js and provided a framework of approachable examples for us to build on. For some specific p5.js-related issues we were having, we reached out to '
-  project-a-4-3-casey-louise: ' and '
-  project-a-4-4-casey-louise: ' (who worked on the '
+  project-a-4-2-casey-louise: " really laid the groundwork for us in understanding how shaders work in p5.js and provided a framework of approachable examples for us to build on. For some specific p5.js-related issues we were having, we reached out to "
+  project-a-4-3-casey-louise: " and "
+  project-a-4-4-casey-louise: " (who worked on the "
   webgl-casey-louise: WebGL implementation in p5.js
-  project-a-4-5-casey-louise: '), and they were super helpful.'
+  project-a-4-5-casey-louise: "), and they were super helpful."
   project-a-4-6-casey-louise: >-
     Louise: The learning curve was pretty steep for getting shaders into p5.
     Luckily, there were some very well-documented examples on GitHub by Adam
@@ -1419,31 +1419,31 @@ showcase:
     inspiration from the way the
   openframeworks-book-casey-louise: openFrameworks book
   project-a-4-7-casey-louise: ' is written. A fun "hey, it’s not hard and you can do it too" approach is what we believe in.'
-  project-a-5-1-casey-louise: 'Check out the '
-  project-a-5-2-casey-louise: ' to explore our peers'' amazing grant projects!'
+  project-a-5-1-casey-louise: "Check out the "
+  project-a-5-2-casey-louise: " to explore our peers' amazing grant projects!"
   pronouns-nonbinary: (they/them)
-  creator-from-moon: 'From Athens, Georgia'
+  creator-from-moon: "From Athens, Georgia"
   posters-by: Posters By
   project-a-1-1-moon: >-
     Moon: I'm a graphic designer, visual artist, and design educator. This
     summer, I taught a graphic design course in the University of Georgia
     Cortona program in Italy, introducing some basics of p5.js. This fall, I am
     planning to teach and to study digital platforms at UGA.
-  project-a-1-2-moon: 'My former colleague, '
-  project-a-1-3-moon: ', invited me to '
-  project-a-1-4-moon: ' in '
+  project-a-1-2-moon: "My former colleague, "
+  project-a-1-3-moon: ", invited me to "
+  project-a-1-4-moon: " in "
   pcd-la-moon: LA in January 2019
   project-a-1-5-moon: >-
     . They helped me with the tools and logics of p5.js. It was an excellent
     teaching and learning experience.
-  project-a-2-1-moon: 'We followed basic tutorials, '
+  project-a-2-1-moon: "We followed basic tutorials, "
   codetrain-moon: Daniel's videos on YouTube
-  project-a-2-2-moon: ', and '
+  project-a-2-2-moon: ", and "
   p5-reference-moon: Reference on the p5.js website
   project-a-2-3-moon: .
-  project-a-3-1-moon: 'My favorite function is related to '
-  project-a-3-2-moon: ' and '
-  project-a-3-3-moon: ': '
+  project-a-3-1-moon: "My favorite function is related to "
+  project-a-3-2-moon: " and "
+  project-a-3-3-moon: ": "
   project-a-3-4-moon: >-
     . I was able to use and to teach this tool to visualize various ideas about
     time in motion.
@@ -1453,21 +1453,21 @@ showcase:
     couple of times, and then I drew a chart to memorize and to teach the way I
     understood the p5.js structure and code with strong constraints I set up. It
     was an excellent teaching and learning experience.
-  project-a-5-1-moon: 'Check out the '
-  project-a-5-2-moon: ' in Milan, Italy.'
+  project-a-5-1-moon: "Check out the "
+  project-a-5-2-moon: " in Milan, Italy."
 teach:
   teach-title2: Teach
   teach-intro1: >-
     Every teaching has its own unique goals, messages, conditions, and
-    environments. 
+    environments.
   teach-intro2: >-
     By documenting and sharing p5 workshops, classes, and materials, we hope to
-    better connect the p5.js learner and educator communities around the world. 
+    better connect the p5.js learner and educator communities around the world.
   teach-intro3: Share or recommend
-  teach-intro4: 'your own teaching experiences, too!'
+  teach-intro4: "your own teaching experiences, too!"
   teach-heading: p5 Teaching Resources
   teach-search-filter: Search Filter
-  teach-filter1: 'Diversity & Inclusion : '
+  teach-filter1: "Diversity & Inclusion : "
   teach-filter1-label1: Gender
   teach-filter1-label2: Race & Ethnicity
   teach-filter1-label3: Language
@@ -1480,20 +1480,20 @@ teach:
   teach-filter1-label10: Age
   teach-filter1-label11: Skill Level
   teach-filter1-label12: Occupation
-  teach-filter1-label13: '#noCodeSnobs'
-  teach-filter1-label14: '#newKidLove'
-  teach-filter1-label15: '#unassumeCore'
-  teach-filter1-label16: '#BlackLivesMatter'
-  teach-filter2: 'Venue : '
+  teach-filter1-label13: "#noCodeSnobs"
+  teach-filter1-label14: "#newKidLove"
+  teach-filter1-label15: "#unassumeCore"
+  teach-filter1-label16: "#BlackLivesMatter"
+  teach-filter2: "Venue : "
   teach-filter2-label1: Africa
   teach-filter2-label2: Asia
   teach-filter2-label3: Europe
   teach-filter2-label4: North America
   teach-filter2-label5: Oceania
   teach-filter2-label6: South America
-  teach-filter2-label7: 'Virtual-Online '
-  teach-filter3: 'Year : '
-  teach-filter4: 'Level of Difficulty : '
+  teach-filter2-label7: "Virtual-Online "
+  teach-filter3: "Year : "
+  teach-filter4: "Level of Difficulty : "
   teach-filter4-label1: Elementary
   teach-filter4-label2: Intermediate
   teach-filter4-label3: Advanced
@@ -1504,44 +1504,44 @@ teach:
   teach-case-subtitle5: Method & Materials
   teach-case1-title: p5.js à l'Ubuntu Party!
   teach-case1-lead-name: Basile Pesin
-  teach-case1-content1: '2020 Ubuntu Party '
-  teach-case1-content1-1: 'Cité des Sciences et de l''Industrie, Paris, France'
-  teach-case1-content2: 'Any age, including children and parents, young and older adults.'
+  teach-case1-content1: "2020 Ubuntu Party "
+  teach-case1-content1-1: "Cité des Sciences et de l'Industrie, Paris, France"
+  teach-case1-content2: "Any age, including children and parents, young and older adults."
   teach-case1-content3: Advanced
   teach-case1-content4: >-
     To introduce a new public to programming through fun and compelling
-    examples. 
+    examples.
   teach-case1-content5: >-
     Method: in-person workshop, 1 hour per session, with different participant
     each times. The students were using (Ubuntu) machines with the p5.js web
     editor. I was teaching using a video projector as well as a board.
   teach-case1-content5-1: >-
     Materials: The exercises I gave where accessible through p5.js web-editor
-    links available in 
+    links available in
   teach-case2-title: >-
     Making The Thing that Makes the Thing: Exploring Generative Art & Design
     with p5.js
   teach-case2-lead-name: Priti Pandurangan & Ajith Ranka
-  teach-case2-content1: 'National Institute of Design, Bangalore'
-  teach-case2-content1-1: '2020 February 8, 2:30-4:00 PM'
+  teach-case2-content1: "National Institute of Design, Bangalore"
+  teach-case2-content1-1: "2020 February 8, 2:30-4:00 PM"
   teach-case2-content2: >-
     Our participants included art/design students & professionals, creative
     coding enthusiasts. We had close to 50 participants.
-  teach-case2-content3: 'Priti: Intermediate & Ajith: Advanced'
+  teach-case2-content3: "Priti: Intermediate & Ajith: Advanced"
   teach-case2-content4: >-
     To explore generative art &#x0026; design and recreate some classical works
-    with p5.js. 
-  teach-case2-content5: 'Methods: In-person, collaborative, hands-on workshop.'
-  teach-case2-content5-1: 'Materials: '
-  teach-case2-content5-2: 'course page '
-  teach-case2-content5-3: 'linking to sketches on the p5 editor, '
-  teach-case2-content5-4: 'interactive reference guide '
+    with p5.js.
+  teach-case2-content5: "Methods: In-person, collaborative, hands-on workshop."
+  teach-case2-content5-1: "Materials: "
+  teach-case2-content5-2: "course page "
+  teach-case2-content5-3: "linking to sketches on the p5 editor, "
+  teach-case2-content5-4: "interactive reference guide "
   teach-case2-content5-5: to p5 basics
   teach-case3-title: CC Fest (Creative Coding Festival)
   teach-case3-lead-name: Saber
-  teach-case3-speech: 'Love p5.js. It has meant so much to me, my students, and this community.'
-  teach-case3-content1: ' New York, Los Angeles, San Francisco, Virtual-Online '
-  teach-case3-content1-1: ' Twice a year in NYC for four years; once a year in LA for three years; once a year in SF for two years; now virtual'
+  teach-case3-speech: "Love p5.js. It has meant so much to me, my students, and this community."
+  teach-case3-content1: " New York, Los Angeles, San Francisco, Virtual-Online "
+  teach-case3-content1-1: " Twice a year in NYC for four years; once a year in LA for three years; once a year in SF for two years; now virtual"
   teach-case3-content2: >-
     Our participants included art/design students & professionals, creative
     coding enthusiasts. We had close to 50 participants.
@@ -1554,34 +1554,34 @@ teach:
     methods and materials. Most used some sort of slides or documentation, some
     live coding using an editor, with work time for participant to remix.
   teach-case3-content5-1: CC Fest Lessons page
-  teach-case3-content5-2: ' for teaching materials'
+  teach-case3-content5-2: " for teaching materials"
   teach-case3-content5-3: More photos
   teach-case4-title: Taller Introducción a la Programación Creativa con p5.js
   teach-case4-lead-name: Aarón Montoya-Moraga
-  teach-case4-speech: 'p5.js is my happy place '
-  teach-case4-content1: ' PlusCode Media Arts Festival, Buenos Aires, Argentina & Virtual-Online '
-  teach-case4-content1-1: ' 2018 November 14, 3 hours'
+  teach-case4-speech: "p5.js is my happy place "
+  teach-case4-content1: " PlusCode Media Arts Festival, Buenos Aires, Argentina & Virtual-Online "
+  teach-case4-content1-1: " 2018 November 14, 3 hours"
   teach-case4-content2: >-
     I had around 16 students in the workshop, and a team including 3 people from
     the PlusCode festival, and one person at the venue.
-  teach-case4-content3: 'Elementary, Intermediate, Advanced'
+  teach-case4-content3: "Elementary, Intermediate, Advanced"
   teach-case4-content4: >-
     Introduction to beginners and artists of graphic web programming and open
     source, using p5.js, in Spanish :)
-  teach-case4-content5: 'I used the material on this '
+  teach-case4-content5: "I used the material on this "
   teach-case4-content5-1: GitHub repo
-  teach-case4-content5-2: ', we used the p5.js web editor, we had a three hour long workshop'
-  teach-case4-content5-3: '+CODE electronic art festival 2018, Argentina'
-  teach-case4-content5-4: ', Medium'
+  teach-case4-content5-2: ", we used the p5.js web editor, we had a three hour long workshop"
+  teach-case4-content5-3: "+CODE electronic art festival 2018, Argentina"
+  teach-case4-content5-4: ", Medium"
   teach-case5-title: Introduction to Generative Drawing
   teach-case5-lead-name: Adam Herst
   teach-case5-speech: >-
     My greatest source of uncertainty in developing the workshop was whether it
     was trying to teach art to programmers or to teach programming to artists.
   teach-case5-content1: Inter/Access
-  teach-case5-content1-1: ' (artist-run centre), Toronto, Ontario, Canada'
+  teach-case5-content1-1: " (artist-run centre), Toronto, Ontario, Canada"
   teach-case5-content1-2: In-person with a self-paced workbook for remote work
-  teach-case5-content1-3: ' 2020 February 12, 7PM-9PM'
+  teach-case5-content1-3: " 2020 February 12, 7PM-9PM"
   teach-case5-content2: 15 artists
   teach-case5-content3: Elementary
   teach-case5-content4: >-
@@ -1590,69 +1590,69 @@ teach:
   teach-case5-content5: >-
     A printed workbook with activities that used the p5.js web editor to show
     how translate an physical drawing into a digital drawing.
-  teach-case5-content5-1: 'Processing Community Day 2019: Generative Drawing at Inter/Access'
+  teach-case5-content5-1: "Processing Community Day 2019: Generative Drawing at Inter/Access"
   teach-case5-content5-2: Introduction to Generative Drawing Letter PDF
   teach-case5-content5-3: Introduction to Generative Drawing Booklet PDF
-  teach-case6-title: 'Open Lecture, Creative Coding: 2020'
+  teach-case6-title: "Open Lecture, Creative Coding: 2020"
   teach-case6-lead-name: Shunsuke Takawo
   teach-case6-speech: >-
     I love p5.js because it's so easy to read and write code in p5.js. Coding in
     your everyday life!
-  teach-case6-content1: ' Kyoto University of Art and Design, Kyoto, Japan & Virtual-Online '
-  teach-case6-content1-1: ' 2020 March 16-18, 1-7 PM'
-  teach-case6-content2: 'Students of Kyoto University of Art and Design, and anyone.'
+  teach-case6-content1: " Kyoto University of Art and Design, Kyoto, Japan & Virtual-Online "
+  teach-case6-content1-1: " 2020 March 16-18, 1-7 PM"
+  teach-case6-content2: "Students of Kyoto University of Art and Design, and anyone."
   teach-case6-content3: Elementary
   teach-case6-content4: Making code as a tool for artistic expression.
-  teach-case6-content5: 'Dropbox Paper, p5.js web editor.'
+  teach-case6-content5: "Dropbox Paper, p5.js web editor."
   teach-case6-content5-1: Syllabus
   teach-case6-content5-2: Day 1
   teach-case6-content5-3: Day 2
   teach-case6-content5-4: Day 3
-  teach-case6-content5-5: ', YouTube'
+  teach-case6-content5-5: ", YouTube"
   teach-case7-title: Creative Coding for Static Graphics
   teach-case7-lead-name: Shunsuke Takawo
   teach-case7-speech: >-
     Coding in p5.js is a lot of fun. If you haven't started yet, I encourage you
     to give it a try!
-  teach-case7-content1: ' FabCafe MTRL, Tokyo, Japan'
-  teach-case7-content1-1: ' 2019 September 15, 4-7 PM '
+  teach-case7-content1: " FabCafe MTRL, Tokyo, Japan"
+  teach-case7-content1-1: " 2019 September 15, 4-7 PM "
   teach-case7-content2: Anyone who wants to try coding in p5.js.
   teach-case7-content3: Intermediate
   teach-case7-content4: To code from the graphic design's perspective.
-  teach-case7-content5: 'Dropbox Paper, p5.js web editor.'
+  teach-case7-content5: "Dropbox Paper, p5.js web editor."
   teach-case7-content5-1: Syllabus & Material
   teach-case8-title: Generative Typography
   teach-case8-lead-name: Dae In Chung
-  teach-case8-content1: ' Baltimore, Maryland, USA & Virtual-Online '
-  teach-case8-content1-1: ' 2019 January 21 - May 08, every Wednesday, 4-10 PM'
+  teach-case8-content1: " Baltimore, Maryland, USA & Virtual-Online "
+  teach-case8-content1-1: " 2019 January 21 - May 08, every Wednesday, 4-10 PM"
   teach-case8-content2: 14 undergrads and grad students who had little to no experience in coding.
   teach-case8-content3: Elementary
   teach-case8-content4: Experiment with typographic forms and structures through computation.
-  teach-case8-content5: 'Methods: online/offline lectures and critiques.'
-  teach-case8-content5-1: 'Materials: p5js online editor, Github, youtube tutorials.'
+  teach-case8-content5: "Methods: online/offline lectures and critiques."
+  teach-case8-content5-1: "Materials: p5js online editor, Github, youtube tutorials."
   teach-case8-content5-2: Works of participants
   teach-case9-title: Machine Learning for the Web
   teach-case9-lead-name: Yining Shi
-  teach-case9-content1: ' ITP, NYU, 370 Jay St, Brooklyn, NY 11201, USA'
-  teach-case9-content1-1: '2019 March 09 - October 12, every Tuesday, 6:30-9:00 PM'
+  teach-case9-content1: " ITP, NYU, 370 Jay St, Brooklyn, NY 11201, USA"
+  teach-case9-content1-1: "2019 March 09 - October 12, every Tuesday, 6:30-9:00 PM"
   teach-case9-content2: >-
     Students at Interactive Telecommunications Program, New York University. 16
     people.
-  teach-case9-content3: 'Elementary, Intermediate'
+  teach-case9-content3: "Elementary, Intermediate"
   teach-case9-content4: >-
     The goal of this class is to learn and understand common machine learning
     techniques and apply them to generate creative outputs in the browser using
     ml5.js and p5.js.
   teach-case9-content5: >-
     This class is a mix of lectures, coding sessions, group discussions, and
-    presentations. I used 
+    presentations. I used
   teach-case9-content5-1: GitHub
-  teach-case9-content5-2: ' to host class syllabus and all the coding materials, Google Slides for lectures and p5.js Web Editor for live coding sessions. Every week, there were one-on-one office hours to talk about any difficulties of coming up with an idea for the homework or any coding changes.'
-  teach-case9-content5-3: 'Methods: online/offline lectures and critiques.'
+  teach-case9-content5-2: " to host class syllabus and all the coding materials, Google Slides for lectures and p5.js Web Editor for live coding sessions. Every week, there were one-on-one office hours to talk about any difficulties of coming up with an idea for the homework or any coding changes."
+  teach-case9-content5-3: "Methods: online/offline lectures and critiques."
   teach-case10-title: Introduction to p5.js and JavaScript
   teach-case10-lead-name: Nico Reski
-  teach-case10-content1: ' Currently available as self-study at own pace with accompanying slides, linked below.'
-  teach-case10-content3: 'Beginner, Elementary'
+  teach-case10-content1: " Currently available as self-study at own pace with accompanying slides, linked below."
+  teach-case10-content3: "Beginner, Elementary"
   teach-case10-content4: >-
     Introduce learners (potentially with no coding experiences at all) to the
     very basics of p5.js (and JavaScript), in order to encourage creative coding
@@ -1660,28 +1660,28 @@ teach:
   teach-case10-content5: >-
     p5.js source code (for the introductory project), JavaScript source code
     (illustrating some basic JavaScript functionalities), accompanying slides in
-    .pdf format, all hosted publicly on GitHub. 
+    .pdf format, all hosted publicly on GitHub.
   teach-case10-content5-1: Overview
-  teach-case10-content5-2: ' of the workshop and its contents (including all links to the material hosted on GitHub) on my academic webpage.'
+  teach-case10-content5-2: " of the workshop and its contents (including all links to the material hosted on GitHub) on my academic webpage."
   teach-case11-title: Digital Weaving & Physical Computing Workshop Series
   teach-case11-lead-name: Qianqian Ye & Evelyn Masso
-  teach-case11-content1: ' Womens Center for Creative Work (WCCW), Los Angeles, CA, US'
-  teach-case11-content1-1: ' 2019 October 19 - November 02, every Saturday 3-6 PM'
-  teach-case11-content2: '15 women and non-binary artists, designer, makers, programers. '
+  teach-case11-content1: " Womens Center for Creative Work (WCCW), Los Angeles, CA, US"
+  teach-case11-content1-1: " 2019 October 19 - November 02, every Saturday 3-6 PM"
+  teach-case11-content2: "15 women and non-binary artists, designer, makers, programers. "
   teach-case11-content3: Elementary
   teach-case11-content4: >-
     Over the course of three workshops, we will draw and create patterns using
     p5.js, an open-source graphical library; we will learn and apply
     computational concepts to transform patterns and finally, we will bring a
     weaving to life with electronic microcontrollers.
-  teach-case11-content5: 'Methods: small team session'
+  teach-case11-content5: "Methods: small team session"
   teach-case11-content5-1: >-
     Materials: slides, p5.js web editor, pen and paper to draw pattern, physical
     pattern weaving tool.
-  teach-case11-content5-2: 'Workshop Slide #1'
-  teach-case11-content5-3: 'Workshop Slide #2'
+  teach-case11-content5-2: "Workshop Slide #1"
+  teach-case11-content5-3: "Workshop Slide #2"
   teach-case11-content5-4: Workshop Information
-  teach-case11-content5-5: ' on WCCW website.'
+  teach-case11-content5-5: " on WCCW website."
   teach-case12-title: Signing Coders
   teach-case12-lead-name: Taeyoon Choi
   teach-case12-speech: >-
@@ -1690,8 +1690,8 @@ teach:
     workshops in December 2020. The project is supported by the Open Society
     Foundation Human Rights Initiative and Korea Disability Arts & Culture
     Center.
-  teach-case12-content1: ' WRIC, New York City, USA & Seoul Museum of Art, Seoul, South Korea.'
-  teach-case12-content1-1: '5 Sessions, each 2~3 hours'
+  teach-case12-content1: " WRIC, New York City, USA & Seoul Museum of Art, Seoul, South Korea."
+  teach-case12-content1-1: "5 Sessions, each 2~3 hours"
   teach-case12-content2: Deaf and Hard of Hearing students age 10~50 who live in NYC.
   teach-case12-content3: Elementary
   teach-case12-content4: >-

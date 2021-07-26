@@ -44,24 +44,24 @@ let bubbles = []; // 모든 버블 객체를 담는 전역 배열
 
 // 비동기 데이터 로딩을 preload에 담아 setup이 실행되기 전 완료시킴
 function preload() {
-  data = loadJSON('assets/bubbles.json');
+  data = loadJSON("assets/bubbles.json");
 }
 
 // 저장된 Bubble 데이터를 Bubble 객체로 전환
 function loadData() {
-  let bubbleData = data['bubbles'];
+  let bubbleData = data["bubbles"];
   for (let i = 0; i < bubbleData.length; i++) {
     // 배열 속 각 객체 받아오기
     let bubble = bubbleData[i];
     // position 객체 받아오기
-    let position = bubble['position'];
+    let position = bubble["position"];
     // 위치로부터 x,y 받아오기
-    let x = position['x'];
-    let y = position['y'];
+    let x = position["x"];
+    let y = position["y"];
 
     // Get diameter and label
-    let diameter = bubble['diameter'];
-    let label = bubble['label'];
+    let diameter = bubble["diameter"];
+    let label = bubble["label"];
 
     // 배열에 객체 담기
     bubbles.push(new Bubble(x, y, diameter, label));
@@ -72,7 +72,7 @@ function loadData() {
 function mousePressed() {
   // Bubble에 지름과 레이블 더하기
   let diameter = random(40, 80);
-  let label = 'New Label';
+  let label = "New Label";
 
   // 배열에 새로운 JSON bubble 객체 더하기
   bubbles.push(new Bubble(mouseX, mouseY, diameter, label));
@@ -100,5 +100,5 @@ function draw() {
   // 하단에서의 레이블 방향들
   textAlign(LEFT);
   fill(0);
-  text('Click to add bubbles.', 10, height - 10);
+  text("Click to add bubbles.", 10, height - 10);
 }

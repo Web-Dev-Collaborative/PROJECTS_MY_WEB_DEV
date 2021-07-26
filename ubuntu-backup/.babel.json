@@ -1,0 +1,2531 @@
+{
+  "{\"filename\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "./dog",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "Dog"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src/index.js",
+      "filenameRelative": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _dog = require('./dog');\n\nvar _dog2 = _interopRequireDefault(_dog);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar toby = new _dog2.default('Toby');\n\n/* eslint-disable no-console */\n\nconsole.log(toby.bark());\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbInRvYnkiLCJjb25zb2xlIiwibG9nIiwiYmFyayJdLCJtYXBwaW5ncyI6Ijs7QUFJQTs7Ozs7O0FBRUEsSUFBTUEsT0FBTyxrQkFBUSxNQUFSLENBQWI7O0FBSkE7O0FBTUFDLFFBQVFDLEdBQVIsQ0FBWUYsS0FBS0csSUFBTCxFQUFaIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlUm9vdCI6Ii9tbnQvYy9MYW1iZGEvQ0lSUklDVUxVTU4vbGFtYmRhLWJhY2t1cC0yL2xhbWJkYS1zdGF0aWMtYi9MYW1iZGEtUmVzb3VyY2UtU3RhdGljLUFzc2V0cy9qcy1zdGFjay13YWxrdGhyb3VnaC1tYXN0ZXIvMDItYmFiZWwtZXM2LWVzbGludC1mbG93LWplc3QtaHVza3kvc3JjIiwic291cmNlc0NvbnRlbnQiOlsiLy8gQGZsb3dcblxuLyogZXNsaW50LWRpc2FibGUgbm8tY29uc29sZSAqL1xuXG5pbXBvcnQgRG9nIGZyb20gJy4vZG9nJ1xuXG5jb25zdCB0b2J5ID0gbmV3IERvZygnVG9ieScpXG5cbmNvbnNvbGUubG9nKHRvYnkuYmFyaygpKVxuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "toby",
+        "console",
+        "log",
+        "bark"
+      ],
+      "mappings": ";;AAIA;;;;;;AAEA,IAAMA,OAAO,kBAAQ,MAAR,CAAb;;AAJA;;AAMAC,QAAQC,GAAR,CAAYF,KAAKG,IAAL,EAAZ",
+      "file": "index.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src",
+      "sourcesContent": [
+        "// @flow\n\n/* eslint-disable no-console */\n\nimport Dog from './dog'\n\nconst toby = new Dog('Toby')\n\nconsole.log(toby.bark())\n"
+      ]
+    },
+    "mtime": 1495462837000
+  },
+  "{\"filename\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src/dog.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [
+        "createClass",
+        "classCallCheck"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src/dog.js",
+      "filenameRelative": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src/dog.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "dog.js",
+      "sourceFileName": "dog.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "dog"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Dog = function () {\n  function Dog(name) {\n    _classCallCheck(this, Dog);\n\n    this.name = name;\n  }\n\n  _createClass(Dog, [{\n    key: \"bark\",\n    value: function bark() {\n      return \"Wah wah, I am \" + this.name;\n    }\n  }]);\n\n  return Dog;\n}();\n\nexports.default = Dog;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRvZy5qcyJdLCJuYW1lcyI6WyJEb2ciLCJuYW1lIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0lBRU1BLEc7QUFHSixlQUFZQyxJQUFaLEVBQTBCO0FBQUE7O0FBQ3hCLFNBQUtBLElBQUwsR0FBWUEsSUFBWjtBQUNEOzs7OzJCQUVNO0FBQ0wsZ0NBQXdCLEtBQUtBLElBQTdCO0FBQ0Q7Ozs7OztrQkFHWUQsRyIsImZpbGUiOiJkb2cuanMiLCJzb3VyY2VSb290IjoiL21udC9jL0xhbWJkYS9DSVJSSUNVTFVNTi9sYW1iZGEtYmFja3VwLTIvbGFtYmRhLXN0YXRpYy1iL0xhbWJkYS1SZXNvdXJjZS1TdGF0aWMtQXNzZXRzL2pzLXN0YWNrLXdhbGt0aHJvdWdoLW1hc3Rlci8wMi1iYWJlbC1lczYtZXNsaW50LWZsb3ctamVzdC1odXNreS9zcmMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBAZmxvd1xuXG5jbGFzcyBEb2cge1xuICBuYW1lOiBzdHJpbmdcblxuICBjb25zdHJ1Y3RvcihuYW1lOiBzdHJpbmcpIHtcbiAgICB0aGlzLm5hbWUgPSBuYW1lXG4gIH1cblxuICBiYXJrKCkge1xuICAgIHJldHVybiBgV2FoIHdhaCwgSSBhbSAke3RoaXMubmFtZX1gXG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgRG9nXG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "dog.js"
+      ],
+      "names": [
+        "Dog",
+        "name"
+      ],
+      "mappings": ";;;;;;;;;;IAEMA,G;AAGJ,eAAYC,IAAZ,EAA0B;AAAA;;AACxB,SAAKA,IAAL,GAAYA,IAAZ;AACD;;;;2BAEM;AACL,gCAAwB,KAAKA,IAA7B;AACD;;;;;;kBAGYD,G",
+      "file": "dog.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/02-babel-es6-eslint-flow-jest-husky/src",
+      "sourcesContent": [
+        "// @flow\n\nclass Dog {\n  name: string\n\n  constructor(name: string) {\n    this.name = name\n  }\n\n  bark() {\n    return `Wah wah, I am ${this.name}`\n  }\n}\n\nexport default Dog\n"
+      ]
+    },
+    "mtime": 1495462837000
+  },
+  "{\"filename\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "compression",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "compression"
+              }
+            ]
+          },
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "../shared/config",
+            "imported": [
+              "APP_NAME",
+              "STATIC_PATH",
+              "WEB_PORT"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "APP_NAME",
+                "local": "APP_NAME"
+              },
+              {
+                "kind": "named",
+                "imported": "STATIC_PATH",
+                "local": "STATIC_PATH"
+              },
+              {
+                "kind": "named",
+                "imported": "WEB_PORT",
+                "local": "WEB_PORT"
+              }
+            ]
+          },
+          {
+            "source": "../shared/util",
+            "imported": [
+              "isProd"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "isProd",
+                "local": "isProd"
+              }
+            ]
+          },
+          {
+            "source": "./render-app",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "renderApp"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server/index.js",
+      "filenameRelative": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _compression = require('compression');\n\nvar _compression2 = _interopRequireDefault(_compression);\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _config = require('../shared/config');\n\nvar _util = require('../shared/util');\n\nvar _renderApp = require('./render-app');\n\nvar _renderApp2 = _interopRequireDefault(_renderApp);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\n\napp.use((0, _compression2.default)());\napp.use(_config.STATIC_PATH, _express2.default.static('dist'));\napp.use(_config.STATIC_PATH, _express2.default.static('public'));\n\napp.get('/', function (req, res) {\n  res.send((0, _renderApp2.default)(_config.APP_NAME));\n});\n\napp.listen(_config.WEB_PORT, function () {\n  // eslint-disable-next-line no-console\n  console.log('Server running on port ' + _config.WEB_PORT + ' ' + (_util.isProd ? '(production)' : '(development)') + '.');\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImFwcCIsInVzZSIsInN0YXRpYyIsImdldCIsInJlcSIsInJlcyIsInNlbmQiLCJsaXN0ZW4iLCJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiOztBQUVBOzs7O0FBQ0E7Ozs7QUFFQTs7QUFDQTs7QUFDQTs7Ozs7O0FBRUEsSUFBTUEsTUFBTSx3QkFBWjs7QUFFQUEsSUFBSUMsR0FBSixDQUFRLDRCQUFSO0FBQ0FELElBQUlDLEdBQUosc0JBQXFCLGtCQUFRQyxNQUFSLENBQWUsTUFBZixDQUFyQjtBQUNBRixJQUFJQyxHQUFKLHNCQUFxQixrQkFBUUMsTUFBUixDQUFlLFFBQWYsQ0FBckI7O0FBRUFGLElBQUlHLEdBQUosQ0FBUSxHQUFSLEVBQWEsVUFBQ0MsR0FBRCxFQUFNQyxHQUFOLEVBQWM7QUFDekJBLE1BQUlDLElBQUosQ0FBUywwQ0FBVDtBQUNELENBRkQ7O0FBSUFOLElBQUlPLE1BQUosbUJBQXFCLFlBQU07QUFDekI7QUFDQUMsVUFBUUMsR0FBUix1REFBa0QsZUFBUyxjQUFULEdBQTBCLGVBQTVFO0FBQ0QsQ0FIRCIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZVJvb3QiOiIvbW50L2MvTGFtYmRhL0NJUlJJQ1VMVU1OL2xhbWJkYS1iYWNrdXAtMi9sYW1iZGEtc3RhdGljLWIvTGFtYmRhLVJlc291cmNlLVN0YXRpYy1Bc3NldHMvanMtc3RhY2std2Fsa3Rocm91Z2gtbWFzdGVyLzAzLWV4cHJlc3Mtbm9kZW1vbi1wbTIvc3JjL3NlcnZlciIsInNvdXJjZXNDb250ZW50IjpbIi8vIEBmbG93XG5cbmltcG9ydCBjb21wcmVzc2lvbiBmcm9tICdjb21wcmVzc2lvbidcbmltcG9ydCBleHByZXNzIGZyb20gJ2V4cHJlc3MnXG5cbmltcG9ydCB7IEFQUF9OQU1FLCBTVEFUSUNfUEFUSCwgV0VCX1BPUlQgfSBmcm9tICcuLi9zaGFyZWQvY29uZmlnJ1xuaW1wb3J0IHsgaXNQcm9kIH0gZnJvbSAnLi4vc2hhcmVkL3V0aWwnXG5pbXBvcnQgcmVuZGVyQXBwIGZyb20gJy4vcmVuZGVyLWFwcCdcblxuY29uc3QgYXBwID0gZXhwcmVzcygpXG5cbmFwcC51c2UoY29tcHJlc3Npb24oKSlcbmFwcC51c2UoU1RBVElDX1BBVEgsIGV4cHJlc3Muc3RhdGljKCdkaXN0JykpXG5hcHAudXNlKFNUQVRJQ19QQVRILCBleHByZXNzLnN0YXRpYygncHVibGljJykpXG5cbmFwcC5nZXQoJy8nLCAocmVxLCByZXMpID0+IHtcbiAgcmVzLnNlbmQocmVuZGVyQXBwKEFQUF9OQU1FKSlcbn0pXG5cbmFwcC5saXN0ZW4oV0VCX1BPUlQsICgpID0+IHtcbiAgLy8gZXNsaW50LWRpc2FibGUtbmV4dC1saW5lIG5vLWNvbnNvbGVcbiAgY29uc29sZS5sb2coYFNlcnZlciBydW5uaW5nIG9uIHBvcnQgJHtXRUJfUE9SVH0gJHtpc1Byb2QgPyAnKHByb2R1Y3Rpb24pJyA6ICcoZGV2ZWxvcG1lbnQpJ30uYClcbn0pXG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "app",
+        "use",
+        "static",
+        "get",
+        "req",
+        "res",
+        "send",
+        "listen",
+        "console",
+        "log"
+      ],
+      "mappings": ";;AAEA;;;;AACA;;;;AAEA;;AACA;;AACA;;;;;;AAEA,IAAMA,MAAM,wBAAZ;;AAEAA,IAAIC,GAAJ,CAAQ,4BAAR;AACAD,IAAIC,GAAJ,sBAAqB,kBAAQC,MAAR,CAAe,MAAf,CAArB;AACAF,IAAIC,GAAJ,sBAAqB,kBAAQC,MAAR,CAAe,QAAf,CAArB;;AAEAF,IAAIG,GAAJ,CAAQ,GAAR,EAAa,UAACC,GAAD,EAAMC,GAAN,EAAc;AACzBA,MAAIC,IAAJ,CAAS,0CAAT;AACD,CAFD;;AAIAN,IAAIO,MAAJ,mBAAqB,YAAM;AACzB;AACAC,UAAQC,GAAR,uDAAkD,eAAS,cAAT,GAA0B,eAA5E;AACD,CAHD",
+      "file": "index.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server",
+      "sourcesContent": [
+        "// @flow\n\nimport compression from 'compression'\nimport express from 'express'\n\nimport { APP_NAME, STATIC_PATH, WEB_PORT } from '../shared/config'\nimport { isProd } from '../shared/util'\nimport renderApp from './render-app'\n\nconst app = express()\n\napp.use(compression())\napp.use(STATIC_PATH, express.static('dist'))\napp.use(STATIC_PATH, express.static('public'))\n\napp.get('/', (req, res) => {\n  res.send(renderApp(APP_NAME))\n})\n\napp.listen(WEB_PORT, () => {\n  // eslint-disable-next-line no-console\n  console.log(`Server running on port ${WEB_PORT} ${isProd ? '(production)' : '(development)'}.`)\n})\n"
+      ]
+    },
+    "mtime": 1495462837000
+  },
+  "{\"filename\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared/config.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "WEB_PORT",
+            "STATIC_PATH",
+            "APP_NAME"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "WEB_PORT",
+              "exported": "WEB_PORT"
+            },
+            {
+              "kind": "local",
+              "local": "STATIC_PATH",
+              "exported": "STATIC_PATH"
+            },
+            {
+              "kind": "local",
+              "local": "APP_NAME",
+              "exported": "APP_NAME"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared/config.js",
+      "filenameRelative": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared/config.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "config.js",
+      "sourceFileName": "config.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "config"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar WEB_PORT = exports.WEB_PORT = process.env.PORT || 8000;\nvar STATIC_PATH = exports.STATIC_PATH = '/static';\nvar APP_NAME = exports.APP_NAME = 'Hello App';\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbmZpZy5qcyJdLCJuYW1lcyI6WyJXRUJfUE9SVCIsInByb2Nlc3MiLCJlbnYiLCJQT1JUIiwiU1RBVElDX1BBVEgiLCJBUFBfTkFNRSJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFFTyxJQUFNQSw4QkFBV0MsUUFBUUMsR0FBUixDQUFZQyxJQUFaLElBQW9CLElBQXJDO0FBQ0EsSUFBTUMsb0NBQWMsU0FBcEI7QUFDQSxJQUFNQyw4QkFBVyxXQUFqQiIsImZpbGUiOiJjb25maWcuanMiLCJzb3VyY2VSb290IjoiL21udC9jL0xhbWJkYS9DSVJSSUNVTFVNTi9sYW1iZGEtYmFja3VwLTIvbGFtYmRhLXN0YXRpYy1iL0xhbWJkYS1SZXNvdXJjZS1TdGF0aWMtQXNzZXRzL2pzLXN0YWNrLXdhbGt0aHJvdWdoLW1hc3Rlci8wMy1leHByZXNzLW5vZGVtb24tcG0yL3NyYy9zaGFyZWQiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBAZmxvd1xuXG5leHBvcnQgY29uc3QgV0VCX1BPUlQgPSBwcm9jZXNzLmVudi5QT1JUIHx8IDgwMDBcbmV4cG9ydCBjb25zdCBTVEFUSUNfUEFUSCA9ICcvc3RhdGljJ1xuZXhwb3J0IGNvbnN0IEFQUF9OQU1FID0gJ0hlbGxvIEFwcCdcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "config.js"
+      ],
+      "names": [
+        "WEB_PORT",
+        "process",
+        "env",
+        "PORT",
+        "STATIC_PATH",
+        "APP_NAME"
+      ],
+      "mappings": ";;;;;AAEO,IAAMA,8BAAWC,QAAQC,GAAR,CAAYC,IAAZ,IAAoB,IAArC;AACA,IAAMC,oCAAc,SAApB;AACA,IAAMC,8BAAW,WAAjB",
+      "file": "config.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared",
+      "sourcesContent": [
+        "// @flow\n\nexport const WEB_PORT = process.env.PORT || 8000\nexport const STATIC_PATH = '/static'\nexport const APP_NAME = 'Hello App'\n"
+      ]
+    },
+    "mtime": 1495462837000
+  },
+  "{\"filename\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared/util.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "isProd"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "isProd",
+              "exported": "isProd"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared/util.js",
+      "filenameRelative": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared/util.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "util.js",
+      "sourceFileName": "util.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "util"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\n\n// eslint-disable-next-line import/prefer-default-export\nvar isProd = exports.isProd = process.env.NODE_ENV === 'production';\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInV0aWwuanMiXSwibmFtZXMiOlsiaXNQcm9kIiwicHJvY2VzcyIsImVudiIsIk5PREVfRU5WIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBRUE7QUFDTyxJQUFNQSwwQkFBU0MsUUFBUUMsR0FBUixDQUFZQyxRQUFaLEtBQXlCLFlBQXhDIiwiZmlsZSI6InV0aWwuanMiLCJzb3VyY2VSb290IjoiL21udC9jL0xhbWJkYS9DSVJSSUNVTFVNTi9sYW1iZGEtYmFja3VwLTIvbGFtYmRhLXN0YXRpYy1iL0xhbWJkYS1SZXNvdXJjZS1TdGF0aWMtQXNzZXRzL2pzLXN0YWNrLXdhbGt0aHJvdWdoLW1hc3Rlci8wMy1leHByZXNzLW5vZGVtb24tcG0yL3NyYy9zaGFyZWQiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBAZmxvd1xuXG4vLyBlc2xpbnQtZGlzYWJsZS1uZXh0LWxpbmUgaW1wb3J0L3ByZWZlci1kZWZhdWx0LWV4cG9ydFxuZXhwb3J0IGNvbnN0IGlzUHJvZCA9IHByb2Nlc3MuZW52Lk5PREVfRU5WID09PSAncHJvZHVjdGlvbidcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "util.js"
+      ],
+      "names": [
+        "isProd",
+        "process",
+        "env",
+        "NODE_ENV"
+      ],
+      "mappings": ";;;;;;;AAEA;AACO,IAAMA,0BAASC,QAAQC,GAAR,CAAYC,QAAZ,KAAyB,YAAxC",
+      "file": "util.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/shared",
+      "sourcesContent": [
+        "// @flow\n\n// eslint-disable-next-line import/prefer-default-export\nexport const isProd = process.env.NODE_ENV === 'production'\n"
+      ]
+    },
+    "mtime": 1495462837000
+  },
+  "{\"filename\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server/render-app.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "../shared/config",
+            "imported": [
+              "STATIC_PATH"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "STATIC_PATH",
+                "local": "STATIC_PATH"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server/render-app.js",
+      "filenameRelative": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server/render-app.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "render-app.js",
+      "sourceFileName": "render-app.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "render-app"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _config = require('../shared/config');\n\nvar renderApp = function renderApp(title) {\n  return '<!doctype html>\\n<html>\\n  <head>\\n    <title>' + title + '</title>\\n    <link rel=\"stylesheet\" href=\"' + _config.STATIC_PATH + '/css/style.css\">\\n  </head>\\n  <body>\\n    <h1>' + title + '</h1>\\n  </body>\\n</html>\\n';\n};\n\nexports.default = renderApp;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlbmRlci1hcHAuanMiXSwibmFtZXMiOlsicmVuZGVyQXBwIiwidGl0bGUiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUVBOztBQUVBLElBQU1BLFlBQVksU0FBWkEsU0FBWSxDQUFDQyxLQUFEO0FBQUEsNERBSUxBLEtBSkssNkhBUVJBLEtBUlE7QUFBQSxDQUFsQjs7a0JBYWVELFMiLCJmaWxlIjoicmVuZGVyLWFwcC5qcyIsInNvdXJjZVJvb3QiOiIvbW50L2MvTGFtYmRhL0NJUlJJQ1VMVU1OL2xhbWJkYS1iYWNrdXAtMi9sYW1iZGEtc3RhdGljLWIvTGFtYmRhLVJlc291cmNlLVN0YXRpYy1Bc3NldHMvanMtc3RhY2std2Fsa3Rocm91Z2gtbWFzdGVyLzAzLWV4cHJlc3Mtbm9kZW1vbi1wbTIvc3JjL3NlcnZlciIsInNvdXJjZXNDb250ZW50IjpbIi8vIEBmbG93XG5cbmltcG9ydCB7IFNUQVRJQ19QQVRIIH0gZnJvbSAnLi4vc2hhcmVkL2NvbmZpZydcblxuY29uc3QgcmVuZGVyQXBwID0gKHRpdGxlOiBzdHJpbmcpID0+XG5gPCFkb2N0eXBlIGh0bWw+XG48aHRtbD5cbiAgPGhlYWQ+XG4gICAgPHRpdGxlPiR7dGl0bGV9PC90aXRsZT5cbiAgICA8bGluayByZWw9XCJzdHlsZXNoZWV0XCIgaHJlZj1cIiR7U1RBVElDX1BBVEh9L2Nzcy9zdHlsZS5jc3NcIj5cbiAgPC9oZWFkPlxuICA8Ym9keT5cbiAgICA8aDE+JHt0aXRsZX08L2gxPlxuICA8L2JvZHk+XG48L2h0bWw+XG5gXG5cbmV4cG9ydCBkZWZhdWx0IHJlbmRlckFwcFxuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "render-app.js"
+      ],
+      "names": [
+        "renderApp",
+        "title"
+      ],
+      "mappings": ";;;;;;AAEA;;AAEA,IAAMA,YAAY,SAAZA,SAAY,CAACC,KAAD;AAAA,4DAILA,KAJK,6HAQRA,KARQ;AAAA,CAAlB;;kBAaeD,S",
+      "file": "render-app.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/03-express-nodemon-pm2/src/server",
+      "sourcesContent": [
+        "// @flow\n\nimport { STATIC_PATH } from '../shared/config'\n\nconst renderApp = (title: string) =>\n`<!doctype html>\n<html>\n  <head>\n    <title>${title}</title>\n    <link rel=\"stylesheet\" href=\"${STATIC_PATH}/css/style.css\">\n  </head>\n  <body>\n    <h1>${title}</h1>\n  </body>\n</html>\n`\n\nexport default renderApp\n"
+      ]
+    },
+    "mtime": 1495462837000
+  },
+  "{\"filename\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server/index.js\",\"env\":{\"development\":{\"plugins\":[]}},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "compression",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "compression"
+              }
+            ]
+          },
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "../shared/config",
+            "imported": [
+              "APP_NAME",
+              "STATIC_PATH",
+              "WEB_PORT"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "APP_NAME",
+                "local": "APP_NAME"
+              },
+              {
+                "kind": "named",
+                "imported": "STATIC_PATH",
+                "local": "STATIC_PATH"
+              },
+              {
+                "kind": "named",
+                "imported": "WEB_PORT",
+                "local": "WEB_PORT"
+              }
+            ]
+          },
+          {
+            "source": "../shared/util",
+            "imported": [
+              "isProd"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "isProd",
+                "local": "isProd"
+              }
+            ]
+          },
+          {
+            "source": "./render-app",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "renderApp"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server/index.js",
+      "filenameRelative": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _compression = require('compression');\n\nvar _compression2 = _interopRequireDefault(_compression);\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _config = require('../shared/config');\n\nvar _util = require('../shared/util');\n\nvar _renderApp = require('./render-app');\n\nvar _renderApp2 = _interopRequireDefault(_renderApp);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\n\napp.use((0, _compression2.default)());\napp.use(_config.STATIC_PATH, _express2.default.static('dist'));\napp.use(_config.STATIC_PATH, _express2.default.static('public'));\n\napp.get('/', function (req, res) {\n  res.send((0, _renderApp2.default)(_config.APP_NAME));\n});\n\napp.listen(_config.WEB_PORT, function () {\n  // eslint-disable-next-line no-console\n  console.log('Server running on port ' + _config.WEB_PORT + ' ' + (_util.isProd ? '(production)' : '(development).\\nKeep \"yarn dev:wds\" running in an other terminal') + '.');\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImFwcCIsInVzZSIsInN0YXRpYyIsImdldCIsInJlcSIsInJlcyIsInNlbmQiLCJsaXN0ZW4iLCJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiOztBQUVBOzs7O0FBQ0E7Ozs7QUFFQTs7QUFDQTs7QUFDQTs7Ozs7O0FBRUEsSUFBTUEsTUFBTSx3QkFBWjs7QUFFQUEsSUFBSUMsR0FBSixDQUFRLDRCQUFSO0FBQ0FELElBQUlDLEdBQUosc0JBQXFCLGtCQUFRQyxNQUFSLENBQWUsTUFBZixDQUFyQjtBQUNBRixJQUFJQyxHQUFKLHNCQUFxQixrQkFBUUMsTUFBUixDQUFlLFFBQWYsQ0FBckI7O0FBRUFGLElBQUlHLEdBQUosQ0FBUSxHQUFSLEVBQWEsVUFBQ0MsR0FBRCxFQUFNQyxHQUFOLEVBQWM7QUFDekJBLE1BQUlDLElBQUosQ0FBUywwQ0FBVDtBQUNELENBRkQ7O0FBSUFOLElBQUlPLE1BQUosbUJBQXFCLFlBQU07QUFDekI7QUFDQUMsVUFBUUMsR0FBUix1REFBa0QsZUFBUyxjQUFULEdBQ2xELGtFQURBO0FBRUQsQ0FKRCIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZVJvb3QiOiIvbW50L2MvTGFtYmRhL0NJUlJJQ1VMVU1OL2xhbWJkYS1iYWNrdXAtMi9sYW1iZGEtc3RhdGljLWIvTGFtYmRhLVJlc291cmNlLVN0YXRpYy1Bc3NldHMvanMtc3RhY2std2Fsa3Rocm91Z2gtbWFzdGVyLzA0LXdlYnBhY2stcmVhY3QtaG1yL3NyYy9zZXJ2ZXIiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBAZmxvd1xuXG5pbXBvcnQgY29tcHJlc3Npb24gZnJvbSAnY29tcHJlc3Npb24nXG5pbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJ1xuXG5pbXBvcnQgeyBBUFBfTkFNRSwgU1RBVElDX1BBVEgsIFdFQl9QT1JUIH0gZnJvbSAnLi4vc2hhcmVkL2NvbmZpZydcbmltcG9ydCB7IGlzUHJvZCB9IGZyb20gJy4uL3NoYXJlZC91dGlsJ1xuaW1wb3J0IHJlbmRlckFwcCBmcm9tICcuL3JlbmRlci1hcHAnXG5cbmNvbnN0IGFwcCA9IGV4cHJlc3MoKVxuXG5hcHAudXNlKGNvbXByZXNzaW9uKCkpXG5hcHAudXNlKFNUQVRJQ19QQVRILCBleHByZXNzLnN0YXRpYygnZGlzdCcpKVxuYXBwLnVzZShTVEFUSUNfUEFUSCwgZXhwcmVzcy5zdGF0aWMoJ3B1YmxpYycpKVxuXG5hcHAuZ2V0KCcvJywgKHJlcSwgcmVzKSA9PiB7XG4gIHJlcy5zZW5kKHJlbmRlckFwcChBUFBfTkFNRSkpXG59KVxuXG5hcHAubGlzdGVuKFdFQl9QT1JULCAoKSA9PiB7XG4gIC8vIGVzbGludC1kaXNhYmxlLW5leHQtbGluZSBuby1jb25zb2xlXG4gIGNvbnNvbGUubG9nKGBTZXJ2ZXIgcnVubmluZyBvbiBwb3J0ICR7V0VCX1BPUlR9ICR7aXNQcm9kID8gJyhwcm9kdWN0aW9uKScgOlxuICAnKGRldmVsb3BtZW50KS5cXG5LZWVwIFwieWFybiBkZXY6d2RzXCIgcnVubmluZyBpbiBhbiBvdGhlciB0ZXJtaW5hbCd9LmApXG59KVxuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "app",
+        "use",
+        "static",
+        "get",
+        "req",
+        "res",
+        "send",
+        "listen",
+        "console",
+        "log"
+      ],
+      "mappings": ";;AAEA;;;;AACA;;;;AAEA;;AACA;;AACA;;;;;;AAEA,IAAMA,MAAM,wBAAZ;;AAEAA,IAAIC,GAAJ,CAAQ,4BAAR;AACAD,IAAIC,GAAJ,sBAAqB,kBAAQC,MAAR,CAAe,MAAf,CAArB;AACAF,IAAIC,GAAJ,sBAAqB,kBAAQC,MAAR,CAAe,QAAf,CAArB;;AAEAF,IAAIG,GAAJ,CAAQ,GAAR,EAAa,UAACC,GAAD,EAAMC,GAAN,EAAc;AACzBA,MAAIC,IAAJ,CAAS,0CAAT;AACD,CAFD;;AAIAN,IAAIO,MAAJ,mBAAqB,YAAM;AACzB;AACAC,UAAQC,GAAR,uDAAkD,eAAS,cAAT,GAClD,kEADA;AAED,CAJD",
+      "file": "index.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server",
+      "sourcesContent": [
+        "// @flow\n\nimport compression from 'compression'\nimport express from 'express'\n\nimport { APP_NAME, STATIC_PATH, WEB_PORT } from '../shared/config'\nimport { isProd } from '../shared/util'\nimport renderApp from './render-app'\n\nconst app = express()\n\napp.use(compression())\napp.use(STATIC_PATH, express.static('dist'))\napp.use(STATIC_PATH, express.static('public'))\n\napp.get('/', (req, res) => {\n  res.send(renderApp(APP_NAME))\n})\n\napp.listen(WEB_PORT, () => {\n  // eslint-disable-next-line no-console\n  console.log(`Server running on port ${WEB_PORT} ${isProd ? '(production)' :\n  '(development).\\nKeep \"yarn dev:wds\" running in an other terminal'}.`)\n})\n"
+      ]
+    },
+    "mtime": 1495462837000
+  },
+  "{\"filename\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared/config.js\",\"env\":{\"development\":{\"plugins\":[]}},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "WEB_PORT",
+            "WDS_PORT",
+            "STATIC_PATH",
+            "APP_NAME",
+            "APP_CONTAINER_CLASS",
+            "APP_CONTAINER_SELECTOR"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "WEB_PORT",
+              "exported": "WEB_PORT"
+            },
+            {
+              "kind": "local",
+              "local": "WDS_PORT",
+              "exported": "WDS_PORT"
+            },
+            {
+              "kind": "local",
+              "local": "STATIC_PATH",
+              "exported": "STATIC_PATH"
+            },
+            {
+              "kind": "local",
+              "local": "APP_NAME",
+              "exported": "APP_NAME"
+            },
+            {
+              "kind": "local",
+              "local": "APP_CONTAINER_CLASS",
+              "exported": "APP_CONTAINER_CLASS"
+            },
+            {
+              "kind": "local",
+              "local": "APP_CONTAINER_SELECTOR",
+              "exported": "APP_CONTAINER_SELECTOR"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared/config.js",
+      "filenameRelative": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared/config.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "config.js",
+      "sourceFileName": "config.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "config"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar WEB_PORT = exports.WEB_PORT = process.env.PORT || 8000;\nvar WDS_PORT = exports.WDS_PORT = 7000;\nvar STATIC_PATH = exports.STATIC_PATH = '/static';\n\nvar APP_NAME = exports.APP_NAME = 'Hello App';\n\nvar APP_CONTAINER_CLASS = exports.APP_CONTAINER_CLASS = 'js-app';\nvar APP_CONTAINER_SELECTOR = exports.APP_CONTAINER_SELECTOR = '.' + APP_CONTAINER_CLASS;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbmZpZy5qcyJdLCJuYW1lcyI6WyJXRUJfUE9SVCIsInByb2Nlc3MiLCJlbnYiLCJQT1JUIiwiV0RTX1BPUlQiLCJTVEFUSUNfUEFUSCIsIkFQUF9OQU1FIiwiQVBQX0NPTlRBSU5FUl9DTEFTUyIsIkFQUF9DT05UQUlORVJfU0VMRUNUT1IiXSwibWFwcGluZ3MiOiI7Ozs7O0FBRU8sSUFBTUEsOEJBQVdDLFFBQVFDLEdBQVIsQ0FBWUMsSUFBWixJQUFvQixJQUFyQztBQUNBLElBQU1DLDhCQUFXLElBQWpCO0FBQ0EsSUFBTUMsb0NBQWMsU0FBcEI7O0FBRUEsSUFBTUMsOEJBQVcsV0FBakI7O0FBRUEsSUFBTUMsb0RBQXNCLFFBQTVCO0FBQ0EsSUFBTUMsZ0VBQTZCRCxtQkFBbkMiLCJmaWxlIjoiY29uZmlnLmpzIiwic291cmNlUm9vdCI6Ii9tbnQvYy9MYW1iZGEvQ0lSUklDVUxVTU4vbGFtYmRhLWJhY2t1cC0yL2xhbWJkYS1zdGF0aWMtYi9MYW1iZGEtUmVzb3VyY2UtU3RhdGljLUFzc2V0cy9qcy1zdGFjay13YWxrdGhyb3VnaC1tYXN0ZXIvMDQtd2VicGFjay1yZWFjdC1obXIvc3JjL3NoYXJlZCIsInNvdXJjZXNDb250ZW50IjpbIi8vIEBmbG93XG5cbmV4cG9ydCBjb25zdCBXRUJfUE9SVCA9IHByb2Nlc3MuZW52LlBPUlQgfHwgODAwMFxuZXhwb3J0IGNvbnN0IFdEU19QT1JUID0gNzAwMFxuZXhwb3J0IGNvbnN0IFNUQVRJQ19QQVRIID0gJy9zdGF0aWMnXG5cbmV4cG9ydCBjb25zdCBBUFBfTkFNRSA9ICdIZWxsbyBBcHAnXG5cbmV4cG9ydCBjb25zdCBBUFBfQ09OVEFJTkVSX0NMQVNTID0gJ2pzLWFwcCdcbmV4cG9ydCBjb25zdCBBUFBfQ09OVEFJTkVSX1NFTEVDVE9SID0gYC4ke0FQUF9DT05UQUlORVJfQ0xBU1N9YFxuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "config.js"
+      ],
+      "names": [
+        "WEB_PORT",
+        "process",
+        "env",
+        "PORT",
+        "WDS_PORT",
+        "STATIC_PATH",
+        "APP_NAME",
+        "APP_CONTAINER_CLASS",
+        "APP_CONTAINER_SELECTOR"
+      ],
+      "mappings": ";;;;;AAEO,IAAMA,8BAAWC,QAAQC,GAAR,CAAYC,IAAZ,IAAoB,IAArC;AACA,IAAMC,8BAAW,IAAjB;AACA,IAAMC,oCAAc,SAApB;;AAEA,IAAMC,8BAAW,WAAjB;;AAEA,IAAMC,oDAAsB,QAA5B;AACA,IAAMC,gEAA6BD,mBAAnC",
+      "file": "config.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared",
+      "sourcesContent": [
+        "// @flow\n\nexport const WEB_PORT = process.env.PORT || 8000\nexport const WDS_PORT = 7000\nexport const STATIC_PATH = '/static'\n\nexport const APP_NAME = 'Hello App'\n\nexport const APP_CONTAINER_CLASS = 'js-app'\nexport const APP_CONTAINER_SELECTOR = `.${APP_CONTAINER_CLASS}`\n"
+      ]
+    },
+    "mtime": 1495462837000
+  },
+  "{\"filename\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared/util.js\",\"env\":{\"development\":{\"plugins\":[]}},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "isProd"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "isProd",
+              "exported": "isProd"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared/util.js",
+      "filenameRelative": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared/util.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "util.js",
+      "sourceFileName": "util.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "util"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\n\n// eslint-disable-next-line import/prefer-default-export\nvar isProd = exports.isProd = process.env.NODE_ENV === 'production';\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInV0aWwuanMiXSwibmFtZXMiOlsiaXNQcm9kIiwicHJvY2VzcyIsImVudiIsIk5PREVfRU5WIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBRUE7QUFDTyxJQUFNQSwwQkFBU0MsUUFBUUMsR0FBUixDQUFZQyxRQUFaLEtBQXlCLFlBQXhDIiwiZmlsZSI6InV0aWwuanMiLCJzb3VyY2VSb290IjoiL21udC9jL0xhbWJkYS9DSVJSSUNVTFVNTi9sYW1iZGEtYmFja3VwLTIvbGFtYmRhLXN0YXRpYy1iL0xhbWJkYS1SZXNvdXJjZS1TdGF0aWMtQXNzZXRzL2pzLXN0YWNrLXdhbGt0aHJvdWdoLW1hc3Rlci8wNC13ZWJwYWNrLXJlYWN0LWhtci9zcmMvc2hhcmVkIiwic291cmNlc0NvbnRlbnQiOlsiLy8gQGZsb3dcblxuLy8gZXNsaW50LWRpc2FibGUtbmV4dC1saW5lIGltcG9ydC9wcmVmZXItZGVmYXVsdC1leHBvcnRcbmV4cG9ydCBjb25zdCBpc1Byb2QgPSBwcm9jZXNzLmVudi5OT0RFX0VOViA9PT0gJ3Byb2R1Y3Rpb24nXG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "util.js"
+      ],
+      "names": [
+        "isProd",
+        "process",
+        "env",
+        "NODE_ENV"
+      ],
+      "mappings": ";;;;;;;AAEA;AACO,IAAMA,0BAASC,QAAQC,GAAR,CAAYC,QAAZ,KAAyB,YAAxC",
+      "file": "util.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/shared",
+      "sourcesContent": [
+        "// @flow\n\n// eslint-disable-next-line import/prefer-default-export\nexport const isProd = process.env.NODE_ENV === 'production'\n"
+      ]
+    },
+    "mtime": 1495462837000
+  },
+  "{\"filename\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server/render-app.js\",\"env\":{\"development\":{\"plugins\":[]}},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "../shared/config",
+            "imported": [
+              "APP_CONTAINER_CLASS",
+              "STATIC_PATH",
+              "WDS_PORT"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "APP_CONTAINER_CLASS",
+                "local": "APP_CONTAINER_CLASS"
+              },
+              {
+                "kind": "named",
+                "imported": "STATIC_PATH",
+                "local": "STATIC_PATH"
+              },
+              {
+                "kind": "named",
+                "imported": "WDS_PORT",
+                "local": "WDS_PORT"
+              }
+            ]
+          },
+          {
+            "source": "../shared/util",
+            "imported": [
+              "isProd"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "isProd",
+                "local": "isProd"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server/render-app.js",
+      "filenameRelative": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server/render-app.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "render-app.js",
+      "sourceFileName": "render-app.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "render-app"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _config = require('../shared/config');\n\nvar _util = require('../shared/util');\n\nvar renderApp = function renderApp(title) {\n  return '<!doctype html>\\n<html>\\n  <head>\\n    <title>' + title + '</title>\\n    <link rel=\"stylesheet\" href=\"' + _config.STATIC_PATH + '/css/style.css\">\\n  </head>\\n  <body>\\n    <div class=\"' + _config.APP_CONTAINER_CLASS + '\"></div>\\n    <script src=\"' + (_util.isProd ? _config.STATIC_PATH : 'http://localhost:' + _config.WDS_PORT + '/dist') + '/js/bundle.js\"></script>\\n  </body>\\n</html>\\n';\n};\n\nexports.default = renderApp;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlbmRlci1hcHAuanMiXSwibmFtZXMiOlsicmVuZGVyQXBwIiwidGl0bGUiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUVBOztBQUNBOztBQUVBLElBQU1BLFlBQVksU0FBWkEsU0FBWSxDQUFDQyxLQUFEO0FBQUEsNERBSUxBLEtBSkssb01BU0MscUZBVEQ7QUFBQSxDQUFsQjs7a0JBY2VELFMiLCJmaWxlIjoicmVuZGVyLWFwcC5qcyIsInNvdXJjZVJvb3QiOiIvbW50L2MvTGFtYmRhL0NJUlJJQ1VMVU1OL2xhbWJkYS1iYWNrdXAtMi9sYW1iZGEtc3RhdGljLWIvTGFtYmRhLVJlc291cmNlLVN0YXRpYy1Bc3NldHMvanMtc3RhY2std2Fsa3Rocm91Z2gtbWFzdGVyLzA0LXdlYnBhY2stcmVhY3QtaG1yL3NyYy9zZXJ2ZXIiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBAZmxvd1xuXG5pbXBvcnQgeyBBUFBfQ09OVEFJTkVSX0NMQVNTLCBTVEFUSUNfUEFUSCwgV0RTX1BPUlQgfSBmcm9tICcuLi9zaGFyZWQvY29uZmlnJ1xuaW1wb3J0IHsgaXNQcm9kIH0gZnJvbSAnLi4vc2hhcmVkL3V0aWwnXG5cbmNvbnN0IHJlbmRlckFwcCA9ICh0aXRsZTogc3RyaW5nKSA9PlxuYDwhZG9jdHlwZSBodG1sPlxuPGh0bWw+XG4gIDxoZWFkPlxuICAgIDx0aXRsZT4ke3RpdGxlfTwvdGl0bGU+XG4gICAgPGxpbmsgcmVsPVwic3R5bGVzaGVldFwiIGhyZWY9XCIke1NUQVRJQ19QQVRIfS9jc3Mvc3R5bGUuY3NzXCI+XG4gIDwvaGVhZD5cbiAgPGJvZHk+XG4gICAgPGRpdiBjbGFzcz1cIiR7QVBQX0NPTlRBSU5FUl9DTEFTU31cIj48L2Rpdj5cbiAgICA8c2NyaXB0IHNyYz1cIiR7aXNQcm9kID8gU1RBVElDX1BBVEggOiBgaHR0cDovL2xvY2FsaG9zdDoke1dEU19QT1JUfS9kaXN0YH0vanMvYnVuZGxlLmpzXCI+PC9zY3JpcHQ+XG4gIDwvYm9keT5cbjwvaHRtbD5cbmBcblxuZXhwb3J0IGRlZmF1bHQgcmVuZGVyQXBwXG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "render-app.js"
+      ],
+      "names": [
+        "renderApp",
+        "title"
+      ],
+      "mappings": ";;;;;;AAEA;;AACA;;AAEA,IAAMA,YAAY,SAAZA,SAAY,CAACC,KAAD;AAAA,4DAILA,KAJK,oMASC,qFATD;AAAA,CAAlB;;kBAceD,S",
+      "file": "render-app.js",
+      "sourceRoot": "/mnt/c/Lambda/CIRRICULUMN/lambda-backup-2/lambda-static-b/Lambda-Resource-Static-Assets/js-stack-walkthrough-master/04-webpack-react-hmr/src/server",
+      "sourcesContent": [
+        "// @flow\n\nimport { APP_CONTAINER_CLASS, STATIC_PATH, WDS_PORT } from '../shared/config'\nimport { isProd } from '../shared/util'\n\nconst renderApp = (title: string) =>\n`<!doctype html>\n<html>\n  <head>\n    <title>${title}</title>\n    <link rel=\"stylesheet\" href=\"${STATIC_PATH}/css/style.css\">\n  </head>\n  <body>\n    <div class=\"${APP_CONTAINER_CLASS}\"></div>\n    <script src=\"${isProd ? STATIC_PATH : `http://localhost:${WDS_PORT}/dist`}/js/bundle.js\"></script>\n  </body>\n</html>\n`\n\nexport default renderApp\n"
+      ]
+    },
+    "mtime": 1495462837000
+  }
+}

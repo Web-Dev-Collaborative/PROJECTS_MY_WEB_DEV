@@ -13,7 +13,6 @@ var spacing = 10;
 var d;
 var counter = 0;
 
-
 points = [];
 
 function windowResized() {
@@ -22,7 +21,7 @@ function windowResized() {
 
 function setup() {
   var c = createCanvas(windowWidth, windowHeight);
-  c.parent('home-sketch-frame');
+  c.parent("home-sketch-frame");
   background(0);
   for (var i = 0; i < 300; i++) {
     points.push(new Point(int(800 / (spacing * 2)), int(800 / (spacing * 2))));
@@ -42,7 +41,7 @@ function draw() {
   } else {
     alp = 0.8;
   }
-  background(255,alp);
+  background(255, alp);
 
   //Behavoir 5
   if (counter > 8100) {
@@ -50,9 +49,9 @@ function draw() {
   } else {
     z = 0.8;
   }
-  
+
   background(255, z);
-  
+
   push();
   translate(windowWidth / 2 - 600, windowHeight / 2 - 600);
   scale(1.5);
@@ -73,13 +72,13 @@ function Point(_x, _y) {
   this.px;
   this.py;
   //this.color = color(13, 86, 97);
-  this.color = color(random(150,255), 195, 205);
+  this.color = color(random(150, 255), 195, 205);
 
-  this.display = function() {
+  this.display = function () {
     push();
     //Behavior 3
     if (counter > 3700) {
-      var r = map(counter, 3700, 5200, random(150,255), 242);
+      var r = map(counter, 3700, 5200, random(150, 255), 242);
       var g = map(counter, 3700, 5200, 195, 21);
       var b = map(counter, 3700, 5200, 205, 91);
       stroke(r, g, b);
@@ -93,7 +92,12 @@ function Point(_x, _y) {
       var l = map(counter, 0, 1200, 0.01, 1.899);
       strokeWeight(l);
     }
-    line(this.x * spacing, this.y * spacing, this.px * spacing, this.py * spacing);
+    line(
+      this.x * spacing,
+      this.y * spacing,
+      this.px * spacing,
+      this.py * spacing
+    );
     pop();
 
     noStroke(0);
@@ -110,14 +114,14 @@ function Point(_x, _y) {
     fill(255);
     smooth();
     ellipse(this.x * spacing, this.y * spacing, d, d);
-  }
+  };
 
-  this.setPrevPosition = function() {
+  this.setPrevPosition = function () {
     this.px = this.x;
     this.py = this.y;
-  }
-  this.update = function() {
-    //Behavior 0 
+  };
+  this.update = function () {
+    //Behavior 0
     var direction = int(random(0, 8));
 
     if (direction == BEI) {
@@ -153,5 +157,5 @@ function Point(_x, _y) {
     if (this.y > 900 / spacing - 1) {
       this.y = 900 / spacing - 2;
     }
-  }
+  };
 }

@@ -3,15 +3,15 @@
  * @description Create a p5 instance, which keeps all variables
  * out of the global scope of your page.
  */
-let sketch = function(p) {
+let sketch = function (p) {
   let x = 100;
   let y = 100;
 
-  p.setup = function() {
+  p.setup = function () {
     p.createCanvas(700, 410);
   };
 
-  p.draw = function() {
+  p.draw = function () {
     p.background(0);
     p.fill(255);
     p.rect(x, y, 50, 50);

@@ -11,7 +11,7 @@ let easing = 0.05;
 
 function setup() {
   createCanvas(720, 400);
-  img = loadImage('assets/moonwalk.jpg'); // 加载图像
+  img = loadImage("assets/moonwalk.jpg"); // 加载图像
 }
 
 function draw() {

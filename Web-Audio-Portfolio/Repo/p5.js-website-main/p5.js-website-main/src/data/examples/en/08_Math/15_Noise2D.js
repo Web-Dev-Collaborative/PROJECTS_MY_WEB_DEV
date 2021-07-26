@@ -37,6 +37,6 @@ function draw() {
   //Show the details of two partitions
   textSize(18);
   fill(255, 255, 255);
-  text('Noice2D with 2 octaves and 0.2 falloff', 10, 350);
-  text('Noice2D with 1 octaves and 0.7 falloff', 330, 350);
+  text("Noice2D with 2 octaves and 0.2 falloff", 10, 350);
+  text("Noice2D with 1 octaves and 0.7 falloff", 330, 350);
 }

@@ -13,7 +13,7 @@
 let song;
 
 function preload() {
-  song = loadSound('assets/lucky_dragons_-_power_melody.mp3');
+  song = loadSound("assets/lucky_dragons_-_power_melody.mp3");
 }
 
 function setup() {

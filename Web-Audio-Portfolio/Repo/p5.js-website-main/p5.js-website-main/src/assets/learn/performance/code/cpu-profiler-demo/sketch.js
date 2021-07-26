@@ -8,7 +8,7 @@ var stepSize = 2;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  
+
   // Set up a video capture
   capture = createCapture(VIDEO);
   capture.size(640, 480);
@@ -53,11 +53,11 @@ function sortHue(color1, color2) {
   var hue2 = hue(color2);
   if (hue1 < hue2) return -1;
   else if (hue1 > hue2) return 1;
-  return 0;  
+  return 0;
 }
 
 function drawPixels() {
-  // Calculated dimensions of sampled video 
+  // Calculated dimensions of sampled video
   var sampledWidth = Math.ceil(videoWidth / stepSize);
   var sampledHeight = Math.ceil(videoHeight / stepSize);
   // We are going to draw rectangles for each sampled color, so scale up the

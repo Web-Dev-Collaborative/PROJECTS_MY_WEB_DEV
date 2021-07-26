@@ -21,8 +21,8 @@ function draw() {
   const h = (w * height) / width;
 
   // 너비와 높이의 음의 절반에서 시작
-  const xmin = -w/2;
-  const ymin = -h/2;
+  const xmin = -w / 2;
+  const ymin = -h / 2;
 
   // pixels[] 배열에 쓸 수 있는지 확인합니다.
   // 다른 드로잉을 하지 않으므로, 이 작업은 한번만 수행합니다.
@@ -37,8 +37,8 @@ function draw() {
   const ymax = ymin + h;
 
   // 각 픽셀마다 x,y를 증가하는 양 계산
-  const dx = (xmax - xmin) / (width);
-  const dy = (ymax - ymin) / (height);
+  const dx = (xmax - xmin) / width;
+  const dy = (ymax - ymin) / height;
 
   // y 시작
   let y = ymin;
@@ -46,7 +46,6 @@ function draw() {
     // x 시작
     let x = xmin;
     for (let i = 0; i < width; i++) {
-
       // 이제, 우리가 z = z^2 + cm 를 반복 할 때 z가 무한대로 향하나요?
       let a = x;
       let b = y;
@@ -59,14 +58,14 @@ function draw() {
         b = twoab + y;
         // 이 유한한 세상에서의 무한대 개념은 간단합니다. 여기서는 그냥 16이라 설정하지요.
         if (dist(aa, bb, 0, 0) > 16) {
-          break; 
+          break;
         }
         n++;
       }
 
       // 무한대에 도달하기까지 걸리는 시간을 기준으로 각 픽셀에 색상을 지정합니다.
       // 도달하지 못할 경우, 검정색으로 지정합니다.
-      const pix = (i+j*width)*4;
+      const pix = (i + j * width) * 4;
       const norm = map(n, 0, maxiterations, 0, 1);
       let bright = map(sqrt(norm), 0, 1, 0, 255);
       if (n == maxiterations) {

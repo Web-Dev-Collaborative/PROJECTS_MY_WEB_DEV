@@ -13,11 +13,11 @@ let step = 20; // cuánto se mueve la tortuga en cada 'F'
 let angle = 90; // cuánto gira la tortuga con un '-' or '+'
 
 // SECCIÓN LINDENMAYER (SISTEMAS-L)
-let thestring = 'A'; // "axioma" o inicio de la cadena
+let thestring = "A"; // "axioma" o inicio de la cadena
 let numloops = 5; // cuántas iteraciones a pre-computar
 let therules = []; // arreglo para las reglas
-therules[0] = ['A', '-BF+AFA+FB-']; // primera regla
-therules[1] = ['B', '+AF-BFB-FA+']; // segunda regla
+therules[0] = ["A", "-BF+AFA+FB-"]; // primera regla
+therules[1] = ["B", "+AF-BFB-FA+"]; // segunda regla
 
 let whereinstring = 0; // dónde estamos en el sistema-L
 
@@ -37,7 +37,6 @@ function setup() {
 }
 
 function draw() {
-
   // dibujar el caracter actual en la pantalla
   drawIt(thestring[whereinstring]);
 
@@ -45,18 +44,17 @@ function draw() {
   // si sobrepasamos el final, volver al inicio.
   whereinstring++;
   if (whereinstring > thestring.length - 1) whereinstring = 0;
-
 }
 
 // interpretar un sistema-L
 function lindenmayer(s) {
-  let outputstring = ''; // inicializar una cadena de salida en blanco
+  let outputstring = ""; // inicializar una cadena de salida en blanco
 
   // iterar a lo largo de las  'reglas' buscando coincidencias de símbolo:
   for (let i = 0; i < s.length; i++) {
     let ismatch = 0; // por defecto, sin coincidencia
     for (let j = 0; j < therules.length; j++) {
-      if (s[i] == therules[j][0])  {
+      if (s[i] == therules[j][0]) {
         outputstring += therules[j][1]; //escribir substitución
         ismatch = 1; //si  tenemos una coincidencia, no copiemos el símbolo
         break; // salir de este bucle for()
@@ -71,8 +69,8 @@ function lindenmayer(s) {
 
 // esta es una función que dibuja los comandos de la tortuga
 function drawIt(k) {
-
-  if (k=='F') { // dibujar hacia adelante
+  if (k == "F") {
+    // dibujar hacia adelante
     // de polar a cartesiano basado en paso y ángulo actual:
     let x1 = x + step * cos(radians(currentangle));
     let y1 = y + step * sin(radians(currentangle));
@@ -81,9 +79,9 @@ function drawIt(k) {
     // actualizar la posición de la tortuga:
     x = x1;
     y = y1;
-  } else if (k == '+') {
+  } else if (k == "+") {
     currentangle += angle; // doblar hacia la izquierda
-  } else if (k == '-') {
+  } else if (k == "-") {
     currentangle -= angle; // doblar hacia la derecha
   }
 

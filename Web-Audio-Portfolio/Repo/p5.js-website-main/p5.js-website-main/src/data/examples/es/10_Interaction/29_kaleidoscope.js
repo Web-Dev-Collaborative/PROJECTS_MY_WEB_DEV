@@ -16,25 +16,25 @@ function setup() {
   background(127);
 
   // Creando el botón para guardar para el archivo
-  saveButton = createButton('save');
+  saveButton = createButton("save");
   saveButton.mousePressed(saveFile);
 
   // Creando el botón para borrar la pantalla
-  clearButton = createButton('clear');
+  clearButton = createButton("clear");
   clearButton.mousePressed(clearScreen);
 
   // Creando el botón para la pantalla completa
-  fullscreenButton = createButton('Full Screen');
+  fullscreenButton = createButton("Full Screen");
   fullscreenButton.mousePressed(screenFull);
 
   // Configurando el deslizador para el grosor del pincel
-  brushSizeSlider = createButton('Brush Size Slider');
+  brushSizeSlider = createButton("Brush Size Slider");
   sizeSlider = createSlider(1, 32, 4, 0.1);
 }
 
 // Función para guardar el archivo
 function saveFile() {
-  save('design.jpg');
+  save("design.jpg");
 }
 
 // Función para limpiar la pantalla

@@ -1,6 +1,6 @@
 /*
  * @name 噪声波
- * @description 调用柏林噪声来产生波状图案。 
+ * @description 调用柏林噪声来产生波状图案。
  * 作者：Daniel Shiffman
  */
 let yoff = 0.0; // 柏林噪声的第二维度

@@ -86,7 +86,7 @@ function draw() {
   noFill();
   stroke(255);
 
-  morph.forEach(v => {
+  morph.forEach((v) => {
     vertex(v.x, v.y);
   });
   endShape(CLOSE);

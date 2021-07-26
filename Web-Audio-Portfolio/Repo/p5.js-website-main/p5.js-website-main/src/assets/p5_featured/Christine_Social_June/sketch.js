@@ -1,9 +1,12 @@
-var BobsUno, options, sliderValue, sketch, slider,
-    isActiveBobMode = false;
+var BobsUno,
+  options,
+  sliderValue,
+  sketch,
+  slider,
+  isActiveBobMode = false;
 
 function setup() {
-
-  sketch = createCanvas(windowWidth, windowHeight)
+  sketch = createCanvas(windowWidth, windowHeight);
   sketch.id("p5Canvas");
 
   colorMode(HSB);
@@ -14,7 +17,7 @@ function setup() {
     doDisplayBob: true,
     bobSize: 20,
     doRunInterference: true,
-    fieldPulseRate: 1
+    fieldPulseRate: 1,
   };
   BobsUno = new BobSystem();
 }

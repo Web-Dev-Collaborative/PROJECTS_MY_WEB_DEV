@@ -1,7 +1,7 @@
 /*
  * @name 이중 랜덤
  * @frame 720,400 (optional)
- * @description random() 호출과 point()함수를 이중으로 사용하여 
+ * @description random() 호출과 point()함수를 이중으로 사용하여
  * 불규칙한 톱니 모양의 선을 만듭니다.
  * 원본 제작: 이라 그린버그(Ira Greenberg)
  */
