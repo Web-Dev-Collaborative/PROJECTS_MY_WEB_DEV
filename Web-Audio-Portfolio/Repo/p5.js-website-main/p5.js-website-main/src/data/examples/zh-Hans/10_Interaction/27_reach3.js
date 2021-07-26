@@ -28,7 +28,7 @@ function setup() {
   stroke(255, 100);
   noFill();
 
-  x[x.length - 1] = width / 2; // 设置基础 x 坐标 
+  x[x.length - 1] = width / 2; // 设置基础 x 坐标
   y[x.length - 1] = height; // 设置基础 y 坐标
 }
 

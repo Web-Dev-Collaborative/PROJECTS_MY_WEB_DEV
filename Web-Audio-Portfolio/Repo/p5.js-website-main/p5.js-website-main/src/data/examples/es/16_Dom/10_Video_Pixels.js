@@ -2,7 +2,7 @@
  * @name Pixeles de video
  * @frame 320,240
  * @description Cargar un video, manipula sus pixeles y dibújalo en el lienzo.
- * Para correr este ejemplo localmente, necesitarás correr un 
+ * Para correr este ejemplo localmente, necesitarás correr un
  * <a href="https://github.com/processing/p5.js/wiki/Local-server">servidor local</a>.
  */
 let fingers;
@@ -10,7 +10,7 @@ let fingers;
 function setup() {
   createCanvas(320, 240);
   // especifica múltples formatos para distintos navegadores
-  fingers = createVideo(['assets/fingers.mov', 'assets/fingers.webm']);
+  fingers = createVideo(["assets/fingers.mov", "assets/fingers.webm"]);
   fingers.loop();
   fingers.hide();
   noStroke();

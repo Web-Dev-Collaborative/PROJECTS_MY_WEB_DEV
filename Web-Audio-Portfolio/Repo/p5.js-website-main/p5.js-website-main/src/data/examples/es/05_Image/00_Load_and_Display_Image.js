@@ -10,7 +10,7 @@ let img; // Declarar variable 'img'.
 
 function setup() {
   createCanvas(720, 400);
-  img = loadImage('assets/moonwalk.jpg'); // Cargar la imagen
+  img = loadImage("assets/moonwalk.jpg"); // Cargar la imagen
 }
 
 function draw() {

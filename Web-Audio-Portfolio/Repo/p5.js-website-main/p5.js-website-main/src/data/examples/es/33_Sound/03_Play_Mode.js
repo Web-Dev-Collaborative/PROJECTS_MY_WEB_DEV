@@ -9,19 +9,19 @@
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">biblioteca p5.sound</a>
  * un archivo de audio y correr un <a href="https://github.com/processing/p5.js/wiki/Local-server">servidor local</a>.</span></em>
  */
-let playMode = 'sustain';
+let playMode = "sustain";
 let sample;
 
 function setup() {
   createCanvas(710, 50);
-  soundFormats('mp3', 'ogg');
-  sample = loadSound('assets/Damscray_-_Dancing_Tiger_02.mp3');
+  soundFormats("mp3", "ogg");
+  sample = loadSound("assets/Damscray_-_Dancing_Tiger_02.mp3");
 }
 
 function draw() {
   background(255, 255, 0);
-  let str = 'Click here to play! Press key to toggle play mode.';
-  str += ' Current Play Mode: ' + playMode + '.';
+  let str = "Click here to play! Press key to toggle play mode.";
+  str += " Current Play Mode: " + playMode + ".";
   text(str, 10, height / 2);
 }
 
@@ -33,10 +33,10 @@ function keyPressed(k) {
 }
 
 function togglePlayMode() {
-  if (playMode === 'sustain') {
-    playMode = 'restart';
+  if (playMode === "sustain") {
+    playMode = "restart";
   } else {
-    playMode = 'sustain';
+    playMode = "sustain";
   }
   sample.playMode(playMode);
 }

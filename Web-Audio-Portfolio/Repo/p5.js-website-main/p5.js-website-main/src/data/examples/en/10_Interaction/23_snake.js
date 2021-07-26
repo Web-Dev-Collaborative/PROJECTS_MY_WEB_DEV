@@ -8,7 +8,7 @@
 
 // the snake is divided into small segments, which are drawn and edited on each 'draw' call
 let numSegments = 10;
-let direction = 'right';
+let direction = "right";
 
 const xStart = 0; //starting x coordinate for snake
 const yStart = 250; //starting y coordinate for snake
@@ -22,10 +22,10 @@ let yFruit = 0;
 let scoreElem;
 
 function setup() {
-  scoreElem = createDiv('Score = 0');
+  scoreElem = createDiv("Score = 0");
   scoreElem.position(20, 20);
-  scoreElem.id = 'score';
-  scoreElem.style('color', 'white');
+  scoreElem.id = "score";
+  scoreElem.style("color", "white");
 
   createCanvas(500, 500);
   frameRate(15);
@@ -66,19 +66,19 @@ function updateSnakeCoordinates() {
     yCor[i] = yCor[i + 1];
   }
   switch (direction) {
-    case 'right':
+    case "right":
       xCor[numSegments - 1] = xCor[numSegments - 2] + diff;
       yCor[numSegments - 1] = yCor[numSegments - 2];
       break;
-    case 'up':
+    case "up":
       xCor[numSegments - 1] = xCor[numSegments - 2];
       yCor[numSegments - 1] = yCor[numSegments - 2] - diff;
       break;
-    case 'left':
+    case "left":
       xCor[numSegments - 1] = xCor[numSegments - 2] - diff;
       yCor[numSegments - 1] = yCor[numSegments - 2];
       break;
-    case 'down':
+    case "down":
       xCor[numSegments - 1] = xCor[numSegments - 2];
       yCor[numSegments - 1] = yCor[numSegments - 2] + diff;
       break;
@@ -100,7 +100,7 @@ function checkGameStatus() {
   ) {
     noLoop();
     const scoreVal = parseInt(scoreElem.html().substring(8));
-    scoreElem.html('Game ended! Your score was : ' + scoreVal);
+    scoreElem.html("Game ended! Your score was : " + scoreVal);
   }
 }
 
@@ -127,7 +127,7 @@ function checkForFruit() {
   point(xFruit, yFruit);
   if (xCor[xCor.length - 1] === xFruit && yCor[yCor.length - 1] === yFruit) {
     const prevScore = parseInt(scoreElem.html().substring(8));
-    scoreElem.html('Score = ' + (prevScore + 1));
+    scoreElem.html("Score = " + (prevScore + 1));
     xCor.unshift(xCor[0]);
     yCor.unshift(yCor[0]);
     numSegments++;
@@ -149,23 +149,23 @@ function updateFruitCoordinates() {
 function keyPressed() {
   switch (keyCode) {
     case 74:
-      if (direction !== 'right') {
-        direction = 'left';
+      if (direction !== "right") {
+        direction = "left";
       }
       break;
     case 76:
-      if (direction !== 'left') {
-        direction = 'right';
+      if (direction !== "left") {
+        direction = "right";
       }
       break;
     case 73:
-      if (direction !== 'down') {
-        direction = 'up';
+      if (direction !== "down") {
+        direction = "up";
       }
       break;
     case 75:
-      if (direction !== 'up') {
-        direction = 'down';
+      if (direction !== "up") {
+        direction = "down";
       }
       break;
   }

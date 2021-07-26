@@ -31,20 +31,20 @@ function mousePressed() {
 }
 
 // Una clase simple de Particle
-let Particle = function(position) {
+let Particle = function (position) {
   this.acceleration = createVector(0, 0.05);
   this.velocity = createVector(random(-1, 1), random(-1, 0));
   this.position = position.copy();
   this.lifespan = 255.0;
 };
 
-Particle.prototype.run = function() {
+Particle.prototype.run = function () {
   this.update();
   this.display();
 };
 
 // Método para actualizar posición
-Particle.prototype.update = function(){
+Particle.prototype.update = function () {
   this.velocity.add(this.acceleration);
   this.position.add(this.velocity);
   this.lifespan -= 2;
@@ -76,8 +76,7 @@ ParticleSystem.prototype.addParticle = function () {
   // Añadir o una Particle o una CrazyParticle al sistema
   if (int(random(0, 2)) == 0) {
     p = new Particle(this.origin);
-  }
-  else {
+  } else {
     p = new CrazyParticle(this.origin);
   }
   this.particles.push(p);
@@ -101,7 +100,7 @@ function CrazyParticle(origin) {
 
   // Inicializar nustras propiedades añadidas
   this.theta = 0.0;
-};
+}
 
 // Crear un objeto Crazy.prototype que hereda de Particle.prototype.
 // Nota: un error común aquí es usar "new Particle()" para crear el
@@ -116,14 +115,14 @@ CrazyParticle.prototype.constructor = CrazyParticle;
 // Notice we don't have the method run() here; it is inherited from Particle
 
 // This update() method overrides the parent class update() method
-CrazyParticle.prototype.update=function() {
+CrazyParticle.prototype.update = function () {
   Particle.prototype.update.call(this);
   // Incrementar rotación basado en la velocidad horizontal
   this.theta += (this.velocity.x * this.velocity.mag()) / 10.0;
-}
+};
 
 // Este método display() anula el método display() de la clase padre
-CrazyParticle.prototype.display=function() {
+CrazyParticle.prototype.display = function () {
   // Render de la elipse como una partícula regular
   Particle.prototype.display.call(this);
   // Añadir línea giratoria
@@ -133,4 +132,4 @@ CrazyParticle.prototype.display=function() {
   stroke(255, this.lifespan);
   line(0, 0, 25, 0);
   pop();
-}
+};

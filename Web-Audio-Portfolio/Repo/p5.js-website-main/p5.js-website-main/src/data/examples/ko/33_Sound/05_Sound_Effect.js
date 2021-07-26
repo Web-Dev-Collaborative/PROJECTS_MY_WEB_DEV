@@ -2,7 +2,7 @@
  * @name 사운드 효과
  * @description <p>마우스로 원 안쪽을 누르면 사운드 효과가 재생됩니다.</p>
  * <p><em><span class="small"> 로컬 프로젝트에서 이 예제를 실행하려면 적어도 한 개의 사운드 파일이 필요하고,
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며, 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며,
  * <a href="https://github.com/processing/p5.js/wiki/Local-server">로컬 서버</a>를 작동시켜야 합니다.</span></em></p>
  */
 // 다니엘 쉬프만(Daniel Shiffman)의 Learning Processing을 적용
@@ -47,8 +47,8 @@ function setup() {
 
   // 사운드 파일 불러오기
   // 스케치에 MP3와 OGG 버전을 포함시킵니다.
-  soundFormats('mp3', 'ogg');
-  dingdong = loadSound('assets/doorbell.mp3');
+  soundFormats("mp3", "ogg");
+  dingdong = loadSound("assets/doorbell.mp3");
 
   // 새로운 초인종 만들기
   doorbell = new Doorbell(width / 2, height / 2, 64);

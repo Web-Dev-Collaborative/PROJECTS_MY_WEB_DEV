@@ -1,10 +1,10 @@
 // Results in Chrome:
-// 
+//
 //  Creating divs in native JS took:  1.19ms.
 //  Creating divs in p5 took:         479.57ms.
-//  
+//
 // Note: tests are in functions so that the timeline in Chrome dev tools can
-// provide useful debugging information. 
+// provide useful debugging information.
 
 p5.disableFriendlyErrors = true;
 
@@ -28,7 +28,7 @@ function nativeAddDivs() {
   }
   document.body.appendChild(containerDiv);
   var elapsed = millis() - start;
-  console.log("Creating divs in native JS took: " + elapsed.toFixed(2) + "ms.")
+  console.log("Creating divs in native JS took: " + elapsed.toFixed(2) + "ms.");
   // Cleanup
   document.body.removeChild(containerDiv);
 }
@@ -42,7 +42,7 @@ function p5AddDivs() {
     containerDiv.child(childDiv);
   }
   var elapsed = millis() - start;
-  console.log("Creating divs in p5 took: " + elapsed.toFixed(2) + "ms.")
+  console.log("Creating divs in p5 took: " + elapsed.toFixed(2) + "ms.");
   // Cleanup
   containerDiv.remove();
 }

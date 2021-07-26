@@ -67,19 +67,19 @@ function draw() {
   }
 
   if (youWin) {
-    winText.style('display', 'block');
+    winText.style("display", "block");
     for (var i = 0; i < drops.length; i++) {
       drops[i].fall();
       drops[i].show();
     }
   } else {
-    winText.style('display', 'none');
+    winText.style("display", "none");
   }
 
   if (gameOver) {
-    instructionText.style('display', 'block');
+    instructionText.style("display", "block");
   } else {
-    instructionText.style('display', 'none');
+    instructionText.style("display", "none");
   }
 }
 
@@ -89,11 +89,11 @@ function keyReleased() {
 }
 
 function keyPressed() {
-  if (key === 'a' || key === 'A') {
+  if (key === "a" || key === "A") {
     board.isMovingLeft = true;
-  } else if (key === 'd' || key === 'D') {
+  } else if (key === "d" || key === "D") {
     board.isMovingRight = true;
-  } else if (key === 's' || key === 'S') {
+  } else if (key === "s" || key === "S") {
     if (bricks.length === 0) createBricks(20);
     gameOver = false;
     youWin = false;
@@ -107,11 +107,11 @@ function createBricks(n) {
 }
 
 function createText() {
-  winText = createP('🎉🎉🎉 YOU WIN! 🎉🎉🎉');
-  winText.style('display', 'none');
+  winText = createP("🎉🎉🎉 YOU WIN! 🎉🎉🎉");
+  winText.style("display", "none");
   winText.position(width / 2 - 130, 80);
 
   instructionText = createP("Press 'S' to Start, 'A'/'D' to move Right/Left");
-  instructionText.style('display', 'none');
+  instructionText.style("display", "none");
   instructionText.position(width / 2 - 240, 100);
 }

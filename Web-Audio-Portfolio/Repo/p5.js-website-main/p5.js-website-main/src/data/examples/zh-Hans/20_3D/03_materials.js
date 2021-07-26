@@ -7,7 +7,7 @@
 let img;
 function setup() {
   createCanvas(710, 400, WEBGL);
-  img = loadImage('assets/cat.jpg');
+  img = loadImage("assets/cat.jpg");
 }
 
 function draw() {

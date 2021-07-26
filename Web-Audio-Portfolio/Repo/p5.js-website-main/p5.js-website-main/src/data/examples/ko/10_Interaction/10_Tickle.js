@@ -3,7 +3,7 @@
  * @description 마우스 커서를 "tickle"에 올리면, 마치 간지럼을 타는듯 떨립니다.
  * 너무 간지럽히면 화면 밖으로 튀어나갈 수도 있습니다 >_<
  */
-let message = 'tickle',
+let message = "tickle",
   font,
   bounds, // 텍스트의 바운딩 박스에 대한 x, y, w, h값
   fontsize = 60,
@@ -11,7 +11,7 @@ let message = 'tickle',
   y; // 텍스트의 x 와 y 좌표
 
 function preload() {
-  font = loadFont('assets/SourceSansPro-Regular.otf');
+  font = loadFont("assets/SourceSansPro-Regular.otf");
 }
 
 function setup() {

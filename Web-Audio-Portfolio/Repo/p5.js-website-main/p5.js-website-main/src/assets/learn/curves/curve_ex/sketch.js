@@ -30,10 +30,10 @@ function draw() {
   ellipse(x4, y4, 10, 10);
 
   noStroke();
-  text('(' + x1 + ',' + y1 + ')', x1, y1);
-  text('(' + x2 + ',' + y2 + ')', x2, y2);
-  text('(' + x3 + ',' + y3 + ')', x3, y3);
-  text('(' + x4 + ',' + y4 + ')', x4, y4);
+  text("(" + x1 + "," + y1 + ")", x1, y1);
+  text("(" + x2 + "," + y2 + ")", x2, y2);
+  text("(" + x3 + "," + y3 + ")", x3, y3);
+  text("(" + x4 + "," + y4 + ")", x4, y4);
 
   if (d1) {
     x1 = mouseX;

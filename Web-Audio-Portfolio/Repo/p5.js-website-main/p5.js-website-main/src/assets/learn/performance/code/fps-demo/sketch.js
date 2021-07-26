@@ -10,7 +10,7 @@ function draw() {
   fill("#E6AF2E");
   ellipse(width / 2, height / 2, radius, radius);
 
-  // Draw FPS (rounded to 2 decimal places) at the bottom left of the 
+  // Draw FPS (rounded to 2 decimal places) at the bottom left of the
   // screen
   // var fps = frameRate();
   // fill(255);

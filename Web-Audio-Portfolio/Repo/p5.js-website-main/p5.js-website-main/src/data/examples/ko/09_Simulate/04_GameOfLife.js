@@ -33,15 +33,14 @@ function setup() {
 function draw() {
   background(255);
   generate();
-  for ( let i = 0; i < columns;i++) {
-    for ( let j = 0; j < rows;j++) {
-      if ((board[i][j] == 1)) fill(0);
+  for (let i = 0; i < columns; i++) {
+    for (let j = 0; j < rows; j++) {
+      if (board[i][j] == 1) fill(0);
       else fill(255);
       stroke(0);
-      rect(i * w, j * w, w-1, w-1);
+      rect(i * w, j * w, w - 1, w - 1);
     }
   }
-
 }
 
 // 마우스 버튼 클릭시 보드 리셋하기
@@ -54,7 +53,8 @@ function init() {
   for (let i = 0; i < columns; i++) {
     for (let j = 0; j < rows; j++) {
       // 0으로 모서리 테두리 그리기
-      if (i == 0 || j == 0 || i == columns-1 || j == rows-1) board[i][j] = 0;
+      if (i == 0 || j == 0 || i == columns - 1 || j == rows - 1)
+        board[i][j] = 0;
       // 나머지는 무작위로 채우기
       else board[i][j] = floor(random(2));
       next[i][j] = 0;
@@ -64,7 +64,6 @@ function init() {
 
 // 새로운 세대 생성하는 과정
 function generate() {
-
   // 2D 배열 상 모든 셀들을 걸쳐 반복하며 각 셀별 이웃 확인하기
   for (let x = 1; x < columns - 1; x++) {
     for (let y = 1; y < rows - 1; y++) {
@@ -72,7 +71,7 @@ function generate() {
       let neighbors = 0;
       for (let i = -1; i <= 1; i++) {
         for (let j = -1; j <= 1; j++) {
-          neighbors += board[x+i][y+j];
+          neighbors += board[x + i][y + j];
         }
       }
 
@@ -80,10 +79,13 @@ function generate() {
       // 이 계산을 빼주는 요령
       neighbors -= board[x][y];
       // 라이프 규칙
-      if      ((board[x][y] == 1) && (neighbors <  2)) next[x][y] = 0;           // 외로움
-      else if ((board[x][y] == 1) && (neighbors >  3)) next[x][y] = 0;           // 인구과잉
-      else if ((board[x][y] == 0) && (neighbors == 3)) next[x][y] = 1;           // 재생산
-      else                                             next[x][y] = board[x][y]; // 균형
+      if (board[x][y] == 1 && neighbors < 2) next[x][y] = 0;
+      // 외로움
+      else if (board[x][y] == 1 && neighbors > 3) next[x][y] = 0;
+      // 인구과잉
+      else if (board[x][y] == 0 && neighbors == 3) next[x][y] = 1;
+      // 재생산
+      else next[x][y] = board[x][y]; // 균형
     }
   }
 
@@ -92,4 +94,3 @@ function generate() {
   board = next;
   next = temp;
 }
-

@@ -12,12 +12,12 @@
  * <p>
  * <b>변조 깊이</b>는 반송파 주파수가 변조된 정도를 묘사합니다.
  * 이는 변조기의 진폭을 기반으로 합니다.
- * 변조기는 반송파 주파수에 추가될, 진폭 값들의 연속적인 스트림을 생성합니다. 
- * 진폭이 0이면 묵음이 발생하므로 변조가 적용되지 않습니다. 
+ * 변조기는 반송파 주파수에 추가될, 진폭 값들의 연속적인 스트림을 생성합니다.
+ * 진폭이 0이면 묵음이 발생하므로 변조가 적용되지 않습니다.
  * 진폭이 1.0이면 출력값의 범위가 +1.0과 -1.0 사이로 조정됩니다.
  * 이는 스피커로 전송되는 사운드의 표준 범위이기도 합니다.
  * 하지만, FM에서는 변조기의 출력을 반송파 주파수로 전송하는데,
- * 반송파 주파수에서는 + 1Hz / -1Hz 변조를 거의 찾아보기 힘듭니다. 
+ * 반송파 주파수에서는 + 1Hz / -1Hz 변조를 거의 찾아보기 힘듭니다.
  * 따라서, 변조기의 진폭("깊이")을 스피커로 보내는 값보다 훨씬 높은 숫자로 증가시키는 게 일반적입니다.</p>
  * <p><b>변조 주파수</b>는 변조 속도를 나타냅니다.
  * 변조 주파수가 20Hz보다 낮으면, 우리는 주파수를 음고가 아닌 비트와 리듬으로서 듣게 됩니다.
@@ -36,7 +36,7 @@
  * 변조기 파형이 마치 사각형 <code>[]</code>, 싸인 <code>~</code>
  * 또는 삼각형 <code>/\</code>과 같이 대칭일 경우, 음수의 진폭과 양수의 진폭은 동일합니다.
  * 하지만 이 예제 속 변조기는 마치 이러한 모양 / 의 톱니처럼 생긴 비대칭적인 파형을 갖습니다.
- * 여기에 음수를 곱하면, 파형이 마치 이러한 모양 \ 처럼 반대로 바뀝니다. 
+ * 여기에 음수를 곱하면, 파형이 마치 이러한 모양 \ 처럼 반대로 바뀝니다.
  * 그 차이를 명확히 관찰하려면, 주파수를 낮춰보세요.
  * </p>
  * <p>- MouseY는 변조기의 주파수를 0부터 112Hz까지 조정합니다.
@@ -66,13 +66,13 @@ function setup() {
   let cnv = createCanvas(800, 400);
   noFill();
 
-  carrier = new p5.Oscillator('sine');
+  carrier = new p5.Oscillator("sine");
   carrier.amp(0); // 진폭 설정
   carrier.freq(carrierBaseFreq); // 주파수 설정
   carrier.start(); // 오실레이팅 시작
 
   // 종류를 'square(사각형)', 'sine(싸인)' 또는 'triangle(삼각형)'으로 바꿔보세요!
-  modulator = new p5.Oscillator('sawtooth');
+  modulator = new p5.Oscillator("sawtooth");
   modulator.start();
 
   // 반송파 주파수를 변조하기 위해 변조기의 출력값 더하기
@@ -115,14 +115,14 @@ function draw() {
 
   strokeWeight(1);
   // 어떤 일이 일어나는 지에 대한 설명을 추가합니다.
-  text('Modulator Frequency: ' + modFreq.toFixed(3) + ' Hz', 20, 20);
+  text("Modulator Frequency: " + modFreq.toFixed(3) + " Hz", 20, 20);
   text(
-    'Modulator Amplitude (Modulation Depth): ' + modDepth.toFixed(3),
+    "Modulator Amplitude (Modulation Depth): " + modDepth.toFixed(3),
     20,
     40
   );
   text(
-    'Carrier Frequency (pre-modulation): ' + carrierBaseFreq + ' Hz',
+    "Carrier Frequency (pre-modulation): " + carrierBaseFreq + " Hz",
     width / 2,
     20
   );
@@ -130,13 +130,13 @@ function draw() {
 
 // 사운드 토글을 위한 helper 함수
 function toggleAudio(cnv) {
-  cnv.mouseOver(function() {
+  cnv.mouseOver(function () {
     carrier.amp(1.0, 0.01);
   });
-  cnv.touchStarted(function() {
+  cnv.touchStarted(function () {
     carrier.amp(1.0, 0.01);
   });
-  cnv.mouseOut(function() {
+  cnv.mouseOut(function () {
     carrier.amp(0.0, 1.0);
   });
 }

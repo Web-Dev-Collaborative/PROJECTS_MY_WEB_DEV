@@ -3,7 +3,7 @@
  * @description The word "tickle" jitters when the cursor hovers over.
  * Sometimes, it can be tickled off the screen.
  */
-let message = 'tickle',
+let message = "tickle",
   font,
   bounds, // holds x, y, w, h of the text's bounding box
   fontsize = 60,
@@ -11,7 +11,7 @@ let message = 'tickle',
   y; // x and y coordinates of the text
 
 function preload() {
-  font = loadFont('assets/SourceSansPro-Regular.otf');
+  font = loadFont("assets/SourceSansPro-Regular.otf");
 }
 
 function setup() {

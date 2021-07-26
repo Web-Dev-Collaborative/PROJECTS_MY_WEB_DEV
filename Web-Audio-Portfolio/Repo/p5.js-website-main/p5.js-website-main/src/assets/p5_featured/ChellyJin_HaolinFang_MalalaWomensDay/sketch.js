@@ -10,9 +10,9 @@ var font;
 function preload() {
   font = loadFont("Inconsolata.otf");
   malala = loadImage("malala.png");
-quote = "Let us remember:   One book, one pen, one child, and one teacher can change the world - Malala Yousafzai";
+  quote =
+    "Let us remember:   One book, one pen, one child, and one teacher can change the world - Malala Yousafzai";
 
-  
   book[0] = loadImage("book1.png");
   book[1] = loadImage("book2.png");
   book[2] = loadImage("book3.png");
@@ -25,16 +25,13 @@ quote = "Let us remember:   One book, one pen, one child, and one teacher can ch
   pen[3] = loadImage("pen3.png");
   pen[4] = loadImage("pen4.png");
   pen[5] = loadImage("pen5.png");
-  
-  
+
   child[0] = loadImage("handone.png");
   child[1] = loadImage("handtwo.png");
 
   teacher[0] = loadImage("mouth1.png");
   teacher[1] = loadImage("mouth2.png");
   teacher[2] = loadImage("mouth3.png");
-
-
 }
 
 function setup() {
@@ -45,15 +42,15 @@ function setup() {
 
 function draw() {
   clear();
-  noStroke();  
-    
+  noStroke();
+
   if (scene == 1) {
     textSize(25);
     textFont(font);
-    fill('#68c7b7');
-    text("Click the screen to change image.", windowWidth*0.5, 100);
+    fill("#68c7b7");
+    text("Click the screen to change image.", windowWidth * 0.5, 100);
   }
-  
+
   // Opening book
   if (scene == 2) {
     frame = int(map(mouseX, 0, width, 0, book.length));
@@ -93,17 +90,17 @@ function draw() {
         image(teacher[frame], i + 15, j + 50, 50, 50);
     }
   }
-    image(malala, 175, windowHeight * 0.70, 1000, 1000);
-    fill(246,144,101);
-    textSize(20);
-    text(quote, windowWidth-200, windowHeight/2-50, 150, 500);
-    fill(255,255,153,50);
-  ellipse(mouseX,mouseY,80,80);
-	fill(255,255,153,150);
-  ellipse(mouseX,mouseY,50,50);
-  ellipse(mouseX,mouseY,15,15);
+  image(malala, 175, windowHeight * 0.7, 1000, 1000);
+  fill(246, 144, 101);
+  textSize(20);
+  text(quote, windowWidth - 200, windowHeight / 2 - 50, 150, 500);
+  fill(255, 255, 153, 50);
+  ellipse(mouseX, mouseY, 80, 80);
+  fill(255, 255, 153, 150);
+  ellipse(mouseX, mouseY, 50, 50);
+  ellipse(mouseX, mouseY, 15, 15);
   fill("#ffff32");
-  ellipse(mouseX,mouseY,10,10);
+  ellipse(mouseX, mouseY, 10, 10);
 }
 
 function mousePressed() {
@@ -115,7 +112,7 @@ function mousePressed() {
     scene = 4;
   } else if (scene == 4) {
     scene = 5;
-  }	else if (scene == 5) {
+  } else if (scene == 5) {
     scene = 2;
   }
 }

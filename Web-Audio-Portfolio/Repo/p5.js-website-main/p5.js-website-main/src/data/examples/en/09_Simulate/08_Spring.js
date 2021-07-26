@@ -5,24 +5,24 @@
  */
 // Spring drawing constants for top bar
 let springHeight = 32,
-    left,
-    right,
-    maxHeight = 200,
-    minHeight = 100,
-    over = false,
-    move = false;
+  left,
+  right,
+  maxHeight = 200,
+  minHeight = 100,
+  over = false,
+  move = false;
 
 // Spring simulation constants
-let M = 0.8,  // Mass
-    K = 0.2,  // Spring constant
-    D = 0.92, // Damping
-    R = 150;  // Rest position
+let M = 0.8, // Mass
+  K = 0.2, // Spring constant
+  D = 0.92, // Damping
+  R = 150; // Rest position
 
 // Spring simulation variables
-let ps = R,   // Position
-    vs = 0.0, // Velocity
-    as = 0,   // Acceleration
-    f = 0;    // Force
+let ps = R, // Position
+  vs = 0.0, // Velocity
+  as = 0, // Acceleration
+  f = 0; // Force
 
 function setup() {
   createCanvas(710, 400);
@@ -56,11 +56,11 @@ function drawSpring() {
 
 function updateSpring() {
   // Update the spring position
-  if ( !move ) {
-    f = -K * ( ps - R ); // f=-ky
-    as = f / M;          // Set the acceleration, f=ma == a=f/m
-    vs = D * (vs + as);  // Set the velocity
-    ps = ps + vs;        // Updated position
+  if (!move) {
+    f = -K * (ps - R); // f=-ky
+    as = f / M; // Set the acceleration, f=ma == a=f/m
+    vs = D * (vs + as); // Set the velocity
+    ps = ps + vs; // Updated position
   }
 
   if (abs(vs) < 0.1) {
@@ -68,7 +68,12 @@ function updateSpring() {
   }
 
   // Test if mouse if over the top bar
-  if (mouseX > left && mouseX < right && mouseY > ps && mouseY < ps + springHeight) {
+  if (
+    mouseX > left &&
+    mouseX < right &&
+    mouseY > ps &&
+    mouseY < ps + springHeight
+  ) {
     over = true;
   } else {
     over = false;

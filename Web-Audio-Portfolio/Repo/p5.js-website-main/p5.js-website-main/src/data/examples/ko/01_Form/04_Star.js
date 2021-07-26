@@ -1,6 +1,6 @@
 /*
  * @name 별모양
- * @description 이 예제에서 소개하는 star()함수는 여러가지 다양한 모양을 그립니다. 
+ * @description 이 예제에서 소개하는 star()함수는 여러가지 다양한 모양을 그립니다.
  * draw()함수 내에 호출된 polygon() 안에 다양한 숫자를 넣어 탐구해보세요.
  */
 function setup() {

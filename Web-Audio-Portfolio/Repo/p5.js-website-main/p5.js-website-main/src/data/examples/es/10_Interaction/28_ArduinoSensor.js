@@ -20,17 +20,15 @@
 function setup() {
   createCanvas(400, 400);
   noStroke();
-  fill('#ff00aa22');
+  fill("#ff00aa22");
   receiveSensorData(handleData);
 }
 
 function handleData(data) {
-
   console.log(data); // emitir los valores a registrar
   // data[0] es el primer valor, data[1] el segundo, etc.
 
   // Dibuja! Navega http://p5js.org/reference/
-  background('#ddd');
-  ellipse(100, 200, data[0]+10, data[0]+10);
-
+  background("#ddd");
+  ellipse(100, 200, data[0] + 10, data[0] + 10);
 }

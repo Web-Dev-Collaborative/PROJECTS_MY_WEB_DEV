@@ -1,11 +1,11 @@
 let img;
-function setup(){
+function setup() {
   createCanvas(100, 100);
   img = loadImage("/assets/learn/program-flow/images/clouds.jpg");
   noLoop();
 }
 
-function draw(){
+function draw() {
   background(200);
-  image(img,0,0);
+  image(img, 0, 0);
 }

@@ -1,0 +1,80 @@
+/* the div that holds the date picker calendar */
+.dpDiv {}
+
+
+/* the table (within the div) that holds the date picker calendar */
+.dpTable {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  color: #505050;
+  background-color: #ece9d8;
+  border: 1px solid #AAAAAA;
+}
+
+
+/* a table row that holds date numbers (either blank or 1-31) */
+.dpTR {}
+
+
+/* the top table row that holds the month, year, and forward/backward buttons */
+.dpTitleTR {}
+
+/* the .dpDayTR {}
+
+
+/* the bottom table row, that has the "This Month" and "Close" buttons */
+.dpTodayButtonTR {}
+.dpTD {
+  borde
+}
+
+/.dpDayHighlightTD {
+  backgro
+}
+
+
+/* the da.dpTDHover {
+  background-color: #aca998;
+  border: 1px solid #888888;
+  cursor: pointer;
+  color
+  }
+/* the table cell that holds the name of the month and the year */
+
+/* a table cell that holds one of the forward/backward buttons */
+.
+
+/* the ta.dpTodayButtonTD {}
+
+/* a table cell that holds the names of days of the week (Mo, Tu, We, etc.) */
+.dpDayTD {
+  backg border: 1px solid #AAAAAA;
+  color: white;
+}
+
+/* additional style infor.dpTitleText {
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+}
+/* additional style information for the cell that holds a highlighted day (usually either today's date or the current date field value) */
+.dpDayH color: 4060ff;
+font-weight: bold;
+}
+/* the forward/backward buttons at the top */
+.dpButton {
+  font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: gray;
+  background: #d8e8ff;
+  font-weight: bold;
+  padding: 0px;
+}
+/* the "This Month" and "Close" buttons at the bottom */
+.dpTodayButton {
+  font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: gray;
+  background: #d8e8ff;
+}

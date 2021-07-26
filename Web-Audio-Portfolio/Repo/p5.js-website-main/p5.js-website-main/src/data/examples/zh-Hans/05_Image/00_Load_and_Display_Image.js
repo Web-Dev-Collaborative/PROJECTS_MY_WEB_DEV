@@ -9,11 +9,11 @@ let img; // 声明变量 'img'
 
 function setup() {
   createCanvas(720, 400);
-  img = loadImage('assets/moonwalk.jpg'); // 加载图像
+  img = loadImage("assets/moonwalk.jpg"); // 加载图像
 }
 
 function draw() {
-  // 在坐标(0, 0)，显示原图大小的图像 
+  // 在坐标(0, 0)，显示原图大小的图像
   image(img, 0, 0);
   // 在坐标(0, 高度/2)，显示一半原图大小的图像
   image(img, 0, height / 2, img.width / 2, img.height / 2);

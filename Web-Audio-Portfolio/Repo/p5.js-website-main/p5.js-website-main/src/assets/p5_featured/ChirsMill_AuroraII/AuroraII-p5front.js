@@ -36,16 +36,15 @@ var stepRes = 0.041;
 //Appearance
 var strWei = 1;
 var strAlpha = 0.55;
-var bgAlpha = 1/20;
+var bgAlpha = 1 / 20;
 
 //Motion
 var m, mAcc;
-var maxVel = 0.010;
+var maxVel = 0.01;
 
 //Timer
 var start, end;
 var trigger = 12; //seconds
-
 
 function setup() {
   //devicePixelScaling(false);
@@ -69,29 +68,31 @@ function init2() {
   //Timer Start
   if (timed) {
     start = millis();
-    end = start + (trigger*1000);
+    end = start + trigger * 1000;
   }
 
   //Colors
-    var h = random(360);
-    if (blur) {bg = color(0,0,100,bgAlpha);}
-    else {bg = color(0,0,100);}
-    str = color(h,80,75, strAlpha);
+  var h = random(360);
+  if (blur) {
+    bg = color(0, 0, 100, bgAlpha);
+  } else {
+    bg = color(0, 0, 100);
+  }
+  str = color(h, 80, 75, strAlpha);
 
   //Corners
   var x = new Array();
   var y = new Array();
   if (genCoord) {
-    x[0] = (width/2)-random(height/2);
-    y[0] = (height/2)-random(height/2);
-    x[1] = (width/2)-random(height/2);
-    y[1] = (height/2)+random(height/2);
-    x[2] = (width/2)+random(height/2);
-    y[2] = (height/2)-random(height/2);
-    x[3] = (width/2)+random(height/2);
-    y[3] = (height/2)+random(height/2);
-  }
-  else {
+    x[0] = width / 2 - random(height / 2);
+    y[0] = height / 2 - random(height / 2);
+    x[1] = width / 2 - random(height / 2);
+    y[1] = height / 2 + random(height / 2);
+    x[2] = width / 2 + random(height / 2);
+    y[2] = height / 2 - random(height / 2);
+    x[3] = width / 2 + random(height / 2);
+    y[3] = height / 2 + random(height / 2);
+  } else {
     for (var i = 0; i < 4; i++) {
       x[i] = random(width);
       y[i] = random(height);
@@ -104,10 +105,10 @@ function init2() {
 
   //Stepping Lines
   for (var i = 0; i < numlines; ++i) {
-    s1[i] = p5.Vector.lerp(p[0], p[1], i/(numlines-1));
+    s1[i] = p5.Vector.lerp(p[0], p[1], i / (numlines - 1));
   }
   for (var i = 0; i < numlines; ++i) {
-    s2[i] = p5.Vector.lerp(p[2], p[3], i/(numlines-1));
+    s2[i] = p5.Vector.lerp(p[2], p[3], i / (numlines - 1));
   }
 
   //Motion
@@ -115,17 +116,16 @@ function init2() {
   if (randir) {
     xvel = random(-maxVel, maxVel);
     yvel = random(-maxVel, maxVel);
-  }
-  else{
+  } else {
     xvel = 0;
     yvel = random(0, -maxVel);
   }
   m = createVector(xvel, yvel);
-  mAcc = createVector(0,0);
+  mAcc = createVector(0, 0);
 
   //Amplitude
   if (!controlAmp) {
-    amplitude = minAmp+abs(randomGaussian())*(maxAmp-minAmp);
+    amplitude = minAmp + abs(randomGaussian()) * (maxAmp - minAmp);
   }
 
   //Generate Lines
@@ -164,7 +164,13 @@ function windowResized() {
 function mousePressed() {
   if (mouseButton == LEFT) {
     if (controlAmp) {
-      amplitude = map(mouseY, 0, windowHeight, minAmp-safeAmp, maxAmp+safeAmp)
+      amplitude = map(
+        mouseY,
+        0,
+        windowHeight,
+        minAmp - safeAmp,
+        maxAmp + safeAmp
+      );
       amplitude = constrain(amplitude, minAmp, maxAmp);
     }
     init2();
@@ -174,23 +180,27 @@ function mousePressed() {
 }
 
 function touchStarted() {
-    if (controlAmp) {
-      amplitude = map(touchY, 0, windowHeight, minAmp-safeAmp, maxAmp+safeAmp)
-      amplitude = constrain(amplitude, minAmp, maxAmp);
-    }
-    init2();
+  if (controlAmp) {
+    amplitude = map(
+      touchY,
+      0,
+      windowHeight,
+      minAmp - safeAmp,
+      maxAmp + safeAmp
+    );
+    amplitude = constrain(amplitude, minAmp, maxAmp);
+  }
+  init2();
   // prevent default
   //return false;
 }
 
-
 function coin() {
-  if (random(1)>0.5) return true;
+  if (random(1) > 0.5) return true;
   else return false;
 }
 
-
-function Line2 (p1_, p2_, divs_, step_) {
+function Line2(p1_, p2_, divs_, step_) {
   this.p1 = p1_;
   this.p2 = p2_;
   this.divs = divs_;
@@ -211,29 +221,30 @@ function Line2 (p1_, p2_, divs_, step_) {
   this.generateVectors();
 }
 
-Line2.prototype.generateVectors = function() {
+Line2.prototype.generateVectors = function () {
   for (var i = 0; i < this.divs; ++i) {
-    var n = (noise((i * lineRes) + mAcc.x, (this.step * stepRes) + mAcc.y) - 0.5) * 2;
+    var n =
+      (noise(i * lineRes + mAcc.x, this.step * stepRes + mAcc.y) - 0.5) * 2;
     // var mod = pow( sin(i*PI/(this.divs-1)), edgeCalm);
     // var mod2 = pow( sin(this.step*PI/(numlines-1)), edgeCalm);
     // var sizedamp = width/1920;
 
-    this.points[i] = p5.Vector.lerp(this.p1, this.p2, i/(this.divs-1));
-    this.points[i].add(p5.Vector.mult(this.vPerp, n*amplitude));
+    this.points[i] = p5.Vector.lerp(this.p1, this.p2, i / (this.divs - 1));
+    this.points[i].add(p5.Vector.mult(this.vPerp, n * amplitude));
   }
-}
+};
 
-Line2.prototype.draw = function() {
+Line2.prototype.draw = function () {
   beginShape();
   for (var i = 0; i < this.divs; ++i) {
     curveVertex(this.points[i].x, this.points[i].y);
   }
   endShape();
-}
+};
 
-Line2.prototype.update = function() {
+Line2.prototype.update = function () {
   this.generateVectors();
-}
+};
 
 /*
   The MIT License (MIT)

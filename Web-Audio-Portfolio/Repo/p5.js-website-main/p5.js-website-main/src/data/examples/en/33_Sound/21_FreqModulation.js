@@ -72,13 +72,13 @@ function setup() {
   let cnv = createCanvas(800, 400);
   noFill();
 
-  carrier = new p5.Oscillator('sine');
+  carrier = new p5.Oscillator("sine");
   carrier.amp(0); // set amplitude
   carrier.freq(carrierBaseFreq); // set frequency
   carrier.start(); // start oscillating
 
   // try changing the type to 'square', 'sine' or 'triangle'
-  modulator = new p5.Oscillator('sawtooth');
+  modulator = new p5.Oscillator("sawtooth");
   modulator.start();
 
   // add the modulator's output to modulate the carrier's frequency
@@ -121,14 +121,14 @@ function draw() {
 
   strokeWeight(1);
   // add a note about what's happening
-  text('Modulator Frequency: ' + modFreq.toFixed(3) + ' Hz', 20, 20);
+  text("Modulator Frequency: " + modFreq.toFixed(3) + " Hz", 20, 20);
   text(
-    'Modulator Amplitude (Modulation Depth): ' + modDepth.toFixed(3),
+    "Modulator Amplitude (Modulation Depth): " + modDepth.toFixed(3),
     20,
     40
   );
   text(
-    'Carrier Frequency (pre-modulation): ' + carrierBaseFreq + ' Hz',
+    "Carrier Frequency (pre-modulation): " + carrierBaseFreq + " Hz",
     width / 2,
     20
   );
@@ -136,13 +136,13 @@ function draw() {
 
 // helper function to toggle sound
 function toggleAudio(cnv) {
-  cnv.mouseOver(function() {
+  cnv.mouseOver(function () {
     carrier.amp(1.0, 0.01);
   });
-  cnv.touchStarted(function() {
+  cnv.touchStarted(function () {
     carrier.amp(1.0, 0.01);
   });
-  cnv.mouseOut(function() {
+  cnv.mouseOut(function () {
     carrier.amp(0.0, 1.0);
   });
 }

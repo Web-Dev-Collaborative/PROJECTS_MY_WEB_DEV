@@ -1,10 +1,10 @@
 // Results in Chrome:
-// 
+//
 //  p5 dist took:                 3205.14ms.
 //  Distance squared squred took: 2921.55ms.
-//  
+//
 // Results in p5 Editor:
-// 
+//
 //  p5 dist took:                 5381.38ms.
 //  Distance squared squred took: 2450.13ms.
 
@@ -23,7 +23,7 @@ function setup() {
   var maxDistance = 50;
 
   // -- DISTANCE ---------------------------------------------------------------
-  
+
   var lastPoint = points[0];
   var start = millis();
   for (var i = 0; i < iterations; i++) {
@@ -32,8 +32,7 @@ function setup() {
     lastPoint = points[i];
   }
   var elapsed = millis() - start;
-  console.log("p5 dist took: " + elapsed.toFixed(2) + "ms.")
-
+  console.log("p5 dist took: " + elapsed.toFixed(2) + "ms.");
 
   // -- DISTANCE SQUARED -------------------------------------------------------
 
@@ -42,7 +41,7 @@ function setup() {
     var dx = x2 - x1;
     var dy = y2 - y1;
     return dx * dx + dy * dy;
-  }
+  };
   var lastPoint = points[0];
   var start = millis();
   for (var i = 0; i < iterations; i++) {
@@ -51,6 +50,5 @@ function setup() {
     lastPoint = points[i];
   }
   var elapsed = millis() - start;
-  console.log("Distance squared squred took: " + elapsed.toFixed(2) + "ms.")
-
+  console.log("Distance squared squred took: " + elapsed.toFixed(2) + "ms.");
 }

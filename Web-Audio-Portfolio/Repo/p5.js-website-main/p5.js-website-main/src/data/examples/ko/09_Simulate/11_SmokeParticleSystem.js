@@ -16,12 +16,15 @@ function preload() {
 }
 
 function setup() {
-
   // 캔버스 사이즈 설정
   createCanvas(640, 360);
 
   // 파티클 시스템 초기화
-  ps = new ParticleSystem(0, createVector(width / 2, height - 60), particle_texture);
+  ps = new ParticleSystem(
+    0,
+    createVector(width / 2, height - 60),
+    particle_texture
+  );
 }
 
 function draw() {
@@ -43,7 +46,7 @@ function draw() {
 /**
  *  이 함수는 "wind(바람)"이 부는 방향을 나타낸 화살표를 그립니다.
  */
-function drawVector(v, loc, scale){
+function drawVector(v, loc, scale) {
   push();
   let arrowsize = 4;
   translate(loc.x, loc.y);
@@ -51,9 +54,9 @@ function drawVector(v, loc, scale){
   rotate(v.heading());
 
   let len = v.mag() * scale;
-  line(0, 0, len,0);
-  line(len, 0, len-arrowsize, +arrowsize / 2);
-  line(len, 0, len-arrowsize, -arrowsize / 2);
+  line(0, 0, len, 0);
+  line(len, 0, len - arrowsize, +arrowsize / 2);
+  line(len, 0, len - arrowsize, -arrowsize / 2);
   pop();
 }
 //========= 파티클 시스템 ===========
@@ -65,12 +68,11 @@ function drawVector(v, loc, scale){
  * @param img_ 시스템 상 각 파티클의 텍스쳐를 나타내는 매개 변수
  * @constructor 생성자
  */
-let ParticleSystem = function(num, v, img_) {
-
+let ParticleSystem = function (num, v, img_) {
   this.particles = [];
   this.origin = v.copy(); // 실수로 원래 벡터값(origin)을 바꾼 경우를 대비하여, 벡터값을 복사합니다.
-  this.img = img_
-  for(let i = 0; i < num; ++i){
+  this.img = img_;
+  for (let i = 0; i < num; ++i) {
     this.particles.push(new Particle(this.origin, this.img));
   }
 };
@@ -78,8 +80,7 @@ let ParticleSystem = function(num, v, img_) {
 /**
  * 이 함수는 전체 파티클 시스템을 실행합니다.
  */
-ParticleSystem.prototype.run = function() {
-
+ParticleSystem.prototype.run = function () {
   // 변수들에 반복할, 숨겨진 배열 길이
   // for 반복문에 <variable> .length가 표시 될 수 있지만, 매 반복마다 그 길이가
   // 다시 계산되기 때문에 여기에 숨깁니다.
@@ -98,26 +99,25 @@ ParticleSystem.prototype.run = function() {
       this.particles.splice(i, 1);
     }
   }
-}
+};
 
 /**
  * 현재 시스템의 존재하는 모든 파티클에 힘 벡터를 추가하는 메소드
  * @param dir 힘의 방향을 묘사하는 p5.Vector 매개 변수
  */
-ParticleSystem.prototype.applyForce = function(dir) {
+ParticleSystem.prototype.applyForce = function (dir) {
   let len = this.particles.length;
-  for(let i = 0; i < len; ++i){
+  for (let i = 0; i < len; ++i) {
     this.particles[i].applyForce(dir);
   }
-}
+};
 
 /**
  * 본래 지정된 텍스쳐와 동일한 텍스쳐의 파티클을 시스템 원점에 추가
  */
-ParticleSystem.prototype.addParticle = function() {
-    this.particles.push(new Particle(this.origin, this.img));
-}
-
+ParticleSystem.prototype.addParticle = function () {
+  this.particles.push(new Particle(this.origin, this.img));
+};
 
 //========= 파티클 ===========
 /**
@@ -133,31 +133,31 @@ let Particle = function (pos, img_) {
   this.acc = createVector();
   this.lifespan = 100.0;
   this.texture = img_;
-}
+};
 
 /**
  *  파티클을 업데이트하는 동시에 보이게 하기
  */
-Particle.prototype.run = function() {
+Particle.prototype.run = function () {
   this.update();
   this.render();
-}
+};
 
 /**
  *  파티클을 화면에 보이게하는 메소드
  */
-Particle.prototype.render = function() {
+Particle.prototype.render = function () {
   imageMode(CENTER);
   tint(255, this.lifespan);
   image(this.texture, this.loc.x, this.loc.y);
-}
+};
 
 /**
  *  파티클에 힘 벡터를 적용하는 메소드
  */
-Particle.prototype.applyForce = function(f) {
+Particle.prototype.applyForce = function (f) {
   this.acc.add(f);
-}
+};
 
 /**
  *  파티클의 lifespan(수명)이 끝나가는지 여부를 확인하는 메소드
@@ -167,16 +167,16 @@ Particle.prototype.isDead = function () {
   if (this.lifespan <= 0.0) {
     return true;
   } else {
-      return false;
-    }
-}
+    return false;
+  }
+};
 
 /**
  *  파티클의 위치를 업데이트하는 메소드
  */
-Particle.prototype.update = function() {
+Particle.prototype.update = function () {
   this.vel.add(this.acc);
   this.loc.add(this.vel);
   this.lifespan -= 2.5;
   this.acc.mult(0);
-}
+};

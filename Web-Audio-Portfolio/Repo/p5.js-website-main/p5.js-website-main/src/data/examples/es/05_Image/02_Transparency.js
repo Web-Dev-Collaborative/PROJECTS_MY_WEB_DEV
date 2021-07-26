@@ -12,7 +12,7 @@ let easing = 0.05;
 
 function setup() {
   createCanvas(720, 400);
-  img = loadImage('assets/moonwalk.jpg'); // Cargar una imagen al programa
+  img = loadImage("assets/moonwalk.jpg"); // Cargar una imagen al programa
 }
 
 function draw() {

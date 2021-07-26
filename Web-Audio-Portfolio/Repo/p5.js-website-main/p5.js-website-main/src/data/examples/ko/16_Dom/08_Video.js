@@ -11,8 +11,8 @@ let button;
 
 function setup() {
   // 여러 브라우저 지원을 위해 다양한 비디오 형식 지정
-  fingers = createVideo(['assets/fingers.mov', 'assets/fingers.webm']);
-  button = createButton('play');
+  fingers = createVideo(["assets/fingers.mov", "assets/fingers.webm"]);
+  button = createButton("play");
   button.mousePressed(toggleVid); // 버튼 리스너 붙이기
 }
 
@@ -20,10 +20,10 @@ function setup() {
 function toggleVid() {
   if (playing) {
     fingers.pause();
-    button.html('play');
+    button.html("play");
   } else {
     fingers.loop();
-    button.html('pause');
+    button.html("pause");
   }
   playing = !playing;
 }

@@ -12,7 +12,7 @@ let smallPoint, largePoint;
 
 function preload() {
   // 加载图像
-  img = loadImage('assets/moonwalk.jpg');
+  img = loadImage("assets/moonwalk.jpg");
 }
 
 function setup() {

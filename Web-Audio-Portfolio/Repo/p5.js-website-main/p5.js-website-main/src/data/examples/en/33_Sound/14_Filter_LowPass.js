@@ -15,8 +15,8 @@ let fft;
 let filter, filterFreq, filterRes;
 
 function preload() {
-  soundFormats('mp3', 'ogg');
-  soundFile = loadSound('assets/beat');
+  soundFormats("mp3", "ogg");
+  soundFile = loadSound("assets/beat");
 }
 
 function setup() {

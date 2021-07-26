@@ -8,7 +8,7 @@ let w = 10;
 // An array of 0s and 1s
 let cells;
 
- // We arbitrarily start with just the middle cell having a state of "1"
+// We arbitrarily start with just the middle cell having a state of "1"
 let generation = 0;
 
 // An array to store the ruleset, for example {0,1,1,0,1,1,0,1}
@@ -20,8 +20,7 @@ function setup() {
   for (let i = 0; i < cells.length; i++) {
     cells[i] = 0;
   }
-  cells[cells.length/2] = 1;
-
+  cells[cells.length / 2] = 1;
 }
 
 function draw() {
@@ -34,7 +33,7 @@ function draw() {
       rect(i * w, generation * w, w, w);
     }
   }
-  if (generation < height/w) {
+  if (generation < height / w) {
     generate();
   }
 }
@@ -45,17 +44,16 @@ function generate() {
   let nextgen = Array(cells.length);
   // For every spot, determine new state by examing current state, and neighbor states
   // Ignore edges that only have one neighor
-  for (let i = 1; i < cells.length-1; i++) {
-    let left   = cells[i-1];   // Left neighbor state
-    let me     = cells[i];     // Current state
-    let right  = cells[i+1];   // Right neighbor state
+  for (let i = 1; i < cells.length - 1; i++) {
+    let left = cells[i - 1]; // Left neighbor state
+    let me = cells[i]; // Current state
+    let right = cells[i + 1]; // Right neighbor state
     nextgen[i] = rules(left, me, right); // Compute next generation state based on ruleset
   }
   // The current generation is the new generation
   cells = nextgen;
   generation++;
 }
-
 
 // Implementing the Wolfram rules
 // Could be improved and made more concise, but here we can explicitly see what is going on for each case
@@ -70,4 +68,3 @@ function rules(a, b, c) {
   if (a == 0 && b == 0 && c == 0) return ruleset[7];
   return 0;
 }
-

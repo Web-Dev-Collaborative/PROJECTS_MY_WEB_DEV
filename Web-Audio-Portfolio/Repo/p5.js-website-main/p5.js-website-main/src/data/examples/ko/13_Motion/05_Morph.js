@@ -20,7 +20,7 @@ let state = false;
 function setup() {
   createCanvas(720, 400);
 
-    // 중심을 가리키는 벡터를 사용하여 원 그리기
+  // 중심을 가리키는 벡터를 사용하여 원 그리기
   for (let angle = 0; angle < 360; angle += 9) {
     // 주의: 원의 이동 경로와 상응하기 위해, 0에서 시작하지 않습니다.
     let v = p5.Vector.fromAngle(radians(angle - 135));
@@ -85,7 +85,7 @@ function draw() {
   noFill();
   stroke(255);
 
-  morph.forEach(v => {
+  morph.forEach((v) => {
     vertex(v.x, v.y);
   });
   endShape(CLOSE);

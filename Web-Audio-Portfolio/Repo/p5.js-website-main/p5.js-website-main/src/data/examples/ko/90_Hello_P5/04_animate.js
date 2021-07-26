@@ -14,20 +14,19 @@ function setup() {
 
 function draw() {
   background(200);
-  
+
   // 원 그리기
   stroke(50);
   fill(100);
   ellipse(x, y, 24, 24);
-  
+
   // 가로축에서 무작위로 흔들리기
   x = x + random(-1, 1);
   // 일정 속도로 위를 향해 움직이기
   y = y - 1;
-  
+
   // 화면 하단으로 리셋
   if (y < 0) {
     y = height;
   }
 }
-

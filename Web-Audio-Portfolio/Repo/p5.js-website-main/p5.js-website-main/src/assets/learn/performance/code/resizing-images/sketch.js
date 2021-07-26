@@ -6,14 +6,13 @@
 
 // NOTE: this code disregards pixel density
 
-// Image sources: 
+// Image sources:
 //  - steve lodefink, blackberry
 //    https://flic.kr/p/2sGVow
 //    Creative Commons Attribution License (Share, Adapt, Commercial)
 //  - floral pattern
 //    http://www.publicdomainpictures.net/view-image.php?image=51731&picture=vintage-floral-wallpaper-pattern
-//    Creative Commons Public Domain 
-
+//    Creative Commons Public Domain
 
 p5.disableFriendlyErrors = true;
 
@@ -31,7 +30,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(originalImage.width * 4 , originalImage.height);
+  createCanvas(originalImage.width * 4, originalImage.height);
   background(255);
 
   stepSize = originalImage.width / preshrunkImage.width;
@@ -44,7 +43,6 @@ function setup() {
   imageResize();
   translate(originalImage.width, 0);
   iterativeImageResize();
-
 }
 
 function resizeBeforeRuntime() {
@@ -55,7 +53,6 @@ function resizeBeforeRuntime() {
 
   // Iterations
   for (var i = 0; i < iterations; i++) {
-
     // Get the pixel data
     preshrunkImage.loadPixels();
 
@@ -64,19 +61,18 @@ function resizeBeforeRuntime() {
       for (var y = 0; y < h; y++) {
         var index = 4 * (y * w + x);
         var r = preshrunkImage.pixels[index];
-        var g = preshrunkImage.pixels[index+1];
-        var b = preshrunkImage.pixels[index+2];
-        var a = preshrunkImage.pixels[index+3];  
+        var g = preshrunkImage.pixels[index + 1];
+        var b = preshrunkImage.pixels[index + 2];
+        var a = preshrunkImage.pixels[index + 3];
         fill(r, g, b, a);
         noStroke();
-        rect(x * stepSize, y * stepSize, stepSize, stepSize);  
+        rect(x * stepSize, y * stepSize, stepSize, stepSize);
       }
     }
-
   }
 
   var elapsed = millis() - start;
-  console.log("resizeBeforeRuntime took: " + elapsed.toFixed(2) + "ms.")
+  console.log("resizeBeforeRuntime took: " + elapsed.toFixed(2) + "ms.");
 }
 
 function sampleImage() {
@@ -87,7 +83,6 @@ function sampleImage() {
 
   // Iterations
   for (var i = 0; i < iterations; i++) {
-
     // Get the pixel data
     originalImage.loadPixels();
 
@@ -96,19 +91,18 @@ function sampleImage() {
       for (var y = 0; y < h; y += stepSize) {
         var index = 4 * (y * w + x);
         var r = originalImage.pixels[index];
-        var g = originalImage.pixels[index+1];
-        var b = originalImage.pixels[index+2];
-        var a = originalImage.pixels[index+3];  
+        var g = originalImage.pixels[index + 1];
+        var b = originalImage.pixels[index + 2];
+        var a = originalImage.pixels[index + 3];
         fill(r, g, b, a);
         noStroke();
-        rect(x, y, stepSize, stepSize);  
+        rect(x, y, stepSize, stepSize);
       }
     }
-
   }
 
   var elapsed = millis() - start;
-  console.log("sampleImage took: " + elapsed.toFixed(2) + "ms.")
+  console.log("sampleImage took: " + elapsed.toFixed(2) + "ms.");
 }
 
 function imageResize() {
@@ -117,8 +111,17 @@ function imageResize() {
   var originalWidth = originalImage.width;
   var originalHeight = originalImage.height;
   var img = new p5.Image(originalWidth, originalHeight);
-  img.copy(originalImage, 0, 0, originalWidth, originalHeight, 0, 0, 
-    originalWidth, originalHeight);
+  img.copy(
+    originalImage,
+    0,
+    0,
+    originalWidth,
+    originalHeight,
+    0,
+    0,
+    originalWidth,
+    originalHeight
+  );
 
   // Setup work, only needs to be done once
   var w = preshrunkImage.width;
@@ -128,11 +131,9 @@ function imageResize() {
 
   // Resize the image
   img.resize(w, h);
-    
+
   // Iterations
   for (var i = 0; i < iterations; i++) {
-
-
     // Get the pixel data
     img.loadPixels();
 
@@ -141,19 +142,18 @@ function imageResize() {
       for (var y = 0; y < h; y++) {
         var index = 4 * (y * w + x);
         var r = img.pixels[index];
-        var g = img.pixels[index+1];
-        var b = img.pixels[index+2];
-        var a = img.pixels[index+3];  
+        var g = img.pixels[index + 1];
+        var b = img.pixels[index + 2];
+        var a = img.pixels[index + 3];
         fill(r, g, b, a);
         noStroke();
-        rect(x * stepSize, y * stepSize, stepSize, stepSize);  
+        rect(x * stepSize, y * stepSize, stepSize, stepSize);
       }
     }
-
   }
 
   var elapsed = millis() - start;
-  console.log("imageResize took: " + elapsed.toFixed(2) + "ms.")
+  console.log("imageResize took: " + elapsed.toFixed(2) + "ms.");
 }
 
 function iterativeImageResize() {
@@ -162,24 +162,33 @@ function iterativeImageResize() {
   var originalWidth = originalImage.width;
   var originalHeight = originalImage.height;
   var img = new p5.Image(originalWidth, originalHeight);
-  img.copy(originalImage, 0, 0, originalWidth, originalHeight, 0, 0, 
-    originalWidth, originalHeight);
+  img.copy(
+    originalImage,
+    0,
+    0,
+    originalWidth,
+    originalHeight,
+    0,
+    0,
+    originalWidth,
+    originalHeight
+  );
 
   var start = millis();
 
   // Interatively resize the image by halfing as many times as possible. In an
   // application, you would want to choose a number of times to half (1x - 2x
-  // times). The resizing here is extremely drastic for demonstration purposes, 
+  // times). The resizing here is extremely drastic for demonstration purposes,
   // so this is going to do 3x half resizes.
   // Source: http://stackoverflow.com/a/19262385
   var targetWidth = preshrunkImage.width;
   var targetHeight = preshrunkImage.height;
-  while (img.width > (2 * targetWidth) && img.height > (2 * targetHeight)) {
+  while (img.width > 2 * targetWidth && img.height > 2 * targetHeight) {
     img.resize(img.width / 2, img.height / 2);
   }
   // Final resize to get to the exact dimensions
   if (img.width !== targetWidth || img.height !== targetHeight) {
-    img.resize(targetWidth, targetHeight)
+    img.resize(targetWidth, targetHeight);
   }
 
   // Setup work, only needs to be done once
@@ -188,7 +197,6 @@ function iterativeImageResize() {
 
   // Iterations
   for (var i = 0; i < iterations; i++) {
-
     // Get the pixels
     img.loadPixels();
 
@@ -197,17 +205,16 @@ function iterativeImageResize() {
       for (var y = 0; y < h; y++) {
         var index = 4 * (y * w + x);
         var r = img.pixels[index];
-        var g = img.pixels[index+1];
-        var b = img.pixels[index+2];
-        var a = img.pixels[index+3];  
+        var g = img.pixels[index + 1];
+        var b = img.pixels[index + 2];
+        var a = img.pixels[index + 3];
         fill(r, g, b, a);
         noStroke();
-        rect(x * stepSize, y * stepSize, stepSize, stepSize);  
+        rect(x * stepSize, y * stepSize, stepSize, stepSize);
       }
     }
-
   }
 
   var elapsed = millis() - start;
-  console.log("iterativeImageResize took: " + elapsed.toFixed(2) + "ms.")
+  console.log("iterativeImageResize took: " + elapsed.toFixed(2) + "ms.");
 }

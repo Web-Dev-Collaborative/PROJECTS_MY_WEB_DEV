@@ -15,8 +15,6 @@ function setup() {
   // println(width);
   // println(height);
   // println(lines.length);
-
-
 }
 
 function draw() {
@@ -30,16 +28,12 @@ function draw() {
 
     // display
     lines[i].display();
-
   }
 
   // println(lines.length);
-
 }
 
-
 function Shape(x, y) {
-
   this.x = x;
   this.y = y;
   this.r = 200;
@@ -54,13 +48,18 @@ function Shape(x, y) {
   this.grow = 0;
   this.turn = 0;
 
-  this.display = function(x, y) {
+  this.display = function (x, y) {
     noStroke();
     fill(this.col);
-    rect(this.x, this.y, (5 * this.scale) + this.grow, (5 * this.scale) + this.grow);
-  }
+    rect(
+      this.x,
+      this.y,
+      5 * this.scale + this.grow,
+      5 * this.scale + this.grow
+    );
+  };
 
-  this.intersects = function() {
+  this.intersects = function () {
     var d = dist(this.x, this.y, mouseX, mouseY);
     if (d < this.r) {
       this.grow = 1.5 * this.scale;
@@ -74,9 +73,8 @@ function Shape(x, y) {
       this.scale = lerp(this.scale, 1.5, 0.05);
       return false;
     }
-  }
+  };
 }
-
 
 // function mousePressed() {
 //   for (var i = lines.length - 1; i >= 0; i--) {

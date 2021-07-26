@@ -39,42 +39,38 @@ PenroseLSystem.prototype.simulate = function (gen) {
   while (this.getAge() < gen) {
     this.iterate(this.production);
   }
-}
+};
 
 PenroseLSystem.prototype.reset = function () {
   this.production = this.axiom;
   this.drawLength = this.startLength;
   this.generations = 0;
-}
+};
 
 PenroseLSystem.prototype.getAge = function () {
   return this.generations;
-}
+};
 
 //apply substitution rules to create new iteration of production string
-PenroseLSystem.prototype.iterate = function() {
+PenroseLSystem.prototype.iterate = function () {
   let newProduction = "";
 
-  for(let i = 0; i < this.production.length; ++i) {
+  for (let i = 0; i < this.production.length; ++i) {
     let step = this.production.charAt(i);
     //if current character is 'W', replace current character
     //by corresponding rule
-    if (step == 'W') {
+    if (step == "W") {
       newProduction = newProduction + this.ruleW;
-    }
-    else if (step == 'X') {
+    } else if (step == "X") {
       newProduction = newProduction + this.ruleX;
-    }
-    else if (step == 'Y') {
+    } else if (step == "Y") {
       newProduction = newProduction + this.ruleY;
-    }
-    else if (step == 'Z') {
+    } else if (step == "Z") {
       newProduction = newProduction + this.ruleZ;
-    }
-    else {
+    } else {
       //drop all 'F' characters, don't touch other
       //characters (i.e. '+', '-', '[', ']'
-      if (step != 'F') {
+      if (step != "F") {
         newProduction = newProduction + step;
       }
     }
@@ -83,43 +79,37 @@ PenroseLSystem.prototype.iterate = function() {
   this.drawLength = this.drawLength * 0.5;
   this.generations++;
   this.production = newProduction;
-}
+};
 
 //convert production string to a turtle graphic
 PenroseLSystem.prototype.render = function () {
   translate(width / 2, height / 2);
 
   this.steps += 20;
-  if(this.steps > this.production.length) {
+  if (this.steps > this.production.length) {
     this.steps = this.production.length;
   }
 
-  for(let i = 0; i < this.steps; ++i) {
+  for (let i = 0; i < this.steps; ++i) {
     let step = this.production.charAt(i);
 
     //'W', 'X', 'Y', 'Z' symbols don't actually correspond to a turtle action
-    if( step == 'F') {
+    if (step == "F") {
       stroke(255, 60);
-      for(let j=0; j < this.repeats; j++) {
+      for (let j = 0; j < this.repeats; j++) {
         line(0, 0, 0, -this.drawLength);
         noFill();
         translate(0, -this.drawLength);
       }
       this.repeats = 1;
-    }
-    else if (step == '+') {
+    } else if (step == "+") {
       rotate(this.theta);
-    }
-    else if (step == '-') {
+    } else if (step == "-") {
       rotate(-this.theta);
-    }
-    else if (step == '[') {
+    } else if (step == "[") {
       push();
-    }
-    else if (step == ']') {
+    } else if (step == "]") {
       pop();
     }
   }
-}
-
-
+};

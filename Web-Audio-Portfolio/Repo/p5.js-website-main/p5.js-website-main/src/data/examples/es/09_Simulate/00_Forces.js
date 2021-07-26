@@ -28,7 +28,6 @@ function draw() {
   liquid.display();
 
   for (let i = 0; i < movers.length; i++) {
-
     // ¿Está el objeto Mover dentro del objeto líquido?
     if (liquid.contains(movers[i])) {
       // Calcular fuerza de arrastre
@@ -38,7 +37,7 @@ function draw() {
     }
 
     // Aquí se escala la gravedad según la masa
-    let gravity = createVector(0, 0.1*movers[i].mass);
+    let gravity = createVector(0, 0.1 * movers[i].mass);
     // Aplicar gravedad
     movers[i].applyForce(gravity);
 
@@ -47,9 +46,7 @@ function draw() {
     movers[i].display();
     movers[i].checkEdges();
   }
-
 }
-
 
 function mousePressed() {
   reset();
@@ -62,7 +59,7 @@ function reset() {
   }
 }
 
-let Liquid = function(x, y, w, h, c) {
+let Liquid = function (x, y, w, h, c) {
   this.x = x;
   this.y = y;
   this.w = w;
@@ -71,14 +68,18 @@ let Liquid = function(x, y, w, h, c) {
 };
 
 // ¿Está el objeto Mover dentro del objeto líquido?
-Liquid.prototype.contains = function(m) {
+Liquid.prototype.contains = function (m) {
   let l = m.position;
-  return l.x > this.x && l.x < this.x + this.w &&
-         l.y > this.y && l.y < this.y + this.h;
+  return (
+    l.x > this.x &&
+    l.x < this.x + this.w &&
+    l.y > this.y &&
+    l.y < this.y + this.h
+  );
 };
 
 // Calcular fuerza de arrastre
-Liquid.prototype.calculateDrag = function(m) {
+Liquid.prototype.calculateDrag = function (m) {
   // Magnitud es coeficiente * velocidad al cuadrado
   let speed = m.velocity.mag();
   let dragMagnitude = this.c * speed * speed;
@@ -94,7 +95,7 @@ Liquid.prototype.calculateDrag = function(m) {
   return dragForce;
 };
 
-Liquid.prototype.display = function() {
+Liquid.prototype.display = function () {
   noStroke();
   fill(50);
   rect(this.x, this.y, this.w, this.h);
@@ -109,12 +110,12 @@ function Mover(m, x, y) {
 
 // Segunda ley de Newton: F = M * A
 // ó A = F / M
-Mover.prototype.applyForce = function(force) {
-  let f = p5.Vector.div(force,this.mass);
+Mover.prototype.applyForce = function (force) {
+  let f = p5.Vector.div(force, this.mass);
   this.acceleration.add(f);
 };
 
-Mover.prototype.update = function() {
+Mover.prototype.update = function () {
   // La velocidad es cambiada según la aceleración
   this.velocity.add(this.acceleration);
   // La posición es cambiada según la velocidad
@@ -123,7 +124,7 @@ Mover.prototype.update = function() {
   this.acceleration.mult(0);
 };
 
-Mover.prototype.display = function() {
+Mover.prototype.display = function () {
   stroke(0);
   strokeWeight(2);
   fill(255, 127);
@@ -131,10 +132,10 @@ Mover.prototype.display = function() {
 };
 
 // Rebotar contra la parte inferior de la ventana
-Mover.prototype.checkEdges = function() {
-  if (this.position.y > (height - this.mass * 8)) {
+Mover.prototype.checkEdges = function () {
+  if (this.position.y > height - this.mass * 8) {
     // Un poco de amortiguamiento al rebotar contra el fondo
     this.velocity.y *= -0.9;
-    this.position.y = (height - this.mass * 8);
+    this.position.y = height - this.mass * 8;
   }
 };

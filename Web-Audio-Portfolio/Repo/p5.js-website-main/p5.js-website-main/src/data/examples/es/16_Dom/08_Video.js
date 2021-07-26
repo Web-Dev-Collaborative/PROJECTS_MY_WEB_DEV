@@ -9,8 +9,8 @@ let button;
 
 function setup() {
   // especificar múltiples formatos para distintos navegadores
-  fingers = createVideo(['assets/fingers.mov', 'assets/fingers.webm']);
-  button = createButton('play');
+  fingers = createVideo(["assets/fingers.mov", "assets/fingers.webm"]);
+  button = createButton("play");
   button.mousePressed(toggleVid); // adjuntar un listener al botón
 }
 
@@ -18,10 +18,10 @@ function setup() {
 function toggleVid() {
   if (playing) {
     fingers.pause();
-    button.html('play');
+    button.html("play");
   } else {
     fingers.loop();
-    button.html('pause');
+    button.html("pause");
   }
   playing = !playing;
 }

@@ -71,13 +71,13 @@ function setup() {
   let cnv = createCanvas(800, 400);
   noFill();
 
-  carrier = new p5.Oscillator('sine');
+  carrier = new p5.Oscillator("sine");
   carrier.amp(0); // definir la amplitud
   carrier.freq(carrierBaseFreq); // definir la frecuencia
   carrier.start(); // empezar a oscilar
 
   // prueba a cambiar el tipo a 'square', 'sine' or 'triangle'
-  modulator = new p5.Oscillator('sawtooth');
+  modulator = new p5.Oscillator("sawtooth");
   modulator.start();
 
   // suma la salida de la modulante para modular la frecuencia de la portadora
@@ -120,14 +120,14 @@ function draw() {
 
   strokeWeight(1);
   // añade una nota sobre lo que está pasando
-  text('Frecuencia modulante: ' + modFreq.toFixed(3) + ' Hz', 20, 20);
+  text("Frecuencia modulante: " + modFreq.toFixed(3) + " Hz", 20, 20);
   text(
-    'Amplitud modulante (profundidad de modulación): ' + modDepth.toFixed(3),
+    "Amplitud modulante (profundidad de modulación): " + modDepth.toFixed(3),
     20,
     40
   );
   text(
-    'Frecuencia portadora (antes de la modulación): ' + carrierBaseFreq + ' Hz',
+    "Frecuencia portadora (antes de la modulación): " + carrierBaseFreq + " Hz",
     width / 2,
     20
   );
@@ -135,13 +135,13 @@ function draw() {
 
 // función de ayuda para prender y apagar el sonido
 function toggleAudio(cnv) {
-  cnv.mouseOver(function() {
+  cnv.mouseOver(function () {
     carrier.amp(1.0, 0.01);
   });
-  cnv.touchStarted(function() {
+  cnv.touchStarted(function () {
     carrier.amp(1.0, 0.01);
   });
-  cnv.mouseOut(function() {
+  cnv.mouseOut(function () {
     carrier.amp(0.0, 1.0);
   });
 }

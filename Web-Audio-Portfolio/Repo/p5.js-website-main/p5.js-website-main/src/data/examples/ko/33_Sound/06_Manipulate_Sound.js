@@ -5,7 +5,7 @@
  * 재생 속도가 느리면 사운드의 지속 시간을 늘릴 뿐 아니라,
  * 느린 주파수에서 재생되어 음고(pitch)를 감소시킵니다.</p>
  * <p><em><span class="small"> 로컬 프로젝트에서 이 예제를 실행하려면 적어도 한 개의 사운드 파일이 필요하고,
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며, 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며,
  * <a href="https://github.com/processing/p5.js/wiki/Local-server">로컬 서버</a>를 작동시켜야 합니다.</span></em></p>
  */
 // 사운드 파일 객체
@@ -13,7 +13,7 @@ let song;
 
 function preload() {
   // 사운드 파일 불러오기
-  song = loadSound('assets/Damscray_DancingTiger.mp3');
+  song = loadSound("assets/Damscray_DancingTiger.mp3");
 }
 
 function setup() {

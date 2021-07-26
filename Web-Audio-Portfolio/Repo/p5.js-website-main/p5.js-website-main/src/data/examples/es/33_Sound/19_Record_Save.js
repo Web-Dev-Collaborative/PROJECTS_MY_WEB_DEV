@@ -17,7 +17,7 @@ function setup() {
   createCanvas(400, 400);
   background(200);
   fill(0);
-  text('Enable mic and click the mouse to begin recording', 20, 20);
+  text("Enable mic and click the mouse to begin recording", 20, 20);
 
   // crear una entrada de audio
   mic = new p5.AudioIn();
@@ -42,17 +42,17 @@ function mousePressed() {
     recorder.record(soundFile);
 
     background(255, 0, 0);
-    text('Recording now! Click to stop.', 20, 20);
+    text("Recording now! Click to stop.", 20, 20);
     state++;
   } else if (state === 1) {
     recorder.stop(); // parar el grabador, y enviar el resultado al archivo de audio soundFile
 
     background(0, 255, 0);
-    text('Recording stopped. Click to play & save', 20, 20);
+    text("Recording stopped. Click to play & save", 20, 20);
     state++;
   } else if (state === 2) {
     soundFile.play(); // reproduce el sonido
-    saveSound(soundFile, 'mySound.wav'); // almacena el archivo
+    saveSound(soundFile, "mySound.wav"); // almacena el archivo
     state++;
   }
 }

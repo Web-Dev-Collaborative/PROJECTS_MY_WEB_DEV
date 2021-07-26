@@ -17,5 +17,5 @@ function draw() {
   // 0부터 720에 이르는 mouseX 값을 40부터 300의 범위로 조정
   let d = map(mouseX, 0, width, 40, 300);
   fill(255, c, 0);
-  ellipse(width/2, height/2, d, d);
+  ellipse(width / 2, height / 2, d, d);
 }

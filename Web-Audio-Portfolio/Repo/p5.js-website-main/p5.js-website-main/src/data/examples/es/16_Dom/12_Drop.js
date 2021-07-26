@@ -16,18 +16,18 @@ function draw() {
   noStroke();
   textSize(24);
   textAlign(CENTER);
-  text('Drag an image file onto the canvas.', width / 2, height / 2);
+  text("Drag an image file onto the canvas.", width / 2, height / 2);
   noLoop();
 }
 
 function gotFile(file) {
   // si es un archivo de imagen
-  if (file.type === 'image') {
+  if (file.type === "image") {
     // crear un elemento de imagen DOM, pero sin mostrarlo
     const img = createImg(file.data).hide();
     // dibujar la imagen en el lienzo
     image(img, 0, 0, width, height);
   } else {
-    println('Not an image file!');
+    println("Not an image file!");
   }
 }

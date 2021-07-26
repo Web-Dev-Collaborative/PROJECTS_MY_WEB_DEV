@@ -1,4 +1,3 @@
-
 /*
  * @name 스피로그래프
  * @description 일명 싸인이라 불리는 서로 맞물린 원형들을 이용하여,
@@ -25,7 +24,7 @@ function setup() {
   rad = height / 4; // 중심 원의 반지름 계산
   background(204); // 화면 비우기
 
-  for (let i = 0; i<sines.length; i++) {
+  for (let i = 0; i < sines.length; i++) {
     sines[i] = PI; // 모든 원들이 북쪽을 향해 시작하도록 설정
   }
 }
@@ -58,15 +57,14 @@ function draw() {
     if (trace) ellipse(0, 0, erad, erad); // 만약 추적 중이라면 erad로 그리기
     pop(); // 레벨 1 다운
     translate(0, radius); // 다음 싸인을 위한 위치로 이동하기
-    sines[i] = (sines[i] + (fund + (fund * i * ratio))) % TWO_PI; // fund에 따라 각도 업데이트하기
+    sines[i] = (sines[i] + (fund + fund * i * ratio)) % TWO_PI; // fund에 따라 각도 업데이트하기
   }
 
   pop(); // 마지막 변형에 다다르면 레벨 1 다운
-
 }
 
 function keyReleased() {
-  if (key==' ') {
+  if (key == " ") {
     trace = !trace;
     background(255);
   }

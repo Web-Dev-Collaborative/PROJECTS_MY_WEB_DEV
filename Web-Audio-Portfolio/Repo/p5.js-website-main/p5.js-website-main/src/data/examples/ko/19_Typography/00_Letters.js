@@ -10,8 +10,8 @@ let font,
 
 function preload() {
   // setup()과 draw()를 호출하기에 앞서,
-  // assets 파일 경로에 .ttf 또는 .otf 폰트가 저장 및 로드되었는지 확인하세요. 
-  font = loadFont('assets/SourceSansPro-Regular.otf');
+  // assets 파일 경로에 .ttf 또는 .otf 폰트가 저장 및 로드되었는지 확인하세요.
+  font = loadFont("assets/SourceSansPro-Regular.otf");
 }
 
 function setup() {
@@ -43,13 +43,13 @@ function draw() {
 
       // 모음과 기타 글자들에 각각 다른 색상 더하기
       if (
-        letter === 'A' ||
-        letter === 'E' ||
-        letter === 'I' ||
-        letter === 'O' ||
-        letter === 'U'
+        letter === "A" ||
+        letter === "E" ||
+        letter === "I" ||
+        letter === "O" ||
+        letter === "U"
       ) {
-        fill('#ed225d');
+        fill("#ed225d");
       } else {
         fill(255);
       }

@@ -14,13 +14,13 @@
  * 또한, RMS는 초당 44,000배의 속도에서 샘플링된 순간 진폭 판독값을 사용하는 대신
  * 시간에 따른 평균값(이 경우, 1024 샘플)을 사용하여, 진폭을 듣는 방식을 더욱 잘 나타냅니다.</p>
  * <p><em><span class="small"> 로컬 프로젝트에서 이 예제를 실행하려면 적어도 한 개의 사운드 파일이 필요하고,
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며, 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며,
  * <a href="https://github.com/processing/p5.js/wiki/Local-server">로컬 서버</a>를 작동시켜야 합니다.</span></em></p>
  */
 let song, analyzer;
 
 function preload() {
-  song = loadSound('assets/lucky_dragons_-_power_melody.mp3');
+  song = loadSound("assets/lucky_dragons_-_power_melody.mp3");
 }
 
 function setup() {

@@ -11,7 +11,7 @@ let easing = 0.05;
 
 function setup() {
   createCanvas(720, 400);
-  img = loadImage('assets/moonwalk.jpg'); // 프로그램상 이미지 불러오기
+  img = loadImage("assets/moonwalk.jpg"); // 프로그램상 이미지 불러오기
 }
 
 function draw() {

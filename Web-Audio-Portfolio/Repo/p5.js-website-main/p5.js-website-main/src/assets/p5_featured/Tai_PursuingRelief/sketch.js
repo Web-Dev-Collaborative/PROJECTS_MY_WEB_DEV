@@ -46,7 +46,7 @@ var mozzie8;
 var mozzie9;
 
 function preload() {
-  //can only see 'loadImage' in Firefox 
+  //can only see 'loadImage' in Firefox
   img = loadImage("finger01.png");
 }
 
@@ -90,195 +90,194 @@ function setup() {
   g9 = 255;
   b9 = 255;
 
-  // MOZZIE #1 
+  // MOZZIE #1
   mozzie = {
-    x: (windowWidth/1200)*80,
-    y: (windowHeight/640)*300,
-    show: function() {
+    x: (windowWidth / 1200) * 80,
+    y: (windowHeight / 640) * 300,
+    show: function () {
       noStroke();
       strokeWeight(2);
       stroke(r, g - 20, b - 20);
       fill(r, g - 20, b - 20);
       ellipse(this.x, this.y, 50, 50);
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var d = dist(mouseX, mouseY, this.x, this.y);
       if (d < 28) {
         r = 255;
         g = g - 20;
         b = b - 20;
       }
-    }
-  }
+    },
+  };
 
-  // MOZZIE #2 - with the new set of variables 
+  // MOZZIE #2 - with the new set of variables
   mozzie2 = {
-    x: (windowWidth/1200)*100,
-    y: (windowHeight/640)*600,
-    show: function() {
+    x: (windowWidth / 1200) * 100,
+    y: (windowHeight / 640) * 600,
+    show: function () {
       noStroke();
       strokeWeight(2);
       stroke(r2, g2 - 20, b2 - 20);
       fill(r2, g2 - 20, b2 - 20);
       ellipse(this.x, this.y, 50, 50);
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var d2 = dist(mouseX, mouseY, this.x, this.y);
       if (d2 < 28) {
         r2 = 255;
         g2 = g2 - 20;
         b2 = b2 - 20;
       }
-    }
-  }
+    },
+  };
 
-  // MOZZIE #3 - with the new set of variables 
+  // MOZZIE #3 - with the new set of variables
   mozzie3 = {
-    x: (windowWidth/1200)*360,
-    y: (windowHeight/640)*50,
-    show: function() {
+    x: (windowWidth / 1200) * 360,
+    y: (windowHeight / 640) * 50,
+    show: function () {
       noStroke();
       strokeWeight(2);
       stroke(r3, g3 - 20, b3 - 20);
       fill(r3, g3 - 20, b3 - 20);
       ellipse(this.x, this.y, 50, 50);
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var d3 = dist(mouseX, mouseY, this.x, this.y);
       if (d3 < 28) {
         r3 = 255;
         g3 = g3 - 20;
         b3 = b3 - 20;
       }
-    }
-  }
+    },
+  };
 
-  // MOZZIE #4 - with the new set of variables 
+  // MOZZIE #4 - with the new set of variables
   mozzie4 = {
-    x: (windowWidth/1200)*800,
-    y: (windowHeight/640)*400,
-    show: function() {
+    x: (windowWidth / 1200) * 800,
+    y: (windowHeight / 640) * 400,
+    show: function () {
       noStroke();
       strokeWeight(2);
       stroke(r4, g4 - 20, b4 - 20);
       fill(r4, g4 - 20, b4 - 20);
       ellipse(this.x, this.y, 50, 50);
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var d4 = dist(mouseX, mouseY, this.x, this.y);
       if (d4 < 28) {
         r4 = 255;
         g4 = g4 - 20;
         b4 = b4 - 20;
       }
-    }
-  }
+    },
+  };
 
-  // MOZZIE #5 - with the new set of variables 
+  // MOZZIE #5 - with the new set of variables
   mozzie5 = {
-    x: (windowWidth/1200)*400,
-    y: (windowHeight/640)*350,
-    show: function() {
+    x: (windowWidth / 1200) * 400,
+    y: (windowHeight / 640) * 350,
+    show: function () {
       noStroke();
       strokeWeight(2);
       stroke(r5, g5 - 20, b5 - 20);
       fill(r5, g5 - 20, b5 - 20);
       ellipse(this.x, this.y, 50, 50);
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var d5 = dist(mouseX, mouseY, this.x, this.y);
       if (d5 < 28) {
         r5 = 255;
         g5 = g5 - 20;
         b5 = b5 - 20;
       }
-    }
-  }
+    },
+  };
 
-  // MOZZIE #6 - with the new set of variables 
+  // MOZZIE #6 - with the new set of variables
   mozzie6 = {
-    x: (windowWidth/1200)*1150,
-    y: (windowHeight/640)*300,
-    show: function() {
+    x: (windowWidth / 1200) * 1150,
+    y: (windowHeight / 640) * 300,
+    show: function () {
       noStroke();
       strokeWeight(2);
       stroke(r6, g6 - 20, b6 - 20);
       fill(r6, g6 - 20, b6 - 20);
       ellipse(this.x, this.y, 50, 50);
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var d6 = dist(mouseX, mouseY, this.x, this.y);
       if (d6 < 28) {
         r6 = 255;
         g6 = g6 - 20;
         b6 = b6 - 20;
       }
-    }
-  }
+    },
+  };
 
-  // MOZZIE #7 - with the new set of variables 
+  // MOZZIE #7 - with the new set of variables
   mozzie7 = {
-    x: (windowWidth/1200)*900,
-    y: (windowHeight/640)*350,
-    show: function() {
+    x: (windowWidth / 1200) * 900,
+    y: (windowHeight / 640) * 350,
+    show: function () {
       noStroke();
       strokeWeight(2);
       stroke(r7, g7 - 20, b7 - 20);
       fill(r7, g7 - 20, b7 - 20);
       ellipse(this.x, this.y, 50, 50);
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var d7 = dist(mouseX, mouseY, this.x, this.y);
       if (d7 < 28) {
         r7 = 255;
         g7 = g7 - 20;
         b7 = b7 - 20;
       }
-    }
-  }
+    },
+  };
 
-  // MOZZIE #8 - with the new set of variables 
+  // MOZZIE #8 - with the new set of variables
   mozzie8 = {
-    x: (windowWidth/1200)*890,
-    y: (windowHeight/640)*610,
-    show: function() {
+    x: (windowWidth / 1200) * 890,
+    y: (windowHeight / 640) * 610,
+    show: function () {
       noStroke();
       strokeWeight(2);
       stroke(r8, g8 - 20, b8 - 20);
       fill(r8, g8 - 20, b8 - 20);
       ellipse(this.x, this.y, 50, 50);
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var d8 = dist(mouseX, mouseY, this.x, this.y);
       if (d8 < 28) {
         r8 = 255;
         g8 = g8 - 20;
         b8 = b8 - 20;
       }
-    }
-  }
+    },
+  };
 
-  // MOZZIE #9 - with the new set of variables 
+  // MOZZIE #9 - with the new set of variables
   mozzie9 = {
-    x: (windowWidth/1200)*880,
-    y: (windowHeight/640)*100,
-    show: function() {
+    x: (windowWidth / 1200) * 880,
+    y: (windowHeight / 640) * 100,
+    show: function () {
       noStroke();
       strokeWeight(2);
       stroke(r9, g9 - 20, b9 - 20);
       fill(r9, g9 - 20, b9 - 20);
       ellipse(this.x, this.y, 50, 50);
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var d9 = dist(mouseX, mouseY, this.x, this.y);
       if (d9 < 28) {
         r9 = 255;
         g9 = g9 - 20;
         b9 = b9 - 20;
       }
-    }
-  }
-
+    },
+  };
 }
 
 function draw() {
@@ -291,13 +290,13 @@ function draw() {
   background(255, 249, 249);
 
   fingerTopLeft = {
-    x: (windowWidth/1200)*200,
-    y: (windowHeight/640)*110,
+    x: (windowWidth / 1200) * 200,
+    y: (windowHeight / 640) * 110,
     aspect: img.height / img.width,
     imageWidth: 150,
     imageHeight: imageWidth * aspect,
 
-    show: function() {
+    show: function () {
       push();
       translate(this.x, this.y);
       scale(-1, 1);
@@ -305,15 +304,14 @@ function draw() {
       rotate(radians(finger1));
       image(img, 0, 0, imageWidth, imageHeight);
       pop();
-
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var dfinger1 = dist(mouseX, mouseY, this.x, this.y);
       if (dfinger1 < 300) {
         finger1 = finger1 + 45;
       }
-    }
-  }
+    },
+  };
 
   /*
   //fingerTopLeft
@@ -331,28 +329,27 @@ function draw() {
   */
 
   fingerBottomLeft = {
-    x: (windowWidth/1200)*200,
-    y: (windowHeight/640)*420,
+    x: (windowWidth / 1200) * 200,
+    y: (windowHeight / 640) * 420,
     aspect: img.height / img.width,
     imageWidth: 150,
     imageHeight: imageWidth * aspect,
 
-    show: function() {
+    show: function () {
       push();
       translate(this.x, this.y);
       scale(-1, 1);
       rotate(radians(finger2));
       image(img, 0, 0, imageWidth, imageHeight);
       pop();
-
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var dfinger2 = dist(mouseX, mouseY, this.x, this.y);
       if (dfinger2 < 300) {
         finger2 = finger2 + 45;
       }
-    }
-  }
+    },
+  };
   /*
   //fingerBottomLeft
   push ();
@@ -365,28 +362,27 @@ function draw() {
   */
 
   fingerTopMid = {
-    x: (windowWidth/1200)*580,
-    y: (windowHeight/640)*50,
+    x: (windowWidth / 1200) * 580,
+    y: (windowHeight / 640) * 50,
     aspect: img.height / img.width,
     imageWidth: 150,
     imageHeight: imageWidth * aspect,
 
-    show: function() {
+    show: function () {
       push();
       translate(this.x, this.y);
       scale(-1, 1);
       rotate(radians(finger3));
       image(img, 0, 0, imageWidth, imageHeight);
       pop();
-
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var dfinger3 = dist(mouseX, mouseY, this.x, this.y);
       if (dfinger3 < 200) {
         finger3 = finger3 + 45;
       }
-    }
-  }
+    },
+  };
   /*
   //fingerTopMid
   push ();
@@ -399,28 +395,27 @@ function draw() {
   */
 
   fingerMidMid = {
-    x: (windowWidth/1200)*700,
-    y: (windowHeight/640)*320,
+    x: (windowWidth / 1200) * 700,
+    y: (windowHeight / 640) * 320,
     aspect: img.height / img.width,
     imageWidth: 150,
     imageHeight: imageWidth * aspect,
 
-    show: function() {
+    show: function () {
       push();
       translate(this.x, this.y);
       scale(-1, 1);
       rotate(radians(finger4));
       image(img, 0, 0, imageWidth, imageHeight);
       pop();
-
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var dfinger4 = dist(mouseX, mouseY, this.x, this.y);
       if (dfinger4 < 200) {
         finger4 = finger4 + 45;
       }
-    }
-  }
+    },
+  };
 
   /*
   //fingerMidMid
@@ -434,28 +429,27 @@ function draw() {
   */
 
   fingerBottomMid = {
-    x: (windowWidth/1200)*550,
-    y: (windowHeight/640)*480,
+    x: (windowWidth / 1200) * 550,
+    y: (windowHeight / 640) * 480,
     aspect: img.height / img.width,
     imageWidth: 150,
     imageHeight: imageWidth * aspect,
 
-    show: function() {
+    show: function () {
       push();
       translate(this.x, this.y);
       scale(-1, 1);
       rotate(radians(finger5));
       image(img, 0, 0, imageWidth, imageHeight);
       pop();
-
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var dfinger5 = dist(mouseX, mouseY, this.x, this.y);
       if (dfinger5 < 200) {
         finger5 = finger5 + 45;
       }
-    }
-  }
+    },
+  };
 
   /*
   //fingerBottomMid
@@ -468,28 +462,27 @@ function draw() {
   */
 
   fingerTopRight = {
-    x: (windowWidth/1200)*1100,
-    y: (windowHeight/640)*105,
+    x: (windowWidth / 1200) * 1100,
+    y: (windowHeight / 640) * 105,
     aspect: img.height / img.width,
     imageWidth: 150,
     imageHeight: imageWidth * aspect,
 
-    show: function() {
+    show: function () {
       push();
       translate(this.x, this.y);
       scale(-1, 1);
       rotate(radians(finger6));
       image(img, 0, 0, imageWidth, imageHeight);
       pop();
-
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var dfinger6 = dist(mouseX, mouseY, this.x, this.y);
       if (dfinger6 < 200) {
         finger6 = finger6 + 45;
       }
-    }
-  }
+    },
+  };
 
   /*
   //fingerTopRight
@@ -503,28 +496,27 @@ function draw() {
   */
 
   fingerBottomRight = {
-    x: (windowWidth/1200)*1000,
-    y: (windowHeight/640)*450,
+    x: (windowWidth / 1200) * 1000,
+    y: (windowHeight / 640) * 450,
     aspect: img.height / img.width,
     imageWidth: 150,
     imageHeight: imageWidth * aspect,
 
-    show: function() {
+    show: function () {
       push();
       translate(this.x, this.y);
       scale(-1, 1);
       rotate(radians(finger7));
       image(img, 0, 0, imageWidth, imageHeight);
       pop();
-
     },
-    mousePressed: function() {
+    mousePressed: function () {
       var dfinger7 = dist(mouseX, mouseY, this.x, this.y);
       if (dfinger7 < 200) {
         finger7 = finger7 + 45;
       }
-    }
-  }
+    },
+  };
   /*
   //fingerBottomRight
   push ();

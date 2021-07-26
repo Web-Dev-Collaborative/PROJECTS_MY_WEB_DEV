@@ -13,7 +13,7 @@ function draw() {
   // 배경색을 검정색(0)으로 지정, noFill()로 면채우기 기능 해제
   background(0);
   noFill();
-    
+
   // point()의 괄호 안 두 인수로 좌표값 지정
   // 첫번째 인수는 x값을, 두번째 인수는 y값 의미
   stroke(255);

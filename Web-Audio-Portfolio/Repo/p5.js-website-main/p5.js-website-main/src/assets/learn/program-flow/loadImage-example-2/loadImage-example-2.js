@@ -1,14 +1,14 @@
 let img;
-function preload(){
+function preload() {
   img = loadImage("/assets/learn/program-flow/images/clouds.jpg");
 }
 
-function setup(){
+function setup() {
   createCanvas(100, 100);
   noLoop();
 }
 
-function draw(){
+function draw() {
   background(200);
-  image(img,0,0);
+  image(img, 0, 0);
 }

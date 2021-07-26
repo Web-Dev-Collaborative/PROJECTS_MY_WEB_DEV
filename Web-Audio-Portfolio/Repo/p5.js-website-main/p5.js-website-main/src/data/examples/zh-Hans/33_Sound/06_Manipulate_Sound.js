@@ -14,7 +14,7 @@ let song;
 
 function preload() {
   // Load a sound file
-  song = loadSound('assets/Damscray_DancingTiger.mp3');
+  song = loadSound("assets/Damscray_DancingTiger.mp3");
 }
 
 function setup() {

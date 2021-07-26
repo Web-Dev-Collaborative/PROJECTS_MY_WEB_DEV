@@ -1,16 +1,16 @@
 // Results in Chrome:
-// 
+//
 //  Friendly Errors Disabled:
 //    "Random took: 271.43ms."
-//  
+//
 //  Friendly Errors Enabled:
 //    "Random took: 1534.10ms."
-//  
+//
 // Results in p5 Editor:
-// 
+//
 //  Friendly Errors Disabled:
 //    "Random took: 1885.23ms."
-//  
+//
 //  Friendly Errors Enabled:
 //    "Random took: 3147.38ms."
 
@@ -26,5 +26,5 @@ function setup() {
     random();
   }
   var elapsed = millis() - start;
-  console.log("Random took: " + elapsed.toFixed(2) + "ms.")
+  console.log("Random took: " + elapsed.toFixed(2) + "ms.");
 }

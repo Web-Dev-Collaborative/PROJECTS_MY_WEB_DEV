@@ -6,20 +6,20 @@
  * 그렇지 않을 경우, 스케치에서 사운드 재생을 원하는 시점에 파일이 불러지지 않을 수 있습니다.
  *
  * <br><br><p><em><span class="small"> 로컬 프로젝트에서 이 예제를 실행하려면 적어도 한 개의 사운드 파일이 필요하고,
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며, 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound 라이브러리</a>를 추가해야 되며,
  * <a href="https://github.com/processing/p5.js/wiki/Local-server">로컬 서버</a>를 작동시켜야 합니다.</span></em></p>
  */
 
 let song;
 
 function preload() {
-  song = loadSound('assets/lucky_dragons_-_power_melody.mp3');
+  song = loadSound("assets/lucky_dragons_-_power_melody.mp3");
 }
 
 function setup() {
   createCanvas(710, 200);
   song.loop(); // 이제 노래 파일이 setup()에서 재생될 준비가 되었습니다.
-               //preload에서 이미 한 차례 불러왔기 때문입니다.
+  //preload에서 이미 한 차례 불러왔기 때문입니다.
   background(0, 255, 0);
 }
 

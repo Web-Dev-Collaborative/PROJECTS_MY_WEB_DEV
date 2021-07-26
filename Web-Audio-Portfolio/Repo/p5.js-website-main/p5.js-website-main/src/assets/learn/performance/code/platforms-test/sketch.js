@@ -1,17 +1,17 @@
 // Particle system performance test
-// 
+//
 // Chrome Results:
 //  "Drawing 200x times took: 1708.16ms."
-// 
+//
 // Firefox Results:
 //  "Drawing 200x times took: 3761.27ms."
-//  
+//
 // Edge Results:
 //  "Drawing 200x times took: 8362.05ms."
-// 
+//
 // IE11 Results:
 //  "Drawing 200x times took: 8665.79ms."
-// 
+//
 // Editor results:
 //  "Drawing 200x times took: 4480.28ms."
 
@@ -31,8 +31,8 @@ function setup() {
       y: random(0, height),
       heading: random(0, TWO_PI),
       radius: random(5, 10),
-      color: color(random(70, 90), 100, 100)
-    })
+      color: color(random(70, 90), 100, 100),
+    });
   }
 
   var start = millis();
@@ -40,8 +40,9 @@ function setup() {
     draw();
   }
   var elapsed = millis() - start;
-  console.log("Drawing " + iterations + "x times took: " + elapsed.toFixed(2) + 
-    "ms.");
+  console.log(
+    "Drawing " + iterations + "x times took: " + elapsed.toFixed(2) + "ms."
+  );
 }
 
 function draw() {

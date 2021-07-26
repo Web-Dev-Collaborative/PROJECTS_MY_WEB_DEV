@@ -7,7 +7,7 @@ let y = 100;
 
 // setup()함수 속 선언문은 프로그램 시작시 한번 실행됩니다.
 function setup() {
-  // createCanvas가 그 첫 선언문입니다. 
+  // createCanvas가 그 첫 선언문입니다.
   createCanvas(720, 400);
   stroke(255); // 선색을 흰색(255)으로 지정
   frameRate(30);

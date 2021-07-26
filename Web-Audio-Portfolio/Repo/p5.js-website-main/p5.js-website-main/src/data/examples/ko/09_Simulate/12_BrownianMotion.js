@@ -10,10 +10,9 @@ let range = 6;
 let ax = [];
 let ay = [];
 
-
 function setup() {
   createCanvas(710, 400);
-  for ( let i = 0; i < num; i++ ) {
+  for (let i = 0; i < num; i++) {
     ax[i] = width / 2;
     ay[i] = height / 2;
   }
@@ -24,7 +23,7 @@ function draw() {
   background(51);
 
   // 모든 요소들을 좌측으로 1자리 이동
-  for ( let i = 1; i < num; i++ ) {
+  for (let i = 1; i < num; i++) {
     ax[i - 1] = ax[i];
     ay[i - 1] = ay[i];
   }
@@ -38,8 +37,8 @@ function draw() {
   ay[num - 1] = constrain(ay[num - 1], 0, height);
 
   // 점들을 잇는 선 그리기
-  for ( let j = 1; j < num; j++ ) {
-    let val = j / num * 204.0 + 51;
+  for (let j = 1; j < num; j++) {
+    let val = (j / num) * 204.0 + 51;
     stroke(val);
     line(ax[j - 1], ay[j - 1], ax[j], ay[j]);
   }

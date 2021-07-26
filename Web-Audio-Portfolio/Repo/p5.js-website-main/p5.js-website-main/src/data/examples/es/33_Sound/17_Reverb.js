@@ -11,8 +11,8 @@
 let sound, reverb;
 
 function preload() {
-  soundFormats('mp3', 'ogg');
-  soundFile = loadSound('assets/Damscray_DancingTiger');
+  soundFormats("mp3", "ogg");
+  soundFile = loadSound("assets/Damscray_DancingTiger");
 
   // desconectar la conexión por defecto
   // para solor escuchar el sonido a través de reverb.process()

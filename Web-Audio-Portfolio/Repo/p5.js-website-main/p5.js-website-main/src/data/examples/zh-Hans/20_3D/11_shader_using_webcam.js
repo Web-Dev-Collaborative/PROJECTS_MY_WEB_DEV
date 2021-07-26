@@ -11,7 +11,7 @@ let cam;
 
 function preload() {
   // load the shader
-  theShader = loadShader('assets/webcam.vert', 'assets/webcam.frag');
+  theShader = loadShader("assets/webcam.vert", "assets/webcam.frag");
 }
 
 function sizeVideo() {
@@ -31,7 +31,7 @@ function draw() {
   shader(theShader);
 
   // passing cam as a texture
-  theShader.setUniform('tex0', cam);
+  theShader.setUniform("tex0", cam);
 
   // rect gives us some geometry on the screen
   rect(0, 0, width, height);

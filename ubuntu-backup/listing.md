@@ -1,0 +1,9 @@
+.//C-drive
+.//ciricculumn-Lambda
+.//downloads-C
+.//get-pip.py
+.//listing.md
+.//microsoft.gpg
+.//package-lock.json
+.//package.json
+.//yarn.lock

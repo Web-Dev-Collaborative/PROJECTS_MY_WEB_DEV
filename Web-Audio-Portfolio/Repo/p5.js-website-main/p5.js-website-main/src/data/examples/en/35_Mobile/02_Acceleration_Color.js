@@ -14,7 +14,7 @@ function setup() {
 
 function draw() {
   background(r, g, b);
-  console.log('draw');
+  console.log("draw");
 }
 
 function deviceMoved() {

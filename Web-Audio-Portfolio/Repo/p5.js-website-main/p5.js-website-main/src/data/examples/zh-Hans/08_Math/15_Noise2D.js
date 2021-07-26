@@ -37,6 +37,6 @@ function draw() {
   // 显示左右两分区的详细信息
   textSize(18);
   fill(255, 255, 255);
-  text('Noice2D with 2 octaves and 0.2 falloff', 10, 350);
-  text('Noice2D with 1 octaves and 0.7 falloff', 330, 350);
+  text("Noice2D with 2 octaves and 0.2 falloff", 10, 350);
+  text("Noice2D with 1 octaves and 0.7 falloff", 330, 350);
 }

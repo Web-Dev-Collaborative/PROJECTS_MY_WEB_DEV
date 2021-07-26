@@ -24,7 +24,7 @@ function draw() {
 }
 
 function Spring2D(xpos, ypos, m, g) {
-  this.x = xpos;// The x- and y-coordinates
+  this.x = xpos; // The x- and y-coordinates
   this.y = ypos;
   this.vx = 0; // The x- and y-axis velocities
   this.vy = 0;
@@ -34,7 +34,7 @@ function Spring2D(xpos, ypos, m, g) {
   this.stiffness = 0.2;
   this.damping = 0.7;
 
-  this.update = function(targetX, targetY) {
+  this.update = function (targetX, targetY) {
     let forceX = (targetX - this.x) * this.stiffness;
     let ax = forceX / this.mass;
     this.vx = this.damping * (this.vx + ax);
@@ -44,12 +44,12 @@ function Spring2D(xpos, ypos, m, g) {
     let ay = forceY / this.mass;
     this.vy = this.damping * (this.vy + ay);
     this.y += this.vy;
-  }
+  };
 
-  this.display = function(nx, ny) {
+  this.display = function (nx, ny) {
     noStroke();
     ellipse(this.x, this.y, this.radius * 2, this.radius * 2);
     stroke(255);
     line(this.x, this.y, nx, ny);
-  }
+  };
 }

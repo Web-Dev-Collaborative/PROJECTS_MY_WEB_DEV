@@ -14,8 +14,8 @@
 let soundFile, analyzer, delay;
 
 function preload() {
-  soundFormats('ogg', 'mp3');
-  soundFile = loadSound('assets/beatbox.mp3');
+  soundFormats("ogg", "mp3");
+  soundFile = loadSound("assets/beatbox.mp3");
 }
 
 function setup() {
@@ -25,7 +25,7 @@ function setup() {
 
   delay = new p5.Delay();
   delay.process(soundFile, 0.12, 0.7, 2300);
-  delay.setType('pingPong'); // a stereo effect
+  delay.setType("pingPong"); // a stereo effect
 
   analyzer = new p5.Amplitude();
 }

@@ -16,5 +16,5 @@ function draw() {
   // 将 mouseX 的数值从 0-720 to 缩放至 40-300 的范围内
   let d = map(mouseX, 0, width, 40, 300);
   fill(255, c, 0);
-  ellipse(width/2, height/2, d, d);
+  ellipse(width / 2, height / 2, d, d);
 }

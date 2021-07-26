@@ -10,8 +10,8 @@
 let sound, reverb;
 
 function preload() {
-  soundFormats('mp3', 'ogg');
-  soundFile = loadSound('assets/Damscray_DancingTiger');
+  soundFormats("mp3", "ogg");
+  soundFile = loadSound("assets/Damscray_DancingTiger");
 
   // disconnect the default connection
   // so that we only hear the sound via the reverb.process

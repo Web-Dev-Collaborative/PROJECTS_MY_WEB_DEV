@@ -3,7 +3,7 @@
  * @description "tickle" 这个单词会在光标移至它时抖动。
  * 有时还会抖出屏幕。
  */
-let message = 'tickle',
+let message = "tickle",
   font,
   bounds, // 存储文本框的 x, y, w, h 值
   fontsize = 60,
@@ -11,7 +11,7 @@ let message = 'tickle',
   y; // 文本的 x 和 y 坐标
 
 function preload() {
-  font = loadFont('assets/SourceSansPro-Regular.otf');
+  font = loadFont("assets/SourceSansPro-Regular.otf");
 }
 
 function setup() {

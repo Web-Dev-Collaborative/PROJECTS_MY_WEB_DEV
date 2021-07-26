@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-  background('brown');
+  background("brown");
   let t = frameCount / 60; // update time
 
   // create a random number of snowflakes each frame
@@ -41,7 +41,7 @@ function snowflake() {
   // chosen so the snowflakes are uniformly spread out in area
   this.radius = sqrt(random(pow(width / 2, 2)));
 
-  this.update = function(time) {
+  this.update = function (time) {
     // x position follows a circle
     let w = 0.6; // angular speed
     let angle = w * time + this.initialangle;
@@ -57,7 +57,7 @@ function snowflake() {
     }
   };
 
-  this.display = function() {
+  this.display = function () {
     ellipse(this.posX, this.posY, this.size);
   };
 }

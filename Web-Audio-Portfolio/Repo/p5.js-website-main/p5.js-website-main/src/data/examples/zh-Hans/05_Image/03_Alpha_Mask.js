@@ -10,8 +10,8 @@ let imgMask;
 
 function preload() {
   // 加载图像及图像遮罩
-  img = loadImage('assets/moonwalk.jpg');
-  imgMask = loadImage('assets/mask.png');
+  img = loadImage("assets/moonwalk.jpg");
+  imgMask = loadImage("assets/mask.png");
 }
 
 function setup() {

@@ -10,8 +10,8 @@ let ball = {};
 let soundFile;
 
 function preload() {
-  soundFormats('mp3', 'ogg');
-  soundFile = loadSound('assets/beatbox.ogg');
+  soundFormats("mp3", "ogg");
+  soundFile = loadSound("assets/beatbox.ogg");
 }
 
 function setup() {

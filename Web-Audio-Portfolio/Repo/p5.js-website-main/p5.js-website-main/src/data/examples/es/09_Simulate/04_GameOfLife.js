@@ -32,15 +32,14 @@ function setup() {
 function draw() {
   background(255);
   generate();
-  for ( let i = 0; i < columns;i++) {
-    for ( let j = 0; j < rows;j++) {
-      if ((board[i][j] == 1)) fill(0);
+  for (let i = 0; i < columns; i++) {
+    for (let j = 0; j < rows; j++) {
+      if (board[i][j] == 1) fill(0);
       else fill(255);
       stroke(0);
       rect(i * w, j * w, w - 1, w - 1);
     }
   }
-
 }
 
 // Resetear tablero cuando el ratón es presionado
@@ -53,7 +52,8 @@ function init() {
   for (let i = 0; i < columns; i++) {
     for (let j = 0; j < rows; j++) {
       // Llenar bordes con 0s
-      if (i == 0 || j == 0 || i == columns-1 || j == rows-1) board[i][j] = 0;
+      if (i == 0 || j == 0 || i == columns - 1 || j == rows - 1)
+        board[i][j] = 0;
       // Llenar el resto aleatoriamente
       else board[i][j] = floor(random(2));
       next[i][j] = 0;
@@ -63,7 +63,6 @@ function init() {
 
 // El proceso de crear una nueva generación
 function generate() {
-
   // Recorrer cada lugar de nuestro arreglo 2D y revisar lugares vecinos
   for (let x = 1; x < columns - 1; x++) {
     for (let y = 1; y < rows - 1; y++) {
@@ -71,7 +70,7 @@ function generate() {
       let neighbors = 0;
       for (let i = -1; i <= 1; i++) {
         for (let j = -1; j <= 1; j++) {
-          neighbors += board[x+i][y+j];
+          neighbors += board[x + i][y + j];
         }
       }
 
@@ -79,10 +78,13 @@ function generate() {
       // lo sumamos en el bucle anterior
       neighbors -= board[x][y];
       // Reglas de vida
-      if      ((board[x][y] == 1) && (neighbors <  2)) next[x][y] = 0;           // Soledad
-      else if ((board[x][y] == 1) && (neighbors >  3)) next[x][y] = 0;           // Sobrepoblación
-      else if ((board[x][y] == 0) && (neighbors == 3)) next[x][y] = 1;           // Reproducción
-      else                                             next[x][y] = board[x][y]; // Stasis
+      if (board[x][y] == 1 && neighbors < 2) next[x][y] = 0;
+      // Soledad
+      else if (board[x][y] == 1 && neighbors > 3) next[x][y] = 0;
+      // Sobrepoblación
+      else if (board[x][y] == 0 && neighbors == 3) next[x][y] = 1;
+      // Reproducción
+      else next[x][y] = board[x][y]; // Stasis
     }
   }
 
