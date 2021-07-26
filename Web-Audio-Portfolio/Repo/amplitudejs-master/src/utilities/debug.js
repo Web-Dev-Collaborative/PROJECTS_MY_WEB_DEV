@@ -8,7 +8,7 @@ import config from "../config.js";
  * Handles the debugging of AmplitudeJS
  * @module utilities/Debug
  */
-let Debug = (function() {
+let Debug = (function () {
   /**
    * Writes out debug message to the console if enabled.
    *
@@ -31,7 +31,7 @@ let Debug = (function() {
     Returns the public facing methods
   */
   return {
-    writeMessage: writeMessage
+    writeMessage: writeMessage,
   };
 })();
 

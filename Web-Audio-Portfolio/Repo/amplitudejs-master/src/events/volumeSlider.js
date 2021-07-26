@@ -25,7 +25,7 @@ import VolumeSliderElements from "../visual/volumeSliderElements.js";
  * Handles all events for a volume up event.
  * @module events/VolumeSlider
  */
-let VolumeSlider = (function() {
+let VolumeSlider = (function () {
   /**
    * Handles a change on the volume slider
    *
@@ -55,7 +55,7 @@ let VolumeSlider = (function() {
    * Returns the public facing methods
    */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

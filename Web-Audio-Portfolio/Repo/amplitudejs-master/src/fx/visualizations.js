@@ -15,7 +15,7 @@ import Debug from "../utilities/debug.js";
  *
  * @module Visualizations
  */
-let Visualizations = (function() {
+let Visualizations = (function () {
   /**
    * Runs all of the visualizations on the screen.
    */
@@ -394,12 +394,10 @@ let Visualizations = (function() {
 	    It becomes the key to access the visualization.
 	  */
     config.visualizations.available[newVisualization.getID()] = new Array();
-    config.visualizations.available[newVisualization.getID()][
-      "object"
-    ] = visualization;
-    config.visualizations.available[newVisualization.getID()][
-      "preferences"
-    ] = preferences;
+    config.visualizations.available[newVisualization.getID()]["object"] =
+      visualization;
+    config.visualizations.available[newVisualization.getID()]["preferences"] =
+      preferences;
   }
 
   /**
@@ -518,7 +516,7 @@ let Visualizations = (function() {
   return {
     run: run,
     stop: stop,
-    register: register
+    register: register,
   };
 })();
 

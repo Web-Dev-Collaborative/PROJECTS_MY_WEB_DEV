@@ -8,52 +8,50 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-(function() {
+(function () {
   function shadowSelector(v) {
-    return 'html /deep/ ' + selector(v);
+    return "html /deep/ " + selector(v);
   }
   function selector(v) {
     return '[touch-action="' + v + '"]';
   }
   function rule(v) {
-    return '{ -ms-touch-action: ' + v + '; touch-action: ' + v + ';}';
+    return "{ -ms-touch-action: " + v + "; touch-action: " + v + ";}";
   }
   var attrib2css = [
-    'none',
-    'auto',
-    'pan-x',
-    'pan-y',
+    "none",
+    "auto",
+    "pan-x",
+    "pan-y",
     {
-      rule: 'pan-x pan-y',
-      selectors: [
-        'pan-x pan-y',
-        'pan-y pan-x'
-      ]
+      rule: "pan-x pan-y",
+      selectors: ["pan-x pan-y", "pan-y pan-x"],
     },
-    'manipulation'
+    "manipulation",
   ];
-  var styles = '';
+  var styles = "";
   // only install stylesheet if the browser has touch action support
-  var hasTouchAction = typeof document.head.style.touchAction === 'string';
+  var hasTouchAction = typeof document.head.style.touchAction === "string";
   // only add shadow selectors if shadowdom is supported
-  var hasShadowRoot = !window.ShadowDOMPolyfill && document.head.createShadowRoot;
+  var hasShadowRoot =
+    !window.ShadowDOMPolyfill && document.head.createShadowRoot;
 
   if (hasTouchAction) {
-    attrib2css.forEach(function(r) {
+    attrib2css.forEach(function (r) {
       if (String(r) === r) {
-        styles += selector(r) + rule(r) + '\n';
+        styles += selector(r) + rule(r) + "\n";
         if (hasShadowRoot) {
-          styles += shadowSelector(r) + rule(r) + '\n';
+          styles += shadowSelector(r) + rule(r) + "\n";
         }
       } else {
-        styles += r.selectors.map(selector) + rule(r.rule) + '\n';
+        styles += r.selectors.map(selector) + rule(r.rule) + "\n";
         if (hasShadowRoot) {
-          styles += r.selectors.map(shadowSelector) + rule(r.rule) + '\n';
+          styles += r.selectors.map(shadowSelector) + rule(r.rule) + "\n";
         }
       }
     });
 
-    var el = document.createElement('style');
+    var el = document.createElement("style");
     el.textContent = styles;
     document.head.appendChild(el);
   }

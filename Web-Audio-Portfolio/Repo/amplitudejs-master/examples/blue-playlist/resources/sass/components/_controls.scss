@@ -1,91 +1,91 @@
-div#control-container{
+div#control-container {
   margin-top: 25px;
 
-  div#repeat-container{
+  div#repeat-container {
     width: 25%;
     float: left;
     padding-top: 20px;
 
-    div#repeat{
+    div#repeat {
       width: 24px;
       height: 19px;
       cursor: pointer;
 
-      &.amplitude-repeat-off{
-        background: url('../img/repeat-off.svg');
+      &.amplitude-repeat-off {
+        background: url("../img/repeat-off.svg");
       }
 
-      &.amplitude-repeat-on{
-        background: url('../img/repeat-on.svg');
+      &.amplitude-repeat-on {
+        background: url("../img/repeat-on.svg");
       }
     }
 
-    div#shuffle{
+    div#shuffle {
       width: 23px;
       height: 19px;
       cursor: pointer;
       float: right;
 
-      &.amplitude-shuffle-off{
-        background: url('../img/shuffle-off.svg');
+      &.amplitude-shuffle-off {
+        background: url("../img/shuffle-off.svg");
       }
 
-      &.amplitude-shuffle-on{
-        background: url('../img/shuffle-on.svg');
+      &.amplitude-shuffle-on {
+        background: url("../img/shuffle-on.svg");
       }
     }
   }
 
-  @media all and (-ms-high-contrast:none)
-  {
-    *::-ms-backdrop, div#control-container{
+  @media all and (-ms-high-contrast: none) {
+    *::-ms-backdrop,
+    div#control-container {
       margin-top: 40px;
       float: none;
     }
   }
 
-  div#central-control-container{
+  div#central-control-container {
     width: 50%;
     float: left;
 
-    div#central-controls{
+    div#central-controls {
       width: 130px;
       margin: auto;
 
-      div#previous{
+      div#previous {
         display: inline-block;
         width: 40px;
         height: 40px;
         cursor: pointer;
-        background: url('../img/prev.svg');
+        background: url("../img/prev.svg");
         background-repeat: no-repeat;
         float: left;
         margin-top: 10px;
-          margin-right: -5px;
+        margin-right: -5px;
       }
 
-      div#play-pause{
+      div#play-pause {
         display: inline-block;
         width: 60px;
         height: 60px;
         cursor: pointer;
         float: left;
 
-        &.amplitude-paused{
-          background: url('../img/play.svg');
+        &.amplitude-paused {
+          background: url("../img/play.svg");
         }
 
-        &.amplitude-playing{
-          background: url('../img/pause.svg');
+        &.amplitude-playing {
+          background: url("../img/pause.svg");
         }
       }
 
-      div#next{
+      div#next {
         display: inline-block;
         width: 40px;
         height: 40px;
         cursor: pointer;
-        background: url('../img/next.svg');
+        background: url("../img/next.svg");
         background-repeat: no-repeat;
         float: left;
         margin-top: 10px;
@@ -94,48 +94,48 @@ div#control-container{
     }
   }
 
-  div#volume-container{
+  div#volume-container {
     width: 25%;
     float: left;
     padding-top: 20px;
 
-    div#shuffle-right{
+    div#shuffle-right {
       width: 23px;
       height: 19px;
       cursor: pointer;
       margin: auto;
 
-      &.amplitude-shuffle-off{
-        background: url('../img/shuffle-off.svg');
+      &.amplitude-shuffle-off {
+        background: url("../img/shuffle-off.svg");
       }
 
-      &.amplitude-shuffle-on{
-        background: url('../img/shuffle-on.svg');
+      &.amplitude-shuffle-on {
+        background: url("../img/shuffle-on.svg");
       }
     }
   }
 
   margin-top: 20px;
 
-  div.amplitude-mute{
+  div.amplitude-mute {
     cursor: pointer;
     width: 25px;
     height: 19px;
     float: left;
 
-    &.amplitude-not-muted{
-      background: url('../img/volume.svg');
+    &.amplitude-not-muted {
+      background: url("../img/volume.svg");
       background-repeat: no-repeat;
     }
 
-    &.amplitude-muted{
-      background: url('../img/mute.svg');
+    &.amplitude-muted {
+      background: url("../img/mute.svg");
       background-repeat: no-repeat;
     }
   }
 }
 
-div#control-container:after{
+div#control-container:after {
   content: "";
   display: table;
   clear: both;
@@ -143,46 +143,46 @@ div#control-container:after{
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-  div#amplitude-player{
-		div#repeat-container{
-			div#repeat{
-				margin-left: auto;
-				margin-right: auto;
-				float: none;
-			}
-			div#shuffle{
-				display: none;
-			}
-		}
-		div#volume-container{
-			div.volume-controls{
-				display: none;
-			}
-			div#shuffle-right{
-				display: block;
-			}
-		}
+  div#amplitude-player {
+    div#repeat-container {
+      div#repeat {
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+      }
+      div#shuffle {
+        display: none;
+      }
+    }
+    div#volume-container {
+      div.volume-controls {
+        display: none;
+      }
+      div#shuffle-right {
+        display: block;
+      }
+    }
   }
 }
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-  div#amplitude-player{
-    div#repeat-container{
-      div#repeat{
+  div#amplitude-player {
+    div#repeat-container {
+      div#repeat {
         margin-left: auto;
         margin-right: auto;
         float: none;
       }
-      div#shuffle{
+      div#shuffle {
         display: none;
       }
     }
-    div#volume-container{
-      div.volume-controls{
+    div#volume-container {
+      div.volume-controls {
         display: none;
       }
-      div#shuffle-right{
+      div#shuffle-right {
         display: block;
       }
     }
@@ -191,18 +191,18 @@ div#control-container:after{
 
 /* Large and up */
 @media screen and (min-width: 64em) {
-	div#amplitude-player{
-		div#repeat-container{
-			div#repeat{
-				margin-left: 10px;
-				margin-right: 20px;
-				float: left;
-			}
-		}
-		div#volume-container{
-			div#shuffle-right{
-				display: none;
-			}
-		}
-	}
+  div#amplitude-player {
+    div#repeat-container {
+      div#repeat {
+        margin-left: 10px;
+        margin-right: 20px;
+        float: left;
+      }
+    }
+    div#volume-container {
+      div#shuffle-right {
+        display: none;
+      }
+    }
+  }
 }

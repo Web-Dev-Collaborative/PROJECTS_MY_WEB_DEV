@@ -17,37 +17,39 @@
  *  along with WebPd.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-var _ = require('underscore')
+var _ = require("underscore");
 
 // Error thrown when Pd.loadPatch failed
-var PatchLoadError = exports.PatchLoadError = function PatchLoadError(errorList) {
-  this.name = 'PatchLoadError'
-  this.errorList = errorList
-  this.message = _.map(errorList, function(errPair) {
-    return errPair[0] + '\n\t' + errPair[1].message
-  }).join('\n')
-  this.stack = (new Error()).stack
-}
-PatchLoadError.prototype = Object.create(Error.prototype)
-PatchLoadError.prototype.constructor = PatchLoadError
-
+var PatchLoadError = (exports.PatchLoadError = function PatchLoadError(
+  errorList
+) {
+  this.name = "PatchLoadError";
+  this.errorList = errorList;
+  this.message = _.map(errorList, function (errPair) {
+    return errPair[0] + "\n\t" + errPair[1].message;
+  }).join("\n");
+  this.stack = new Error().stack;
+});
+PatchLoadError.prototype = Object.create(Error.prototype);
+PatchLoadError.prototype.constructor = PatchLoadError;
 
 // Error thrown when trying to create an unknown object
-var UnknownObjectError = exports.UnknownObjectError = function UnknownObjectError(type) {
-  this.name = 'UnknownObjectError'
-  this.message = 'unknown object ' + type
-  this.objectType = type
-  this.stack = (new Error()).stack
-}
-UnknownObjectError.prototype = Object.create(Error.prototype)
-UnknownObjectError.prototype.constructor = UnknownObjectError
-
+var UnknownObjectError = (exports.UnknownObjectError =
+  function UnknownObjectError(type) {
+    this.name = "UnknownObjectError";
+    this.message = "unknown object " + type;
+    this.objectType = type;
+    this.stack = new Error().stack;
+  });
+UnknownObjectError.prototype = Object.create(Error.prototype);
+UnknownObjectError.prototype.constructor = UnknownObjectError;
 
 // Error thrown when trying to access an invalid portlet with `.i` or `.o`
-var InvalidPortletError = exports.InvalidPortletError = function InvalidPortletError(message) {
-  this.name = 'InvalidPortletError'
-  this.message = message
-  this.stack = (new Error()).stack
-}
-InvalidPortletError.prototype = Object.create(Error.prototype)
-InvalidPortletError.prototype.constructor = InvalidPortletError
+var InvalidPortletError = (exports.InvalidPortletError =
+  function InvalidPortletError(message) {
+    this.name = "InvalidPortletError";
+    this.message = message;
+    this.stack = new Error().stack;
+  });
+InvalidPortletError.prototype = Object.create(Error.prototype);
+InvalidPortletError.prototype.constructor = InvalidPortletError;

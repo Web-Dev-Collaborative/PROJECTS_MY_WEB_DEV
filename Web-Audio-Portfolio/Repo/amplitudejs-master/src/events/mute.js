@@ -25,7 +25,7 @@ import VolumeSliderElements from "../visual/volumeSliderElements.js";
  * Handles all events for a mute event.
  * @module events/Mute
  */
-let Mute = (function() {
+let Mute = (function () {
   /**
    * Handles an event for a mute element
    *
@@ -72,7 +72,7 @@ let Mute = (function() {
    * Returns the public facing methods
    */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

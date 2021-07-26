@@ -9,7 +9,7 @@ import config from "../../config.js";
  *
  * @module visual/time/CurrentMinuteElements
  */
-let CurrentMinuteElements = (function() {
+let CurrentMinuteElements = (function () {
   /**
    * Syncs the current minutes elements.
    *
@@ -176,7 +176,7 @@ let CurrentMinuteElements = (function() {
    */
   return {
     sync: sync,
-    resetTimes: resetTimes
+    resetTimes: resetTimes,
   };
 })();
 

@@ -1,5 +1,5 @@
 div#visualizations-player-playlist {
-  background-color: #482D57;
+  background-color: #482d57;
   border-radius: 20px;
   position: absolute;
   top: 0;
@@ -11,39 +11,39 @@ div#visualizations-player-playlist {
   z-index: 9999;
   display: none;
 
-  div.top-arrow{
+  div.top-arrow {
     text-align: center;
 
-    img{
+    img {
       cursor: pointer;
     }
   }
 
-  div.top{
-    span.playlist-title{
+  div.top {
+    span.playlist-title {
       color: white;
       font-family: "Avenir Black", sans-serif;
       font-size: 36px;
       font-weight: 700;
     }
 
-    div.amplitude-shuffle{
+    div.amplitude-shuffle {
       width: 22px;
       height: 13px;
       cursor: pointer;
       float: right;
       margin-top: 22px;
 
-      &.amplitude-shuffle-on{
+      &.amplitude-shuffle-on {
         background: url("../img/shuffle-on.svg") no-repeat center;
       }
 
-      &.amplitude-shuffle-off{
+      &.amplitude-shuffle-off {
         background: url("../img/shuffle-off.svg") no-repeat center;
       }
     }
 
-    div.amplitude-repeat{
+    div.amplitude-repeat {
       width: 25px;
       height: 15px;
       cursor: pointer;
@@ -51,60 +51,60 @@ div#visualizations-player-playlist {
       margin-left: 25px;
       margin-top: 20px;
 
-      &.amplitude-repeat-on{
+      &.amplitude-repeat-on {
         background: url("../img/repeat-on.svg") no-repeat center;
       }
 
-      &.amplitude-repeat-off{
+      &.amplitude-repeat-off {
         background: url("../img/repeat-off.svg") no-repeat center;
       }
     }
 
-    border-bottom: 1px solid rgba( 255, 255, 255, .2 );
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  div.songs-container{
+  div.songs-container {
     padding-top: 35px;
     height: 400px;
     padding-bottom: 90px;
     overflow-y: scroll;
 
-    div.song{
+    div.song {
       margin-bottom: 20px;
       cursor: pointer;
       padding: 5px;
       border-radius: 3px;
 
-      &.amplitude-active-song-container{
-        background-color: #03C1EB;
+      &.amplitude-active-song-container {
+        background-color: #03c1eb;
       }
 
-      &:hover{
-        background-color: #4CF298;
+      &:hover {
+        background-color: #4cf298;
       }
 
-      span.song-position{
+      span.song-position {
         color: white;
         font-family: "Avenir", sans-serif;
         font-size: 18px;
         float: left;
       }
 
-      img.song-album-art{
+      img.song-album-art {
         width: 44px;
         height: 44px;
         border-radius: 4px;
-        box-shadow: 0 2px 7px 0 rgba(0,0,0,0.50);
+        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.5);
         float: left;
         margin-left: 12px;
         margin-right: 16px;
       }
 
-      div.song-meta-data-container{
+      div.song-meta-data-container {
         float: left;
-        width: calc( 100% - 105px );
+        width: calc(100% - 105px);
 
-        span.song-name{
+        span.song-name {
           font-size: 18px;
           display: block;
           color: white;
@@ -114,7 +114,7 @@ div#visualizations-player-playlist {
           text-overflow: ellipsis;
         }
 
-        span.song-artist{
+        span.song-artist {
           font-size: 12px;
           display: block;
           color: white;
@@ -126,15 +126,15 @@ div#visualizations-player-playlist {
       }
     }
 
-    div.song:after{
+    div.song:after {
       content: "";
       display: table;
       clear: both;
     }
   }
 
-  div.active-audio{
-    background-color: rgba( 3, 193, 235, .7 );
+  div.active-audio {
+    background-color: rgba(3, 193, 235, 0.7);
     position: absolute;
     left: 0;
     right: 0;
@@ -148,19 +148,19 @@ div#visualizations-player-playlist {
     padding-right: 25px;
     display: flex;
 
-    img.cover-art-small{
+    img.cover-art-small {
       width: 50px;
       height: 50px;
       border-radius: 4px;
       float: left;
     }
 
-    div.active-audio-right{
+    div.active-audio-right {
       float: left;
-      width: calc( 100% - 50px );
+      width: calc(100% - 50px);
       padding-left: 10px;
 
-      span.song-name{
+      span.song-name {
         font-size: 16px;
         color: white;
         font-family: "Avenir", sans-serif;
@@ -172,10 +172,10 @@ div#visualizations-player-playlist {
         text-overflow: ellipsis;
       }
 
-      div.active-audio-controls{
+      div.active-audio-controls {
         text-align: center;
 
-        div.amplitude-prev{
+        div.amplitude-prev {
           width: 18px;
           height: 26px;
           display: inline-block;
@@ -186,7 +186,7 @@ div#visualizations-player-playlist {
           cursor: pointer;
         }
 
-        div.amplitude-play-pause{
+        div.amplitude-play-pause {
           display: inline-block;
           width: 24px;
           height: 25px;
@@ -194,18 +194,18 @@ div#visualizations-player-playlist {
           margin: auto;
           vertical-align: middle;
 
-          &.amplitude-paused{
+          &.amplitude-paused {
             background: url("../img/small-play.svg") no-repeat center;
             background-size: contain;
           }
 
-          &.amplitude-playing{
+          &.amplitude-playing {
             background: url("../img/small-pause.svg") no-repeat center;
             background-size: contain;
           }
         }
 
-        div.amplitude-next{
+        div.amplitude-next {
           width: 18px;
           height: 26px;
           display: inline-block;
@@ -224,19 +224,16 @@ div#visualizations-player-playlist {
   Small only
 */
 @media screen and (max-width: 39.9375em) {
-
 }
 
 /*
   Medium only
 */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-
 }
 
 /*
   Large Only
 */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {
-
 }

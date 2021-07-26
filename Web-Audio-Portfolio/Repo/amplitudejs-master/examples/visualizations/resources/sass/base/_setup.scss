@@ -1,22 +1,23 @@
 @font-face {
-  font-family: 'Avenir';
-  src: url('../fonts/AvenirLTStd-Book.otf');
+  font-family: "Avenir";
+  src: url("../fonts/AvenirLTStd-Book.otf");
 }
 
 @font-face {
-  font-family: 'Avenir Black';
-  src: url('../fonts/AvenirLTStd-Black.otf');
+  font-family: "Avenir Black";
+  src: url("../fonts/AvenirLTStd-Black.otf");
 }
 
 @font-face {
-  font-family: 'Avenir Roman';
-  src: url('../fonts/AvenirLTStd-Roman.otf');
+  font-family: "Avenir Roman";
+  src: url("../fonts/AvenirLTStd-Roman.otf");
 }
 
-html, body{
+html,
+body {
   background-color: #333;
 }
 
-div#pre-load-img-container{
+div#pre-load-img-container {
   display: none;
 }

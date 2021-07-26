@@ -5,22 +5,22 @@
 /*
   2. Components
 */
-  @import 'components/white-player';
-  @import 'components/white-player-top';
-  @import 'components/white-player-center';
-  @import 'components/white-player-controls';
-  @import 'components/white-player-playlist-container';
-  @import 'components/white-player-playlist-top';
-  @import 'components/white-player-up-next';
-  @import 'components/white-player-playlist';
-  @import 'components/white-player-playlist-song';
-  @import 'components/white-player-playlist-controls';
-  @import 'components/song-to-add';
+@import "components/white-player";
+@import "components/white-player-top";
+@import "components/white-player-center";
+@import "components/white-player-controls";
+@import "components/white-player-playlist-container";
+@import "components/white-player-playlist-top";
+@import "components/white-player-up-next";
+@import "components/white-player-playlist";
+@import "components/white-player-playlist-song";
+@import "components/white-player-playlist-controls";
+@import "components/song-to-add";
 
 /*
   3. Layout
 */
-  @import 'layout/body';
+@import "layout/body";
 
 /*
   4. Pages
@@ -41,5 +41,5 @@
 /*
   8. Animations
 */
-  @import 'animations/slide-in-top';
-  @import 'animations/slide-out-top';
+@import "animations/slide-in-top";
+@import "animations/slide-out-top";

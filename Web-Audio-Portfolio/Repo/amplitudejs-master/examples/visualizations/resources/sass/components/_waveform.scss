@@ -1,23 +1,23 @@
-div.amplitude-wave-form{
+div.amplitude-wave-form {
   margin-top: 25px;
   margin-bottom: 12px;
 
-  svg{
+  svg {
     stroke: url(#gradient);
     height: 50px;
     width: 100%;
-    stroke-width: .5px;
+    stroke-width: 0.5px;
 
-    g{
-		  stroke: url(#gradient);
-		  height: 50px;
-		  width: 100%;
+    g {
+      stroke: url(#gradient);
+      height: 50px;
+      width: 100%;
 
-      path{
-  			stroke: url(#gradient);
-  		  height: 50px;
-  		  width: 100%;
+      path {
+        stroke: url(#gradient);
+        height: 50px;
+        width: 100%;
       }
-		}
+    }
   }
 }

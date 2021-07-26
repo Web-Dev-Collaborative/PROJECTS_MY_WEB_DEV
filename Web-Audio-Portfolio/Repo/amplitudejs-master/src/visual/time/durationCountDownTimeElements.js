@@ -9,7 +9,7 @@ import config from "../../config.js";
  *
  * @module visual/time/DurationCountDownTimeElements.
  */
-let DurationCountDownTimeElements = (function() {
+let DurationCountDownTimeElements = (function () {
   /**
    * Syncs all of the countdown time elements.
    *
@@ -192,7 +192,7 @@ let DurationCountDownTimeElements = (function() {
    */
   return {
     sync: sync,
-    resetTimes: resetTimes
+    resetTimes: resetTimes,
   };
 })();
 

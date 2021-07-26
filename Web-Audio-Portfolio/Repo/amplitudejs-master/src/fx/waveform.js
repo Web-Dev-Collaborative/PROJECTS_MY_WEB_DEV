@@ -9,12 +9,12 @@ import config from "../config.js";
  * Help from: https://robots.thoughtbot.com/javascript-audio-api
  * https://stackoverflow.com/questions/21347833/html-svg-not-drawing-works-in-other-pages
  */
-let WaveForm = (function() {
+let WaveForm = (function () {
   /*
     Initialize the local variables used in the Waveform.
   */
   let buffer = "";
-  let sampleRate = '';
+  let sampleRate = "";
   let peaks = "";
 
   function init() {
@@ -84,7 +84,7 @@ let WaveForm = (function() {
       if (
         config.waveforms.built[
           Math.abs(
-            config.audio.src.split("").reduce(function(a, b) {
+            config.audio.src.split("").reduce(function (a, b) {
               a = (a << 5) - a + b.charCodeAt(0);
               return a & a;
             }, 0)
@@ -106,7 +106,7 @@ let WaveForm = (function() {
           When the ready state changes, check to see if we can render the
           wave form.
         */
-        req.onreadystatechange = function(e) {
+        req.onreadystatechange = function (e) {
           /*
             When the request is complete, then we begin decoding the
             audio to build the waveform.
@@ -120,24 +120,25 @@ let WaveForm = (function() {
               /*
                 Decode the audio data and process the waveform.
               */
-              config.context.decodeAudioData(req.response, function(
-                bufferedAudio
-              ) {
-                /*
+              config.context.decodeAudioData(
+                req.response,
+                function (bufferedAudio) {
+                  /*
                   Set the buffer to the audio returned.
                 */
-                buffer = bufferedAudio;
+                  buffer = bufferedAudio;
 
-                /*
+                  /*
                   Get the peaks in the audio.
                 */
-                peaks = getPeaks(sampleRate, buffer);
+                  peaks = getPeaks(sampleRate, buffer);
 
-                /*
+                  /*
                   Build the SVG
                 */
-                process(sampleRate, buffer, peaks);
-              });
+                  process(sampleRate, buffer, peaks);
+                }
+              );
             }
           }
         };
@@ -151,7 +152,7 @@ let WaveForm = (function() {
         displayWaveForms(
           config.waveforms.built[
             Math.abs(
-              config.audio.src.split("").reduce(function(a, b) {
+              config.audio.src.split("").reduce(function (a, b) {
                 a = (a << 5) - a + b.charCodeAt(0);
                 return a & a;
               }, 0)
@@ -196,7 +197,7 @@ let WaveForm = (function() {
       */
       config.waveforms.built[
         Math.abs(
-          config.audio.src.split("").reduce(function(a, b) {
+          config.audio.src.split("").reduce(function (a, b) {
             a = (a << 5) - a + b.charCodeAt(0);
             return a & a;
           }, 0)
@@ -209,7 +210,7 @@ let WaveForm = (function() {
       displayWaveForms(
         config.waveforms.built[
           Math.abs(
-            config.audio.src.split("").reduce(function(a, b) {
+            config.audio.src.split("").reduce(function (a, b) {
               a = (a << 5) - a + b.charCodeAt(0);
               return a & a;
             }, 0)
@@ -439,12 +440,12 @@ let WaveForm = (function() {
   /**
    * Determines if the user is using waveforms
    */
-  function determineIfUsingWaveforms(){
+  function determineIfUsingWaveforms() {
     let waveforms = document.querySelectorAll(".amplitude-wave-form");
 
-    if( waveforms.length > 0 ){
+    if (waveforms.length > 0) {
       return true;
-    }else{
+    } else {
       return false;
     }
   }
@@ -455,7 +456,7 @@ let WaveForm = (function() {
   return {
     init: init,
     build: build,
-    determineIfUsingWaveforms: determineIfUsingWaveforms
+    determineIfUsingWaveforms: determineIfUsingWaveforms,
   };
 })();
 

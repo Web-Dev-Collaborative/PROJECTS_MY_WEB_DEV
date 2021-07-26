@@ -21,7 +21,7 @@ import Debug from "../utilities/debug.js";
  *
  * @module events/Prev
  */
-let Prev = (function() {
+let Prev = (function () {
   /**
    * Handles an event on the previous button
    *
@@ -101,7 +101,7 @@ let Prev = (function() {
     Returns the public facing methods.
   */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

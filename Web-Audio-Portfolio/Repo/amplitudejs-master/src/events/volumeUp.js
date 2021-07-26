@@ -25,7 +25,7 @@ import VolumeSliderElements from "../visual/volumeSliderElements.js";
  * Handles all events for a volume up event.
  * @module events/VolumeUp
  */
-let VolumeUp = (function() {
+let VolumeUp = (function () {
   /**
    * Handles a click on a volume up element.
    *
@@ -79,7 +79,7 @@ let VolumeUp = (function() {
    * Returns the public facing methods
    */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

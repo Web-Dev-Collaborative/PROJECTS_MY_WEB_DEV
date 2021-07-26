@@ -8,7 +8,7 @@ import config from "../config.js";
  * Defines the visual representation of AmplitudeJS song slider elements.
  * @module visual/SongSliderElements
  */
-let SongSliderElements = (function() {
+let SongSliderElements = (function () {
   /**
    * Syncs all of the song slider elements.
    *
@@ -225,7 +225,7 @@ let SongSliderElements = (function() {
     syncPlaylist: syncPlaylist,
     syncSong: syncSong,
     syncSongInPlaylist: syncSongInPlaylist,
-    resetElements: resetElements
+    resetElements: resetElements,
   };
 })();
 

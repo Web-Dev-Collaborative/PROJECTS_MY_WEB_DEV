@@ -1,4 +1,4 @@
-input[type="range"]#global-large-song-slider{
+input[type="range"]#global-large-song-slider {
   width: 100%;
   margin-top: -74px;
   -webkit-appearance: none;
@@ -9,20 +9,20 @@ input[type="range"]#global-large-song-slider{
   display: block;
 }
 
-input[type="range"]#global-large-song-slider:focus{
+input[type="range"]#global-large-song-slider:focus {
   outline: none;
 }
 
-input[type="range"]#global-large-song-slider::-webkit-slider-runnable-track{
+input[type="range"]#global-large-song-slider::-webkit-slider-runnable-track {
   width: 100%;
   cursor: pointer;
   border-radius: 0px;
   height: 68px;
-  background-color: rgba( 0, 0, 0, 0 );
+  background-color: rgba(0, 0, 0, 0);
   -webkit-appearance: none;
 }
 
-input[type="range"]#global-large-song-slider::-webkit-slider-thumb{
+input[type="range"]#global-large-song-slider::-webkit-slider-thumb {
   width: 5px;
   height: 68px;
   background-color: white;
@@ -30,16 +30,16 @@ input[type="range"]#global-large-song-slider::-webkit-slider-thumb{
   -webkit-appearance: none;
 }
 
-input[type="range"]#global-large-song-slider::-moz-range-track{
+input[type="range"]#global-large-song-slider::-moz-range-track {
   width: 100%;
   height: 0px;
   cursor: pointer;
   border-radius: 0px;
   height: 68px;
-  background-color: rgba( 0, 0, 0, 0 );
+  background-color: rgba(0, 0, 0, 0);
 }
 
-input[type="range"]#global-large-song-slider::-moz-range-thumb{
+input[type="range"]#global-large-song-slider::-moz-range-thumb {
   width: 5px;
   height: 68px;
   background-color: white;
@@ -48,23 +48,23 @@ input[type="range"]#global-large-song-slider::-moz-range-thumb{
   margin-top: -34px;
 }
 
-input[type="range"]#global-large-song-slider::-ms-track{
+input[type="range"]#global-large-song-slider::-ms-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
   border-radius: 0px;
-  background: rgba( 255, 255, 255, .25 );
+  background: rgba(255, 255, 255, 0.25);
 }
 
-input[type="range"]#global-large-song-slider::-ms-fill-lower{
+input[type="range"]#global-large-song-slider::-ms-fill-lower {
   background: transparent;
 }
 
-input[type="range"]#global-large-song-slider::-ms-fill-upper{
+input[type="range"]#global-large-song-slider::-ms-fill-upper {
   background: transparent;
 }
 
-input[type="range"]#global-large-song-slider::-ms-thumb{
+input[type="range"]#global-large-song-slider::-ms-thumb {
   width: 28px;
   height: 28px;
   background-color: white;

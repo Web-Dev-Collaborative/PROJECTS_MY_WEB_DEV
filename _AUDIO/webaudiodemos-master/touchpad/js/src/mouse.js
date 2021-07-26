@@ -7,7 +7,7 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-(function(scope) {
+(function (scope) {
   var dispatcher = scope.dispatcher;
   var pointermap = dispatcher.pointermap;
   // radius around touchend that swallows mouse events
@@ -19,7 +19,7 @@
 
   var FIREFOX_LINUX = /Linux.*Firefox\//i;
 
-  var HAS_BUTTONS = (function() {
+  var HAS_BUTTONS = (function () {
     // firefox on linux returns spec-incorrect values for mouseup.buttons
     // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent.buttons#See_also
     // https://codereview.chromium.org/727593003/#msg16
@@ -27,7 +27,7 @@
       return false;
     }
     try {
-      return new MouseEvent('test', {buttons: 1}).buttons === 1;
+      return new MouseEvent("test", { buttons: 1 }).buttons === 1;
     } catch (e) {
       return false;
     }
@@ -36,21 +36,13 @@
   // handler block for native mouse events
   var mouseEvents = {
     POINTER_ID: 1,
-    POINTER_TYPE: 'mouse',
-    events: [
-      'mousedown',
-      'mousemove',
-      'mouseup'
-    ],
-    exposes: [
-      'down',
-      'up',
-      'move'
-    ],
-    register: function(target) {
+    POINTER_TYPE: "mouse",
+    events: ["mousedown", "mousemove", "mouseup"],
+    exposes: ["down", "up", "move"],
+    register: function (target) {
       dispatcher.listen(target, this.events);
     },
-    unregister: function(target) {
+    unregister: function (target) {
       if (target === document) {
         return;
       }
@@ -58,36 +50,38 @@
     },
     lastTouches: [],
     // collide with the global mouse listener
-    isEventSimulatedFromTouch: function(inEvent) {
+    isEventSimulatedFromTouch: function (inEvent) {
       var lts = this.lastTouches;
-      var x = inEvent.clientX, y = inEvent.clientY;
+      var x = inEvent.clientX,
+        y = inEvent.clientY;
       for (var i = 0, l = lts.length, t; i < l && (t = lts[i]); i++) {
         // simulated mouse events will be swallowed near a primary touchend
-        var dx = Math.abs(x - t.x), dy = Math.abs(y - t.y);
+        var dx = Math.abs(x - t.x),
+          dy = Math.abs(y - t.y);
         if (dx <= DEDUP_DIST && dy <= DEDUP_DIST) {
           return true;
         }
       }
     },
-    prepareEvent: function(inEvent) {
+    prepareEvent: function (inEvent) {
       var e = dispatcher.cloneEvent(inEvent);
       e.pointerId = this.POINTER_ID;
       e.isPrimary = true;
       e.pointerType = this.POINTER_TYPE;
-      e._source = 'mouse';
+      e._source = "mouse";
       if (!HAS_BUTTONS) {
         var type = inEvent.type;
         var bit = WHICH_TO_BUTTONS[inEvent.which] || 0;
-        if (type === 'mousedown') {
+        if (type === "mousedown") {
           CURRENT_BUTTONS |= bit;
-        } else if (type === 'mouseup') {
+        } else if (type === "mouseup") {
           CURRENT_BUTTONS &= ~bit;
         }
         e.buttons = CURRENT_BUTTONS;
       }
       return e;
     },
-    mousedown: function(inEvent) {
+    mousedown: function (inEvent) {
       if (!this.isEventSimulatedFromTouch(inEvent)) {
         var p = pointermap.has(this.POINTER_ID);
         var e = this.prepareEvent(inEvent);
@@ -96,7 +90,7 @@
         dispatcher.down(e);
       }
     },
-    mousemove: function(inEvent) {
+    mousemove: function (inEvent) {
       if (!this.isEventSimulatedFromTouch(inEvent)) {
         var target = pointermap.get(this.POINTER_ID);
         if (target) {
@@ -115,7 +109,7 @@
         }
       }
     },
-    mouseup: function(inEvent) {
+    mouseup: function (inEvent) {
       if (!this.isEventSimulatedFromTouch(inEvent)) {
         var e = this.prepareEvent(inEvent);
         e.relatedTarget = scope.findTarget(inEvent);
@@ -124,11 +118,11 @@
         this.cleanupMouse(e.buttons);
       }
     },
-    cleanupMouse: function(buttons) {
+    cleanupMouse: function (buttons) {
       if (buttons === 0) {
         pointermap.delete(this.POINTER_ID);
       }
-    }
+    },
   };
 
   scope.mouseEvents = mouseEvents;

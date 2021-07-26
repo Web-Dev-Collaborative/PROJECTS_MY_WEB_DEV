@@ -34,14 +34,16 @@ meta:
   - name: creator
     content: "@521dimensions"
 ---
+
 # Configuring Default Volume Parameters
+
 <carbon-ads/>
 There are lots of different volume parameters that can be set by default in AmplitudeJS. You can initialize the volume to be
 
 ## Setting the Starting Volume
 
 You can define the starting volume for when the user initially presses play.  
-To do this, you need to add a "volume" key to your initialization JSON.  This
+To do this, you need to add a "volume" key to your initialization JSON. This
 value is any number between 0 and 100. Think of this as a percentage.
 If you want the volume percentage at 35%, set this value equal to 35.
 

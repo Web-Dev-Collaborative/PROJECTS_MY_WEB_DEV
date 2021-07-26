@@ -5,25 +5,25 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /
-  static_files: index.html
-  upload: index.html
+  - url: /
+    static_files: index.html
+    upload: index.html
 
-- url: /css
-  static_dir: css
+  - url: /css
+    static_dir: css
 
-- url: /fonts
-  static_dir: fonts
+  - url: /fonts
+    static_dir: fonts
 
-- url: /img
-  static_dir: img
+  - url: /img
+    static_dir: img
 
-- url: /favicon.ico
-  static_files: favicon.ico
-  upload: favicon.ico
+  - url: /favicon.ico
+    static_files: favicon.ico
+    upload: favicon.ico
 
-- url: /js
-  static_dir: js
+  - url: /js
+    static_dir: js
 
-- url: /sounds
-  static_dir: sounds
+  - url: /sounds
+    static_dir: sounds

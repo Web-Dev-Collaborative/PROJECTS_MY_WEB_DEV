@@ -45,7 +45,7 @@ import PlayPauseElements from "../visual/playPauseElements.js";
  *
  * @module events/KeyDown
  */
-let KeyDown = (function() {
+let KeyDown = (function () {
   /**
    * When the keydown event is fired, we determine which function should be run
    * based on what was passed in.
@@ -220,7 +220,7 @@ let KeyDown = (function() {
    * Returns the public methods for the handler.
    */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

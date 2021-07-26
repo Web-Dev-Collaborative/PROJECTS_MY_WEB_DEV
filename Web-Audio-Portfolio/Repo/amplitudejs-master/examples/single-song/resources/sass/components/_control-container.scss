@@ -1,4 +1,4 @@
-div.control-container{
+div.control-container {
   margin-top: 10px;
   padding-bottom: 10px;
 
@@ -11,12 +11,12 @@ div.control-container{
   }
 
   div.amplitude-play-pause.amplitude-paused {
-    background: url('../img/play.svg');
+    background: url("../img/play.svg");
     background-size: cover;
   }
 
   div.amplitude-play-pause.amplitude-playing {
-    background: url('../img/pause.svg');
+    background: url("../img/pause.svg");
     background-size: cover;
   }
 
@@ -71,12 +71,10 @@ div.control-container{
   Medium only
 */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-
 }
 
 /*
   Large Only
 */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {
-
 }

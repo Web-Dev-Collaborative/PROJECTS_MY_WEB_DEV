@@ -36,6 +36,7 @@ meta:
 ---
 
 # Interactive Elements
+
 <carbon-ads/>
 The interactive elements of AmplitudeJS have event handlers bound to them that
 responds to a touch or click from a user. These elements build the functionality
@@ -46,8 +47,9 @@ global, playlist, individual song or individual song in playlist. These are outl
 ## Play Button
 
 There are 4 different levels for a play button.
+
 1. Global Play - Plays the current song whether it's an individual song or in a
-playlist
+   playlist
 2. Playlist Play - Plays the current song in the playlist.
 3. Song Play - Plays an individual song by itself.
 4. Plays an individual song in a playlist.
@@ -56,6 +58,7 @@ The play button responds to the 'click' event on a desktop or a 'touchstart'
 event on mobile.
 
 ### Global Play Button
+
 The global play button will play the active song whether or not the song is an
 individual song or in a playlist. To add a global play button simply an HTML
 element with the class `amplitude-play`.
@@ -65,6 +68,7 @@ element with the class `amplitude-play`.
 ```
 
 ### Playlist Play Button
+
 The playlist play button will play the active song in the playlist or it will
 play the first song in the playlist if the playlist is out of scope (meaning
 another playlist was being played or it's the first playlist being played). To
@@ -76,6 +80,7 @@ add a playlist play button, add an HTML element with the class of
 ```
 
 ### Individual Song Play Button
+
 The individual song play button will play the song defined by the `data-amplitude-song-index="{song_index}"` attribute.
 
 ```html
@@ -83,16 +88,23 @@ The individual song play button will play the song defined by the `data-amplitud
 ```
 
 ### Individual Song In Playlist Button
+
 The individual playlist button is a combination of the attributes `data-amplitude-song-index="{song_index}"` and `data-amplitude-playlist="{playlist}"`. This will play an individual song in a playlist as defined.
 
 ```html
-<span class="amplitude-play" data-amplitude-song-index="1" data-amplitude-playlist="test_playlist"></span>
+<span
+  class="amplitude-play"
+  data-amplitude-song-index="1"
+  data-amplitude-playlist="test_playlist"
+></span>
 ```
 
 ## Pause Button
+
 The pause button has 4 different levels.
+
 1. Global Pause - Pauses the active song no matter if it's individual or in a
-playlist.
+   playlist.
 2. Playlist Pause - Pauses the active song in the playlist.
 3. Song Pause - Pauses an individual song.
 4. Song In Playlist Pause - Pauses an individual song in a playlist.
@@ -101,6 +113,7 @@ The pause button responds to the 'click' event on a desktop or a 'touchstart'
 event on mobile.
 
 ### Global Pause
+
 The global pause button will pause whatever song is currently playing. To add a
 global pause button simply add an HTML element with the class of 'amplitude-pause'.
 
@@ -109,6 +122,7 @@ global pause button simply add an HTML element with the class of 'amplitude-paus
 ```
 
 ### Playlist Pause
+
 The playlist pause button will pause the active song in the playlist. It only
 works if the playlist defined in the attribute is playing the song.
 
@@ -117,19 +131,27 @@ works if the playlist defined in the attribute is playing the song.
 ```
 
 ### Individual Song Pause
+
 The individual song pause button will pause the song defined by the attribute `data-amplitude-song-index="song_index"`.
 
 ```html
 <span class="amplitude-pause" data-amplitude-song-index="{song_index}"></span>
 ```
+
 ### Individual Song In Playlist Pause
+
 If you want to pause an individual song in a playlist, you need to add both the `data-amplitude-song-index="{song_index}"` and the `data-amplitude-playlist="{playlist}"` attributes.
 
 ```html
-<span class="amplitude-pause" data-amplitude-song-index="{song_index}" data-amplitude-playlist="{playlist}"></span>
+<span
+  class="amplitude-pause"
+  data-amplitude-song-index="{song_index}"
+  data-amplitude-playlist="{playlist}"
+></span>
 ```
 
 ## Play Pause Button
+
 The play/pause button is probably the most common button to be implemented when
 working with AmplitudeJS. Depending on the global state, playlist state and/or
 song state, this element will get a class that is `amplitude-playing` or
@@ -138,14 +160,15 @@ pause button image as a background in CSS so when the interaction occurs, the
 proper button appears.
 
 There are 3 levels of Play/Pause buttons.
+
 1. Global Play/Pause - Plays or pauses the active song no matter if it's
-independent or part of a playlist.
+   independent or part of a playlist.
 2. Playlist Play/Pause - Plays or pauses the active song in the scope of the playlist.
 3. Song Play/Pause - Plays or pauses an individual song.
 4. Song In Playlist Play/Pause - Plays or pauses an individual song in the playlist.
 
-
 ### Global Play/Pause
+
 The global play pause button plays or pauses the current song depending on the
 state of the AmplitudeJS player. This button does not account for whether the
 song is in a playlist or an individual song, it's whatever song is active the
@@ -156,6 +179,7 @@ functionality works on.
 ```
 
 ### Playlist Play/Pause
+
 The playlist play pause button plays or pauses the current song in a playlist.
 If a song is being played outside of a playlist when clicked, the playlist will
 play the first song in the playlist assigned to the button clicked and pause the
@@ -166,22 +190,32 @@ other song. To add a playlist play pause button add an element with the class of
 ```
 
 ### Song Play/Pause
+
 The song play pause button plays or pauses an individual song when clicked.
 
 ```html
-<span class="amplitude-play-pause" data-amplitude-song-index="{song_index}"></span>
+<span
+  class="amplitude-play-pause"
+  data-amplitude-song-index="{song_index}"
+></span>
 ```
 
 ### Song In Playlist Play/Pause
+
 The song in playlist play pause button plays or pauses an individual song in a playlist when clicked. This is defined by a combination of the `data-amplitude-song-index="{song_index}"` attributes and the `data-amplitude-playlist="{playlist}"` attributes.
 
 ```html
-<span class="amplitude-play-pause" data-amplitude-song-index="{song_index}" data-amplitude-playlist="{playlist}"></span>
+<span
+  class="amplitude-play-pause"
+  data-amplitude-song-index="{song_index}"
+  data-amplitude-playlist="{playlist}"
+></span>
 ```
 
-
 ## Stop Button
+
 There is only one level for the stop button:
+
 1. Global - Stops whatever song is playing.
 
 The stop button simply stops the active song. On a desktop, this will respond to
@@ -195,7 +229,9 @@ the following HTML element:
 ```
 
 ## Mute Button
+
 There is only one level for the mute button:
+
 1. Global - Mutes the current song.
 
 The mute button is another global element that mutes the active song. On a
@@ -212,7 +248,9 @@ element and `amplitude-muted` is added when the player is muted.
 ```
 
 ## Volume Up
+
 There is only one level for the volume up button:
+
 1. Global - Increases the volume by the amount specified on init. Default 5%.
 
 The volume up button increments the volume by the amount defined in the config.
@@ -227,7 +265,9 @@ element add:
 ```
 
 ## Volume Down
+
 There is only one level for the volume down button:
+
 1. Global - Decreases the volume by the amount specified on init. Default 5%.
 
 The volume down button decrements the volume by the amount defined in the
@@ -242,7 +282,9 @@ element add:
 ```
 
 ## Volume Slider
+
 There is only one level for the volume slider:
+
 1. Global - Increases or Decreases the volume by sliding the range element.
 
 The volume slider MUST be an HTML 5 range input element. This allows the user to
@@ -253,10 +295,11 @@ volume up and down hardware buttons. To add a volume slider, add the following
 HTML:
 
 ```html
-<input type="range" class="amplitude-volume-slider"/>
+<input type="range" class="amplitude-volume-slider" />
 ```
 
 ## Next Button
+
 AmplitudeJS extends functionality for the audio tag by allowing designers and
 developers to build playlists. When a next button has been added AmplitudeJS
 will go to the next song in the state of the player.
@@ -264,7 +307,7 @@ will go to the next song in the state of the player.
 There are two levels of the next button.
 
 1. Global Next - Will go to the next song in the state no matter what state
-the player is in. If the player is playing a specific playlist, the global next button will go to the next song in the list.
+   the player is in. If the player is playing a specific playlist, the global next button will go to the next song in the list.
 2. Playlist Next - Will go to the next song in the playlist.
 
 The next button will either go sequentially down the indexes or the next index
@@ -272,21 +315,27 @@ in the shuffled songs array. If the player is playing a playlist, then the
 global next button will operate on that playlist.
 
 ### Global Next Button
+
 To add a global next button add the following HTML:
+
 ```html
 <span class="amplitude-next"></span>
 ```
 
 ### Playlist Next Button
+
 To add a playlist next button add the following HTML:
+
 ```html
 <span class="amplitude-next" data-amplitude-playlist="{playlist_key}"></span>
 ```
+
 The playlist next button has a `data-amplitude-playlist` attribute with the key for the playlist it's corresponding to.
 
 A quick note on the playlist next buttons. If you have two playlists (A & B), and you are playing playlist A, but press a next button that is relating to playlist B, the next button won't do anything.
 
 ## Previous Button
+
 Similar to the next button, the previous button goes to the previous song in the
 state of the player. There are two levels of the previous button.
 
@@ -298,13 +347,17 @@ index in the shuffled songs array. If the player is playing a playlist,
 the global previous button will operate on that playlist.
 
 ### Global Previous Button
+
 To add a global previous button add the following HTML:
+
 ```html
 <span class="amplitude-prev"></span>
 ```
 
 ### Playlist Previous Button
+
 To add a playlist previous button add the following HTML:
+
 ```html
 <span class="amplitude-prev" data-amplitude-playlist="{playlist_key}"></span>
 ```
@@ -312,6 +365,7 @@ To add a playlist previous button add the following HTML:
 The playlist previous button has a `data-amplitude-playlist` attribute with the key for the playlist it's corresponding to. Similar to the next buttons, if you have two playlists and you click a previous button scoped to the inactive playlist, then it won't do anything.
 
 ## Shuffle Button
+
 The shuffle button has two levels:
 
 1. Global Shuffle Button - Shuffles the songs array. This is used outside the scope of the playlist.
@@ -319,16 +373,20 @@ The shuffle button has two levels:
 
 The shuffle button is also an extension of functionality added by AmplitudeJS. It allows the developer/user to shuffle songs in a playlist or on a global level.
 
-Playlists can have shuffle states independent of other playlists. When a song ends or the user goes to the next song, AmplitudeJS will know whether or not the playlist should go to the next sequential user defined song or the next song in the shuffle array.  When a playlist is shuffled or the global songs are shuffled a class of `amplitude-shuffle-on` is applied to the element where if shuffle is turned off `ampltiude-shuffle-off` is applied to the element.
+Playlists can have shuffle states independent of other playlists. When a song ends or the user goes to the next song, AmplitudeJS will know whether or not the playlist should go to the next sequential user defined song or the next song in the shuffle array. When a playlist is shuffled or the global songs are shuffled a class of `amplitude-shuffle-on` is applied to the element where if shuffle is turned off `ampltiude-shuffle-off` is applied to the element.
 
 ### Global Shuffle Button
+
 To add a shuffle button add the following HTML:
+
 ```html
 <span class="amplitude-shuffle"></span>
 ```
 
 ### Playlist Shuffle Button
+
 To add a playlist shuffle button add the following HTML:
+
 ```html
 <span class="amplitude-shuffle" data-amplitude-playlist="{playlist_key}"></span>
 ```
@@ -337,28 +395,36 @@ This shuffle button contains the attribute that defines the playlist key. This
 will shuffle only the playlist defined.
 
 ## Repeat Button
+
 The repeat button, when active, will repeat the entire songs array when the last song has been played.
 
 There are two levels to the Repeat Button:
+
 1. Global Repeat - Repeats the songs in the songs array when the last song has finished.
 2. Playlist Repeat - Repeats the playlist when the last song in the playlist has finished.
 
 The buttons can be styled based off of the state of the classes applied to the button. When repeat is not on, the button will have a class of `amplitude-repeat-off` applied to the element and when repeat is on, the class `amplitude-repeat-on` applied to the element.
 
 ### Global Repeat Button
+
 To add the repeat button, add the following HTML:
+
 ```html
 <span class="amplitude-repeat"></span>
 ```
 
 ### Playlist Repeat Button
+
 To add a playlist repeat button, add the following HTML:
+
 ```html
 <span class="amplitude-repeat" data-amplitude-playlist="{playlist_key}"></span>
 ```
 
 ## Repeat Song
+
 There is only one level of the repeat song button:
+
 1. Global - Repeats the current song when eneded.
 
 The repeat song button, when active, will repeat the individual song when the song has ended. The button can be styled based off of the sate of classes
@@ -366,13 +432,17 @@ applied to the button. When the repeat is not on, the button will have a class
 of `amplitude-repeat-song-off` and when on, `amplitude-repeat-song-on`.
 
 ### Global Repeat Song Button
+
 To add the repeat song button, add the following HTML:
+
 ```html
 <span class="amplitude-repeat-song"></span>
 ```
 
 ## Playback Speed Button
+
 There is only one level for the playback speed button:
+
 1. Global - Determines how fast the audio should play back through AmplitudeJS.
 
 The playback speed button controls how fast the audio is played back through
@@ -386,18 +456,22 @@ When clicked, the playback speed button will add a class representing the speed
 the player is playing back at. The classes can be styled as well and are as
 follows:
 
-* '1.0' = 'amplitude-playback-speed-10'
-* '1.5' = 'amplitude-playback-speed-15'
-* '2.0' = 'amplitude-playback-speed-20'
+- '1.0' = 'amplitude-playback-speed-10'
+- '1.5' = 'amplitude-playback-speed-15'
+- '2.0' = 'amplitude-playback-speed-20'
 
 ### Global Playback Speed Button
+
 To add a playback speed button simply add the following HTML:
+
 ```html
 <span class="amplitude-playback-speed"></span>
 ```
 
 ## Skip To Link
+
 There are 2 levels for the skip to link:
+
 1. Individual Song - Skips to time defined for a song an individual song in the songs array.
 2. Individual Song In Playlist - Skips to a time defined for an individual song in a playlist.
 
@@ -408,22 +482,36 @@ you have to add the attribute `data-amplitude-song-index="index"` and `data-ampl
 add an attribute `data-amplitude-location="seconds"` to link to in the song.
 
 ### Individual Song Link
+
 An example song link would be:
+
 ```html
-<span class="amplitude-skip-to" data-amplitude-song-index="{song_index}" data-amplitude-location="30"></span>
+<span
+  class="amplitude-skip-to"
+  data-amplitude-song-index="{song_index}"
+  data-amplitude-location="30"
+></span>
 ```
 
 This link will go to the song at the index defined and the location of the seconds defined by the `data-amplitude-location` attribute into the song.
 
 ### Individual Song In Playlist Link
+
 An example of an individual song in playlist link would be:
+
 ```html
-<span class="amplitude-skip-to" data-amplitude-song-index="{song_index}" data-amplitude-location="30" data-amplitude-playlist="{playlist}"></span>
+<span
+  class="amplitude-skip-to"
+  data-amplitude-song-index="{song_index}"
+  data-amplitude-location="30"
+  data-amplitude-playlist="{playlist}"
+></span>
 ```
 
 This will skip to 30 seconds into a song in the playlist defined. Remember, the index of the song in the playlist is scoped to the playlist!
 
 ## Song Tracking Slider (HTML 5 Range)
+
 There are 4 levels to the song tracking slider:
 
 1. Global - This tracks whatever song is playing.
@@ -440,36 +528,54 @@ properly, your server must support
 [Content-Range HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Range).
 
 ### Global Song Slider
+
 To add a global song slider, add the following element:
 
 ```html
-<input type="range" class="amplitude-song-slider" step=".1"/>
+<input type="range" class="amplitude-song-slider" step=".1" />
 ```
 
-The class name is `amplitude-song-slider`.  the `step` attribute makes fine tuning the slider to react more to the current state of the song more fluid.
+The class name is `amplitude-song-slider`. the `step` attribute makes fine tuning the slider to react more to the current state of the song more fluid.
 
 ### Playlist Song Slider
+
 If you want to do an individual playlist, you can add the attribute of `data-amplitude-playlist="{playlist_key}"`.
 
 ```html
-<input type="range" class="amplitude-song-slider" data-amplitude-playlist="{playlist_key}"/>
+<input
+  type="range"
+  class="amplitude-song-slider"
+  data-amplitude-playlist="{playlist_key}"
+/>
 ```
 
 ### Individual Song Slider
+
 You can also add a song slider for an individual song like this:
 
 ```html
-<input type="range" class="amplitude-song-slider" data-amplitude-song-index="{song_index}"/>
+<input
+  type="range"
+  class="amplitude-song-slider"
+  data-amplitude-song-index="{song_index}"
+/>
 ```
 
 ### Individual Song In Playlist Slider
+
 You can also add a song slider for an individual song in a playlist like this:
 
 ```html
-<input type="range" class="amplitude-song-slider" data-amplitude-playlist="{playlist_key}" data-amplitude-song-index="{song_index}"/>
+<input
+  type="range"
+  class="amplitude-song-slider"
+  data-amplitude-playlist="{playlist_key}"
+  data-amplitude-song-index="{song_index}"
+/>
 ```
 
 ## Song Progress Bar
+
 There are 4 levels where you can add a song progress bar:
 
 1. Global - Displays the current progress for the audio being played.
@@ -480,29 +586,47 @@ There are 4 levels where you can add a song progress bar:
 The song progress bar must be implemented with the HTML 5 progress element. This allows you full customization over the design. These operate the same as the range except you will have to implement your own slider event handling. I wrote a quick tutorial on that here: [https://serversideup.net/set-song-played-percentage-amplitudejs/](https://serversideup.net/set-song-played-percentage-amplitudejs/).
 
 ### Global Song Progress Bar
+
 To add a song progress bar, add the following:
+
 ```html
 <progress class="amplitude-song-played-progress"></progress>
 ```
 
 ### Playlist Song Progress Bar
+
 To add a playlist song progress bar, add the following:
+
 ```html
-<progress class="amplitude-song-played-progress" data-amplitude-playlist="{playlist_key}"></progress>
+<progress
+  class="amplitude-song-played-progress"
+  data-amplitude-playlist="{playlist_key}"
+></progress>
 ```
 
 ### Individual Song Progress Bar
+
 To add an individual song progress bar, add the following:
+
 ```html
-<progress class="amplitude-song-played-progress" data-amplitude-song-index="{song_index}"></progress>
+<progress
+  class="amplitude-song-played-progress"
+  data-amplitude-song-index="{song_index}"
+></progress>
 ```
 
 ### Individual Song In Playlist Progress Bar
+
 ```html
-<progress class="amplitude-song-played-progress" data-amplitude-playlist="{playlist_key}" data-amplitude-song-index="{song_index}"></progress>
+<progress
+  class="amplitude-song-played-progress"
+  data-amplitude-playlist="{playlist_key}"
+  data-amplitude-song-index="{song_index}"
+></progress>
 ```
 
 ## Song Buffered Progress Bar
+
 There are 4 levels for a song buffered progress bar:
 
 1. Global - Displays the percentage of the song buffered for the current song.
@@ -510,28 +634,49 @@ There are 4 levels for a song buffered progress bar:
 3. Individual Song - Displays the percentage of the song buffered for an individual song.
 4. Individual Song In Playlist - Displays the percentage of the song buffered for an individual song in a playlist.
 
-The Song Buffered Progress Bar has to be an HTML 5 progress element. This is the proper semantic element for this use case. This allows for a visual display of how much of the song has been buffered. You can do some CSS techniques to overlay this progress element over the song-played-progress element to make an all in one, or you could leave it by itself.  
+The Song Buffered Progress Bar has to be an HTML 5 progress element. This is the proper semantic element for this use case. This allows for a visual display of how much of the song has been buffered. You can do some CSS techniques to overlay this progress element over the song-played-progress element to make an all in one, or you could leave it by itself.
 
 ### Global Song Buffered Progress Bar
+
 To add a song buffered progress element, add the following:
+
 ```html
 <progress class="amplitude-buffered-progress" value="0"></progress>
 ```
 
 ### Playlist Song Buffered Progress Bar
+
 To add a playlist song buffered progress element, add the following:
+
 ```html
-<progress class="amplitude-buffered-progress" data-amplitude-playlist="{playlist_key}" value="0"></progress>
+<progress
+  class="amplitude-buffered-progress"
+  data-amplitude-playlist="{playlist_key}"
+  value="0"
+></progress>
 ```
 
 ### Individual Song Buffered Progress Bar
+
 To add an individual song buffered progress element, add the following:
+
 ```html
-<progress class="amplitude-buffered-progress" data-amplitude-song-index="{song_index}" value="0"></progress>
+<progress
+  class="amplitude-buffered-progress"
+  data-amplitude-song-index="{song_index}"
+  value="0"
+></progress>
 ```
 
 ### Individual Song In Playlist Buffered Progress Bar
+
 To add an individual song in playlist buffered progress element, add the following:
+
 ```html
-<progress class="amplitude-buffered-progress" data-amplitude-song-index="{song_index}" data-amplitude-playlist="{playlist_key}" value="0"></progress>
+<progress
+  class="amplitude-buffered-progress"
+  data-amplitude-song-index="{song_index}"
+  data-amplitude-playlist="{playlist_key}"
+  value="0"
+></progress>
 ```

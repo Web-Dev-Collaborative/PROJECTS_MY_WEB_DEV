@@ -1,9 +1,9 @@
-div.white-player-playlist-controls{
-  background-color: #F5F5F6;
+div.white-player-playlist-controls {
+  background-color: #f5f5f6;
   border-radius: 8px;
   padding: 16px;
 
-  img.playlist-album-art{
+  img.playlist-album-art {
     float: left;
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
@@ -11,17 +11,17 @@ div.white-player-playlist-controls{
     width: 64px;
   }
 
-  div.playlist-controls{
+  div.playlist-controls {
     float: left;
     margin-left: 25px;
-    width: calc( 100% - 89px );
+    width: calc(100% - 89px);
 
-    div.playlist-meta-data{
+    div.playlist-meta-data {
       display: inline-block;
       width: calc(100% - 125px);
       vertical-align: middle;
 
-      span.song-name{
+      span.song-name {
         display: block;
         color: #414344;
         font-size: 20px;
@@ -29,58 +29,58 @@ div.white-player-playlist-controls{
         overflow: hidden;
         text-overflow: ellipsis;
       }
-  
-      span.song-artist{
+
+      span.song-artist {
         display: block;
-        color: #AAAFB3;
+        color: #aaafb3;
         font-size: 14px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-      }  
+      }
     }
-    
-    div.playlist-control-wrapper{
+
+    div.playlist-control-wrapper {
       text-align: center;
       margin-top: 10px;
       display: inline-block;
       width: 120px;
       vertical-align: middle;
 
-      div#playlist-previous{
+      div#playlist-previous {
         display: inline-block;
         height: 32px;
         width: 32px;
         cursor: pointer;
-        background: url('../img/previous.svg');
+        background: url("../img/previous.svg");
         vertical-align: middle;
         background-size: 32px 32px;
       }
 
-      div#playlist-play-pause{
+      div#playlist-play-pause {
         display: inline-block;
         width: 32px;
         height: 32px;
         cursor: pointer;
         vertical-align: middle;
 
-        &.amplitude-paused{
-          background: url('../img/play.svg');
+        &.amplitude-paused {
+          background: url("../img/play.svg");
           background-size: 32px 32px;
         }
 
-        &.amplitude-playing{
-          background: url('../img/pause.svg');
+        &.amplitude-playing {
+          background: url("../img/pause.svg");
           background-size: 32px 32px;
         }
       }
 
-      div#playlist-next{
+      div#playlist-next {
         display: inline-block;
         height: 32px;
         width: 32px;
         cursor: pointer;
-        background: url('../img/next.svg');
+        background: url("../img/next.svg");
         vertical-align: middle;
         background-size: 32px 32px;
       }
@@ -88,7 +88,7 @@ div.white-player-playlist-controls{
   }
 }
 
-div.white-player-playlist-controls::after{
+div.white-player-playlist-controls::after {
   content: "";
   display: table;
   clear: both;

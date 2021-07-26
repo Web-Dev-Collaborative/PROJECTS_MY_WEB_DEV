@@ -39,7 +39,7 @@ import PlayPauseElements from "../visual/playPauseElements.js";
  *
  * @module events/SkipTo
  */
-let SkipTo = (function() {
+let SkipTo = (function () {
   /**
    * Handles an event on a skip to button.
    *
@@ -174,7 +174,7 @@ let SkipTo = (function() {
    * Return public facing methods
    */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

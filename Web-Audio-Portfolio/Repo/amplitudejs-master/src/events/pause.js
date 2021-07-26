@@ -26,7 +26,7 @@ import PlayPauseElements from "../visual/playPauseElements.js";
  * Handles all of the pause events
  * @module events/Pause
  */
-let Pause = (function() {
+let Pause = (function () {
   /**
    * Handles an event on a pause button
    *
@@ -188,7 +188,7 @@ let Pause = (function() {
     Returns the public facing elements
   */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

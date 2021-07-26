@@ -10,7 +10,7 @@ import config from "../config.js";
  *
  * @module visual/RepeatElements
  */
-let RepeatElements = (function() {
+let RepeatElements = (function () {
   /**
    * Syncs repeat for all of the repeat buttons. Users
    * can apply styles to the 'amplitude-repeat-on' and
@@ -116,7 +116,7 @@ let RepeatElements = (function() {
   return {
     syncRepeat: syncRepeat,
     syncRepeatPlaylist: syncRepeatPlaylist,
-    syncRepeatSong: syncRepeatSong
+    syncRepeatSong: syncRepeatSong,
   };
 })();
 

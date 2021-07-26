@@ -39,7 +39,7 @@ import Debug from "../utilities/debug.js";
  *
  * @module events/Next
  */
-let Next = (function() {
+let Next = (function () {
   /**
    * Handles an event on the next button
    *
@@ -119,7 +119,7 @@ let Next = (function() {
     Returns the public facing methods.
   */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

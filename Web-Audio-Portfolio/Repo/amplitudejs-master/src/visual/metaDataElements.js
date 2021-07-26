@@ -9,7 +9,7 @@ import config from "../config.js";
  *
  * @module visual/MetaDataElements
  */
-let MetaDataElements = (function() {
+let MetaDataElements = (function () {
   /**
    * Displays the active song's metadata. This is called after a song has
    * been changed. This method takes the active song and displays the
@@ -26,7 +26,7 @@ let MetaDataElements = (function() {
     let imageMetaDataKeys = [
       "cover_art_url",
       "station_art_url",
-      "podcast_episode_cover_art_url"
+      "podcast_episode_cover_art_url",
     ];
 
     /*
@@ -75,15 +75,15 @@ let MetaDataElements = (function() {
 					otherwise we clear it. If it's an image element then
 					we default it to the default info if needed.
 				*/
-        let val = (config.active_metadata[info] != undefined) ? config.active_metadata[info] : null;
+        let val =
+          config.active_metadata[info] != undefined
+            ? config.active_metadata[info]
+            : null;
         if (imageMetaDataKeys.indexOf(info) >= 0) {
-          val = val || config.default_album_art
-          songInfoElements[i].setAttribute(
-            "src",
-            val
-          );
+          val = val || config.default_album_art;
+          songInfoElements[i].setAttribute("src", val);
         } else {
-          val = val || ""
+          val = val || "";
           songInfoElements[i].innerHTML = val;
         }
       }
@@ -171,7 +171,7 @@ let MetaDataElements = (function() {
     let imageMetaDataKeys = [
       "cover_art_url",
       "station_art_url",
-      "podcast_episode_cover_art_url"
+      "podcast_episode_cover_art_url",
     ];
 
     /*
@@ -248,7 +248,7 @@ let MetaDataElements = (function() {
     let imageMetaDataKeys = [
       "cover_art_url",
       "station_art_url",
-      "podcast_episode_cover_art_url"
+      "podcast_episode_cover_art_url",
     ];
 
     /*
@@ -282,7 +282,10 @@ let MetaDataElements = (function() {
             data-amplitude-song-info="cover_art_url" defaults to using the value
             of "default_album_art" when "cover_art_url" is missing on the song.
         */
-        let val = config.songs[songIndex][info] != undefined ? config.songs[songIndex][info] : null;
+        let val =
+          config.songs[songIndex][info] != undefined
+            ? config.songs[songIndex][info]
+            : null;
         /*
          If it's an image meta data key, then we set the src attribute of
          the element. Otherwise we set the inner HTML of the element.
@@ -292,11 +295,8 @@ let MetaDataElements = (function() {
            If this is an image meta data key and the individual song doesn't
            have the key, use the default_album_art
            */
-          val = val || config.default_album_art
-          songInfoElements[i].setAttribute(
-            "src",
-            val
-          );
+          val = val || config.default_album_art;
+          songInfoElements[i].setAttribute("src", val);
         } else {
           songInfoElements[i].innerHTML = val;
         }
@@ -341,7 +341,7 @@ let MetaDataElements = (function() {
     displayMetaData: displayMetaData,
     setFirstSongInPlaylist: setFirstSongInPlaylist,
     syncMetaData: syncMetaData,
-    displayPlaylistMetaData: displayPlaylistMetaData
+    displayPlaylistMetaData: displayPlaylistMetaData,
   };
 })();
 

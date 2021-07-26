@@ -15,7 +15,7 @@ import BufferedProgressElements from "../visual/bufferedProgressElements.js";
  *
  * @module events/Progress
  */
-let Progress = (function() {
+let Progress = (function () {
   /**
    * As the song is buffered, we can display the buffered percentage in
    * a progress bar.
@@ -50,7 +50,7 @@ let Progress = (function() {
    * Returns the public facing methods
    */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 

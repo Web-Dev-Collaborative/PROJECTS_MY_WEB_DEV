@@ -9,7 +9,7 @@ import config from "../config.js";
  *
  * @module utilities/Repeater
  */
-let Repeater = (function() {
+let Repeater = (function () {
   /**
    * Sets the state of the repeat for a song.
    *
@@ -53,7 +53,7 @@ let Repeater = (function() {
   return {
     setRepeat: setRepeat,
     setRepeatPlaylist: setRepeatPlaylist,
-    setRepeatSong: setRepeatSong
+    setRepeatSong: setRepeatSong,
   };
 })();
 

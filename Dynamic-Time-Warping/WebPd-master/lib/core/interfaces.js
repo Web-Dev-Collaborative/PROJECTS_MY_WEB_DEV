@@ -17,48 +17,46 @@
  *  along with WebPd.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
- 
+
 // Scheduler to handle timing
 exports.Clock = {
-
   // Current time of the clock in milliseconds
   time: 0,
 
   // Schedules `func(event)` to run at `time` and to repeat every `repetition` millisecond.
   // Returns an `Event`, that has attribute `timeTag`, which is the time at which it is scheduled.
   // If `time` is now, event must be executed immediately.
-  schedule: function(func, time, repetition) {},
+  schedule: function (func, time, repetition) {},
 
   // Unschedules `event`.
-  unschedule: function(event) {}
-}
+  unschedule: function (event) {},
+};
 
 // Audio engine
 exports.Audio = {
-
   // The current sample rate of audio processing
   sampleRate: 44100,
 
   // Start the audio
-  start: function() {},
+  start: function () {},
 
   // Stop the audio
-  stop: function() {},
+  stop: function () {},
 
   // Decode array buffer to a list of channels of Float32Array
-  decode: function(arrayBuffer, done) { done(null, arrayBuffer) }
-}
+  decode: function (arrayBuffer, done) {
+    done(null, arrayBuffer);
+  },
+};
 
 // Midi engine
 exports.Midi = {
-
   // Tells the midi engine to call `callback` to handle incoming midi messages
-  onMessage: function(callback) {}
-}
+  onMessage: function (callback) {},
+};
 
 // File storage
 exports.Storage = {
-
   // Gets the file stored at `uri` and returns `done(err, arrayBuffer)`
-  get: function(uri, done) { }
-}
+  get: function (uri, done) {},
+};

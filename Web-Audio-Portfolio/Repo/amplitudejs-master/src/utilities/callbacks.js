@@ -15,7 +15,7 @@ import Debug from "./debug.js";
  *
  * @module utilities/callbacks
  */
-let Callbacks = (function() {
+let Callbacks = (function () {
   /**
    * Initializes the callbacks for the player.
    */
@@ -24,7 +24,7 @@ let Callbacks = (function() {
       Event: abort
       https://www.w3schools.com/tags/av_event_abort.asp
     */
-    config.audio.addEventListener("abort", function(){
+    config.audio.addEventListener("abort", function () {
       run("abort");
     });
 
@@ -32,7 +32,7 @@ let Callbacks = (function() {
       Event: error
       https://www.w3schools.com/tags/av_event_error.asp
     */
-    config.audio.addEventListener("error", function() {
+    config.audio.addEventListener("error", function () {
       run("error");
     });
 
@@ -40,7 +40,7 @@ let Callbacks = (function() {
       Event: loadeddata
       https://www.w3schools.com/tags/av_event_loadeddata.asp
     */
-    config.audio.addEventListener("loadeddata", function() {
+    config.audio.addEventListener("loadeddata", function () {
       run("loadeddata");
     });
 
@@ -48,7 +48,7 @@ let Callbacks = (function() {
       Event: loadedmetadata
       https://www.w3schools.com/tags/av_event_loadedmetadata.asp
     */
-    config.audio.addEventListener("loadedmetadata", function() {
+    config.audio.addEventListener("loadedmetadata", function () {
       run("loadedmetadata");
     });
 
@@ -56,7 +56,7 @@ let Callbacks = (function() {
       Event: loadstart
       https://www.w3schools.com/tags/av_event_loadstart.asp
     */
-    config.audio.addEventListener("loadstart", function() {
+    config.audio.addEventListener("loadstart", function () {
       run("loadstart");
     });
 
@@ -64,7 +64,7 @@ let Callbacks = (function() {
       Event: pause
       https://www.w3schools.com/tags/av_event_pause.asp
     */
-    config.audio.addEventListener("pause", function() {
+    config.audio.addEventListener("pause", function () {
       run("pause");
     });
 
@@ -72,7 +72,7 @@ let Callbacks = (function() {
       Event: playing
       https://www.w3schools.com/tags/av_event_playing.asp
     */
-    config.audio.addEventListener("playing", function() {
+    config.audio.addEventListener("playing", function () {
       run("playing");
     });
 
@@ -80,15 +80,15 @@ let Callbacks = (function() {
       Event: play
       https://www.w3schools.com/tags/av_event_play.asp
     */
-    config.audio.addEventListener("play", function() {
+    config.audio.addEventListener("play", function () {
       run("play");
-    } );
+    });
 
     /*
       Event: progress
       https://www.w3schools.com/tags/av_event_progress.asp
     */
-    config.audio.addEventListener("progress", function() {
+    config.audio.addEventListener("progress", function () {
       run("progress");
     });
 
@@ -96,7 +96,7 @@ let Callbacks = (function() {
       Event: ratechange
       https://www.w3schools.com/tags/av_event_ratechange.asp
     */
-    config.audio.addEventListener("ratechange", function() {
+    config.audio.addEventListener("ratechange", function () {
       run("ratechange");
     });
 
@@ -104,7 +104,7 @@ let Callbacks = (function() {
       Event: seeked
       https://www.w3schools.com/tags/av_event_seeked.asp
     */
-    config.audio.addEventListener("seeked", function() {
+    config.audio.addEventListener("seeked", function () {
       run("seeked");
     });
 
@@ -112,7 +112,7 @@ let Callbacks = (function() {
       Event: seeking
       https://www.w3schools.com/tags/av_event_seeking.asp
     */
-    config.audio.addEventListener("seeking", function() {
+    config.audio.addEventListener("seeking", function () {
       run("seeking");
     });
 
@@ -120,7 +120,7 @@ let Callbacks = (function() {
       Event: stalled
       https://www.w3schools.com/tags/av_event_stalled.asp
     */
-    config.audio.addEventListener("stalled", function() {
+    config.audio.addEventListener("stalled", function () {
       run("stalled");
     });
 
@@ -128,7 +128,7 @@ let Callbacks = (function() {
       Event: suspend
       https://www.w3schools.com/tags/av_event_suspend.asp
     */
-    config.audio.addEventListener("suspend", function() {
+    config.audio.addEventListener("suspend", function () {
       run("suspend");
     });
 
@@ -136,7 +136,7 @@ let Callbacks = (function() {
       Event: timeupdate
       https://www.w3schools.com/tags/av_event_timeupdate.asp
     */
-    config.audio.addEventListener("timeupdate", function() {
+    config.audio.addEventListener("timeupdate", function () {
       run("timeupdate");
     });
 
@@ -144,7 +144,7 @@ let Callbacks = (function() {
       Event: volumechange
       https://www.w3schools.com/tags/av_event_volumechange.asp
     */
-    config.audio.addEventListener("volumechange", function() {
+    config.audio.addEventListener("volumechange", function () {
       run("volumechange");
     });
 
@@ -152,7 +152,7 @@ let Callbacks = (function() {
       Event: waiting
       https://www.w3schools.com/tags/av_event_waiting.asp
     */
-    config.audio.addEventListener("waiting", function() {
+    config.audio.addEventListener("waiting", function () {
       run("waiting");
     });
 
@@ -160,7 +160,7 @@ let Callbacks = (function() {
       Event: canplay
       https://www.w3schools.com/tags/av_event_canplay.asp
     */
-    config.audio.addEventListener("canplay", function() {
+    config.audio.addEventListener("canplay", function () {
       run("canplay");
     });
 
@@ -168,7 +168,7 @@ let Callbacks = (function() {
       Event: canplaythrough
       https://www.w3schools.com/tags/av_event_canplaythrough.asp
     */
-    config.audio.addEventListener("canplaythrough", function() {
+    config.audio.addEventListener("canplaythrough", function () {
       run("canplaythrough");
     });
 
@@ -176,7 +176,7 @@ let Callbacks = (function() {
       Event: durationchange
       https://www.w3schools.com/tags/av_event_durationchange.asp
     */
-    config.audio.addEventListener("durationchange", function() {
+    config.audio.addEventListener("durationchange", function () {
       run("durationchange");
     });
 
@@ -184,7 +184,7 @@ let Callbacks = (function() {
       Event: ended
       https://www.w3schools.com/tags/av_event_ended.asp
     */
-    config.audio.addEventListener("ended", function() {
+    config.audio.addEventListener("ended", function () {
       run("ended");
     });
   }
@@ -230,7 +230,7 @@ let Callbacks = (function() {
 
   return {
     initialize: initialize,
-    run: run
+    run: run,
   };
 })();
 

@@ -17,12 +17,12 @@
  *  along with WebPd.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-var _ = require('underscore')
+var _ = require("underscore");
 
-exports.declareObjects = function(library) {
-  require('./glue').declareObjects(library)
-  require('./controls').declareObjects(library)
-  require('./waa/dsp').declareObjects(library)
-  require('./waa/portlets').declareObjects(library)
-  require('./midi').declareObjects(library)
-}
+exports.declareObjects = function (library) {
+  require("./glue").declareObjects(library);
+  require("./controls").declareObjects(library);
+  require("./waa/dsp").declareObjects(library);
+  require("./waa/portlets").declareObjects(library);
+  require("./midi").declareObjects(library);
+};

@@ -9,7 +9,7 @@ import config from "../../config.js";
  *
  * @module visual/time/CurrentHourElements
  */
-let CurrentHourElements = (function() {
+let CurrentHourElements = (function () {
   function sync(hours) {
     syncGlobal(hours);
     syncPlaylist(hours);
@@ -169,7 +169,7 @@ let CurrentHourElements = (function() {
    */
   return {
     sync: sync,
-    resetTimes: resetTimes
+    resetTimes: resetTimes,
   };
 })();
 

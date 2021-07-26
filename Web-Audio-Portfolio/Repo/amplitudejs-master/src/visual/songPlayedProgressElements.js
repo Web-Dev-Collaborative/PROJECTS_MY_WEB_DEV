@@ -9,7 +9,7 @@ import config from "../config.js";
  *
  * @module visual/SongPlayedProgressElements
  */
-let SongPlayedProgressElements = (function() {
+let SongPlayedProgressElements = (function () {
   /**
    * Syncs the song played progress bars. These are HTML5 progress elements.
    *
@@ -193,7 +193,7 @@ let SongPlayedProgressElements = (function() {
 
   return {
     sync: sync,
-    resetElements: resetElements
+    resetElements: resetElements,
   };
 })();
 

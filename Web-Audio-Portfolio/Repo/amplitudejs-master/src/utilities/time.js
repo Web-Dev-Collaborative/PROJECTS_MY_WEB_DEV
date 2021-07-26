@@ -8,7 +8,7 @@ import config from "../config.js";
  * The utility to handle the computation of time in AmplitudeJS.
  * @module utilities/Time
  */
-let Time = (function() {
+let Time = (function () {
   /**
    * Computes the current song time. Breaks down where the song is into
    * hours, minutes, seconds and formats it to be displayed to the user.
@@ -176,7 +176,7 @@ let Time = (function() {
     computeCurrentTimes: computeCurrentTimes,
     computeSongDuration: computeSongDuration,
     computeSongCompletionPercentage: computeSongCompletionPercentage,
-    setCurrentTime: setCurrentTime
+    setCurrentTime: setCurrentTime,
   };
 })();
 

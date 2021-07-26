@@ -36,6 +36,7 @@ meta:
 ---
 
 # Overview of Waveforms
+
 <carbon-ads/>
 Waveforms are another FX element added to AmplitudeJS. A waveform is a visual representation of the sound compressions for a piece of audio. Using the Web Audio API, you can display these in your player.
 
@@ -50,12 +51,12 @@ When a waveform is created, it's created for a specific piece of audio. We cache
 By default, the sample rate is set to `100` which generates a pretty rough waveform, but does so efficiently. To set the sample rate, set it through the waveforms object on initialization.
 
 ```javascript
-  Amplitude.init({
-    songs: ['...'],
-    waveforms: {
-      sample_rate: 3000
-    }
-  });
+Amplitude.init({
+  songs: ["..."],
+  waveforms: {
+    sample_rate: 3000,
+  },
+});
 ```
 
 In this example, we set the sample rate to `3000` which will result in a fairly accurate depiction of the waveform!
@@ -100,5 +101,9 @@ To add a waveform for an individual song, display the following:
 To add a waveform for an individual song in a playlist, display the following:
 
 ```html
-<div class="amplitude-wave-form" data-amplitude-song-index="{song_index}" data-amplitude-playlist="{playlist}"></div>
+<div
+  class="amplitude-wave-form"
+  data-amplitude-song-index="{song_index}"
+  data-amplitude-playlist="{playlist}"
+></div>
 ```

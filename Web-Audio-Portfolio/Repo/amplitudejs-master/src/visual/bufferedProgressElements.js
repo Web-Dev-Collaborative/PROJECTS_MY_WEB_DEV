@@ -9,7 +9,7 @@ import config from "../config.js";
  *
  * @module visual/BufferedProgressElements
  */
-let BufferedProgressElements = (function() {
+let BufferedProgressElements = (function () {
   /**
    * Syncs the buffered progress bars to the current percentage in the config
    *
@@ -45,7 +45,7 @@ let BufferedProgressElements = (function() {
         "data-amplitude-song-index"
       );
 
-      if (playlist == null && song == null && !isNaN(config.buffered) ) {
+      if (playlist == null && song == null && !isNaN(config.buffered)) {
         songBufferedProgressBars[i].value = parseFloat(
           parseFloat(config.buffered) / 100
         );
@@ -75,7 +75,7 @@ let BufferedProgressElements = (function() {
         "data-amplitude-song-index"
       );
 
-      if (song == null && !isNaN(config.buffered) ) {
+      if (song == null && !isNaN(config.buffered)) {
         songBufferedProgressBarsPlaylist[i].value = parseFloat(
           parseFloat(config.buffered) / 100
         );
@@ -105,7 +105,7 @@ let BufferedProgressElements = (function() {
         "data-amplitude-playlist"
       );
 
-      if (playlist == null && !isNaN(config.buffered) ) {
+      if (playlist == null && !isNaN(config.buffered)) {
         songBufferedProgressBarsSongs[i].value = parseFloat(
           parseFloat(config.buffered) / 100
         );
@@ -173,7 +173,7 @@ let BufferedProgressElements = (function() {
    */
   return {
     sync: sync,
-    reset: reset
+    reset: reset,
   };
 })();
 

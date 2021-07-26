@@ -3,7 +3,7 @@
  *
  * @module visual/MuteElements
  */
-let MuteElements = (function() {
+let MuteElements = (function () {
   /**
    * Syncs mute for all of the mute buttons. This represents the
    * state of the player if it's muted or not.
@@ -34,7 +34,7 @@ let MuteElements = (function() {
   }
 
   return {
-    setMuted: setMuted
+    setMuted: setMuted,
   };
 })();
 

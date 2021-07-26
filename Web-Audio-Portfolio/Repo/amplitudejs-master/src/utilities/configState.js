@@ -9,7 +9,7 @@ import config from "../config.js";
  *
  * @module utilities/ConfigState
  */
-let ConfigState = (function() {
+let ConfigState = (function () {
   /**
    * Resets the config to the default state. This is called on initialize
    * to ensure the user's config is what matters.
@@ -80,7 +80,7 @@ let ConfigState = (function() {
 	*/
   return {
     resetConfig: resetConfig,
-    setPlayerState: setPlayerState
+    setPlayerState: setPlayerState,
   };
 })();
 

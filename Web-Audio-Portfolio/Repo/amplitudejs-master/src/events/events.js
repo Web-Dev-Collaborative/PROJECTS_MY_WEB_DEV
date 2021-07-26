@@ -40,7 +40,7 @@ import Debug from "../utilities/debug.js";
  *
  * @module events/Events
  */
-var Events = (function() {
+var Events = (function () {
   /**
    * Initializes the handlers for the events listened to by Amplitude
    *
@@ -55,7 +55,7 @@ var Events = (function() {
     /*
 			Sets flag that the screen is moving and not a tap
 		*/
-    document.addEventListener("touchmove", function() {
+    document.addEventListener("touchmove", function () {
       config.is_touch_moving = true;
     });
 
@@ -63,7 +63,7 @@ var Events = (function() {
 			On touch end if it was a touch move event, set moving to
 			false
 		*/
-    document.addEventListener("touchend", function() {
+    document.addEventListener("touchend", function () {
       if (config.is_touch_moving) {
         config.is_touch_moving = false;
       }
@@ -183,13 +183,13 @@ var Events = (function() {
   /**
    * Destroys all of the global audio bindings
    */
-  function destroyAudioBindings(){
+  function destroyAudioBindings() {
     config.audio.removeEventListener("timeupdate", TimeUpdate.handle);
     config.audio.removeEventListener("durationchange", TimeUpdate.handle);
     config.audio.removeEventListener("ended", Ended.handle);
     config.audio.removeEventListener("progress", Progress.handle);
-    
-    if( WaveForm.determineIfUsingWaveforms() ){
+
+    if (WaveForm.determineIfUsingWaveforms()) {
       config.audio.removeEventListener("canplaythrough", WaveForm.build);
     }
   }
@@ -197,13 +197,13 @@ var Events = (function() {
   /**
    * Rebinds all of the global audio bindings
    */
-  function rebindAudio(){
+  function rebindAudio() {
     config.audio.addEventListener("durationchange", TimeUpdate.handle);
     config.audio.addEventListener("timeupdate", TimeUpdate.handle);
     config.audio.addEventListener("ended", Ended.handle);
     config.audio.addEventListener("progress", Progress.handle);
 
-    if( WaveForm.determineIfUsingWaveforms() ){
+    if (WaveForm.determineIfUsingWaveforms()) {
       config.audio.addEventListener("canplaythrough", WaveForm.build);
     }
   }
@@ -884,12 +884,11 @@ var Events = (function() {
    * @access private
    */
   function bindCanPlayThrough() {
-    if( WaveForm.determineIfUsingWaveforms() ){
+    if (WaveForm.determineIfUsingWaveforms()) {
       config.audio.removeEventListener("canplaythrough", WaveForm.build);
       config.audio.addEventListener("canplaythrough", WaveForm.build);
     }
   }
-
 
   /*
 		Returns the public facing functions.
@@ -897,7 +896,7 @@ var Events = (function() {
   return {
     initialize: initialize,
     destroyAudioBindings: destroyAudioBindings,
-    rebindAudio: rebindAudio
+    rebindAudio: rebindAudio,
   };
 })();
 

@@ -57,7 +57,7 @@ import DurationTimeElements from "./time/durationTimeElements.js";
  * through one central point.
  * @module visual/TimeElements
  */
-let TimeElements = (function() {
+let TimeElements = (function () {
   /**
    * Resets the current times.
    */
@@ -112,7 +112,7 @@ let TimeElements = (function() {
     resetCurrentTimes: resetCurrentTimes,
     syncCurrentTimes: syncCurrentTimes,
     resetDurationTimes: resetDurationTimes,
-    syncDurationTimes: syncDurationTimes
+    syncDurationTimes: syncDurationTimes,
   };
 })();
 

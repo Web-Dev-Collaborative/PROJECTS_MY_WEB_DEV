@@ -132,12 +132,12 @@ module.exports = {
 
     active: [],
 
-    backup: ""
+    backup: "",
   },
 
   waveforms: {
     sample_rate: 100,
 
-    built: []
-  }
+    built: [],
+  },
 };

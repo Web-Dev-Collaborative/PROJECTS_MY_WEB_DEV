@@ -8,7 +8,7 @@ import config from "../config.js";
  * Defines the Playback Speed Visual Elements Handler
  * @module visual/PlaybackSpeedElements
  */
-let PlaybackSpeedElements = (function() {
+let PlaybackSpeedElements = (function () {
   /**
    * Sets all of the visual playback speed buttons to have the right class
    * to display the background image that represents the current playback
@@ -58,7 +58,7 @@ let PlaybackSpeedElements = (function() {
    * Returns the public facing methods
    */
   return {
-    sync: sync
+    sync: sync,
   };
 })();
 

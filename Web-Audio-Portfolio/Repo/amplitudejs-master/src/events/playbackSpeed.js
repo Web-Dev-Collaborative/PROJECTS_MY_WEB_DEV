@@ -21,7 +21,7 @@ import PlaybackSpeedElements from "../visual/playbackSpeedElements.js";
  *
  * @module events/PlaybackSpeed
  */
-let PlaybackSpeed = (function() {
+let PlaybackSpeed = (function () {
   /**
    * Handles an event on the playback speed button
    *
@@ -60,7 +60,7 @@ let PlaybackSpeed = (function() {
     Returns public facing methods
   */
   return {
-    handle: handle
+    handle: handle,
   };
 })();
 
